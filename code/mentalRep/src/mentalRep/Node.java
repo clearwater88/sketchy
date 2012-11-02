@@ -16,7 +16,7 @@ public class Node implements Comparable<Node> {
 	private int numNodes;
 	
 	private Node parent;
-	private final int id;
+	final int id;
 	
 	public Node(int id)  {
 		this.id = id;
@@ -117,6 +117,9 @@ public class Node implements Comparable<Node> {
 	}
 	@Override
 	public int hashCode() {
+		/*
+		 * DOES NOT SUPPORT TREES WITH SAME ID! BAD DESIGN!
+		*/		
 		return id;
 	}
 	

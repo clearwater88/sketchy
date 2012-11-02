@@ -1,6 +1,7 @@
 package mentalRep;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
 
@@ -19,6 +20,11 @@ public class Main {
 		System.out.println(t);
 		System.out.println("Prob of tree seq: " + t.getSeqProb());
 		
+		HashMap<Integer,Integer> ruleCounts = t.getRuleCounts();
+		System.out.println("Rule counts: ");
+		for (int key: ruleCounts.keySet()) {
+			System.out.println(key + "/" + ruleCounts.get(key));
+		}
 		
 		/*
 		ArrayList<Node> a = new ArrayList<Node>();
