@@ -4,7 +4,7 @@ import java.util.Collections;
 
 import net.sf.javaml.utils.GammaFunction;
 
-public class Node implements Comparable<Node> {
+class Node implements Comparable<Node> {
 
 	/* remove private, just for debugging */
 	ArrayList<Node> children; //guaranteed to be sorted in increasing id order
@@ -15,10 +15,10 @@ public class Node implements Comparable<Node> {
 	private double logNumTravs;
 	private int numNodes;
 	
-	private Node parent;
+	Node parent;
 	final int id;
 	
-	public Node(int id)  {
+	Node(int id)  {
 		this.id = id;
 		children = new ArrayList<Node>();
 		logNumTravs = 0;
@@ -26,7 +26,7 @@ public class Node implements Comparable<Node> {
 		parent = null;
 	}
 	
-	public Node addChild(Node child) {
+	Node addChild(Node child) {
 		if(child.parent != null) {
 			throw new RuntimeException("Child already has parent: " + 
 		                               child.id + ":" + id);
@@ -38,7 +38,7 @@ public class Node implements Comparable<Node> {
 		return this;
 	}
 	
-	public Node removeChild(Node child) {
+	Node removeChild(Node child) {
 		if(child.parent != this) {
 			throw new RuntimeException("Trying to remove child from node which " +
 					                   "is not its parent: " +
@@ -76,7 +76,7 @@ public class Node implements Comparable<Node> {
 	/*
 	 * Probability of sequence
 	 */
-	public double seqProb(int[] seq) {
+	double seqProb(int[] seq) {
 		if (seq[0] != id) {
 			return 0;
 		}
@@ -107,23 +107,11 @@ public class Node implements Comparable<Node> {
 		return doSeqProb(seq, root+1, frontier,prob);
 	}
 	
-	public long getNumTravers() {
+	long getNumTravers() {
 		return Math.round(Math.exp(logNumTravs));
 	}
 	
-	@Override
-	public boolean equals(Object n) {
-		return this.id == ((Node) n).id;
-	}
-	@Override
-	public int hashCode() {
-		/*
-		 * DOES NOT SUPPORT TREES WITH SAME ID! BAD DESIGN!
-		*/		
-		return id;
-	}
-	
-	public String toSubTree() {
+	String toSubTree() {
 		String str = Integer.toString(id) + "(";
 		for (Node c: children) {
 			str += c.toSubTree()+ ",";
