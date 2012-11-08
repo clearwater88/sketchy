@@ -11,29 +11,36 @@ public class Tree {
 	private final Random gen = new Random();
 	private final int[] primes = {2,3,5,7,11,13,17,19,23,29};
 	
-	private final int MAX_NODES;
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
 	private final Node root;
 	private final int[] seq;
 	
-	public Tree(int [] seq, int MAX_NODES, double alpha) {
+	public Tree(int [] seq, double alpha, HashMap<Integer,HashMap<Integer,Integer>> ruleCounts) {
 		this.seq = seq.clone();
-		this.MAX_NODES = MAX_NODES;
 		this.alpha = alpha;
 		
-		ruleCounts = new HashMap<Integer,HashMap<Integer,Integer>>();
+		this.ruleCounts = ruleCounts;
 		
 		nodes = new ArrayList<Node>();
 		
 		for (int id: seq) {
 			Node n = new Node(id);
 			nodes.add(n);
+			int ruleId = getRuleId(n);
 			
-			HashMap<Integer,Integer> temp = new HashMap<Integer,Integer>();
-			temp.put(getRuleId(n),1);
-			ruleCounts.put(id,temp);	
+			HashMap<Integer,Integer> rule = ruleCounts.get(id);
+			if (rule == null) {
+				rule = new HashMap<Integer,Integer>();
+			}
+
+			if (rule.get(ruleId) == null)
+				rule.put(ruleId,1);
+			else
+				rule.put(ruleId,rule.get(ruleId)+1);
+
+			ruleCounts.put(id,rule);	
 		}
 		root = nodes.get(0);
 		
@@ -85,43 +92,40 @@ public class Tree {
 		if(originalParent==newParent)
 			return true;
 		
-		int originalRuleId = getRuleId(originalParent);
-		int newRuleId = getRuleId(newParent)*primes[child.id];
+		int origParent_origRule = getRuleId(originalParent);
+		int origParent_newRule = getRuleId(originalParent)/primes[child.id];
 		
+		int newParent_origRule = getRuleId(newParent);
+		int newParent_newRule = getRuleId(newParent)*primes[child.id];
+			
 		HashMap<Integer,Integer> origParentRules = ruleCounts.get(originalParent.id);
-		double origRuleFactor = alpha+origParentRules.get(originalRuleId)-1;
-		
-		System.out.println("X: " + origRuleFactor);
-		
-		int totOrigRuleCounts = 0;
-		for (Integer n : origParentRules.keySet())
-			totOrigRuleCounts += origParentRules.get(n);
-		origRuleFactor /= (alpha*Math.pow(2, MAX_NODES)+totOrigRuleCounts-1);
-		
 		HashMap<Integer,Integer> newParentRules = ruleCounts.get(newParent.id);
+	
+		double count_origPar_origRule = alpha+origParentRules.get(origParent_origRule);
+		double count_newPar_origRule = alpha+newParentRules.get(newParent_origRule);
 		
-		Integer newRule = newParentRules.get(newRuleId);
-		int counts = 0;
-		if (newRule != null)
-			counts = newRule.intValue();
+		Integer temp = origParentRules.get(origParent_newRule);
+		double count_origPar_newRule = temp == null ? alpha : alpha+temp.intValue();
+		temp = newParentRules.get(newParent_newRule);
+		double count_newPar_newRule = temp == null ? alpha : alpha+temp.intValue();
 		
-		double newRuleFactor = 1/(counts+alpha);
+		double acceptFactorTreeLike = ((count_origPar_origRule-1)/count_origPar_newRule)*((count_newPar_origRule-1)/count_newPar_newRule);
 		
-		int totNewRuleCounts = 0;
-		for (Integer n : newParentRules.keySet())
-			totNewRuleCounts += newParentRules.get(n);
-		newRuleFactor *= (alpha*Math.pow(2, MAX_NODES)+totNewRuleCounts-1);
-		
-		
-		double acceptFactor = newRuleFactor*origRuleFactor;
-		//BUG: removing child does not mean removing a rule!
-		//acceptFactor NEED TO DO PROB OF W NOW! 
-		
-		System.out.println("Factor: " + acceptFactor);
 
-		boolean res = acceptFactor > gen.nextDouble(); 
-		System.out.println("Decision: " + res);
+		double acceptFactorSeq = 1/getSeqProb();
 		
+		/* ugly....
+		 * 
+		 * */
+		unlinkNode(child);
+		linkNodes(newParent,child);
+		acceptFactorSeq *= getSeqProb();
+		unlinkNode(child);
+		linkNodes(originalParent,child);
+
+		double acceptprob = acceptFactorTreeLike*acceptFactorSeq;
+		//double acceptprob = acceptFactorSeq;
+		boolean res = acceptprob > gen.nextDouble(); 		
 		return res;
 	}
 	
