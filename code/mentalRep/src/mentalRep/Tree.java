@@ -51,14 +51,6 @@ public class Tree {
 		return root.seqProb(seq);
 	}
 	
-	public double treeProb(double alpha) {
-		double res = 0;
-		for (Node n : nodes) {
-			
-		}
-		return res;
-	}
-	
 	public long getNumTraversals() {
 		return root.getNumTravers();
 	}
@@ -79,8 +71,6 @@ public class Tree {
 		int newParentId = gen.nextInt(childId);
 		Node newParent = nodes.get(newParentId);
 		
-		
-		//unlinkNode(nodes.get(childId));
 		if (accept(originalParent,newParent,child)) {
 			unlinkNode(child);
 			linkNodes(newParent,child);
@@ -109,8 +99,8 @@ public class Tree {
 		temp = newParentRules.get(newParent_newRule);
 		double count_newPar_newRule = temp == null ? alpha : alpha+temp.intValue();
 		
-		double acceptFactorTreeLike = ((count_origPar_origRule-1)/count_origPar_newRule)*((count_newPar_origRule-1)/count_newPar_newRule);
-		
+		double acceptFactorTreeLike = (count_origPar_newRule/(count_origPar_origRule-1))
+				                      *(count_newPar_newRule/(count_newPar_origRule-1));
 
 		double acceptFactorSeq = 1/getSeqProb();
 		
@@ -122,16 +112,15 @@ public class Tree {
 		acceptFactorSeq *= getSeqProb();
 		unlinkNode(child);
 		linkNodes(originalParent,child);
-
-		double acceptprob = acceptFactorTreeLike*acceptFactorSeq;
-		//double acceptprob = acceptFactorSeq;
-		boolean res = acceptprob > gen.nextDouble(); 		
-		return res;
+		
+		double acceptprob = acceptFactorTreeLike*acceptFactorSeq;			
+		return acceptprob > gen.nextDouble(); 
 	}
 	
 	private void initializeTree() {
 		for (int i = nodes.size()-1; i>0; i--) {
 			int parentNode = gen.nextInt(i);
+			//int parentNode = i-1;
 			linkNodes(nodes.get(parentNode),nodes.get(i));
 		}
 		if(root.seqProb(seq) == 0) {

@@ -20,8 +20,20 @@ public class Main {
 		HashMap<String,Integer> dist = new HashMap<String,Integer>();
 		ArrayList<Tree> trees = makeList("../test.txt",alpha,ruleCounts);
 		System.out.println("sz: " + trees.size());
-		for (int i=0;i<1000;i++) {
+		
+		System.out.println("Rule counts: ");
+		for (int key: ruleCounts.keySet()) {
+			System.out.println(key + "/" + ruleCounts.get(key));
+		}
+		System.out.println("trees: ");
+		for (Tree t : trees) {
+			System.out.println(t);
+		}
+		
+		
+		for (int i=0;i<100000;i++) {
 			for (int j=0; j < trees.size(); j++) {
+			//for (int j=0; j < 1; j++) {
 				Tree t = trees.get(j);
 				String tr = t.toString();
 				Integer temp =dist.get(tr);
@@ -31,8 +43,7 @@ public class Main {
 					dist.put(tr, temp+1);
 				
 				//System.out.println(tr);
-				
-		 		/*
+				/*
 				System.out.println("Rule counts: ");
 				for (int key: ruleCounts.keySet()) {
 					System.out.println(key + "/" + ruleCounts.get(key));
@@ -59,6 +70,12 @@ public class Main {
 			}
 		}
 		System.out.println("Max: " + maxTr + ":" + ((double) max)/totCount);
+		
+		System.out.println("Rule counts: ");
+		for (int key: ruleCounts.keySet()) {
+			System.out.println(key + "/" + ruleCounts.get(key));
+		}
+		
 	}
 	
 	private static ArrayList<Tree> makeList(String filename, double alpha,HashMap<Integer,HashMap<Integer,Integer>> ruleCounts) {
