@@ -9,7 +9,7 @@ public class Tree {
 	// Key is parent, value is hashmap of childrenRuleId,counts
 	private HashMap<Integer,HashMap<Integer,Integer>> ruleCounts;
 	private final Random gen = new Random();
-	private final int[] primes = {2,3,5,7,11,13,17,19,23,29};
+	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43};
 	
 	private final double alpha;
 	
@@ -171,10 +171,6 @@ public class Tree {
 	}
 	
 	/*
-	 * children of parent guaranteed to be sorted
-	 * Stop symbol: T
-	 * Rule-ids guaranteed to be unique to parent,children pair,
-	 * but not guaranteed to be in any sort of order
 	 * 1 is the special 'stop' rule
 	 */
 	private int getRuleId(Node parent) {
@@ -183,6 +179,20 @@ public class Tree {
 		ArrayList<Node> children = parent.children;
 		for (Node c: children) {
 			res *= primes[c.id];
+		}
+		return res;
+	}
+	
+	// stop rule not included (null terminator, in a sense)
+	public static ArrayList<Integer> getRuleList(int ruleId) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		for (int i=0;i<primes.length;i++) {
+			while (true) {
+				if (ruleId % primes[i] != 0)
+					break;;
+				ruleId /= primes[i];
+				res.add(i);		
+			}
 		}
 		return res;
 	}

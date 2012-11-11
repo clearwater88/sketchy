@@ -17,8 +17,11 @@ public class Main {
 		
 		HashMap<Integer,HashMap<Integer,Integer>> ruleCounts = new HashMap<Integer,HashMap<Integer,Integer>>();
 		
+		ArrayList<HashMap<Integer,HashMap<Integer,Integer>>> allRuleCounts = new ArrayList<HashMap<Integer,HashMap<Integer,Integer>>>();
+		
+		
 		HashMap<String,Integer> dist = new HashMap<String,Integer>();
-		ArrayList<Tree> trees = makeList("../test.txt",alpha,ruleCounts);
+		ArrayList<Tree> trees = makeList("../airplane.txt",alpha,ruleCounts);
 		System.out.println("sz: " + trees.size());
 		
 		System.out.println("Rule counts: ");
@@ -42,14 +45,9 @@ public class Main {
 				else
 					dist.put(tr, temp+1);
 				
-				//System.out.println(tr);
-				/*
-				System.out.println("Rule counts: ");
-				for (int key: ruleCounts.keySet()) {
-					System.out.println(key + "/" + ruleCounts.get(key));
-				}
-				*/
 				t.sampleNewConfig();
+				// doesn't work....just use arrayList of hashmaps, instead of hashmaps of hashmaps?
+				allRuleCounts.add((HashMap<Integer, HashMap<Integer, Integer>>) ruleCounts.clone());
 			}
 			
 		}
@@ -60,21 +58,33 @@ public class Main {
 			totCount += dist.get(tr);
 		}
 		
+		
 		int max = 0;
 		String maxTr = "";
 		for (String tr : dist.keySet()) {
-			System.out.println(tr + ":" + ((double) dist.get(tr))/totCount);
+			//System.out.println(tr + ":" + ((double) dist.get(tr))/totCount);
 			if (dist.get(tr) > max) {
 				max = dist.get(tr);
 				maxTr = tr;
 			}
 		}
 		System.out.println("Max: " + maxTr + ":" + ((double) max)/totCount);
+		System.out.println(allRuleCounts.get(1000));
+		System.out.println(allRuleCounts.get(2));
 		
+		/*
 		System.out.println("Rule counts: ");
 		for (int key: ruleCounts.keySet()) {
-			System.out.println(key + "/" + ruleCounts.get(key));
+			System.out.println("===" + key + "===");
+			HashMap<Integer,Integer> parentRules = ruleCounts.get(key);
+			for (int rule : parentRules.keySet()) {
+				System.out.println(Tree.getRuleList(rule) + "/" + parentRules.get(rule));
+			}
+			
 		}
+		*/
+		
+		System.out.println("Done!");
 		
 	}
 	
