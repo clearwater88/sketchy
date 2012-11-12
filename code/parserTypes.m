@@ -1,21 +1,10 @@
 function parserTypes()
-    
-    lab{1} = 'window';
-    lab{2} = 'left wing';
-    lab{3} = 'right wing';
-    lab{4} = 'tail';
-    lab{5} = 'cockpit';
-    lab{6} = 'body';
-    lab{7} = 'fuselage';
-    lab{8} = 'engine';
-    lab{9} = 'gears';
-    lab{10} = 'propeller';
+    classNum = 0; % airplane
 
-    rootDir = '../data/airplane-stroke/';
-    objType = 'airplane/';
+    [lab,objType,rootDir,iStart] = getClassData(classNum);
     numIm = 80;
     
-    for (i=1:numIm)
+    for (i=iStart:iStart+numIm-1)
         display(['On image: ', int2str(i)]);
         loadFile = ['data/', objType, int2str(i),'.mat'];
         saveFile = ['data/', objType, int2str(i),'-Parts.mat'];

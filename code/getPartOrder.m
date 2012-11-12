@@ -2,17 +2,20 @@ function getPartOrder()
     rootDir = '../data/airplane-stroke/';
     saveFile = 'airplane.txt';
     
-    numIm = 25;
     SIZE_THRESH = 60;
                 
-    stAll = cell(numIm,1);
-    for (i=1:numIm)
+    stAll = [];
+    i=1;
+    while(1)
         ord = [];
         clear bbAll;
         clear partTypes;
         
+        loadFile = [rootDir,int2str(i),'-Parts.mat'];        
+        if (~exist(loadFile,'file'))
+           break; 
+        end
         display(['On image: ', int2str(i)]);
-        loadFile = [rootDir,int2str(i),'-Parts.mat'];
         load(loadFile,'bbAll','partTypes','lab');
         
         ims = getImStack(rootDir,i);
@@ -60,7 +63,9 @@ function getPartOrder()
             st = [st, ',', int2str(res(ii))];
         end
         stAll{i} = st;
+        i=i+1;
     end
+    
     fid=fopen(saveFile,'w');
     for (i=1:numel(stAll))
         fprintf(fid,[stAll{i}, '\n']);

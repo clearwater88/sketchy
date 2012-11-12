@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class Tree {
 	
-	// Key is parent, value is hashmap of childrenRuleId,counts
-	private HashMap<Integer,HashMap<Integer,Integer>> ruleCounts;
+	// arraylist index is parent id; start from 0 for start symbol
+	private ArrayList<HashMap<Integer,Integer>> ruleCounts;
 	private final Random gen = new Random();
 	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43};
 	
@@ -17,7 +17,7 @@ public class Tree {
 	private final Node root;
 	private final int[] seq;
 	
-	public Tree(int [] seq, double alpha, HashMap<Integer,HashMap<Integer,Integer>> ruleCounts) {
+	public Tree(int [] seq, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
 		this.seq = seq.clone();
 		this.alpha = alpha;
 		
@@ -31,16 +31,12 @@ public class Tree {
 			int ruleId = getRuleId(n);
 			
 			HashMap<Integer,Integer> rule = ruleCounts.get(id);
-			if (rule == null) {
-				rule = new HashMap<Integer,Integer>();
-			}
 
 			if (rule.get(ruleId) == null)
 				rule.put(ruleId,1);
 			else
 				rule.put(ruleId,rule.get(ruleId)+1);
 
-			ruleCounts.put(id,rule);	
 		}
 		root = nodes.get(0);
 		
@@ -58,7 +54,7 @@ public class Tree {
 	/*
 	 * should clone for safety-defensive copying.
 	 */
-	public HashMap<Integer,HashMap<Integer,Integer>> getRuleCounts() {
+	public ArrayList<HashMap<Integer,Integer>> getRuleCounts() {
 		return ruleCounts;
 	}
 	

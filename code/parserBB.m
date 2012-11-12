@@ -1,10 +1,10 @@
 function parserBB()
+    n = 1;
 
-    rootDir = '../data/airplane-stroke/';
-    objType = 'airplane/';
+    [~,objType, rootDir,iStart] = getClassData(n);
     numIm = 80;
     
-    for (i=1:numIm)
+    for (i=iStart:iStart+numIm-1)
         display(['On image: ', int2str(i)]);
         saveFile = ['data/', objType, int2str(i),'.mat'];
         if(exist(saveFile,'file'))
