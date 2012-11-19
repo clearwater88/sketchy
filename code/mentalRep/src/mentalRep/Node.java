@@ -7,22 +7,14 @@ import net.sf.javaml.utils.GammaFunction;
 class Node implements Comparable<Node> {
 
 	/* remove private, just for debugging */
-	ArrayList<Node> children; //guaranteed to be sorted in increasing id order
-	
-	/* Only updated through updateTraverse(), which is only called
-	 * from addChild, and removeChild
-	 */
-	private double logNumTravs;
-	private int numNodes;
-	
+	private ArrayList<Node> children; //guaranteed to be sorted in increasing id order
+		
 	Node parent;
 	final int id;
 	
 	Node(int id)  {
 		this.id = id;
 		children = new ArrayList<Node>();
-		logNumTravs = 0;
-		numNodes = 1;
 		parent = null;
 	}
 	
@@ -32,10 +24,12 @@ class Node implements Comparable<Node> {
 		                               child.id + ":" + id);
 		}
 		children.add(child);
-		Collections.sort(children);
 		child.parent = this;
-		updateTraverse();
 		return this;
+	}
+	
+	ArrayList<Node> getChildren() {
+		return children;
 	}
 	
 	Node removeChild(Node child) {
@@ -49,66 +43,53 @@ class Node implements Comparable<Node> {
 		                                child.id + " from " + (id));
 		}
 		child.parent = null;
-		updateTraverse();
 		return this;
-	}
-	
-	private void updateTraverse() {
-		double logNumTravCombs = 0;
-		double logDenomCombs = 0;
-		int nChildSubTrees = 0;
-		for (Node c: children) {
-			logNumTravCombs += c.logNumTravs;
-			int nChildSub = c.numNodes;
-			nChildSubTrees += nChildSub;
-			logDenomCombs += GammaFunction.logGamma(nChildSub+1);
-		}
-		numNodes = nChildSubTrees+1;
-		logNumTravs = logNumTravCombs 
-				      + (GammaFunction.logGamma(nChildSubTrees+1) 
-				      - logDenomCombs);
-		
-		if(parent != null) {
-			parent.updateTraverse();
-		}
 	}
 	
 	/*
 	 * Probability of sequence
 	 */
-	double seqProb(int[] seq) {
-		if (seq[0] != id) {
-			return 0;
-		}
+	double seqProb(ArrayList<Node> nodes) {
 		ArrayList <Node> frontier = new ArrayList<Node>();
 		frontier.addAll(children);
-		return doSeqProb(seq, 1, frontier,1);
+		double temp = doSeqProb(nodes, 1, frontier,1.0);
+		if (temp == 0) {
+			System.out.println(temp);
+			System.out.println("========");
+			System.out.println(nodes);
+			System.out.println(nodes.get(0).toSubTree());		
+			throw new RuntimeException("aw nuts");
+		}			
+		return temp; 
 	}
 	
-	private double doSeqProb(int[] seq, int root, ArrayList<Node> frontier, double prob) {
-		if (root == seq.length)
+	private double doSeqProb(ArrayList<Node> nodes, int root, ArrayList<Node> frontier, double prob) {
+		if (root == nodes.size())
 			return prob;
 		
-		Node foundNode = null;
+		double totalProb = 0;
 		for (Node f: frontier) {
-			if (f.id == seq[root]) {
-				foundNode = f;
-				break;
+			if (f.id == nodes.get(root).id) {
+				
+				ArrayList<Node> frontierCurr = new ArrayList<Node>(frontier);				
+				frontierCurr.remove(f);
+				frontierCurr.addAll(f.children);
+								
+				totalProb += doSeqProb(nodes, root+1, frontierCurr,prob/frontier.size());
+
 			}
 		}
-		if (foundNode == null) {
-			return 0;
-		}
+		
+		return totalProb;
+
 		
 		/*Assume all frontier nodes equal-probably*/
+		/*
 		prob /= frontier.size();
 		frontier.remove(foundNode);
 		frontier.addAll(foundNode.children);
-		return doSeqProb(seq, root+1, frontier,prob);
-	}
-	
-	long getNumTravers() {
-		return Math.round(Math.exp(logNumTravs));
+		return doSeqProb(nodes, root+1, frontier,prob);
+		*/
 	}
 	
 	String toSubTree() {

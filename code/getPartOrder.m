@@ -1,18 +1,22 @@
-function getPartOrder()
-    rootDir = '../data/airplane-stroke/';
-    saveFile = 'airplane.txt';
+function getPartOrder(n)
+
+    useDuplicates = 1;
+
+    [~,objType,rootDir, iStart, saveFile] = getClassData(n);
+    display(['Outputing file: ', saveFile]);
     
     SIZE_THRESH = 60;
                 
     stAll = [];
-    i=1;
+    i=iStart;
     while(1)
         ord = [];
         clear bbAll;
         clear partTypes;
         
-        loadFile = [rootDir,int2str(i),'-Parts.mat'];        
+        loadFile = ['data/', objType,int2str(i),'-Parts.mat'];
         if (~exist(loadFile,'file'))
+            display(['File does not exist: ', loadFile, '. Quiting.']);
            break; 
         end
         display(['On image: ', int2str(i)]);
@@ -57,12 +61,18 @@ function getPartOrder()
         end
         res = partTypes(ord);
         
+        % remove duplicates
+        if (~useDuplicates)
+            [~,id] = unique(res);
+            res = res(sort(id));
+        end
+        
         % 0 is start symbol
         st = '0';
         for (ii=1:numel(res))
             st = [st, ',', int2str(res(ii))];
         end
-        stAll{i} = st;
+        stAll{i-iStart+1} = st;
         i=i+1;
     end
     

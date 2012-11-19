@@ -9,16 +9,14 @@ public class Tree {
 	// arraylist index is parent id; start from 0 for start symbol
 	private ArrayList<HashMap<Integer,Integer>> ruleCounts;
 	private final Random gen = new Random();
-	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43};
+	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53};
 	
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
 	private final Node root;
-	private final int[] seq;
 	
 	public Tree(int [] seq, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
-		this.seq = seq.clone();
 		this.alpha = alpha;
 		
 		this.ruleCounts = ruleCounts;
@@ -44,11 +42,7 @@ public class Tree {
 	}
 	
 	public double getSeqProb() {
-		return root.seqProb(seq);
-	}
-	
-	public long getNumTraversals() {
-		return root.getNumTravers();
+		return root.seqProb(nodes);
 	}
 	
 	/*
@@ -60,7 +54,7 @@ public class Tree {
 	
 	public Tree sampleNewConfig() {
 		// Generate child between 2->last (no point resampling root and 2nd elem)
-		int childId = gen.nextInt(seq.length-2)+2;
+		int childId = gen.nextInt(nodes.size()-2)+2;
 		Node child = nodes.get(childId);
 		Node originalParent = child.parent;
 		
@@ -119,7 +113,9 @@ public class Tree {
 			//int parentNode = i-1;
 			linkNodes(nodes.get(parentNode),nodes.get(i));
 		}
-		if(root.seqProb(seq) == 0) {
+		if(root.seqProb(nodes) == 0) {
+			System.out.println(root.toSubTree());
+			System.out.println(nodes);
 			throw new RuntimeException("invalid initialized tree!");
 		}
 	}
@@ -172,7 +168,7 @@ public class Tree {
 	private int getRuleId(Node parent) {
 		
 		int res = 1;
-		ArrayList<Node> children = parent.children;
+		ArrayList<Node> children = parent.getChildren();
 		for (Node c: children) {
 			res *= primes[c.id];
 		}

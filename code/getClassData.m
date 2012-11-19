@@ -1,4 +1,4 @@
-function [lab,d, rootDir, iStart] = getClassData(n)
+function [lab,d, rootDir, iStart, saveFile] = getClassData(n)
 
     switch (n)
         case 0
@@ -15,6 +15,7 @@ function [lab,d, rootDir, iStart] = getClassData(n)
             lab{11} = 'doors';
             
             d = 'airplane/';
+            saveFile = 'airplane.txt';
             rootDir = '../data/airplane-stroke/';
             iStart = 1;
         case 1
@@ -25,12 +26,27 @@ function [lab,d, rootDir, iStart] = getClassData(n)
             lab{5} = 'left leg';
             lab{6} = 'right hand';
             lab{7} = 'left hand';
-            lab{8} = 'left foot';
-            lab{9} = 'right foot';
+            lab{8} = 'right foot';
+            lab{9} = 'left foot';
+            lab{10} = 'body';
+            lab{11} = 'hair';
+            lab{12} = 'neck';
             
             d = 'person-walking/';
-            rootDir = '../data/person-walking-stroke/';
+            saveFile = 'person-walking.txt';
+            rootDir = '../data/person-walking-stroke/';            
             iStart = 12161;
+        case 2
+            lab{1} = 'body';
+            lab{2} = 'stem';
+            lab{3} = 'leaf';
+            lab{4} = 'body reflection';
+            
+            d = 'apple/';
+            saveFile = 'apple.txt';
+            rootDir = '../data/apple-stroke/';
+            iStart = 321;
+            
         otherwise
             error('Bad class num: %d', n);
     end

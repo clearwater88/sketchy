@@ -1,11 +1,10 @@
-function parserTypes()
-    classNum = 0; % airplane
+function parserTypes(n)
 
-    [lab,objType,rootDir,iStart] = getClassData(classNum);
+    [lab,objType,rootDir,iStart] = getClassData(n);
     numIm = 80;
     
     for (i=iStart:iStart+numIm-1)
-        display(['On image: ', int2str(i)]);
+        display(['On image: ', int2str(i-iStart+1)]);
         loadFile = ['data/', objType, int2str(i),'.mat'];
         saveFile = ['data/', objType, int2str(i),'-Parts.mat'];
         if(exist(saveFile,'file'))
@@ -24,6 +23,10 @@ function parserTypes()
         im = imread(fName);
 
         load(loadFile,'bbAll');
+        for (i=1:numel(lab))
+            display([int2str(i), '/', lab{i}]) ;
+        end
+    
         partTypes = doParserTypes(im,bbAll,lab);
         save(saveFile,'bbAll','lab','partTypes');
     end    

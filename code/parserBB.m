@@ -1,11 +1,10 @@
-function parserBB()
-    n = 1;
+function parserBB(n)
 
     [~,objType, rootDir,iStart] = getClassData(n);
     numIm = 80;
     
     for (i=iStart:iStart+numIm-1)
-        display(['On image: ', int2str(i)]);
+        display(['On image: ', int2str(i-iStart+1)]);
         saveFile = ['data/', objType, int2str(i),'.mat'];
         if(exist(saveFile,'file'))
             display(['File exists: ', saveFile, '. Continuing...']);
