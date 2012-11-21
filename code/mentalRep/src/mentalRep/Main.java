@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
 public class Main {
@@ -15,13 +14,23 @@ public class Main {
 	private static int MAX_ID = 15;
 	private static double alpha = 0.1;
 	
+	private enum Ctype {airplane,apple,personWalking};
+	
 	public static void main(String [ ] args) {
 		
-		int thin = 5;
-		int burnin = 100;
-		int iters = 30000;
+		int thin = 250;
+		int burnin = 1000;
+		int iters = 100000;
 		
-		String file = "../apple.txt";
+		Ctype ct = Ctype.personWalking;
+		
+		
+		String file = getSeqFile(ct);
+		ArrayList<String> partList = getPartList(ct);
+
+		for (String str : partList) {
+			System.out.println(str);
+		}
 		
 		// Index on parent
 		ArrayList<HashMap<Integer,Integer>> ruleCounts = new ArrayList<HashMap<Integer,Integer>>();
@@ -47,50 +56,101 @@ public class Main {
 		for (int i=0;i<iters;i++) {
 			if (i % 1000 == 0)
 				System.out.println("On iteration: " + i);
-			
-			if (i % thin == 0) {
-				for (int j=0; j < trees.size(); j++) {				
-					trees.get(j).sampleNewConfig();
+
+
+			for (int j=0; j < trees.size(); j++) {	
+				trees.get(j).sampleNewConfig();
+				if ((i % thin == 0) & i > burnin) {
 					allRuleCounts.add(cloneRuleList(ruleCounts));
 				}
 			}
 			
 		}
 		
-		/*
-		for (int i = 0; i < allRuleCounts.size(); i += 1000) {
-			System.out.println("XXXXXX");
-			ArrayList<HashMap<Integer,Integer>> temp = allRuleCounts.get(i);
-			for (int par = 0; par < temp.size(); par++) {
-				HashMap<Integer, Integer> parentRules = temp.get(par);
-				System.out.println("===" + par + "===");
-				for (int rule : parentRules.keySet())
-					System.out.println(Tree.getRuleList(rule) + "/" + parentRules.get(rule));
-			}
-		}
-		*/
 		
-		ArrayList<HashMap<Integer,Double>> postRules = getPosteriorRuleCounts(allRuleCounts,thin,burnin);
+		ArrayList<HashMap<Integer,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
 		for (int par = 0; par < postRules.size(); par++) {
 			HashMap<Integer, Double> parentRules = postRules.get(par);
-			System.out.println("===" + par + "===");
+			if (par >= partList.size())
+				break;
+			System.out.println("===" + partList.get(par) + "===");
 			for (int rule : parentRules.keySet())
 				if (parentRules.get(rule) > 0.01)
-					System.out.println(Tree.getRuleList(rule) + "/" + parentRules.get(rule));
+					System.out.println(Tree.getRuleList(rule, partList) + "/" + parentRules.get(rule));
 		}
 		
 		System.out.println("Done!");
 	}
 	
+	private static String getSeqFile(Ctype ct) {
+		String filename = "";
+		switch(ct) {
+			case airplane:
+				filename = "../airplane.txt";
+				break;
+			case personWalking:
+				filename = "../person-walkingManual.txt";
+				break;
+			case apple:
+				filename = "../apple.txt";
+				break;
+			default:
+				throw new RuntimeException("Bad partlist: " + ct);
+		}
+		return filename;
+	}
+	
+	private static ArrayList<String> getPartList(Ctype ct) {
+		ArrayList<String> partList = new ArrayList<String>();
+
+		String filename = "";
+		switch(ct) {
+			case airplane:
+				filename = "../airplaneParts.txt";
+				break;
+			case personWalking:
+				filename = "../person-walkingParts.txt";
+				break;
+			case apple:
+				filename = "../appleParts.txt";
+				break;
+			default:
+				throw new RuntimeException("Bad partlist: " + ct);
+				
+		}
+		
+		try {
+			FileInputStream fstream;
+			fstream = new FileInputStream(filename);
+			DataInputStream in = new DataInputStream(fstream);
+			BufferedReader br = new BufferedReader(new InputStreamReader(in));
+			String strLine;
+			while ((strLine = br.readLine()) != null)   {
+				partList.add(strLine);
+			}
+			//Close the input stream
+			in.close();
+		} catch (FileNotFoundException e) {
+			System.err.println("Error!: " + e.getMessage());
+		} catch (NumberFormatException e) {
+			System.err.println("Error!: " + e.getMessage());
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.err.println("Error!: " + e.getMessage());
+			e.printStackTrace();
+		}			
+		return partList;
+	}
+
 	// not actual posterior of rule probs: need alpha for that
-	private static ArrayList<HashMap<Integer,Double>> getPosteriorRuleCounts(ArrayList<ArrayList<HashMap<Integer,Integer>>> allRuleCounts, int thin, int burnin) {
+	private static ArrayList<HashMap<Integer,Double>> getPosteriorRuleCounts(ArrayList<ArrayList<HashMap<Integer,Integer>>> allRuleCounts) {
 		ArrayList<HashMap<Integer,Double>> res = new ArrayList<HashMap<Integer,Double>>(); 
 		for (int i = 0; i < MAX_ID; i++) {
 			res.add(new HashMap<Integer,Double>());
 		}
-		double totSamp = Math.floor(((double) allRuleCounts.size()-burnin)/ (double) thin);
+		double totSamp = allRuleCounts.size();
 		
-		for (int i = burnin; i < allRuleCounts.size(); i+= thin) {
+		for (int i = 0; i < allRuleCounts.size(); i+= 1) {
 			ArrayList<HashMap<Integer,Integer>> ruleCount = allRuleCounts.get(i);
 			
 			for (int par = 0; par < ruleCount.size(); par++) {
@@ -116,7 +176,6 @@ public class Main {
 			}
 			
 		}
-		
 		return res;
 	}
 	

@@ -176,14 +176,14 @@ public class Tree {
 	}
 	
 	// stop rule not included (null terminator, in a sense)
-	public static ArrayList<Integer> getRuleList(int ruleId) {
-		ArrayList<Integer> res = new ArrayList<Integer>();
+	public static ArrayList<String> getRuleList(int ruleId, ArrayList<String> partList) {
+		ArrayList<String> res = new ArrayList<String>();
 		for (int i=0;i<primes.length;i++) {
 			while (true) {
 				if (ruleId % primes[i] != 0)
 					break;;
 				ruleId /= primes[i];
-				res.add(i);		
+				res.add(partList.get(i));		
 			}
 		}
 		return res;

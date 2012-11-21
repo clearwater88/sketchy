@@ -46,7 +46,20 @@ function [lab,d, rootDir, iStart, saveFile] = getClassData(n)
             saveFile = 'apple.txt';
             rootDir = '../data/apple-stroke/';
             iStart = 321;
+        case 3
+            lab{1} = 'left eye';
+            lab{2} = 'right eye';
+            lab{3} = 'nose';
+            lab{4} = 'mouth';
+            lab{5} = 'left ear';
+            lab{6} = 'right ear';
+            lab{7} = 'head';
+            lab{8} = 'hair';
             
+            d = 'face/';
+            saveFile = 'face.txt';
+            rootDir = '../data/face-stroke/';
+            iStart = 6241;
         otherwise
             error('Bad class num: %d', n);
     end

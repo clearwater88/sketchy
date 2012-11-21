@@ -1,0 +1,12 @@
+start
+window
+left wing
+right wing
+tail
+cockpit
+body
+fuselage
+engine
+gears
+propeller
+doors

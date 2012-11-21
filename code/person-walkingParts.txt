@@ -1,0 +1,13 @@
+start
+head
+right arm
+left arm
+right leg
+left leg
+right hand
+left hand
+right foot
+left foot
+body
+hair
+neck

@@ -99,23 +99,7 @@ function res = cleanUpObjMask(objMask,bbAll)
         
         if(any(szUse > szOther))
             res(objMask(i)) = 0;
-        end
-        
-        %maskUse = bbAllMask(i,:);
-        
-        %otherMasks = bbAllMask;
-        %otherMasks(i,:) = [];
-        
-        %change to largest/smallest
-        %containsOther = (maskUse(1) <= otherMasks(:,1)) & (maskUse(2) <= otherMasks(:,2)) & ...
-        %                (maskUse(3) >= otherMasks(:,3)) & (maskUse(4) >= otherMasks(:,4));
-        %if (any(containsOther))
-        %   res(objMask(i)) = 0; 
-        %end
-        
-        
-        
-        
+        end                
     end
 
 end

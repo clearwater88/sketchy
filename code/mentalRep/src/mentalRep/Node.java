@@ -1,8 +1,6 @@
 package mentalRep;
 import java.util.ArrayList;
-import java.util.Collections;
 
-import net.sf.javaml.utils.GammaFunction;
 
 class Node implements Comparable<Node> {
 
