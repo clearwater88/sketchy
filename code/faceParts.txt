@@ -1,0 +1,11 @@
+start
+right eye
+left eye
+right eyebrow
+left eyebrow
+nose
+mouth
+right ear
+left ear
+head
+hair

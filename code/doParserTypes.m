@@ -1,4 +1,4 @@
-function [partTypes] = doParserTypes(im,bbAll,lab)
+function [partTypes,bbAll] = doParserTypes(im,bbAll,lab)
     
     partTypes = [];
     for (i=1:size(bbAll,1))
@@ -8,12 +8,11 @@ function [partTypes] = doParserTypes(im,bbAll,lab)
         if(resp == 0)
             break;
         end
-        if(resp == -1)
-            partTypes(end+1) = -1;
-        end
 
         partTypes(end+1,1) = resp;
-        display(lab{resp});
+        if (resp ~= -1)
+            display(lab{resp});
+        end
         
     end
     

@@ -27,7 +27,9 @@ function parserTypes(n)
             display([int2str(i), '/', lab{i}]) ;
         end
     
-        partTypes = doParserTypes(im,bbAll,lab);
+        [partTypes,bbAll] = doParserTypes(im,bbAll,lab);
+        display('Done');
+        pause
         save(saveFile,'bbAll','lab','partTypes');
     end    
 

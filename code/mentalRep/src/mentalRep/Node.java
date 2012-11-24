@@ -47,33 +47,42 @@ class Node implements Comparable<Node> {
 	/*
 	 * Probability of sequence
 	 */
-	double seqProb(ArrayList<Node> nodes) {
-		ArrayList <Node> frontier = new ArrayList<Node>();
-		frontier.addAll(children);
-		double temp = doSeqProb(nodes, 1, frontier,1.0);
-		if (temp == 0) {
-			System.out.println(temp);
-			System.out.println("========");
-			System.out.println(nodes);
-			System.out.println(nodes.get(0).toSubTree());		
-			throw new RuntimeException("aw nuts");
-		}			
-		return temp; 
-	}
-	
-	private double doSeqProb(ArrayList<Node> nodes, int root, ArrayList<Node> frontier, double prob) {
+	public double seqProb(ArrayList<Node> nodes, int root, ArrayList<Node> frontier, ArrayList<Double> frontierWeights, double prob, double decayTrav) {
+		if(frontier.size() != frontierWeights.size())
+			throw new RuntimeException("Frontier nodes and weight sizes do not match");
+				
 		if (root == nodes.size())
 			return prob;
 		
+		double totWeightFrontier = 0;
+		for (double d : frontierWeights) {
+			totWeightFrontier += d;
+		}
+		
 		double totalProb = 0;
-		for (Node f: frontier) {
+		for (int i = 0;i < frontier.size(); i++) {
+			Node f = frontier.get(i);
 			if (f.id == nodes.get(root).id) {
 				
-				ArrayList<Node> frontierCurr = new ArrayList<Node>(frontier);				
-				frontierCurr.remove(f);
+				ArrayList<Node> frontierCurr = new ArrayList<Node>(frontier);
+				ArrayList<Double> frontierWeightsCurr = new ArrayList<Double>(frontierWeights);
+				
+				
+				double probNode = prob*frontierWeights.get(i)/totWeightFrontier;
+				//double probNode = prob/frontierCurr.size();
+				frontierCurr.remove(i);
+				frontierWeightsCurr.remove(i);
+				
+				for (int j = 0; j < frontierWeightsCurr.size(); j++) {
+					frontierWeightsCurr.set(j, decayTrav*frontierWeightsCurr.get(j));
+				}
+				
 				frontierCurr.addAll(f.children);
-								
-				totalProb += doSeqProb(nodes, root+1, frontierCurr,prob/frontier.size());
+				for (int j = 0; j < f.children.size(); j++) {
+					frontierWeightsCurr.add(1.0);
+				}
+
+				totalProb += seqProb(nodes, root+1,frontierCurr,frontierWeightsCurr,probNode, decayTrav);
 
 			}
 		}

@@ -12,9 +12,28 @@ import java.util.HashMap;
 public class Main {
 
 	private static int MAX_ID = 15;
-	private static double alpha = 0.1;
+	private static double alpha = 0.01;
+	private static double decayTrav = 0.01;
 	
-	private enum Ctype {airplane,apple,personWalking};
+	private enum Ctype {airplane,apple,personWalking,face,violin};
+	private static HashMap<Ctype,String> partFiles = new HashMap<Ctype,String>();
+	private static HashMap<Ctype,String> seqFiles = new HashMap<Ctype,String>();
+	
+	static {
+		partFiles.put(Ctype.airplane,"../airplaneParts.txt");
+		partFiles.put(Ctype.personWalking,"../person-walkingParts.txt");
+		partFiles.put(Ctype.apple,"../appleParts.txt");
+		partFiles.put(Ctype.face,"../faceParts.txt");
+		partFiles.put(Ctype.violin,"../violinParts.txt");
+
+		
+		seqFiles.put(Ctype.airplane,"../airplane.txt");
+		seqFiles.put(Ctype.personWalking,"../person-walkingManual.txt");
+		seqFiles.put(Ctype.apple,"../apple.txt");
+		seqFiles.put(Ctype.face,"../face.txt");
+		seqFiles.put(Ctype.violin,"../violinManual.txt");
+		
+	}
 	
 	public static void main(String [ ] args) {
 		
@@ -22,10 +41,9 @@ public class Main {
 		int burnin = 1000;
 		int iters = 100000;
 		
-		Ctype ct = Ctype.personWalking;
+		Ctype ct = Ctype.apple;
 		
-		
-		String file = getSeqFile(ct);
+		String file = seqFiles.get(ct);
 		ArrayList<String> partList = getPartList(ct);
 
 		for (String str : partList) {
@@ -38,25 +56,12 @@ public class Main {
 			ruleCounts.add(new HashMap<Integer,Integer>());
 		}
 		
-		
 		ArrayList<ArrayList<HashMap<Integer,Integer>>> allRuleCounts = new ArrayList<ArrayList<HashMap<Integer,Integer>>>();
-		ArrayList<Tree> trees = makeList(file,alpha,ruleCounts);
-		System.out.println("sz: " + trees.size());
-		
-		System.out.println("Rule counts: ");
-		for (int key=0; key < MAX_ID; key++) {
-			System.out.println(key + "/" + ruleCounts.get(key));
-		}
-		System.out.println("trees: ");
-		for (Tree t : trees) {
-			System.out.println(t);
-		}
-		
-		
+		ArrayList<Tree> trees = makeList(file,alpha,decayTrav,ruleCounts);
+
 		for (int i=0;i<iters;i++) {
 			if (i % 1000 == 0)
 				System.out.println("On iteration: " + i);
-
 
 			for (int j=0; j < trees.size(); j++) {	
 				trees.get(j).sampleNewConfig();
@@ -67,7 +72,6 @@ public class Main {
 			
 		}
 		
-		
 		ArrayList<HashMap<Integer,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
 		for (int par = 0; par < postRules.size(); par++) {
 			HashMap<Integer, Double> parentRules = postRules.get(par);
@@ -76,48 +80,44 @@ public class Main {
 			System.out.println("===" + partList.get(par) + "===");
 			for (int rule : parentRules.keySet())
 				if (parentRules.get(rule) > 0.01)
-					System.out.println(Tree.getRuleList(rule, partList) + "/" + parentRules.get(rule));
+					System.out.println(Tree.getRuleListStrings(rule, partList) + "/" + parentRules.get(rule));
 		}
 		
-		System.out.println("Done!");
-	}
-	
-	private static String getSeqFile(Ctype ct) {
-		String filename = "";
-		switch(ct) {
-			case airplane:
-				filename = "../airplane.txt";
+		ArrayList<ArrayList<HashMap<Integer, Double>>> childParRules = getParentCounts(allRuleCounts);
+		for (int i = 0; i < childParRules.size(); i++) {
+			if (i >= partList.size())
 				break;
-			case personWalking:
-				filename = "../person-walkingManual.txt";
-				break;
-			case apple:
-				filename = "../apple.txt";
-				break;
-			default:
-				throw new RuntimeException("Bad partlist: " + ct);
+			
+			ArrayList<HashMap<Integer, Double>> child = childParRules.get(i);			
+			System.out.println("===" + partList.get(i) + "===");
+			for (int j = 0; j < child.size(); j++) {
+				if (j >= partList.size())
+					break;
+				HashMap<Integer, Double> childParProbs = child.get(j);
+				
+				double totParentProb = 0;
+				for (int rule : childParProbs.keySet()) {
+					totParentProb += childParProbs.get(rule);
+				}
+				System.out.println("   ---" + partList.get(j) + ": " + totParentProb + "---");
+				
+				for (int rule : childParProbs.keySet()) {
+					if (childParProbs.get(rule) > 0.01) {
+						System.out.println("      " + Tree.getRuleListStrings(rule, partList) + "/" + childParProbs.get(rule));
+					}
+				}
+			}
 		}
-		return filename;
+		
+		
+		
+		System.out.println("Done!");
 	}
 	
 	private static ArrayList<String> getPartList(Ctype ct) {
 		ArrayList<String> partList = new ArrayList<String>();
 
-		String filename = "";
-		switch(ct) {
-			case airplane:
-				filename = "../airplaneParts.txt";
-				break;
-			case personWalking:
-				filename = "../person-walkingParts.txt";
-				break;
-			case apple:
-				filename = "../appleParts.txt";
-				break;
-			default:
-				throw new RuntimeException("Bad partlist: " + ct);
-				
-		}
+		String filename = partFiles.get(ct);
 		
 		try {
 			FileInputStream fstream;
@@ -150,9 +150,7 @@ public class Main {
 		}
 		double totSamp = allRuleCounts.size();
 		
-		for (int i = 0; i < allRuleCounts.size(); i+= 1) {
-			ArrayList<HashMap<Integer,Integer>> ruleCount = allRuleCounts.get(i);
-			
+		for (ArrayList<HashMap<Integer,Integer>> ruleCount : allRuleCounts) {			
 			for (int par = 0; par < ruleCount.size(); par++) {
 				int totRules = 0;
 				HashMap<Integer,Double> resPar = res.get(par);
@@ -179,7 +177,57 @@ public class Main {
 		return res;
 	}
 	
-	private static ArrayList<Tree> makeList(String filename, double alpha,ArrayList<HashMap<Integer,Integer>> ruleCounts) {
+	private static ArrayList<ArrayList<HashMap<Integer, Double>>> getParentCounts(ArrayList<ArrayList<HashMap<Integer,Integer>>> allRuleCounts) {
+		ArrayList<ArrayList<HashMap<Integer,Double>>> res = new ArrayList<ArrayList<HashMap<Integer,Double>>>(); 
+		for (int i = 0; i < MAX_ID; i++) {
+			ArrayList<HashMap<Integer,Double>> temp = new ArrayList<HashMap<Integer,Double>>();
+			for (int j = 0; j < MAX_ID; j++) {
+				temp.add(new HashMap<Integer,Double>());
+			}
+			res.add(temp);
+		}
+		
+		for (ArrayList<HashMap<Integer,Integer>> ruleCount : allRuleCounts) {
+			for (int par = 0; par < ruleCount.size(); par++) {
+				HashMap<Integer, Integer> parentRules = ruleCount.get(par);
+				for (int ruleId : parentRules.keySet()) {
+					ArrayList<Integer> childIds = Tree.getRuleList(ruleId);
+					for (int child : childIds) {
+						HashMap<Integer, Double> childParHashMap = res.get(child).get(par);
+						Double temp = childParHashMap.get(ruleId);
+						if (temp == null) {
+							childParHashMap.put(ruleId,(double) parentRules.get(ruleId));
+						} else {
+							childParHashMap.put(ruleId,temp + (double) parentRules.get(ruleId));
+						}
+					}
+				}
+			}
+		}
+		
+		for (int i = 0; i < res.size(); i++) {
+			int totCount = 0;
+			ArrayList<HashMap<Integer,Double>> child = res.get(i);
+			for (int j = 0; j < child.size(); j++) {
+				HashMap<Integer,Double> parRules = child.get(j);
+				for (int ruleId : parRules.keySet()) {
+					totCount += parRules.get(ruleId);
+				}
+			}
+			
+			for (int j = 0; j < child.size(); j++) {
+				HashMap<Integer,Double> parRules = child.get(j);
+				for (int ruleId : parRules.keySet()) {
+					parRules.put(ruleId,(double) parRules.get(ruleId)/(double) totCount);
+				}
+			}
+			
+		}
+		
+		return res;
+		
+	}
+	private static ArrayList<Tree> makeList(String filename, double alpha, double decayTrav, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
 		ArrayList<Tree> trees = new ArrayList<Tree>();
 
 		try {
@@ -197,7 +245,7 @@ public class Main {
 				for (int i = 0; i < seq.length; i++) {
 					seq[i] = Integer.parseInt(str[i]);
 				}
-				trees.add(new Tree(seq,alpha,ruleCounts));
+				trees.add(new Tree(seq,alpha,decayTrav,ruleCounts));
 			}
 			//Close the input stream
 			in.close();

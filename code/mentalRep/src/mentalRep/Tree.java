@@ -11,14 +11,15 @@ public class Tree {
 	private final Random gen = new Random();
 	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53};
 	
+	private final double decayTrav;
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
 	private final Node root;
 	
-	public Tree(int [] seq, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
+	public Tree(int [] seq, double alpha, double decayTrav, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
 		this.alpha = alpha;
-		
+		this.decayTrav = decayTrav;
 		this.ruleCounts = ruleCounts;
 		
 		nodes = new ArrayList<Node>();
@@ -42,7 +43,14 @@ public class Tree {
 	}
 	
 	public double getSeqProb() {
-		return root.seqProb(nodes);
+		ArrayList <Node> frontier = new ArrayList<Node>();
+		ArrayList <Double> frontierWeights = new ArrayList<Double>();
+		frontier.addAll(root.getChildren());
+		for (int i = 0; i < frontier.size(); i++) {
+			frontierWeights.add(1.0);
+		}
+		
+		return root.seqProb(nodes, 1, frontier,frontierWeights,1.0,decayTrav);
 	}
 	
 	/*
@@ -94,14 +102,13 @@ public class Tree {
 
 		double acceptFactorSeq = 1/getSeqProb();
 		
-		/* ugly....
-		 * 
-		 * */
+		// ugly
 		unlinkNode(child);
 		linkNodes(newParent,child);
 		acceptFactorSeq *= getSeqProb();
 		unlinkNode(child);
 		linkNodes(originalParent,child);
+		// ugly
 		
 		double acceptprob = acceptFactorTreeLike*acceptFactorSeq;			
 		return acceptprob > gen.nextDouble(); 
@@ -113,7 +120,14 @@ public class Tree {
 			//int parentNode = i-1;
 			linkNodes(nodes.get(parentNode),nodes.get(i));
 		}
-		if(root.seqProb(nodes) == 0) {
+		
+		ArrayList <Node> frontier = new ArrayList<Node>();
+		ArrayList <Double> frontierWeights = new ArrayList<Double>();
+		frontier.addAll(root.getChildren());
+		for (int i = 0; i < frontier.size(); i++)
+			frontierWeights.add(1.0);
+		
+		if(root.seqProb(nodes, 1, frontier,frontierWeights,1.0,decayTrav) == 0) {
 			System.out.println(root.toSubTree());
 			System.out.println(nodes);
 			throw new RuntimeException("invalid initialized tree!");
@@ -175,16 +189,26 @@ public class Tree {
 		return res;
 	}
 	
-	// stop rule not included (null terminator, in a sense)
-	public static ArrayList<String> getRuleList(int ruleId, ArrayList<String> partList) {
-		ArrayList<String> res = new ArrayList<String>();
+	public static ArrayList<Integer> getRuleList(int ruleId) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
 		for (int i=0;i<primes.length;i++) {
 			while (true) {
 				if (ruleId % primes[i] != 0)
 					break;;
 				ruleId /= primes[i];
-				res.add(partList.get(i));		
+				res.add(i);		
 			}
+		}
+		return res;
+	}
+	
+	// stop rule not included (null terminator, in a sense)
+	public static ArrayList<String> getRuleListStrings(int ruleId, ArrayList<String> partList) {
+		ArrayList<String> res = new ArrayList<String>();
+		ArrayList<Integer> rules = getRuleList(ruleId);
+		
+		for (int rule : rules) {
+			res.add(partList.get(rule));
 		}
 		return res;
 	}

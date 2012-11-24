@@ -1,0 +1,13 @@
+start
+body
+fingerboard
+scroll
+strings
+f-hole
+bow
+bridge
+centre hole
+tailpiece
+chin rest
+string endpiece
+button

@@ -47,19 +47,39 @@ function [lab,d, rootDir, iStart, saveFile] = getClassData(n)
             rootDir = '../data/apple-stroke/';
             iStart = 321;
         case 3
-            lab{1} = 'left eye';
-            lab{2} = 'right eye';
-            lab{3} = 'nose';
-            lab{4} = 'mouth';
-            lab{5} = 'left ear';
-            lab{6} = 'right ear';
-            lab{7} = 'head';
-            lab{8} = 'hair';
+            lab{1} = 'right eye';
+            lab{2} = 'left eye';
+            lab{3} = 'right eyebrow';
+            lab{4} = 'left eyebrow';
+            lab{5} = 'nose';
+            lab{6} = 'mouth';
+            lab{7} = 'right ear';
+            lab{8} = 'left ear';
+            lab{9} = 'head';
+            lab{10} = 'hair';
             
             d = 'face/';
             saveFile = 'face.txt';
             rootDir = '../data/face-stroke/';
             iStart = 6241;
+        case 4
+            lab{1} = 'body';
+            lab{2} = 'fingerboard';
+            lab{3} = 'scroll';
+            lab{4} = 'strings';
+            lab{5} = 'f-hole';
+            lab{6} = 'bow';
+            lab{7} = 'bridge';
+            lab{8} = 'centre hole'; % not actual violin part
+            lab{9} = 'tailpiece';
+            lab{10} = 'chin rest';
+            lab{11} = 'string endpiece';
+            lab{12} = 'button';
+            
+            d = 'violin/';
+            saveFile = 'violin.txt';
+            rootDir = '../data/violin-stroke/';
+            iStart = 19281;
         otherwise
             error('Bad class num: %d', n);
     end
