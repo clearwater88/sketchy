@@ -8,14 +8,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Main {
 
-	private static int MAX_ID = 15;
-	private static double alpha = 0.01;
-	private static double decayTrav = 0.01;
+	private static int MAX_ID = 16;
+	private static double alpha = 0.1;
+	
+	private static final double decayTravMin = 0.01;
+	private static final double decayTravMax = 1;
+	private static final Random gen = new Random();
 	
 	private enum Ctype {airplane,apple,personWalking,face,violin};
+	private static final Ctype ct = Ctype.airplane;
+	
 	private static HashMap<Ctype,String> partFiles = new HashMap<Ctype,String>();
 	private static HashMap<Ctype,String> seqFiles = new HashMap<Ctype,String>();
 	
@@ -37,11 +43,9 @@ public class Main {
 	
 	public static void main(String [ ] args) {
 		
-		int thin = 250;
+		int thin = 100;
 		int burnin = 1000;
 		int iters = 100000;
-		
-		Ctype ct = Ctype.apple;
 		
 		String file = seqFiles.get(ct);
 		ArrayList<String> partList = getPartList(ct);
@@ -56,20 +60,33 @@ public class Main {
 			ruleCounts.add(new HashMap<Integer,Integer>());
 		}
 		
+		double decayTrav = (decayTravMax + decayTravMin)/2;
 		ArrayList<ArrayList<HashMap<Integer,Integer>>> allRuleCounts = new ArrayList<ArrayList<HashMap<Integer,Integer>>>();
-		ArrayList<Tree> trees = makeList(file,alpha,decayTrav,ruleCounts);
-
+		ArrayList<Tree> trees = makeList(file,alpha,ruleCounts);
+		ArrayList<Double> decaySamps= new ArrayList<Double>();
+		
+		double treeAcceptTotal = 0;
+		double decayAcceptTotal = 0;
+		
 		for (int i=0;i<iters;i++) {
 			if (i % 1000 == 0)
 				System.out.println("On iteration: " + i);
 
 			for (int j=0; j < trees.size(); j++) {	
-				trees.get(j).sampleNewConfig();
-				if ((i % thin == 0) & i > burnin) {
-					allRuleCounts.add(cloneRuleList(ruleCounts));
-				}
+				treeAcceptTotal += trees.get(j).sampleNewConfig(decayTrav);
 			}
 			
+			double decayTravPropose = proposeDecay(decayTrav);
+			boolean decayAccept = acceptDecay(decayTrav, decayTravPropose, trees);
+			if (decayAccept) {
+				decayTrav = decayTravPropose; 
+				decayAcceptTotal += decayAccept ? 1.0 : 0.0;
+			}
+			
+			if (((i-burnin) % thin == 0) & i > burnin) {
+				allRuleCounts.add(cloneRuleList(ruleCounts));
+				decaySamps.add(decayTrav);
+			}
 		}
 		
 		ArrayList<HashMap<Integer,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
@@ -109,9 +126,42 @@ public class Main {
 			}
 		}
 		
+		double decayTravMean = 0;
+		for (double d : decaySamps) {
+			decayTravMean += d;
+		}
+		decayTravMean /= decaySamps.size();
+		double decayTravVar = 0;
+		for (double d : decaySamps) {
+			decayTravVar += Math.pow(d-decayTravMean,2);
+		}
+		decayTravVar /= decaySamps.size();
+		System.out.println("Decay mean/var: " + decayTravMean + "/" + decayTravVar);
 		
+		System.out.println("Tree accept ratio: " + treeAcceptTotal/(iters*trees.size()));
+		System.out.println("Decay accept ratio: " + decayAcceptTotal/(iters));
 		
 		System.out.println("Done!");
+	}
+	
+	private static double proposeDecay(double decayTrav) {
+		//return Math.exp(Math.log(decayTravMin) + Math.log(decayTravMax/decayTravMin)*gen.nextDouble());
+		return decayTravMin + (decayTravMax-decayTravMin)*gen.nextDouble();
+		
+		/*
+		double temp = decayTrav+0.1*gen.nextGaussian();
+		return temp > 0 ? temp : decayTrav;
+		*/		
+	}
+	
+	private static boolean acceptDecay(double decayTrav, double decayTravPropose, ArrayList<Tree> trees) {
+		double logDecayProbNew = 0;
+		double logDecayProbOld = 0;
+		for (int j=0; j < trees.size(); j++) {	
+			logDecayProbNew += Math.log(trees.get(j).getSeqProb(decayTravPropose));
+			logDecayProbOld += Math.log(trees.get(j).getSeqProb(decayTrav));
+		}
+		return Math.exp(logDecayProbNew - logDecayProbOld) > gen.nextDouble();
 	}
 	
 	private static ArrayList<String> getPartList(Ctype ct) {
@@ -227,7 +277,7 @@ public class Main {
 		return res;
 		
 	}
-	private static ArrayList<Tree> makeList(String filename, double alpha, double decayTrav, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
+	private static ArrayList<Tree> makeList(String filename, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
 		ArrayList<Tree> trees = new ArrayList<Tree>();
 
 		try {
@@ -245,7 +295,7 @@ public class Main {
 				for (int i = 0; i < seq.length; i++) {
 					seq[i] = Integer.parseInt(str[i]);
 				}
-				trees.add(new Tree(seq,alpha,decayTrav,ruleCounts));
+				trees.add(new Tree(seq,alpha,ruleCounts));
 			}
 			//Close the input stream
 			in.close();

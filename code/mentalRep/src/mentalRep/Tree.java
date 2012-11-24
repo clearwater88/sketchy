@@ -9,17 +9,15 @@ public class Tree {
 	// arraylist index is parent id; start from 0 for start symbol
 	private ArrayList<HashMap<Integer,Integer>> ruleCounts;
 	private final Random gen = new Random();
-	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53};
-	
-	private final double decayTrav;
+	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
 	private final Node root;
 	
-	public Tree(int [] seq, double alpha, double decayTrav, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
+	public Tree(int [] seq, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
 		this.alpha = alpha;
-		this.decayTrav = decayTrav;
 		this.ruleCounts = ruleCounts;
 		
 		nodes = new ArrayList<Node>();
@@ -42,7 +40,7 @@ public class Tree {
 		initializeTree();
 	}
 	
-	public double getSeqProb() {
+	public double getSeqProb(double decayTrav) {
 		ArrayList <Node> frontier = new ArrayList<Node>();
 		ArrayList <Double> frontierWeights = new ArrayList<Double>();
 		frontier.addAll(root.getChildren());
@@ -60,7 +58,7 @@ public class Tree {
 		return ruleCounts;
 	}
 	
-	public Tree sampleNewConfig() {
+	public double sampleNewConfig(double decayTrav) {
 		// Generate child between 2->last (no point resampling root and 2nd elem)
 		int childId = gen.nextInt(nodes.size()-2)+2;
 		Node child = nodes.get(childId);
@@ -69,14 +67,15 @@ public class Tree {
 		int newParentId = gen.nextInt(childId);
 		Node newParent = nodes.get(newParentId);
 		
-		if (accept(originalParent,newParent,child)) {
+		boolean accepted = accept(originalParent,newParent,child,decayTrav);
+		if (accepted) {
 			unlinkNode(child);
 			linkNodes(newParent,child);
 		}
-		return this;
+		return accepted ? 1.0 : 0.0;
 	}
 	
-	private boolean accept(Node originalParent, Node newParent, Node child) {
+	private boolean accept(Node originalParent, Node newParent, Node child, double decayTrav) {
 		if(originalParent==newParent)
 			return true;
 		
@@ -100,12 +99,12 @@ public class Tree {
 		double acceptFactorTreeLike = (count_origPar_newRule/(count_origPar_origRule-1))
 				                      *(count_newPar_newRule/(count_newPar_origRule-1));
 
-		double acceptFactorSeq = 1/getSeqProb();
+		double acceptFactorSeq = 1/getSeqProb(decayTrav);
 		
 		// ugly
 		unlinkNode(child);
 		linkNodes(newParent,child);
-		acceptFactorSeq *= getSeqProb();
+		acceptFactorSeq *= getSeqProb(decayTrav);
 		unlinkNode(child);
 		linkNodes(originalParent,child);
 		// ugly
@@ -127,11 +126,13 @@ public class Tree {
 		for (int i = 0; i < frontier.size(); i++)
 			frontierWeights.add(1.0);
 		
-		if(root.seqProb(nodes, 1, frontier,frontierWeights,1.0,decayTrav) == 0) {
+		/*
+		if(root.seqProb(nodes, 1, frontier,frontierWeights,1.0) == 0) {
 			System.out.println(root.toSubTree());
 			System.out.println(nodes);
 			throw new RuntimeException("invalid initialized tree!");
 		}
+		*/
 	}
 	
 	private void linkNodes(Node parent, Node child) {
