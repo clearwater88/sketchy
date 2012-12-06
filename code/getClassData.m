@@ -8,7 +8,7 @@ function [lab,d, rootDir, iStart, saveFile] = getClassData(n)
             lab{4} = 'tail';
             lab{5} = 'cockpit';
             lab{6} = 'body';
-            lab{7} = 'fuselage';
+            lab{7} = 'exhaust';
             lab{8} = 'engine';
             lab{9} = 'gears';
             lab{10} = 'propeller';
@@ -41,6 +41,7 @@ function [lab,d, rootDir, iStart, saveFile] = getClassData(n)
             lab{2} = 'stem';
             lab{3} = 'leaf';
             lab{4} = 'body reflection';
+            lab{5} = 'roots';
             
             d = 'apple/';
             saveFile = 'apple.txt';

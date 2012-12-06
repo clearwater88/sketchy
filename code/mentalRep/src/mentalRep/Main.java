@@ -20,7 +20,7 @@ public class Main {
 	private static final Random gen = new Random();
 	
 	private enum Ctype {airplane,apple,personWalking,face,violin};
-	private static final Ctype ct = Ctype.airplane;
+	private static final Ctype ct = Ctype.face;
 	
 	private static HashMap<Ctype,String> partFiles = new HashMap<Ctype,String>();
 	private static HashMap<Ctype,String> seqFiles = new HashMap<Ctype,String>();
@@ -33,18 +33,18 @@ public class Main {
 		partFiles.put(Ctype.violin,"../violinParts.txt");
 
 		
-		seqFiles.put(Ctype.airplane,"../airplane.txt");
+		seqFiles.put(Ctype.airplane,"../airplaneManual.txt");
 		seqFiles.put(Ctype.personWalking,"../person-walkingManual.txt");
-		seqFiles.put(Ctype.apple,"../apple.txt");
-		seqFiles.put(Ctype.face,"../face.txt");
+		seqFiles.put(Ctype.apple,"../appleManual.txt");
+		seqFiles.put(Ctype.face,"../faceManual.txt");
 		seqFiles.put(Ctype.violin,"../violinManual.txt");
 		
 	}
 	
 	public static void main(String [ ] args) {
 		
-		int thin = 100;
-		int burnin = 1000;
+		int thin = 25;
+		int burnin = 10000;
 		int iters = 100000;
 		
 		String file = seqFiles.get(ct);
