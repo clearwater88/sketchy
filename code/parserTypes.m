@@ -11,16 +11,8 @@ function parserTypes(n)
             display(['File exists: ', saveFile, '. Continuing...']);
             continue;
         end
-        j =1;
-        while(1)
-            if(exist([rootDir,int2str(i),'-',int2str(j+1),'.png'],'file'))
-               j=j+1; 
-            else
-                break;
-            end
-        end
-        fName = [rootDir,int2str(i),'-',int2str(j),'.png'];
-        im = imread(fName);
+
+        im = getIm([rootDir,int2str(i)]);
 
         load(loadFile,'bbAll');
         for (i=1:numel(lab))
