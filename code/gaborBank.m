@@ -1,10 +1,10 @@
 function gabors = gaborBank()
-    sz = 51;
+    sz = 27;
     bandwidth = 0.5;
     gamma = 1;
-    psi = [0:pi/8:2*pi];
-    lambda= [2,5,10,15,30,50];
-    theta = [0:pi/8:pi];
+    psi = [0:pi/4:2*pi];
+    lambda= [5,10,15];
+    theta = [0:pi/4:pi];
 
     gabors = zeros([sz,sz,numel(psi)*numel(lambda)*numel(theta)]);
     

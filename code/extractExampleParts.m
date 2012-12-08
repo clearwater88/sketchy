@@ -2,7 +2,7 @@ function [partsPos,partNeg] = extractExampleParts(partNum)
     [~,objType, rootDir, iStart] = getClassData(partNum);
 
     numIm = 40;
-    nNeg = 100;
+    nNeg = 20;
     
     partsPos = {};
     partNeg = {};
@@ -12,6 +12,11 @@ function [partsPos,partNeg] = extractExampleParts(partNum)
         
         im = double(getIm([rootDir,int2str(i)]));
         load(loadFileBB,'bbAll');
+        
+        bbAll(:,1) = max(bbAll(:,1),1);
+        bbAll(:,2) = max(bbAll(:,2),1);
+        bbAll(:,3) = min(bbAll(:,3),size(im,1));
+        bbAll(:,4) = min(bbAll(:,4),size(im,2));
         
         for (p=1:size(bbAll,1))
             partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
@@ -30,7 +35,7 @@ end
 
 function res = getNegatives(im,bbAll,nNeg)
     MINWIN = (51 -1)/2;
-    MAXWIN = (201 - 1) /2;
+    MAXWIN = (301 - 1) /2;
     OVERLAP_THRESH = 0.5;
     
     imStack = zeros([size(im),size(bbAll,1)]);
