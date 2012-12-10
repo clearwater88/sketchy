@@ -1,35 +1,51 @@
-function [partsPos,partNeg] = extractExampleParts(partNum)
-    [~,objType, rootDir, iStart] = getClassData(partNum);
+function [partsPosAll,partsNegAll] = extractExampleParts(partNums)
 
     numIm = 40;
     nNeg = 20;
-    
-    partsPos = {};
-    partNeg = {};
-    for (i=iStart:iStart+numIm-1)
-        display(['On image: ', int2str(i-iStart+1)]);
-        loadFileBB = ['data/', objType, int2str(i),'.mat'];
-        
-        im = double(getIm([rootDir,int2str(i)]));
-        load(loadFileBB,'bbAll');
-        
-        bbAll(:,1) = max(bbAll(:,1),1);
-        bbAll(:,2) = max(bbAll(:,2),1);
-        bbAll(:,3) = min(bbAll(:,3),size(im,1));
-        bbAll(:,4) = min(bbAll(:,4),size(im,2));
-        
-        for (p=1:size(bbAll,1))
-            partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
-            minY = find(sum(partTemp,2) > 0,1,'first');
-            minX = find(sum(partTemp,1) > 1,1,'first');
-            maxY = find(sum(partTemp,2) > 0,1,'last');
-            maxX = find(sum(partTemp,1) > 1,1,'last');
 
-            partTemp = partTemp(minY:maxY,minX:maxX);
-            partsPos{end+1,1} = partTemp;
+    partsPosAll = {};
+    partsNegAll = {};
+
+    for (kk=1:numel(partNums))
+        partNum = partNums(kk);
+        display(['On object class: ', int2str(partNum)]);
+        
+        [~,objType, rootDir, iStart] = getClassData(partNum);
+
+        partsPos = {};
+        partsNeg = {};
+        for (i=iStart:iStart+numIm-1)
+            display(['On image: ', int2str(i-iStart+1)]);
+            loadFileBB = ['data/', objType, int2str(i),'.mat'];
+
+            im = double(getIm([rootDir,int2str(i)]));
+            load(loadFileBB,'bbAll');
+
+            bbAll(:,1) = max(bbAll(:,1),1);
+            bbAll(:,2) = max(bbAll(:,2),1);
+            bbAll(:,3) = min(bbAll(:,3),size(im,1));
+            bbAll(:,4) = min(bbAll(:,4),size(im,2));
+
+            for (p=1:size(bbAll,1))
+                partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
+                minY = find(sum(partTemp,2) > 0,1,'first');
+                minX = find(sum(partTemp,1) > 1,1,'first');
+                maxY = find(sum(partTemp,2) > 0,1,'last');
+                maxX = find(sum(partTemp,1) > 1,1,'last');
+
+                partTemp = partTemp(minY:maxY,minX:maxX);
+                partsPos{end+1,1} = partTemp;
+            end
+            partNegTemp = getNegatives(im,bbAll,nNeg);
+            partsNeg = cat(1,partsNeg,partNegTemp);
         end
-        partNegTemp = getNegatives(im,bbAll,nNeg);
-        partNeg = cat(1,partNeg,partNegTemp);
+        
+        partsPosAll = cat(1,partsPosAll,partsPos);
+        partsNegAll = cat(1,partsNegAll,partsNeg);
+        
+        % Stroke based?
+        partsNegStroke = getStrokeNeg(partNum);
+        partsNegAll = cat(1,partsNegAll,partsNegStroke);
     end
 end
 

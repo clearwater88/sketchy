@@ -17,7 +17,7 @@ function [multiClass,confuse,allWinners,tp,fp] = getPerform(svmProbEstimates, tr
 end
 
 function [tp,fp] = getROC(svmProbEstimates,trueLabels,classMap)
-    t = 1:-0.01:0.01;
+    t = 1:-0.01:0.0;
     posClass = find(classMap==1);
     for (i=1:numel(t))
         pos = svmProbEstimates(:,posClass) > t(i);

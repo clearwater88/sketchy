@@ -1,14 +1,12 @@
 function partsNeg = getStrokeNeg(partNum)
     [~,objType,rootDir,iStart] = getClassData(partNum);
-    numIm = 10;
+    numIm = 40;
     negPerIm = 20;
     OVERLAP_THRESH = 0.5;
     
     ALPHA = 0.1;
     DECAY = 0.5;
-    THIN = 200;
-    BURNIN= 1000;
-    SAMPLES = 10000;
+    SAMPLES = 40;
     MINDIM = 51;
     
     partsNeg = {};
@@ -25,13 +23,16 @@ function partsNeg = getStrokeNeg(partNum)
         load(loadFileBB,'bbAll');        
         imStack = zeros([imSize,size(bbAll,1)]);
         for (i=1:size(bbAll,1))
-            imStack(bbAll(i,1):bbAll(i,3),bbAll(i,2):bbAll(i,4),i) = 1;
+            startY = max(bbAll(i,1),1);
+            startX = max(bbAll(i,3),1);
+            
+            endY = min(bbAll(i,2),imSize(1));
+            endX = min(bbAll(i,4),imSize(2));
+            
+            imStack(startY:endY,startX:endX,i) = 1;
         end
         
-
         strokeClusters=sampleddCRP(nStrokes,ALPHA,DECAY,SAMPLES);
-        strokeClusters(1:BURNIN) = [];
-        strokeClusters = strokeClusters(1:THIN:numel(strokeClusters));
         
         strokeIms = getStrokeIms(strokeStack,strokeClusters);
         
@@ -73,10 +74,7 @@ function res = getStrokeIms(strokeStack,strokeClusters)
        st = strokeClusters{i};
        for (j=1:numel(st))
            stUse = st{j};
-           temp = zeros(imSize);
-           for (k=1:numel(stUse))
-              temp = temp + strokeStack(:,:,stUse(k)); 
-           end
+           temp = sum(strokeStack(:,:,stUse),3);
            res(:,:,counter) = double(temp>0);
            a = res(:,:,counter);
            assert(sum(a(:)) > 0);

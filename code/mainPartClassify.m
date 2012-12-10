@@ -1,48 +1,37 @@
-
-pooling = [1,1;2,2;4,4];
-poolMode = 2;
-gabors = gaborBank();
-nGabors = size(gabors,3);
-
-partsPos = {};
-partsNeg = {};
-for (n=0:4)
-    if (n==1) continue; end;
-    
-    [partsPosTemp,partsNegTemp] = extractExampleParts(n);
-    partsPos = cat(1,partsPos,partsPosTemp);
-    partsNeg = cat(1,partsNeg,partsNegTemp);
-end
-
-tic
-posFeat = getResponses(gabors,partsPos,pooling,poolMode);
-toc
-tic
-negFeat = getResponses(gabors,partsNeg,pooling,poolMode);
-toc
-
-
-% make same
-%negFeatUse = negFeat(1:size(posFeat,1),:);
-negFeatUse = negFeat;
-
-nPosTrain = floor(size(posFeat,1)/2);
-posTrain = posFeat(1:nPosTrain,:);
-posTest = posFeat(nPosTrain+1:end,:);
-
-nNegTrain = floor(size(negFeatUse,1)/2);
-negTrain = negFeatUse(1:nNegTrain,:);
-negTest = negFeatUse(nNegTrain+1:end,:);
-
-trainFeat = [posTrain;negTrain];
-testFeat = [posTest;negTest];
-
-trainLabels = [ones(size(posTrain,1),1);2*ones(size(negTrain,1),1)];
-testLabels = [ones(size(posTest,1),1);2*ones(size(negTest,1),1)];
+startup;
 
 params.svmCross = 0;
 params.crossType = 1; % cross-val on acuracy
 params.svmKern = 1;
+params.pooling = [1,1;2,2;4,4];
+params.poolMode = 2;
+
+gabors = gaborBank();
+nGabors = size(gabors,3);
+
+n = [0,2];
+[partsPos,partsNeg] = extractExampleParts(n);
+
+posFeat = getResponses(gabors,partsPos,params.pooling,params.poolMode);
+negFeat = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
+
+%[trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+
+% never seen classes
+[trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+trainFeat = [trainFeat;testFeat];
+trainLabels = [trainLabels;testLabels];
+
+n = [3,4];
+[partsPos,partsNeg] = extractExampleParts(n);
+
+posFeat2 = getResponses(gabors,partsPos,params.pooling,params.poolMode);
+negFeat2 = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
+
+[trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
+testFeat = [trainFeat2;testFeat2];
+testLabels = [trainLabels2;testLabels2];
+% never seen classes
 
 [model, probEstimates, classMap] = ...
           classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
