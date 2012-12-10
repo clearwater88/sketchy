@@ -1,38 +1,36 @@
-startup;
+function mainPartClassify(params,trialNum)
 
-params.svmCross = 0;
-params.crossType = 1; % cross-val on acuracy
-params.svmKern = 1;
-params.pooling = [1,1;2,2;4,4];
-params.poolMode = 2;
+    gabors = gaborBank();
+    nGabors = size(gabors,3);
 
-gabors = gaborBank();
-nGabors = size(gabors,3);
+    saveFile = toString(params,trialNum);
 
-n = [0,2];
-[partsPos,partsNeg] = extractExampleParts(n);
+    [partsPos,partsNeg] = extractExampleParts(params.classTrain,params.nIm);
 
-posFeat = getResponses(gabors,partsPos,params.pooling,params.poolMode);
-negFeat = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
+    posFeat = getResponses(gabors,partsPos,params.pooling,params.poolMode);
+    negFeat = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
 
-%[trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+    if (params.sameClass)
+        [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+    else
+        %%% never seen classes %%%
+        [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+        trainFeat = [trainFeat;testFeat];
+        trainLabels = [trainLabels;testLabels];
 
-% never seen classes
-[trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
-trainFeat = [trainFeat;testFeat];
-trainLabels = [trainLabels;testLabels];
+        [partsPos2,partsNeg2] = extractExampleParts(params.classTest,params.nIm);
 
-n = [3,4];
-[partsPos,partsNeg] = extractExampleParts(n);
+        posFeat2 = getResponses(gabors,partsPos2,params.pooling,params.poolMode);
+        negFeat2 = getResponses(gabors,partsNeg2,params.pooling,params.poolMode);
 
-posFeat2 = getResponses(gabors,partsPos,params.pooling,params.poolMode);
-negFeat2 = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
+        [trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
+        testFeat = [trainFeat2;testFeat2];
+        testLabels = [trainLabels2;testLabels2];
+        %%% never seen classes %%%
+    end
 
-[trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
-testFeat = [trainFeat2;testFeat2];
-testLabels = [trainLabels2;testLabels2];
-% never seen classes
-
-[model, probEstimates, classMap] = ...
-          classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
-[multiClass,confuse,allWinners,tp,fp] = getPerform(probEstimates, testLabels, classMap);
+    [model, probEstimates, classMap] = ...
+              classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
+    [multiClass,confuse,allWinners,tp,fp] = getPerform(probEstimates, testLabels, classMap);
+    save(['res',saveFile],'probEstimates','classMap','multiClass','confuse','allWinners','tp','fp', 'testLabels', '-v7.3');
+end

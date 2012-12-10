@@ -6,7 +6,7 @@ function res = getResponses(gabors,ims,pooling,poolMode)
     res = zeros(numel(ims),nFeat);
     for (i=1:numel(ims))
         clear temp;
-        display(['On image ', int2str(i), ' of ', int2str(numel(ims))]);
+        display(['On part ', int2str(i), ' of ', int2str(numel(ims))]);
         for (j=1:nGabors)
             imFilt = conv2(ims{i},gabors(:,:,j),'same');
             if (~exist('temp','var'))
