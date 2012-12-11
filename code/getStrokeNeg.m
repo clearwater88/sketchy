@@ -1,7 +1,5 @@
-function partsNeg = getStrokeNeg(partNum,num)
-    [~,objType,rootDir,~] = getClassData(partNum);
+function partsNeg = getStrokeNeg(strokesStack,bbAll,numNeg)
 
-    negPerIm = 20;
     OVERLAP_THRESH = 0.5;
     
     ALPHA = 0.1;
@@ -10,13 +8,10 @@ function partsNeg = getStrokeNeg(partNum,num)
     MINDIM = 51;
     
     partsNeg = {};
-    [~,strokeStack] = getIm([rootDir,int2str(num)]);
     
-    imSize = [size(strokeStack,1),size(strokeStack,2)];
-    nStrokes = size(strokeStack,3);
+    imSize = [size(strokesStack,1),size(strokesStack,2)];
+    nStrokes = size(strokesStack,3);
     
-    loadFileBB = ['data/', objType, int2str(num),'.mat'];
-    load(loadFileBB,'bbAll');
     imStack = zeros([imSize,size(bbAll,1)]);
     for (i=1:size(bbAll,1))
         startY = max(bbAll(i,1),1);
@@ -30,7 +25,7 @@ function partsNeg = getStrokeNeg(partNum,num)
     
     strokeClusters=sampleddCRP(nStrokes,ALPHA,DECAY,SAMPLES);
     
-    strokeIms = getStrokeIms(strokeStack,strokeClusters);
+    strokeIms = getStrokeIms(strokesStack,strokeClusters);
     
     negFound = 0;
     for (p=1:size(strokeIms,3))
@@ -50,7 +45,7 @@ function partsNeg = getStrokeNeg(partNum,num)
         partTemp = partTemp(minY:maxY,minX:maxX);
         partsNeg{end+1,1} = partTemp;
         negFound = negFound+1;
-        if(negFound >= negPerIm)
+        if(negFound >= numNeg)
             break;
         end
     end

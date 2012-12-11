@@ -1,10 +1,11 @@
-function [partsPosAll,partsNegAll] = extractExampleParts(classNum,numIm)
+function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm)
 
     TOT_IM = 40;
     imsUse = randperm(TOT_IM)-1;
     imsUse = imsUse(1:numIm);
     
     nNeg = 20;
+    nNegStroke = 20;
     
     partsPosAll = {};
     partsNegAll = {};
@@ -25,7 +26,9 @@ function [partsPosAll,partsNegAll] = extractExampleParts(classNum,numIm)
             
             loadFileBB = ['data/', objType, int2str(num),'.mat'];
             
-            im = double(getIm([rootDir,int2str(num)]));
+            [im,strokesStack] = getIm([rootDir,int2str(num)]);
+            im = double(im);
+            
             load(loadFileBB,'bbAll');
             
             % fix to image size
@@ -53,7 +56,7 @@ function [partsPosAll,partsNegAll] = extractExampleParts(classNum,numIm)
             partsNeg = cat(1,partsNeg,partNegTemp);
             
             % Stroke based?
-            partsNegStroke = getStrokeNeg(partNum,num);
+            partsNegStroke = getStrokeNeg(strokesStack,bbAll,nNegStroke);
             partsNeg = cat(1,partsNeg,partsNegStroke);
         
         end

@@ -14,9 +14,9 @@ function [str] = toString(params,trialNum)
     end
     
 
-    str = sprintf('kern%d_poolingLevs%d_poolMode%d_cltrain%d_cltest%d_trial%d', ...
+    str = sprintf('kern%d_poolingLevs%d_poolMode%d_feat%d_cltrain%d_cltest%d_trial%d', ...
                    params.svmKern,size(params.pooling,1), params.poolMode, ...
-                   Ctrain,Ctest,trialNum);
+                   params.featType,Ctrain,Ctest,trialNum);
                
 end
 

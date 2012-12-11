@@ -1,14 +1,11 @@
-function mainPartClassify(params,trialNum)
-
-    gabors = gaborBank();
-    nGabors = size(gabors,3);
+function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNum)
 
     saveFile = toString(params,trialNum);
 
     [partsPos,partsNeg] = extractExampleParts(params.classTrain,params.nIm);
 
-    posFeat = getResponses(gabors,partsPos,params.pooling,params.poolMode);
-    negFeat = getResponses(gabors,partsNeg,params.pooling,params.poolMode);
+    posFeat = getFeatures(partsPos,params);
+    negFeat = getFeatures(partsNeg,params);
 
     if (params.sameClass)
         [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
@@ -20,8 +17,8 @@ function mainPartClassify(params,trialNum)
 
         [partsPos2,partsNeg2] = extractExampleParts(params.classTest,params.nIm);
 
-        posFeat2 = getResponses(gabors,partsPos2,params.pooling,params.poolMode);
-        negFeat2 = getResponses(gabors,partsNeg2,params.pooling,params.poolMode);
+        posFeat2 = getFeatures(partsPos2,params);
+        negFeat2 = getFeatures(partsNeg2,params);
 
         [trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
         testFeat = [trainFeat2;testFeat2];
@@ -32,5 +29,7 @@ function mainPartClassify(params,trialNum)
     [model, probEstimates, classMap] = ...
               classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
     [multiClass,confuse,allWinners,tp,fp] = getPerform(probEstimates, testLabels, classMap);
-    save(['res',saveFile],'probEstimates','classMap','multiClass','confuse','allWinners','tp','fp', 'testLabels', '-v7.3');
+    save(['res',saveFile],'params','probEstimates','classMap', ...
+                          'multiClass','confuse','allWinners', ...
+                          'tp','fp', 'testLabels', '-v7.3');
 end
