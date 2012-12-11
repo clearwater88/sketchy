@@ -1,5 +1,19 @@
-function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm)
+function [partsPosAll,partsNegAll,imsUseAll] = extractExampleParts(classNum,numIm,trialNum)
+    display(['On object class: ', int2str(classNum)]);
+    
+    partsPosAll = {};
+    partsNegAll = {};
+    imsUseAll = cell(numel(classNum),1);
+    for (i=1:numel(classNum))
+        [partsPos,partsNeg,imsUse] = doExtractExampleParts(classNum(i),numIm,trialNum);
+        partsPosAll = cat(1,partsPosAll,partsPos);
+        partsNegAll = cat(1,partsNegAll,partsNeg);
+        imsUseAll{i} = imsUse;
+    end
 
+end
+
+function [partsPosAll,partsNegAll,imsUse] = doExtractExampleParts(classNum,numIm,trialNum)
     TOT_IM = 40;
 
     nNeg = 20;
@@ -7,66 +21,70 @@ function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm)
     
     partsPosAll = {};
     partsNegAll = {};
+
+    partsFile = sprintf('parts_C%d_nIm%d_t%d',classNum,numIm,trialNum);
     
-    imsUse = cell(numel(classNum),1);
-    for (kk=1:numel(classNum))
-        partNum = classNum(kk);
-        display(['On object class: ', int2str(partNum)]);
-        
-        [~,objType, rootDir, iStart] = getClassData(partNum);
-        
-        partsPos = {};
-        partsNeg = {};
+    if(exist([partsFile,'.mat'],'file'))
+        display(['Parts file exists. Loading...']);
+        load(partsFile,'partsPosAll','partsNegAll','imsUse');
+        return;
+    end
+    display(['Parts file does not exist. Computing...']);
+
+    [~,objType, rootDir, iStart] = getClassData(classNum);
     
-        temp = randperm(TOT_IM)-1;
-        imsUse{kk} = temp(1:numIm);
+    partsPos = {};
+    partsNeg = {};
     
-        nImsUse = numel(imsUse{kk});
-        for (i=1:nImsUse)
-            display(['On image: ', int2str(i), ' of ', int2str(nImsUse)]);
-            num = iStart+imsUse{kk}(i);
-            display(['Loading file number: ', int2str(num)]);
-            
-            loadFileBB = ['data/', objType, int2str(num),'.mat'];
-            
-            [im,strokesStack] = getIm([rootDir,int2str(num)]);
-            im = double(im);
-            
-            load(loadFileBB,'bbAll');
-            
-            % fix to image size
-            bbAll(:,1) = max(bbAll(:,1),1);
-            bbAll(:,2) = max(bbAll(:,2),1);
-            bbAll(:,3) = min(bbAll(:,3),size(im,1));
-            bbAll(:,4) = min(bbAll(:,4),size(im,2));
-            
-            % crop to smallest image size
-            bbAllCrop = zeros(size(bbAll));
-            for (p=1:size(bbAll,1))
-                partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
-                bbAllCrop(p,1) = find(sum(partTemp,2) > 0,1,'first') + bbAll(p,1)-1;
-                bbAllCrop(p,3) = find(sum(partTemp,2) > 0,1,'last') + bbAll(p,1)-1;
-                
-                bbAllCrop(p,2) = find(sum(partTemp,1) > 0,1,'first') + bbAll(p,2)-1;
-                bbAllCrop(p,4) = find(sum(partTemp,1) > 0,1,'last') + bbAll(p,2)-1;
-            end
-            
-            for (p=1:size(bbAllCrop,1))
-                partTemp = getPartTemp(bbAllCrop,p,im);
-                partsPos{end+1,1} = partTemp;
-            end
-            partNegTemp = getNegatives(im,bbAll,nNeg);
-            partsNeg = cat(1,partsNeg,partNegTemp);
-            
-            % Stroke based?
-            partsNegStroke = getStrokeNeg(strokesStack,bbAll,nNegStroke);
-            partsNeg = cat(1,partsNeg,partsNegStroke);
+    temp = randperm(TOT_IM)-1;
+    imsUse = temp(1:numIm);
+    
+    nImsUse = numel(imsUse);
+    for (i=1:nImsUse)
+        display(['On image: ', int2str(i), ' of ', int2str(nImsUse)]);
+        num = iStart+imsUse(i);
+        display(['Loading file number: ', int2str(num)]);
         
+        loadFileBB = ['data/', objType, int2str(num),'.mat'];
+        
+        [im,strokesStack] = getIm([rootDir,int2str(num)]);
+        im = double(im);
+        
+        load(loadFileBB,'bbAll');
+        
+        % fix to image size
+        bbAll(:,1) = max(bbAll(:,1),1);
+        bbAll(:,2) = max(bbAll(:,2),1);
+        bbAll(:,3) = min(bbAll(:,3),size(im,1));
+        bbAll(:,4) = min(bbAll(:,4),size(im,2));
+        
+        % crop to smallest image size
+        bbAllCrop = zeros(size(bbAll));
+        for (p=1:size(bbAll,1))
+            partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
+            bbAllCrop(p,1) = find(sum(partTemp,2) > 0,1,'first') + bbAll(p,1)-1;
+            bbAllCrop(p,3) = find(sum(partTemp,2) > 0,1,'last') + bbAll(p,1)-1;
+            
+            bbAllCrop(p,2) = find(sum(partTemp,1) > 0,1,'first') + bbAll(p,2)-1;
+            bbAllCrop(p,4) = find(sum(partTemp,1) > 0,1,'last') + bbAll(p,2)-1;
         end
         
-        partsPosAll = cat(1,partsPosAll,partsPos);
-        partsNegAll = cat(1,partsNegAll,partsNeg);
+        for (p=1:size(bbAllCrop,1))
+            partTemp = getPartTemp(bbAllCrop,p,im);
+            partsPos{end+1,1} = partTemp;
+        end
+        partNegTemp = getNegatives(im,bbAll,nNeg);
+        partsNeg = cat(1,partsNeg,partNegTemp);
+        
+        % Stroke based?
+        partsNegStroke = getStrokeNeg(strokesStack,bbAll,nNegStroke);
+        partsNeg = cat(1,partsNeg,partsNegStroke);
+        
     end
+    
+    partsPosAll = cat(1,partsPosAll,partsPos);
+    partsNegAll = cat(1,partsNegAll,partsNeg);
+    save(partsFile,'partsPosAll','partsNegAll','imsUse','-v7.3');
 end
 
 function partTemp = getPartTemp(bbAllCrop,p,im)

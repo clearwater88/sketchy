@@ -1,14 +1,14 @@
 function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNum)
 
-    saveFile = toString(params,trialNum);
-    featFile = ['feats_',saveFile];
+    [featFile,classifyPart] = toString(params,trialNum);
+    featFile = ['feats_',featFile];
             
     %somewhat pointless, since we still need to pool during feature
     %extraction
     if(~exist([featFile,'.mat'],'file'))
         display(['Feature file does not exist. Computing...']);
 
-        [partsPos,partsNeg,imsUse] = extractExampleParts(params.classTrain,params.nIm);
+        [partsPos,partsNeg,imsUse] = extractExampleParts(params.classTrain,params.nIm,trialNum);
 
         posFeat = getFeatures(partsPos,params);
         negFeat = getFeatures(partsNeg,params);
@@ -22,7 +22,7 @@ function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNu
             trainFeat = [trainFeat;testFeat];
             trainLabels = [trainLabels;testLabels];
 
-            [partsPos2,partsNeg2,imsUse2] = extractExampleParts(params.classTest,params.nIm);
+            [partsPos2,partsNeg2,imsUse2] = extractExampleParts(params.classTest,params.nIm,trialNum);
 
             posFeat2 = getFeatures(partsPos2,params);
             negFeat2 = getFeatures(partsNeg2,params);
@@ -35,14 +35,16 @@ function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNu
         
         save(featFile,'params','trainFeat','testFeat','trainLabels','testLabels','imsUse','imsUse2');
     else
-        display(['Feature file does exists. Loading...']);
+        display(['Feature file exists. Loading...']);
         load(featFile);
     end
 
     [model, probEstimates, classMap] = ...
               classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
     [multiClass,confuse,allWinners,tp,fp] = getPerform(probEstimates, testLabels, classMap);
-    save(['res_',saveFile],'params','probEstimates','classMap', ...
-                          'multiClass','confuse','allWinners', ...
-                          'tp','fp', 'testLabels', '-v7.3');
+    
+    save(['res_',classifyPart,featFile], ...
+            'params','probEstimates','classMap', ...
+            'multiClass','confuse','allWinners', ...
+            'tp','fp', 'testLabels', '-v7.3');
 end
