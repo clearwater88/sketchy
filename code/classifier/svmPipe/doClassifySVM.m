@@ -23,9 +23,11 @@ function [model, probEstimates] = ...
      display('Getting gram matrices');
      switch(params.svmKern)
          case 0
+             display('Dot product');
              trainKern = dotKer(trainFeaturesAll, trainFeaturesAll);
              testKern = dotKer(testFeaturesAll, trainFeaturesAll);
          case 1
+             display('Intersection');
              trainKern = histInter(trainFeaturesAll, trainFeaturesAll);
              testKern = histInter(testFeaturesAll, trainFeaturesAll);
          otherwise
@@ -38,7 +40,7 @@ function [model, probEstimates] = ...
      for (c=1:size(cTry,1))
          %svmStr = sprintf('-m 500 -v 5 -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
          svmStr = sprintf('-m 1000 -q -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
-         for (ii=1:3) %average over 3 cross-val splits trials
+         for (ii=1:2) %average over 2 cross-val splits trials
              classMax(c,1) = classMax(c,1)+do_binary_cross_validation(trainLabels,trainKernSerial,svmStr,2,params.crossType);
          end
      end

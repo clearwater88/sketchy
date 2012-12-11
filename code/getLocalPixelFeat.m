@@ -1,4 +1,4 @@
-function res = getLocalPixelFeat(parts,pooling,poolMode,summarizeLocal)
+function res = getLocalPixelFeat(parts,pooling,poolMode,summarizeLocal,shifts)
 
     if(summarizeLocal)
         nFeats = sum(prod(pooling,2)*2^9);
@@ -17,12 +17,8 @@ function res = getLocalPixelFeat(parts,pooling,poolMode,summarizeLocal)
         window = meshgridRaster(1:size(partUse,1),1:size(partUse,2));
         temp = zeros([size(partUse),9]);
 
-        counter = 1;
-        for (yShift=-1:1)
-            for (xShift=-1:1)
-                temp(:,:,counter) = nocircshift(partUse,[yShift,xShift]);
-                counter = counter+1;
-            end
+        for (i=1:size(shifts,1))
+            temp(:,:,i) = nocircshift(partUse,shifts(i,:));
         end
 
         if (summarizeLocal)

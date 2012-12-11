@@ -36,7 +36,7 @@ function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNu
         save(featFile,'params','trainFeat','testFeat','trainLabels','testLabels','imsUse','imsUse2');
     else
         display(['Feature file exists. Loading...']);
-        load(featFile);
+        load(featFile,'trainFeat','testFeat','trainLabels','testLabels','imsUse','imsUse2');
     end
 
     [model, probEstimates, classMap] = ...

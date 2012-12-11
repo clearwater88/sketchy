@@ -1,21 +1,22 @@
 function [partsPosAll,partsNegAll,imsUseAll] = extractExampleParts(classNum,numIm,trialNum)
-    display(['On object class: ', int2str(classNum)]);
     
     partsPosAll = {};
     partsNegAll = {};
     imsUseAll = cell(numel(classNum),1);
     for (i=1:numel(classNum))
+        display(['On object class: ', int2str(classNum(i))]);
+    
         [partsPos,partsNeg,imsUse] = doExtractExampleParts(classNum(i),numIm,trialNum);
         partsPosAll = cat(1,partsPosAll,partsPos);
         partsNegAll = cat(1,partsNegAll,partsNeg);
         imsUseAll{i} = imsUse;
     end
-
 end
 
 function [partsPosAll,partsNegAll,imsUse] = doExtractExampleParts(classNum,numIm,trialNum)
     TOT_IM = 40;
-
+    MIN_DIM = 28;
+    
     nNeg = 20;
     nNegStroke = 20;
     
@@ -59,25 +60,21 @@ function [partsPosAll,partsNegAll,imsUse] = doExtractExampleParts(classNum,numIm
         bbAll(:,4) = min(bbAll(:,4),size(im,2));
         
         % crop to smallest image size
-        bbAllCrop = zeros(size(bbAll));
-        for (p=1:size(bbAll,1))
-            partTemp = im(bbAll(p,1):bbAll(p,3),bbAll(p,2):bbAll(p,4));
-            bbAllCrop(p,1) = find(sum(partTemp,2) > 0,1,'first') + bbAll(p,1)-1;
-            bbAllCrop(p,3) = find(sum(partTemp,2) > 0,1,'last') + bbAll(p,1)-1;
-            
-            bbAllCrop(p,2) = find(sum(partTemp,1) > 0,1,'first') + bbAll(p,2)-1;
-            bbAllCrop(p,4) = find(sum(partTemp,1) > 0,1,'last') + bbAll(p,2)-1;
-        end
+        bbAllCrop = cropBB(im,bbAll);
         
         for (p=1:size(bbAllCrop,1))
+            if (((bbAllCrop(p,3)-bbAllCrop(p,1)) < MIN_DIM) || ...
+                ((bbAllCrop(p,4)-bbAllCrop(p,2)) < MIN_DIM))
+                continue
+            end
             partTemp = getPartTemp(bbAllCrop,p,im);
             partsPos{end+1,1} = partTemp;
         end
-        partNegTemp = getNegatives(im,bbAll,nNeg);
+        partNegTemp = getNegatives(im,bbAll,nNeg,MIN_DIM);
         partsNeg = cat(1,partsNeg,partNegTemp);
         
         % Stroke based?
-        partsNegStroke = getStrokeNeg(strokesStack,bbAll,nNegStroke);
+        partsNegStroke = getStrokeNeg(strokesStack,bbAll,nNegStroke,MIN_DIM);
         partsNeg = cat(1,partsNeg,partsNegStroke);
         
     end
@@ -89,30 +86,33 @@ end
 
 function partTemp = getPartTemp(bbAllCrop,p,im)
     bbUse = bbAllCrop(p,:);
-    bbAllCrop(p,:) = [];
+   
+    %disable contained checks
+%    bbAllCrop(p,:) = [];
+%     isContained = (bbAllCrop(:,1) > bbUse(1)) & ...
+%                   (bbAllCrop(:,2) > bbUse(2)) & ...
+%                   (bbAllCrop(:,3) < bbUse(3)) & ...
+%                   (bbAllCrop(:,4) < bbUse(4));
     
-    isContained = (bbAllCrop(:,1) > bbUse(1)) & ...
-                  (bbAllCrop(:,2) > bbUse(2)) & ...
-                  (bbAllCrop(:,3) < bbUse(3)) & ...
-                  (bbAllCrop(:,4) < bbUse(4));
+%     containedIm = zeros(size(im));
+%     for (i=1:numel(isContained))
+%         if (isContained(i) == 0)
+%             continue;
+%         end
+%         bb = bbAllCrop(i,:);
+%         containedIm(bb(1):bb(3),bb(2):bb(4)) = ...
+%                       containedIm(bb(1):bb(3),bb(2):bb(4)) + ...
+%                       im(bb(1):bb(3),bb(2):bb(4));
+%     end
+%     partTemp = im - containedIm;
+%     partTemp = max(partTemp,0);
+    %disable contained checks
     
-    containedIm = zeros(size(im));
-    for (i=1:numel(isContained))
-        if (isContained(i) == 0)
-            continue;
-        end
-        bb = bbAllCrop(i,:);
-        containedIm(bb(1):bb(3),bb(2):bb(4)) = ...
-                      containedIm(bb(1):bb(3),bb(2):bb(4)) + ...
-                      im(bb(1):bb(3),bb(2):bb(4));
-    end
-    partTemp = im - containedIm;
-    partTemp = max(partTemp,0);
+    partTemp = im;
     partTemp = partTemp(bbUse(1):bbUse(3),bbUse(2):bbUse(4));
 end
 
-function res = getNegatives(im,bbAll,nNeg)
-    MINWIN = (51 -1)/2;
+function res = getNegatives(im,bbAll,nNeg,MINWIN)
     MAXWIN = (301 - 1) /2;
     OVERLAP_THRESH = 0.5;
 
@@ -130,7 +130,7 @@ function res = getNegatives(im,bbAll,nNeg)
         [y,x] = ind2sub(size(im),px(ind));
         dims = round(MINWIN + (MAXWIN-MINWIN)*rand(2,1));
         bbNeg = [max(1,y-dims(1)), max(1,x-dims(2)), ...
-            min(size(im,1),y+dims(1)), min(size(im,2),x+dims(2))];
+                 min(size(im,1),y+dims(1)), min(size(im,2),x+dims(2))];
         imNeg = zeros(size(im));
         imNeg(bbNeg(1):bbNeg(3),bbNeg(2):bbNeg(4)) = 1;
         areaImNeg = sum(imNeg(:));
@@ -138,11 +138,17 @@ function res = getNegatives(im,bbAll,nNeg)
         areaInt = double(bsxfun(@and,imStack,imNeg));
         areaInt = sum(sum(areaInt,1),2);
         percentOverlap = 2*areaInt./(areasStack+areaImNeg);
-
+        
         if (any(percentOverlap > OVERLAP_THRESH))
             continue;
         end
 
+        bbNeg = cropBB(im,bbNeg);
+        if (((bbNeg(3)-bbNeg(1)) < MINWIN) || ...
+            ((bbNeg(4)-bbNeg(2)) < MINWIN))
+            continue;
+        end;
+        
         res{end+1,1} = im(bbNeg(1):bbNeg(3),bbNeg(2):bbNeg(4));
     end
 end
