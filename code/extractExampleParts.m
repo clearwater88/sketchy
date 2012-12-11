@@ -1,15 +1,14 @@
 function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm)
 
     TOT_IM = 40;
-    imsUse = randperm(TOT_IM)-1;
-    imsUse = imsUse(1:numIm);
-    
+
     nNeg = 20;
     nNegStroke = 20;
     
     partsPosAll = {};
     partsNegAll = {};
     
+    imsUse = cell(numel(classNum),1);
     for (kk=1:numel(classNum))
         partNum = classNum(kk);
         display(['On object class: ', int2str(partNum)]);
@@ -18,10 +17,14 @@ function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm)
         
         partsPos = {};
         partsNeg = {};
-
-        for (i=1:numel(imsUse))
-            display(['On image: ', int2str(i), ' of ', int2str(numel(imsUse))]);
-            num = iStart+imsUse(i);
+    
+        temp = randperm(TOT_IM)-1;
+        imsUse{kk} = temp(1:numIm);
+    
+        nImsUse = numel(imsUse{kk});
+        for (i=1:nImsUse)
+            display(['On image: ', int2str(i), ' of ', int2str(nImsUse)]);
+            num = iStart+imsUse{kk}(i);
             display(['Loading file number: ', int2str(num)]);
             
             loadFileBB = ['data/', objType, int2str(num),'.mat'];

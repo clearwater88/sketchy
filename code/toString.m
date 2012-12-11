@@ -12,11 +12,10 @@ function [str] = toString(params,trialNum)
     else
         Ctest = Ctrain;
     end
-    
 
-    str = sprintf('kern%d_poolingLevs%d_poolMode%d_feat%d_cltrain%d_cltest%d_trial%d', ...
+    str = sprintf('kern%d_poolingLevs%d_poolMode%d_feat%d_cltrain%d_cltest%d_numIm%d_trial%d', ...
                    params.svmKern,size(params.pooling,1), params.poolMode, ...
-                   params.featType,Ctrain,Ctest,trialNum);
+                   params.featType,Ctrain,Ctest,params.nIm,trialNum);
                
 end
 

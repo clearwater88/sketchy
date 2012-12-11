@@ -5,11 +5,14 @@ function res = getLocalPixelFeat(parts,pooling,poolMode,summarizeLocal)
     else
         nFeats = sum(prod(pooling,2)*9);
     end
+    nParts = numel(parts);
     
-    res = zeros(numel(parts),nFeats);
-        
-    for (p=1:numel(parts))
-        display(['Extracting pixel featre on part: ', int2str(p)]);
+    res = zeros(nParts,nFeats);
+    
+    for (p=1:nParts)
+        if (mod(p,5) == 0)
+            display(['Extracting pixel feature on part: ', int2str(p), ' of ', int2str(nParts)]);
+        end
         partUse = parts{p};
         window = meshgridRaster(1:size(partUse,1),1:size(partUse,2));
         temp = zeros([size(partUse),9]);

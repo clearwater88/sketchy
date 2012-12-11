@@ -1,35 +1,48 @@
 function [multiClass,confuse,allWinners,tp,fp] = mainPartClassify(params,trialNum)
 
     saveFile = toString(params,trialNum);
+    featFile = ['feats_',saveFile];
+            
+    %somewhat pointless, since we still need to pool during feature
+    %extraction
+    if(~exist([featFile,'.mat'],'file'))
+        display(['Feature file does not exist. Computing...']);
 
-    [partsPos,partsNeg] = extractExampleParts(params.classTrain,params.nIm);
+        [partsPos,partsNeg,imsUse] = extractExampleParts(params.classTrain,params.nIm);
 
-    posFeat = getFeatures(partsPos,params);
-    negFeat = getFeatures(partsNeg,params);
+        posFeat = getFeatures(partsPos,params);
+        negFeat = getFeatures(partsNeg,params);
 
-    if (params.sameClass)
-        [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+        if (params.sameClass)
+            [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+            imsUse2= 0; %avoid matlab erroring out
+        else
+            %%% never seen classes %%%
+            [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
+            trainFeat = [trainFeat;testFeat];
+            trainLabels = [trainLabels;testLabels];
+
+            [partsPos2,partsNeg2,imsUse2] = extractExampleParts(params.classTest,params.nIm);
+
+            posFeat2 = getFeatures(partsPos2,params);
+            negFeat2 = getFeatures(partsNeg2,params);
+
+            [trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
+            testFeat = [trainFeat2;testFeat2];
+            testLabels = [trainLabels2;testLabels2];
+            %%% never seen classes %%%
+        end
+        
+        save(featFile,'params','trainFeat','testFeat','trainLabels','testLabels','imsUse','imsUse2');
     else
-        %%% never seen classes %%%
-        [trainFeat,testFeat,trainLabels,testLabels] = splitFeat(posFeat,negFeat);
-        trainFeat = [trainFeat;testFeat];
-        trainLabels = [trainLabels;testLabels];
-
-        [partsPos2,partsNeg2] = extractExampleParts(params.classTest,params.nIm);
-
-        posFeat2 = getFeatures(partsPos2,params);
-        negFeat2 = getFeatures(partsNeg2,params);
-
-        [trainFeat2,testFeat2,trainLabels2,testLabels2] = splitFeat(posFeat2,negFeat2);
-        testFeat = [trainFeat2;testFeat2];
-        testLabels = [trainLabels2;testLabels2];
-        %%% never seen classes %%%
+        display(['Feature file does exists. Loading...']);
+        load(featFile);
     end
 
     [model, probEstimates, classMap] = ...
               classifySVM(params, trainFeat, testFeat, trainLabels, testLabels);
     [multiClass,confuse,allWinners,tp,fp] = getPerform(probEstimates, testLabels, classMap);
-    save(['res',saveFile],'params','probEstimates','classMap', ...
+    save(['res_',saveFile],'params','probEstimates','classMap', ...
                           'multiClass','confuse','allWinners', ...
                           'tp','fp', 'testLabels', '-v7.3');
 end
