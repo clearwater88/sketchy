@@ -21,16 +21,7 @@ function [res] = poolSpatialFeatures(ims, poolingMode, nPools)
             feat = ims(startY(i):startY(i)+lenStride(1)-1, ...
                        startX(j):startX(j)+lenStride(2)-1,...
                        :,:);
-            switch(poolingMode)
-                case 0 
-                    feat = mean(mean(feat,1),2);
-                case 1
-                    feat = max(max(feat,[],1),[],2);
-                case 2
-                    feat = sum(sum(feat,1),2);
-                otherwise
-                    error(['Unrecognized poolingMode: ', int2str(poolingMode)]);
-            end
+            feat = pool(feat,poolingMode);
             feat = reshape(feat, [C,nEx]);
             res(:,marker:marker+C-1) = feat';
             marker = marker+C;

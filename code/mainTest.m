@@ -1,15 +1,15 @@
 startup;
-nTrials = 5;
+nTrials = 2;
 
-params.nIm = 40;
+params.nIm = 6;
 params.svmCross = 0;
 params.crossType = 1; % cross-val on acuracy
 
 params.svmKern = 1; %0=dot, 1=intersect
 
-params.sameClass = 0;
-params.classTrain = [0,2,3];
-params.classTest = [4]; % only used if sameClass == 0
+params.sameClass = 1;
+params.classTrain = [3,4];
+params.classTest = [0,2]; % only used if sameClass == 0
 
 params.poolMode = 0; %0=mean,1=max,2=sum
 params.pooling = [1,1;2,2;4,4];
@@ -22,16 +22,7 @@ params.pooling = [1,1;2,2;4,4];
 % 5 = complex cell (pool over phase, scale), do no split pos/neg features
 % 6 = complex cell (pool over phase, scale), split pos/neg features
 
-ftTry = [2,4];
-for (ft=1:numel(ftTry))
-    params.featType = ftTry(ft);
-    for (t=1:nTrials)
-        display(['On trial ', int2str(t)]);
-        [multiClass(t,1),confuse(:,:,t),~,tp(t,:),fp(t,:)] = mainPartClassify(params,t);
-    end
-end
-
-params.svmKern = 0; %0=dot, 1=intersect
+ftTry = [2];
 for (ft=1:numel(ftTry))
     params.featType = ftTry(ft);
     for (t=1:nTrials)

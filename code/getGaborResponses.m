@@ -1,5 +1,5 @@
 function res = getGaborResponses(gabors,parts,pooling,poolMode,doRectify)
-
+    % res: #parts x nFeat, nFeat = nGabors*nPooling
     nGabors = size(gabors,3);
 
     nFeat = sum(prod(pooling,2)*nGabors);
@@ -12,7 +12,9 @@ function res = getGaborResponses(gabors,parts,pooling,poolMode,doRectify)
     
     for (i=1:nParts)
         clear temp;
-        display(['On part ', int2str(i), ' of ', int2str(numel(parts))]);
+        if (mod(i,10) == 0)
+            display(['On part ', int2str(i), ' of ', int2str(numel(parts))]);
+        end
         for (j=1:nGabors)
             imFilt = conv2(parts{i},gabors(:,:,j),'same');
             if (~exist('temp','var'))

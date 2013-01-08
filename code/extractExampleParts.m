@@ -1,19 +1,4 @@
-function [partsPosAll,partsNegAll,imsUseAll] = extractExampleParts(classNum,numIm,trialNum)
-    
-    partsPosAll = {};
-    partsNegAll = {};
-    imsUseAll = cell(numel(classNum),1);
-    for (i=1:numel(classNum))
-        display(['On object class: ', int2str(classNum(i))]);
-    
-        [partsPos,partsNeg,imsUse] = doExtractExampleParts(classNum(i),numIm,trialNum);
-        partsPosAll = cat(1,partsPosAll,partsPos);
-        partsNegAll = cat(1,partsNegAll,partsNeg);
-        imsUseAll{i} = imsUse;
-    end
-end
-
-function [partsPosAll,partsNegAll,imsUse] = doExtractExampleParts(classNum,numIm,trialNum)
+function [partsPosAll,partsNegAll,imsUse] = extractExampleParts(classNum,numIm,trialNum)
     TOT_IM = 40;
     MIN_DIM = 28;
     

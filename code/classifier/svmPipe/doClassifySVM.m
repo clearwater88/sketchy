@@ -35,22 +35,26 @@ function [model, probEstimates] = ...
      end
      display('Done getting gram matrices');
      
-     trainKernSerial = getKern(trainKern, 0);
+     trainKernSerial = getKern(trainKern, 1);
      
-     for (c=1:size(cTry,1))
-         %svmStr = sprintf('-m 500 -v 5 -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
-         svmStr = sprintf('-m 1000 -q -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
-         for (ii=1:2) %average over 2 cross-val splits trials
-             classMax(c,1) = classMax(c,1)+do_binary_cross_validation(trainLabels,trainKernSerial,svmStr,2,params.crossType);
+     if(params.svmCross)
+         for (c=1:size(cTry,1))
+             %svmStr = sprintf('-m 500 -v 5 -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
+             svmStr = sprintf('-m 1000 -q -t 4 -b 1 -c %f -w1 %f', cTry(c), wTry);
+             for (ii=1:2) %average over 2 cross-val splits trials
+                 classMax(c,1) = classMax(c,1)+do_binary_cross_validation(trainLabels,trainKernSerial,svmStr,2,params.crossType);
+             end
          end
-     end
 
-     
-     winVal = max(classMax(:));
-     [c] = ind2sub(size(classMax), find(classMax==winVal, 1));
-     
-     CUse = cTry(c);
-     svmStr = sprintf('-t 4 -b 1 -q -c %f -w1 %f', CUse, wTry);
+
+         winVal = max(classMax(:));
+         [c] = ind2sub(size(classMax), find(classMax==winVal, 1));
+
+         CUse = cTry(c);
+     else
+         CUse = cTry(1);
+     end
+     svmStr = sprintf('-t 4 -b 1 -c %f -w1 %f', CUse, wTry);
      model = svmtrain(trainLabels, trainKernSerial, svmStr);
      
      
@@ -77,7 +81,8 @@ end
 
 function res = getKern(kernAll, checkCol)
     if (checkCol)
-        chol(kernAll);
+        [~,p] = chol(kernAll);
+        kernAll = kernAll + 0.001*eye(size(kernAll,1));
     end
     res = [(1:size(kernAll,1))', kernAll]; % include sample serial number as first column
 end

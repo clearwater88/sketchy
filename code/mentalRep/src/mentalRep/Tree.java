@@ -7,16 +7,17 @@ import java.util.Random;
 public class Tree {
 	
 	// arraylist index is parent id; start from 0 for start symbol
-	private ArrayList<HashMap<Integer,Integer>> ruleCounts;
+	private ArrayList<HashMap<Long,Integer>> ruleCounts;
 	private final Random gen = new Random();
-	private static final int[] primes = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
-
+	private static final int[] factors = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+	
+	
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
 	private final Node root;
 	
-	public Tree(int [] seq, double alpha, ArrayList<HashMap<Integer,Integer>> ruleCounts) {
+	public Tree(int [] seq, double alpha, ArrayList<HashMap<Long,Integer>> ruleCounts) {
 		this.alpha = alpha;
 		this.ruleCounts = ruleCounts;
 		
@@ -25,9 +26,9 @@ public class Tree {
 		for (int id: seq) {
 			Node n = new Node(id);
 			nodes.add(n);
-			int ruleId = getRuleId(n);
+			long ruleId = getRuleId(n);
 			
-			HashMap<Integer,Integer> rule = ruleCounts.get(id);
+			HashMap<Long,Integer> rule = ruleCounts.get(id);
 
 			if (rule.get(ruleId) == null)
 				rule.put(ruleId,1);
@@ -52,9 +53,9 @@ public class Tree {
 	}
 	
 	/*
-	 * should clone for safety-defensive copying.
+	 * should clone for defensive copying.
 	 */
-	public ArrayList<HashMap<Integer,Integer>> getRuleCounts() {
+	public ArrayList<HashMap<Long,Integer>> getRuleCounts() {
 		return ruleCounts;
 	}
 	
@@ -79,14 +80,14 @@ public class Tree {
 		if(originalParent==newParent)
 			return true;
 		
-		int origParent_origRule = getRuleId(originalParent);
-		int origParent_newRule = getRuleId(originalParent)/primes[child.id];
+		long origParent_origRule = getRuleId(originalParent);
+		long origParent_newRule = getRuleId(originalParent)/factors[child.id];
 		
-		int newParent_origRule = getRuleId(newParent);
-		int newParent_newRule = getRuleId(newParent)*primes[child.id];
+		long newParent_origRule = getRuleId(newParent);
+		long newParent_newRule = getRuleId(newParent)*factors[child.id];
 			
-		HashMap<Integer,Integer> origParentRules = ruleCounts.get(originalParent.id);
-		HashMap<Integer,Integer> newParentRules = ruleCounts.get(newParent.id);
+		HashMap<Long,Integer> origParentRules = ruleCounts.get(originalParent.id);
+		HashMap<Long,Integer> newParentRules = ruleCounts.get(newParent.id);
 	
 		double count_origPar_origRule = alpha+origParentRules.get(origParent_origRule);
 		double count_newPar_origRule = alpha+newParentRules.get(newParent_origRule);
@@ -125,14 +126,6 @@ public class Tree {
 		frontier.addAll(root.getChildren());
 		for (int i = 0; i < frontier.size(); i++)
 			frontierWeights.add(1.0);
-		
-		/*
-		if(root.seqProb(nodes, 1, frontier,frontierWeights,1.0) == 0) {
-			System.out.println(root.toSubTree());
-			System.out.println(nodes);
-			throw new RuntimeException("invalid initialized tree!");
-		}
-		*/
 	}
 	
 	private void linkNodes(Node parent, Node child) {
@@ -149,8 +142,8 @@ public class Tree {
 	}
 	
 	private void decrementRule(Node parent) {
-		HashMap<Integer,Integer> parentRules = ruleCounts.get(parent.id);
-		int ruleId = getRuleId(parent);
+		HashMap<Long,Integer> parentRules = ruleCounts.get(parent.id);
+		long ruleId = getRuleId(parent);
 		Integer count = parentRules.get(ruleId);
 		if (count == null) {
 			throw new RuntimeException("Rules does not exist: " + ruleId);
@@ -165,8 +158,8 @@ public class Tree {
 	}
 	
 	private void incrementRule(Node parent) {
-		HashMap<Integer,Integer> parentRules = ruleCounts.get(parent.id);
-		int ruleId = getRuleId(parent);
+		HashMap<Long,Integer> parentRules = ruleCounts.get(parent.id);
+		long ruleId = getRuleId(parent);
 		Integer count = parentRules.get(ruleId);
 
 		int oldVal = 0;
@@ -180,31 +173,38 @@ public class Tree {
 	/*
 	 * 1 is the special 'stop' rule
 	 */
-	private int getRuleId(Node parent) {
+	private long getRuleId(Node parent) {
 		
-		int res = 1;
+		long res = 1;
 		ArrayList<Node> children = parent.getChildren();
+		long old = res;
 		for (Node c: children) {
-			res *= primes[c.id];
+			res *= factors[c.id];
+			if (res < old) {
+				System.out.println(old);
+				System.out.println(res);
+				throw new RuntimeException("Rule id went over");
+			}
+			old = res;
 		}
 		return res;
 	}
 	
-	public static ArrayList<Integer> getRuleList(int ruleId) {
+	public static ArrayList<Integer> getRuleList(long ruleId) {
 		ArrayList<Integer> res = new ArrayList<Integer>();
-		for (int i=0;i<primes.length;i++) {
+
+		for (int i=factors.length-1; i>= 0; i--) {
 			while (true) {
-				if (ruleId % primes[i] != 0)
-					break;;
-				ruleId /= primes[i];
-				res.add(i);		
+				if (ruleId % factors[i] != 0) break;
+				ruleId /= factors[i];
+				res.add(i);	
 			}
 		}
 		return res;
 	}
 	
 	// stop rule not included (null terminator, in a sense)
-	public static ArrayList<String> getRuleListStrings(int ruleId, ArrayList<String> partList) {
+	public static ArrayList<String> getRuleListStrings(long ruleId, ArrayList<String> partList) {
 		ArrayList<String> res = new ArrayList<String>();
 		ArrayList<Integer> rules = getRuleList(ruleId);
 		

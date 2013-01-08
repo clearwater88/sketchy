@@ -13,10 +13,10 @@ function [strFeat,strClassify] = toString(params,trialNum)
         Ctest = Ctrain;
     end
 
-    strFeat = sprintf('poolingLevs%d_poolMode%d_feat%d_cltrain%d_cltest%d_numIm%d_trial%d', ...
+    strFeat = sprintf('poolingLevs%d_poolMode%d_feat%d_numIm%d_trial%d', ...
                       size(params.pooling,1), params.poolMode, ...
-                      params.featType,Ctrain,Ctest,params.nIm,trialNum);
+                      params.featType,params.nIm,trialNum);
                   
-    strClassify = sprintf(' kern%d', params.svmKern);
+    strClassify = sprintf(' kern%d_sameClass%d_cltrain%d_cltest%d_', params.svmKern, params.sameClass, Ctrain,Ctest);
 end
 

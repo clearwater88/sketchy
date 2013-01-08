@@ -67,14 +67,13 @@ class Node implements Comparable<Node> {
 				ArrayList<Node> frontierCurr = new ArrayList<Node>(frontier);
 				ArrayList<Double> frontierWeightsCurr = new ArrayList<Double>(frontierWeights);
 				
-				
 				double probNode = prob*frontierWeights.get(i)/totWeightFrontier;
 				//double probNode = prob/frontierCurr.size();
 				frontierCurr.remove(i);
 				frontierWeightsCurr.remove(i);
 				
 				for (int j = 0; j < frontierWeightsCurr.size(); j++) {
-					frontierWeightsCurr.set(j, decayTrav*frontierWeightsCurr.get(j));
+					frontierWeightsCurr.set(j, Math.exp(-decayTrav)*frontierWeightsCurr.get(j));
 				}
 				
 				frontierCurr.addAll(f.children);
