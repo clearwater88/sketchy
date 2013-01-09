@@ -1,0 +1,10 @@
+start
+body
+lens
+flash
+picture-button
+top-bar-thingy
+handle
+specularities
+display
+controls

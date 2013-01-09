@@ -29,20 +29,32 @@ public class utils {
 		throw new RuntimeException("aw nuts");
 	}
 	
-	public static LinkedHashMap<Long, Double> getSortedHashMap(HashMap<Long, Double> hashMap) {
-		List<Map.Entry<Long, Double>> list = new LinkedList<Map.Entry<Long, Double>>(hashMap.entrySet());
+	public static <T> LinkedHashMap<T, Double> getSortedHashMap(HashMap<T, Double> hashMap) {
+		List<Map.Entry<T, Double>> list = new LinkedList<Map.Entry<T, Double>>(hashMap.entrySet());
 
-		Collections.sort(list, new Comparator<Map.Entry<Long, Double>>() {
-			public int compare(Map.Entry<Long, Double> m1, Map.Entry<Long, Double> m2) {
+		Collections.sort(list, new Comparator<Map.Entry<T, Double>>() {
+			public int compare(Map.Entry<T, Double> m1, Map.Entry<T, Double> m2) {
 				return (m2.getValue()).compareTo(m1.getValue());
 			}
 		});
 
-		LinkedHashMap<Long, Double> res = new LinkedHashMap<Long, Double>();
-		for (Map.Entry<Long, Double> entry : list) {
+		LinkedHashMap<T, Double> res = new LinkedHashMap<T, Double>();
+		for (Map.Entry<T, Double> entry : list) {
 			res.put(entry.getKey(), entry.getValue());
 		}
 		return res;
 	}
+	
+
+	public static <T, V> ArrayList<HashMap<T,V>> cloneRuleList(ArrayList<HashMap<T,V>> ruleCounts) {
+		ArrayList<HashMap<T,V>> res = new ArrayList<HashMap<T,V>>();
+		
+		for (int i = 0; i < ruleCounts.size(); i++) {
+			HashMap<T,V> temp = new HashMap<T,V>(ruleCounts.get(i));
+			res.add(temp);
+		}		
+		return res;
+	}
+	
 	
 }

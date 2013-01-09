@@ -1,0 +1,74 @@
+===start===
+[body]/0.9859025032938031
+[handle, body]/0.00602766798418973
+[picture-button, body]/0.0026350461133069843
+[handle, flash, body]/0.0017127799736495403
+[flash, body]/0.0011198945981554678
+===body===
+[flash, lens]/0.6287549407114641
+[picture-button, flash]/0.07585638998682444
+[picture-button, lens]/0.05286561264822155
+[picture-button, picture-button]/0.050000000000000225
+[display]/0.043379446640316226
+[handle, flash, lens]/0.04120553359683775
+[]/0.025329380764163505
+[flash, flash]/0.02460474308300405
+[specularities, lens]/0.017457180500658653
+[lens]/0.012318840579710137
+[picture-button, flash, lens]/0.008003952569169973
+[specularities, picture-button, lens]/0.004347826086956531
+[top-bar-thingy, flash, lens]/0.003458498023715417
+[display, lens]/0.002832674571805012
+[controls, controls, controls, display, picture-button]/0.0019104084321475653
+[handle, flash, flash, lens]/0.001877470355731228
+[handle, top-bar-thingy, flash, lens]/0.0012187088274044802
+===lens===
+[picture-button]/0.5639410408432162
+[]/0.2865612648221346
+[top-bar-thingy]/0.08675065876152808
+[handle, flash]/0.028532608695651763
+[top-bar-thingy, flash]/0.020586297760210783
+[handle, picture-button]/0.0035820158102766743
+[handle, top-bar-thingy]/0.0031291172595520377
+[flash]/0.0015645586297760204
+[handle]/0.0015233860342555993
+[specularities]/0.0011940052700922263
+[top-bar-thingy, picture-button]/0.0010704874835309618
+===flash===
+[]/0.92505175983437
+[picture-button]/0.05526068134763801
+[handle]/0.013702239789196336
+[flash]/0.00248447204968944
+[handle, flash]/0.001693958215697344
+[top-bar-thingy, picture-button]/0.0010163749294184075
+===picture-button===
+[]/0.9926048705852213
+[handle]/0.0026775468570700003
+[specularities]/0.001912533469335712
+[top-bar-thingy]/0.001912533469335712
+===top-bar-thingy===
+[]/0.8728590250329316
+[flash]/0.10803689064558686
+[handle]/0.014492753623188392
+[handle, flash]/0.0026350461133069834
+[flash, flash]/0.0019762845849802375
+===handle===
+[]/0.9996706192358226
+===specularities===
+[]/0.999999999999986
+===display===
+[lens]/0.4433465085638948
+[controls, controls, controls, picture-button]/0.3675889328063216
+[]/0.10342555994729893
+[controls, controls]/0.02371541501976283
+[controls, controls, controls]/0.022397891963109342
+[controls, controls, picture-button]/0.018445322793148877
+[controls]/0.015151515151515155
+[controls, picture-button]/0.005928853754940713
+===controls===
+[]/0.9459815546771971
+[controls]/0.019762845849802365
+[picture-button]/0.017566974088713213
+[controls, picture-button]/0.011418533157663585
+[controls, controls, picture-button]/0.0030742204655248135
+[controls, controls]/0.0021958717610891525

@@ -8,24 +8,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Random;
 
 public class Main {
 
-	private static enum Ctype {airplane,apple,personWalking,face,violin,camera};
-
-	private static final double alpha = 0.1;
+	private static enum Ctype {airplane,apple,personWalking,face,violin,camera,personSitting,test};
 	
 	private static final double DECAY_TRAV_MIN = 0;
 	private static final double DECAY_TRAV_MAX = 2;
 	
 	private static final int THIN = 25;
-	private static final int BURNIN = 10000;
-	private static final int ITERS = 200000;
+	private static final int BURNIN = 1000;
+	private static final int ITERS = 20000;
 	
 	private static final Random GEN = new Random();
 	private static final String ROOT_DATA_FOLDER = "../mentalData/";
@@ -45,6 +40,7 @@ public class Main {
 		partFiles.put(Ctype.face,ROOT_DATA_FOLDER.concat("faceParts.txt"));
 		partFiles.put(Ctype.violin,ROOT_DATA_FOLDER.concat("violinParts.txt"));
 		partFiles.put(Ctype.camera,ROOT_DATA_FOLDER.concat("cameraParts.txt"));
+		partFiles.put(Ctype.personSitting,ROOT_DATA_FOLDER.concat("person-sittingParts.txt"));
 		
 		seqFiles.put(Ctype.airplane,ROOT_DATA_FOLDER.concat("airplaneManual"));
 		seqFiles.put(Ctype.personWalking,ROOT_DATA_FOLDER.concat("person-walkingManual"));
@@ -52,6 +48,7 @@ public class Main {
 		seqFiles.put(Ctype.face,ROOT_DATA_FOLDER.concat("faceManual"));
 		seqFiles.put(Ctype.violin,ROOT_DATA_FOLDER.concat("violinManual"));
 		seqFiles.put(Ctype.camera,ROOT_DATA_FOLDER.concat("cameraManual"));
+		seqFiles.put(Ctype.personSitting,ROOT_DATA_FOLDER.concat("person-sittingManual"));
 		
 		outFiles.put(Ctype.airplane,ROOT_RES_FOLDER.concat("airplaneManual").concat(resSuffix));
 		outFiles.put(Ctype.personWalking,ROOT_RES_FOLDER.concat("person-walkingManual").concat(resSuffix));
@@ -59,20 +56,34 @@ public class Main {
 		outFiles.put(Ctype.face,ROOT_RES_FOLDER.concat("faceManual").concat(resSuffix));
 		outFiles.put(Ctype.violin,ROOT_RES_FOLDER.concat("violinManual").concat(resSuffix));
 		outFiles.put(Ctype.camera,ROOT_RES_FOLDER.concat("cameraManual").concat(resSuffix));
+		outFiles.put(Ctype.personSitting,ROOT_RES_FOLDER.concat("person-sittingManual").concat(resSuffix));
+		
+		partFiles.put(Ctype.test,ROOT_DATA_FOLDER.concat("testParts.txt"));
+		seqFiles.put(Ctype.test,ROOT_DATA_FOLDER.concat("test"));
+		outFiles.put(Ctype.test,ROOT_RES_FOLDER.concat("test"));
+	
 	}
 	
 	public static void main(String [ ] args) throws FileNotFoundException {
+
 		/*
-		for (Ctype ct : Ctype.values()) {
-			partList = getPartList(ct);
-			doMain(ct);
-		}
-		*/
-		Ctype ct = Ctype.camera;
+		double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
+		for (double alpha : alphaTry)
+			for (Ctype ct : Ctype.values()) {
+				partList = getPartList(ct);
+				doMain(ct,alpha);
+			}
+		}*/
+		
+		
+		double alpha = 0.1;
+		Ctype ct = Ctype.personSitting;
 		partList = getPartList(ct);
-		doMain(ct);
+		doMain(ct,alpha);
 	}
-	private static void doMain(Ctype ct) throws FileNotFoundException {
+		
+	
+	private static void doMain(Ctype ct, double alpha) throws FileNotFoundException {
 		
 		String filePref = seqFiles.get(ct);
 		String file = filePref.concat(".txt");
@@ -105,110 +116,35 @@ public class Main {
 			}
 			
 			if (((i-BURNIN) % THIN == 0) && (i > BURNIN)) {
-				allRuleCounts.add(cloneRuleList(ruleCounts));
+				allRuleCounts.add(utils.cloneRuleList(ruleCounts));
 				decaySamps.add(decayTrav);
 			}
 		}
 
-		PrintStream out = new PrintStream(outFiles.get(ct).concat("-parentView").concat(".txt"));
-		outputPosteriorRuleCounts(allRuleCounts,out);
-		out.close();
-		outputPosteriorRuleCounts(allRuleCounts,System.out);
+		String outFilesPrefix = outFiles.get(ct).concat("-" + new Double(alpha).toString());
 		
-		out = new PrintStream(outFiles.get(ct).concat("-childView").concat(".txt"));
-		outputMostLikelyGens(allRuleCounts, out);
+		PrintStream out = new PrintStream(outFilesPrefix.concat("-parentView").concat(".txt"));
+		ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
+		IO.outputPosteriorRuleCounts(postRules,partList,out);
 		out.close();
-		outputMostLikelyGens(allRuleCounts,System.out);
+		IO.outputPosteriorRuleCounts(postRules,partList,System.out);
 		
-		out = new PrintStream(outFiles.get(ct).concat("-childStats").concat(".txt"));
-		outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, out);
+		out = new PrintStream(outFilesPrefix.concat("-childView").concat(".txt"));
+		ArrayList<ArrayList<HashMap<Long, Double>>> childParRules = getParentCounts(allRuleCounts);
+		IO.outputMostLikelyGens(childParRules, partList, out);
 		out.close();
-		outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, System.out);
+		IO.outputMostLikelyGens(childParRules, partList, System.out);
+		
+		out = new PrintStream(outFilesPrefix.concat("-childStats").concat(".txt"));
+		IO.outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, ITERS, out);
+		out.close();
+		IO.outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, ITERS, System.out);
 		
 
-		
 		System.out.println("Done!");
 	}
 
-	private static void outputStats(ArrayList<Double> decaySamps, 
-			                        int treeAcceptTotal, int decayAcceptTotal, 
-			                        ArrayList<Tree> trees, PrintStream out) {
-		
-		// Decay stats
-		double decayTravMean = 0;
-		for (double d : decaySamps) {
-			decayTravMean += d;
-		}
-		decayTravMean /= decaySamps.size();
-		double decayTravVar = 0;
-		for (double d : decaySamps) {
-			decayTravVar += Math.pow(d-decayTravMean,2);
-		}
-		decayTravVar /= decaySamps.size();
-		
-		// Decay stats
-		out.println("Decay mean/var: " + decayTravMean + "/" + decayTravVar);
-		out.println("Tree accept ratio: " + ((double) treeAcceptTotal)/(ITERS*trees.size()));
-		out.println("Decay accept ratio: " + ((double) decayAcceptTotal)/(ITERS));
-		
-	}
-	private static void outputMostLikelyGens(ArrayList<ArrayList<HashMap<Long, Integer>>> allRuleCounts, PrintStream out) {
-		ArrayList<ArrayList<HashMap<Long, Double>>> childParRules = getParentCounts(allRuleCounts);
-		for (int i = 0; i < childParRules.size(); i++) {
-			
-			ArrayList<HashMap<Long, Double>> child = childParRules.get(i);	
-			
-			Collections.sort(child,new Comparator<HashMap<Long,Double>>() {
-	            public int compare(HashMap<Long,Double> m1, HashMap<Long,Double> m2) {
-	            	
-	            	double tot1 = 0;	
-	            	for (long rule : m1.keySet()) {
-	            		tot1 += m1.get(rule);
-					}
-	            	double tot2 = 0;	
-	            	for (long rule : m2.keySet()) {
-	            		tot2 += m2.get(rule);
-					}
-	            	
-	                if (tot1 <= tot2) return 1;
-	                else return -1;
-	            }
-	        });
-			
-			out.println("=== Child: " + partList.get(i) + "===");
-			for (int j = 0; j < child.size(); j++) {
-				
-				LinkedHashMap<Long, Double> childParProbs = utils.getSortedHashMap(child.get(j));
-				
-				double totParentProb = 0;
-				for (long rule : childParProbs.keySet()) {
-					totParentProb += childParProbs.get(rule);
-				}
-				out.println("   --- Parent: " + partList.get(j) + ": " + totParentProb + "---");
-				
-				for (long rule : childParProbs.keySet()) {
-					if (childParProbs.get(rule) > 0.01) {
-						out.println("         " + Tree.getRuleListStrings(rule, partList) + "/" + childParProbs.get(rule));
-					}
-				}
-			}
-		}
-	}
 	
-	private static void outputPosteriorRuleCounts(ArrayList<ArrayList<HashMap<Long, Integer>>> allRuleCounts, PrintStream out) {
-		
-		ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
-		for (int par = 0; par < postRules.size(); par++) {
-			
-			LinkedHashMap<Long, Double> parentRules = utils.getSortedHashMap(postRules.get(par));
-
-			out.println("===" + partList.get(par) + "===");
-			
-			for (long rule : parentRules.keySet())
-				if (parentRules.get(rule) > 0.01)
-					out.println(Tree.getRuleListStrings(rule, partList) + "/" + parentRules.get(rule));
-		}
-	}
 
 	private static double proposeDecay(double decayTrav) {
 		return DECAY_TRAV_MIN + (DECAY_TRAV_MAX-DECAY_TRAV_MIN)*GEN.nextDouble();
@@ -252,7 +188,8 @@ public class Main {
 		return partList;
 	}
 
-	// not actual posterior of rule probs: need alpha for that
+	// not actual posterior of rule probs: need alpha for that\
+	// List on parents, hash on ruleID and probs
 	private static ArrayList<HashMap<Long,Double>> getPosteriorRuleCounts(ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts) {
 		ArrayList<HashMap<Long,Double>> res = new ArrayList<HashMap<Long,Double>>(); 
 		for (int i = 0; i < partList.size(); i++) {
@@ -339,45 +276,11 @@ public class Main {
 	private static ArrayList<Tree> makeTrees(String filename, double alpha, ArrayList<HashMap<Long,Integer>> ruleCounts) {
 		ArrayList<Tree> trees = new ArrayList<Tree>();
 
-		try {
-			FileInputStream fstream;
-			fstream = new FileInputStream(filename);
-			DataInputStream in = new DataInputStream(fstream);
-			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			String strLine;
-			while ((strLine = br.readLine()) != null)   {
-				// Print the content on the console
-				System.out.println("==A==");
-				System.out.println(strLine);
-				String str[] = strLine.split(","); 
-				int [] seq = new int[str.length];
-				for (int i = 0; i < seq.length; i++) {
-					seq[i] = Integer.parseInt(str[i]);
-				}
-				trees.add(new Tree(seq,alpha,ruleCounts));
-			}
-			//Close the input stream
-			in.close();
-		} catch (FileNotFoundException e) {
-			System.err.println("Error!: " + e.getMessage());
-		} catch (NumberFormatException e) {
-			System.err.println("Error!: " + e.getMessage());
-			e.printStackTrace();
-		} catch (IOException e) {
-			System.err.println("Error!: " + e.getMessage());
-			e.printStackTrace();
-		}			
+		ArrayList<int[]> seqs = IO.readFile(filename);
+		for (int[] seq : seqs) {
+			trees.add(new Tree(seq,alpha,ruleCounts));
+		}
 		return trees;
 	}
 
-	private static ArrayList<HashMap<Long,Integer>> cloneRuleList(ArrayList<HashMap<Long,Integer>> ruleCounts) {
-		ArrayList<HashMap<Long,Integer>> res = new ArrayList<HashMap<Long,Integer>>();
-		
-		for (int i = 0; i < ruleCounts.size(); i++) {
-			HashMap<Long,Integer> temp = new HashMap<Long,Integer>(ruleCounts.get(i));
-			res.add(temp);
-		}		
-		return res;
-	}
-	
 }

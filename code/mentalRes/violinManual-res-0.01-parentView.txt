@@ -1,0 +1,178 @@
+===start===
+[fingerboard, body]/0.8826745718050113
+[scroll, body]/0.014361001317522937
+[chin rest, tailpiece, bridge, fingerboard, body]/0.011890645586297785
+[centre hole, fingerboard, body]/0.00935441370223979
+[strings, scroll, body]/0.008530961791831363
+[scroll, fingerboard, body]/0.00806982872200265
+[bridge, fingerboard, body]/0.008003952569169956
+[chin rest, tailpiece, scroll, fingerboard, body]/0.003985507246376812
+[strings, scroll, fingerboard, body]/0.0037220026350461184
+[centre hole, strings, fingerboard, body]/0.0035573122529644276
+[bridge, strings, fingerboard, body]/0.0033926218708827446
+[string endpiece, bow, strings, fingerboard, body]/0.0030632411067193738
+[body]/0.002766798418972337
+[tailpiece, bridge, fingerboard, body]/0.0026350461133069878
+[tailpiece, bridge, bow, fingerboard, body]/0.0026350461133069878
+[string endpiece, strings, fingerboard, body]/0.0022727272727272765
+[tailpiece, strings, fingerboard, body]/0.0022727272727272735
+[tailpiece, bridge, bow, strings, fingerboard, body]/0.002140974967061927
+[bridge, f-hole, f-hole, fingerboard, body]/0.00197628458498024
+[string endpiece, bow, strings, scroll, fingerboard, body]/0.0018115942028985531
+[tailpiece, bridge, f-hole, f-hole, strings, fingerboard, body]/0.001548089591567854
+[chin rest, tailpiece, fingerboard, body]/0.001449275362318841
+[tailpiece, fingerboard, body]/0.0014492753623188408
+[tailpiece, bridge, f-hole, f-hole, fingerboard, body]/0.0014163372859025045
+[tailpiece, bridge, strings, fingerboard, body]/0.0013504611330698297
+===body===
+[strings]/0.3200263504611318
+[]/0.31215415019762777
+[f-hole, f-hole, strings]/0.09868247694334674
+[centre hole]/0.09621212121212158
+[strings, scroll]/0.033432147562582365
+[bridge, strings]/0.02299077733860338
+[chin rest, f-hole, f-hole, strings]/0.011693017127799766
+[centre hole, strings]/0.010243741765480898
+[bridge, f-hole, f-hole, strings]/0.008761528326745725
+[f-hole, f-hole, strings, scroll]/0.008629776021080376
+[tailpiece, bridge, strings]/0.007048748353096197
+[centre hole, strings, scroll]/0.006093544137022402
+[tailpiece, bridge, bow, strings]/0.005830039525691714
+[bridge, f-hole, f-hole]/0.0034584980237154224
+[chin rest]/0.002997364953886695
+[chin rest, f-hole, f-hole, strings, scroll]/0.002503293807641638
+[chin rest, tailpiece, bridge, bow, strings, scroll]/0.00197628458498024
+[chin rest, tailpiece, bridge, bow, strings]/0.00197628458498024
+[tailpiece, centre hole, f-hole, f-hole, strings]/0.0017786561264822157
+[button, strings]/0.0017457180500658784
+[chin rest, tailpiece, bridge, strings]/0.0015810276679841914
+[chin rest, tailpiece, bridge, strings, scroll]/0.0015151515151515167
+[bridge]/0.0015151515151515156
+[tailpiece, centre hole, bow, f-hole, f-hole, strings, scroll]/0.0014163372859025045
+[tailpiece, centre hole, bow, f-hole, f-hole, strings]/0.0013833992094861671
+[string endpiece, bridge, strings]/0.001284584980237155
+[centre hole, bridge, strings]/0.0012516469038208176
+[chin rest, strings]/0.0012187088274044802
+[tailpiece, centre hole, f-hole, f-hole, strings, scroll]/0.0012187088274044802
+[centre hole, scroll]/0.0011528326745718054
+[centre hole, bridge]/0.001021080368906456
+===fingerboard===
+[scroll]/0.3877909530083448
+[]/0.21137799398668927
+[tailpiece, bow, f-hole, f-hole, scroll]/0.11685416033241929
+[string endpiece, strings, scroll]/0.07070707070707044
+[tailpiece, strings, scroll]/0.054660315529881286
+[bridge]/0.04594439377048054
+[string endpiece, bow, strings, scroll]/0.019120975642714786
+[centre hole]/0.012600925644403918
+[chin rest, tailpiece, scroll]/0.006486267355832575
+[chin rest, tailpiece, bridge, f-hole, f-hole, strings, scroll]/0.006148440931049641
+[chin rest, f-hole, f-hole, scroll]/0.006114658288571346
+[button, strings, scroll]/0.005405222796527152
+[chin rest, f-hole, f-hole, strings, scroll]/0.004999831086787615
+[chin rest, scroll]/0.00469578730448296
+[string endpiece, bridge, bow, strings, scroll]/0.004121482382351944
+[centre hole, scroll, scroll]/0.004053917097395354
+[chin rest, tailpiece, bridge, f-hole, f-hole, scroll]/0.002635046113306982
+[f-hole, f-hole, strings, scroll]/0.002466132900915509
+[centre hole, strings, scroll, scroll]/0.002364784973480626
+[string endpiece, bridge, strings, scroll]/0.002364784973480626
+[button, scroll]/0.0023310023310023314
+[string endpiece, bridge, bow, scroll]/0.0022634370460457424
+[string endpiece, bridge, scroll]/0.001689132123914734
+[tailpiece, bow, f-hole, f-hole]/0.0014526536265666704
+[string endpiece, centre hole, strings, scroll]/0.0012837404141751972
+[chin rest, f-hole, f-hole]/0.0011148272017837235
+[f-hole, f-hole, scroll]/0.001047261916827134
+[string endpiece, bow, scroll]/0.0010134792743488395
+===scroll===
+[]/0.8751065643648781
+[tailpiece, bridge, f-hole, f-hole, strings]/0.06723242656746492
+[chin rest, tailpiece]/0.022049135859877392
+[button, strings]/0.007440130202278562
+[chin rest, tailpiece, bridge, bow, strings]/0.006626365961404343
+[chin rest, tailpiece, bridge, f-hole, f-hole, strings]/0.004417577307602892
+[chin rest, tailpiece, bridge, strings]/0.0030225528946756595
+[button]/0.0022087886538014407
+[chin rest, tailpiece, bridge, f-hole, f-hole]/0.0016275284817484292
+[chin rest, tailpiece, bridge, bow]/0.0013562737347903578
+===strings===
+[]/0.645863671035296
+[bow]/0.3205048193606549
+[string endpiece, centre hole]/0.008633243187018944
+[chin rest, tailpiece, bridge, bow]/0.0078011233617640875
+[button]/0.00568615213924138
+[bridge]/0.0038485541918036174
+[scroll]/0.0013521947160391094
+[bridge, bow]/0.0013175230566534908
+===f-hole===
+[]/0.9861660079051405
+[chin rest, tailpiece, bridge]/0.004874835309617925
+[chin rest, tailpiece, bridge, scroll]/0.0018445322793148868
+[chin rest, tailpiece]/0.0014931927975406231
+===bow===
+[]/0.9934751239098916
+[f-hole, f-hole]/0.006336658510571566
+===bridge===
+[]/0.9727711901624864
+[chin rest]/0.01075977162933686
+[chin rest, tailpiece, bow]/0.007575757575757584
+[bow]/0.0024154589371980675
+[chin rest, tailpiece]/0.0017566974088713211
+===centre hole===
+[]/0.5439488048183643
+[strings]/0.3389798607189907
+[strings, scroll]/0.034067381893468904
+[bridge, strings]/0.025409373235460237
+[strings, scroll, scroll]/0.02239789196310939
+[bow, strings]/0.013551665725578768
+[string endpiece]/0.003387916431394693
+[bridge]/0.002635046113306983
+[scroll, scroll]/0.002635046113306983
+[bow, f-hole, f-hole, strings, scroll]/0.0024468285337850555
+[scroll]/0.001882175795219273
+[bow, f-hole, strings]/0.0016939582156973458
+[bow, f-hole, strings, scroll]/0.001129305477131564
+===tailpiece===
+[]/0.9883893280632303
+[bridge, f-hole, f-hole, strings]/0.003376152832674569
+[bow]/0.002223320158102767
+[chin rest]/0.0016469038208168647
+===chin rest===
+[]/0.861879666227505
+[tailpiece, bridge]/0.04413702239789204
+[tailpiece]/0.031620553359683806
+[tailpiece, bridge, strings]/0.008783487044356606
+[f-hole, f-hole, strings, scroll]/0.004172156346069387
+[f-hole, f-hole]/0.003952569169960472
+[bridge, strings]/0.0037329819938515573
+[tailpiece, bridge, bow]/0.0035133948177426422
+[f-hole, f-hole, strings]/0.003074220465524812
+[bridge]/0.002854633289415898
+[tailpiece, bridge, scroll]/0.002854633289415897
+[f-hole, f-hole, scroll]/0.002415458937198067
+[tailpiece, bridge, strings, scroll]/0.002415458937198067
+[f-hole]/0.002195871761089152
+[bow]/0.002195871761089152
+[f-hole, strings, scroll]/0.001756697408871322
+[tailpiece, bridge, bow, strings]/0.001756697408871322
+[tailpiece, bridge, bow, scroll]/0.0015371102327624067
+[tailpiece, bridge, bow, strings, scroll]/0.0013175230566534915
+[strings, scroll]/0.0013175230566534915
+[bridge, bow]/0.0013175230566534915
+[bridge, bow, strings]/0.0013175230566534915
+[bow, strings, scroll]/0.0010979358805445762
+[tailpiece, bow]/0.0010979358805445762
+===string endpiece===
+[]/0.9288537549407028
+[bridge, bow]/0.026086956521739185
+[bridge]/0.020289855072463805
+[bow]/0.013965744400527013
+[bridge, bow, strings]/0.0015810276679841895
+[scroll, body]/0.0015810276679841895
+[bridge, bow, strings, scroll]/0.0013175230566534913
+[scroll]/0.001054018445322793
+[bow, scroll]/0.001054018445322793
+[bridge, strings]/0.001054018445322793
+===button===
+[]/0.999999999999986

@@ -1,0 +1,473 @@
+===start===
+[head]/0.5489789196310925
+[head, right eye]/0.05138339920948596
+[head, nose]/0.02539525691699604
+[hair, head]/0.02490118577075096
+[head, left ear]/0.01673254281949927
+[head, right eyebrow]/0.0163043478260869
+[head, right ear]/0.01561264822134379
+[head, left eye]/0.015316205533596774
+[right eye]/0.014822134387351688
+[left eye]/0.012714097496706135
+[head, mouth]/0.011495388669301675
+[left eye, right eye]/0.011067193675889297
+[head, left eyebrow]/0.009749670619235828
+[head, nose, right eye]/0.008662714097496712
+[head, mouth, right eye]/0.007147562582345208
+[head, left eye, right eye]/0.007015810276679857
+[nose]/0.006949934123847185
+[hair]/0.006455862977602124
+[left ear]/0.006027667984189738
+[head, left ear, right ear]/0.005928853754940724
+[hair, head, right eye]/0.004314888010540193
+[head, right eyebrow, right eye]/0.0042490118577075174
+[hair, head, right ear]/0.004084321475625831
+[hair, right eyebrow]/0.00398550724637682
+[hair, head, right eyebrow]/0.0036561264822134463
+[head, nose, left eye]/0.0036561264822134463
+[nose, right eye]/0.003458498023715422
+[hair, head, left ear]/0.003458498023715422
+[head, left eyebrow, right eyebrow]/0.0034584980237154215
+[hair, head, nose]/0.00335968379446641
+[head, nose, right eyebrow]/0.003326745718050072
+[head, left ear, right eye]/0.0032608695652173976
+[head, mouth, nose]/0.003194993412384723
+[head, right ear, right eye]/0.0030632411067193733
+[head, left ear, mouth]/0.0025691699604743126
+[hair, left ear]/0.002503293807641638
+[head, left eyebrow, right eye]/0.002437417654808963
+[mouth, right eye]/0.0023386034255599513
+[right eyebrow, right eye]/0.002239789196310939
+[hair, head, left eyebrow]/0.002173913043478264
+[head, nose, left eyebrow]/0.0020421607378129144
+[head, right eyebrow, left eye]/0.002009222661396576
+[left ear, mouth]/0.00197628458498024
+[head, left ear, nose]/0.0019433465085639025
+[head, right ear, right eyebrow]/0.0018774703557312277
+[hair, head, left eye]/0.0018445322793148903
+[head, right ear, nose]/0.001811594202898553
+[head, left eyebrow, left eye]/0.001745718050065878
+[right ear, left eye]/0.0016139657444005288
+[head, mouth, left eye]/0.0016139657444005288
+[head, nose, right eyebrow, right eye]/0.0015810276679841914
+[head, mouth, right eyebrow]/0.001581027667984191
+[head, left ear, right eyebrow]/0.0014822134387351793
+[left eyebrow, left eye]/0.001482213438735179
+[hair, head, left ear, right ear]/0.001449275362318842
+[nose, left eye]/0.0013504611330698297
+[left eyebrow, left eye, right eye]/0.0013504611330698297
+[right ear, left eye, right eye]/0.001284584980237155
+[nose, left eye, right eye]/0.0012516469038208176
+[right eyebrow, left eye, right eye]/0.0012187088274044802
+[head, right ear, mouth]/0.0011857707509881428
+[nose, right eyebrow, right eye]/0.0011528326745718054
+[head, mouth, left eye, right eye]/0.001119894598155468
+[right eyebrow, left eye]/0.0010869565217391307
+[hair, head, mouth]/0.0010869565217391307
+[hair, left eye]/0.0010869565217391307
+[head, left ear, right ear, right eye]/0.0010540184453227933
+[head, right ear, left eye]/0.0010540184453227933
+[head, left ear, left eyebrow]/0.001021080368906456
+[head, right ear, left eyebrow]/0.001021080368906456
+[head, nose, left eye, right eye]/0.001021080368906456
+===right eye===
+[left eye]/0.5587986892334711
+[]/0.17526434917739245
+[nose, left eye]/0.0365528191615149
+[left eyebrow]/0.02398567615958926
+[nose]/0.02094523833654271
+[left eyebrow, left eye]/0.018580453363062074
+[mouth, left eye]/0.01547245025505893
+[right eyebrow, left eye]/0.013310361136448071
+[mouth]/0.01151988108509845
+[right eyebrow]/0.011182054660315504
+[right ear, left eye]/0.010033444816053498
+[left ear, left eye]/0.00618222357352793
+[nose, left eyebrow]/0.005945745076179871
+[hair, mouth]/0.0048984831593527275
+[hair, left eye]/0.004662004662004661
+[left eyebrow, right eyebrow]/0.00402013445491706
+[left eyebrow, right eyebrow, left eye]/0.003783655957568997
+[left ear, right ear, left eye]/0.0035471774602209363
+[right ear, right eyebrow]/0.003276916320394578
+[nose, right eyebrow, left eye]/0.0030066551805682227
+[mouth, nose, left eye]/0.0029390898956116332
+[right ear, nose, left eye]/0.0028039593256984547
+[mouth, nose]/0.002635046113306982
+[nose, left eyebrow, left eye]/0.002533698185872099
+[hair, right eyebrow, left eye]/0.0019931759062193862
+[nose, left eyebrow, right eyebrow]/0.0019931759062193862
+[head, left eyebrow]/0.0018580453363062077
+[hair, nose, left eye]/0.001689132123914734
+[head, left eye]/0.0015877841964798498
+[hair, right eyebrow]/0.001554001554001555
+[right ear, mouth, left eye]/0.0015540015540015549
+[hair, left eyebrow, left eye]/0.0015540015540015549
+[left ear, nose, left eye]/0.0015202189115232603
+[mouth, right eyebrow, left eye]/0.0014864362690449656
+[head, mouth, left eye]/0.0014864362690449656
+[right ear, left eyebrow, left eye]/0.0012837404141751972
+[nose, right eyebrow]/0.0011148272017837235
+[left ear, right eyebrow]/0.0010810445593054288
+[mouth, left eyebrow, left eye]/0.0010810445593054288
+[mouth, left eyebrow]/0.001047261916827134
+===left eye===
+[]/0.40602766798418805
+[nose]/0.2745718050065868
+[right eyebrow]/0.03689064558629764
+[left eyebrow]/0.03448616600790502
+[mouth]/0.029874835309617855
+[left eyebrow, right eyebrow]/0.022299077733860296
+[right eye]/0.021607378129117196
+[mouth, nose]/0.019071146245059237
+[nose, right eyebrow]/0.012714097496706156
+[right ear, nose]/0.010737812911725923
+[right ear]/0.00764163372859027
+[nose, left eyebrow]/0.006653491436100147
+[nose, left eyebrow, right eyebrow]/0.006389986824769448
+[left ear, nose]/0.0063899868247694475
+[hair, nose]/0.006291172595520436
+[nose, right eye]/0.0057312252964427
+[head, mouth]/0.005665349143610027
+[hair, left eyebrow]/0.005401844532279327
+[right ear, mouth]/0.0053030303030303155
+[mouth, right eyebrow]/0.004545454545454556
+[left eyebrow, right eye]/0.003425559947299085
+[mouth, right eye]/0.0027338603425559995
+[left ear, right ear, nose]/0.002700922266139662
+[hair, right eyebrow]/0.002635046113306987
+[left ear, right ear]/0.0021739130434782644
+[hair, nose, right eyebrow]/0.002108036890645589
+[mouth, left eyebrow, right eyebrow]/0.0019104084321475653
+[left ear, right eyebrow]/0.0018115942028985531
+[right eyebrow, right eye]/0.0017457180500658784
+[right ear, mouth, nose]/0.001712779973649541
+[right ear, left eyebrow]/0.0017127799736495408
+[head, right eye]/0.0016139657444005288
+[mouth, left eyebrow]/0.001548089591567854
+[right ear, right eyebrow]/0.0015151515151515167
+[left ear, left eyebrow]/0.0013504611330698297
+[mouth, nose, right eyebrow]/0.0013175230566534924
+[left ear, left eyebrow, right eyebrow]/0.0013175230566534924
+[nose, left eyebrow, right eye]/0.00121870882740448
+[left ear, right ear, mouth]/0.0011857707509881428
+[hair, right eye]/0.0011528326745718054
+[head, right eyebrow]/0.001119894598155468
+[hair, left eyebrow, right eyebrow]/0.001119894598155468
+[left ear, mouth, nose]/0.0010869565217391307
+[hair, right ear, nose]/0.001021080368906456
+===right eyebrow===
+[]/0.37100473332357364
+[left eyebrow]/0.2581369248035907
+[nose]/0.06211877226369962
+[nose, left eyebrow]/0.03142536475869823
+[left eyebrow, right eye]/0.031083784706973285
+[right eye]/0.021909920460645195
+[hair]/0.014785536524667003
+[head]/0.012394476162592129
+[mouth]/0.012004098960620725
+[left eye]/0.01136973600741718
+[right ear]/0.011320938857170757
+[left eye, right eye]/0.010540184453227939
+[mouth, nose]/0.009320255697067289
+[hair, left eyebrow]/0.009222661396574433
+[hair, nose]/0.007661152588688803
+[right ear, left eyebrow]/0.007124383935978126
+[left eyebrow, left eye]/0.007026789635485279
+[left ear, nose]/0.006490020982774598
+[right ear, nose]/0.006490020982774596
+[nose, left eyebrow, right eye]/0.006392426682281747
+[mouth, left eyebrow]/0.005660469428585366
+[left eyebrow, left eye, right eye]/0.005367686527106815
+[left ear, right ear]/0.005318889376860388
+[hair, head]/0.004294149221685457
+[left ear, left eyebrow]/0.004001366320206905
+[head, nose]/0.0035133948177426487
+[nose, right eye]/0.0027814375640462627
+[mouth, left eyebrow, right eye]/0.002635046113306986
+[nose, left eye, right eye]/0.002488654662567709
+[mouth, nose, left eyebrow]/0.0024398575123212828
+[left ear, right ear, nose]/0.0023910603620748575
+[hair, left ear, right ear]/0.0023910603620748575
+[head, left eyebrow]/0.0021958717610891542
+[right ear, left eyebrow, right eye]/0.0020494803103498775
+[left ear, right ear, left eyebrow]/0.001805494559117749
+[head, left ear]/0.0017566974088713233
+[hair, left ear, nose]/0.0016591031083784719
+[hair, mouth, nose]/0.0016591031083784719
+[hair, right ear]/0.0016591031083784719
+[left ear, nose, left eyebrow]/0.0015615088078856205
+[right ear, right eye]/0.0015127116576391948
+[left ear]/0.0013663202068999176
+[left ear, left eyebrow, right eye]/0.001317523056653492
+[head, nose, left eyebrow]/0.0011711316059142148
+[mouth, right eye]/0.001122334455667789
+[right ear, mouth, nose]/0.001122334455667789
+[left ear, mouth, nose]/0.001122334455667789
+[right ear, nose, left eyebrow]/0.0010735373054213634
+[hair, head, left ear]/0.0010247401551749377
+===left eyebrow===
+[]/0.5254477138535106
+[right eyebrow]/0.09622798028595127
+[nose]/0.072024593763724
+[right eye]/0.06885277899770637
+[left eye]/0.02844873859366628
+[hair]/0.022690674864588006
+[nose, right eye]/0.019567657248816737
+[left eye, right eye]/0.014395159322695587
+[nose, right eyebrow]/0.013321622017274213
+[mouth, nose]/0.0112233445566779
+[right ear]/0.009857024349777975
+[hair, right eyebrow]/0.007514761137949527
+[mouth, right eyebrow]/0.007124383935978124
+[nose, left eye]/0.0059044551798174945
+[right eyebrow, right eye]/0.0045869321231640095
+[head, right eyebrow]/0.004391743522178308
+[left ear, nose]/0.004245352071439032
+[right ear, right eye]/0.004001366320206905
+[right eyebrow, left eye]/0.0037573805689747773
+[left ear, right ear]/0.0036109891182355
+[right ear, right eyebrow]/0.0035133948177426487
+[mouth, nose, right eye]/0.0033670033670033716
+[head, nose]/0.0032206119162640945
+[hair, nose]/0.0030742204655248174
+[left ear, right eye]/0.0026838432635534113
+[nose, left eye, right eye]/0.00258624896306056
+[mouth, right eye]/0.0025374518128141346
+[mouth, left eye]/0.002537451812814134
+[head, right ear]/0.002488654662567709
+[left ear, right eyebrow]/0.0023910603620748575
+[hair, right eye]/0.0022934660615820056
+[right ear, nose, right eye]/0.0019518860098570261
+[right ear, left eye]/0.0019030888596106004
+[mouth]/0.0015615088078856205
+[right ear, nose]/0.0015127116576391948
+[left ear]/0.001463914507392769
+[head, left ear, right ear]/0.0014151173571463433
+[mouth, nose, right eyebrow]/0.0013663202068999176
+[mouth, left eye, right eye]/0.0012687259064070662
+[left ear, nose, right eye]/0.0012199287561606405
+[hair, nose, right eyebrow]/0.0011711316059142148
+[left ear, right ear, nose]/0.001122334455667789
+[right eyebrow, left eye, right eye]/0.0010735373054213634
+[hair, left eye, right eye]/0.0010247401551749377
+===nose===
+[mouth]/0.642132250827903
+[]/0.20385998646868342
+[right ear, mouth]/0.018053626749278996
+[right eye]/0.01638001638001645
+[left ear, mouth]/0.011857707509881465
+[hair, mouth]/0.010077270946836199
+[hair]/0.009329487590357191
+[right eyebrow]/0.007798312146138258
+[mouth, left eyebrow]/0.007513442296051011
+[mouth, right eye]/0.007335398639746482
+[left ear, right ear, mouth]/0.005448135882918497
+[hair, right ear]/0.005341309689135782
+[mouth, right eyebrow]/0.004379873945091333
+[head, mouth]/0.0037389167823950395
+[mouth, left eyebrow, right eyebrow]/0.002991133425916033
+[mouth, left eye]/0.0027418723070896972
+[left eye, right eye]/0.0023501762632197423
+[left eyebrow, right eyebrow]/0.002314567531958837
+[right eyebrow, left eye]/0.0021009151443934066
+[right eyebrow, right eye]/0.0019584802193497865
+[hair, left ear, right ear]/0.001887262756827976
+[right ear]/0.0015667841754798287
+[hair, right eyebrow]/0.0013531317879143972
+[left eye]/0.001175088131609871
+[hair, left ear, mouth]/0.0011394794003489657
+[mouth, left eye, right eye]/0.0010682619378271552
+[hair, mouth, left eyebrow]/0.00103265320656625
+===mouth===
+[]/0.8088603425559951
+[right ear]/0.03353096179183128
+[hair]/0.022430830039525628
+[left ear, right ear]/0.02042160737812905
+[left ear]/0.018972332015810237
+[left eyebrow]/0.013175230566534865
+[head]/0.012714097496706142
+[right eyebrow]/0.00945322793148879
+[right eye]/0.008992094861660074
+[left eyebrow, right eyebrow]/0.007971014492753638
+[left eye]/0.005665349143610027
+[hair, left ear]/0.0035243741765480967
+[hair, left ear, right ear]/0.002733860342555999
+[left eyebrow, right eye]/0.0023715415019762887
+[left eyebrow, left eye]/0.00197628458498024
+[hair, left eyebrow, right eyebrow]/0.0018445322793148905
+[right ear, right eye]/0.0017786561264822155
+[hair, right ear]/0.0017457180500658784
+[head, right ear]/0.001712779973649541
+[right ear, right eyebrow]/0.0016469038208168662
+[hair, right eyebrow]/0.0014163372859025045
+[hair, left eyebrow]/0.0012187088274044802
+[left eye, right eye]/0.0011857707509881428
+===right ear===
+[]/0.6038647342995173
+[left ear]/0.2534663404228609
+[hair]/0.040027605244996656
+[head]/0.014492753623188442
+[left ear, right eyebrow]/0.012171403475751331
+[hair, left ear]/0.01123031557814169
+[head, left ear]/0.009912792521488195
+[left ear, right eye]/0.007215007215007229
+[hair, right eye]/0.005332831419787951
+[left ear, left eyebrow, right eyebrow]/0.00332517723822072
+[left ear, left eyebrow]/0.00332517723822072
+[right eye]/0.0025095677269590323
+[left ear, nose]/0.0022586109542631285
+[hair, left ear, right eyebrow]/0.0022586109542631285
+[left ear, right eyebrow, right eye]/0.0018821757952192728
+[hair, left eyebrow, right eye]/0.0015057406361754183
+[left ear, left eyebrow, right eye]/0.0013802622498274668
+[right eyebrow]/0.0011293054771315638
+[left ear, left eye]/0.0011293054771315638
+[hair, mouth]/0.001066566283957588
+[hair, left eyebrow]/0.001066566283957588
+[left ear, nose, right eyebrow]/0.0010038270907836123
+===left ear===
+[]/0.7408871321914815
+[right ear]/0.09486166007905063
+[hair]/0.024719242110546522
+[right eyebrow]/0.02289980550850122
+[head]/0.0200765418156723
+[hair, right ear]/0.012485099441621211
+[right eye]/0.011544011544011572
+[left eyebrow, right eyebrow]/0.008469791078486747
+[hair, right eyebrow]/0.007842399146746988
+[right eyebrow, right eye]/0.006775832862789398
+[head, right ear]/0.004078047556308431
+[left eyebrow, right eye]/0.0036388732040906
+[left eyebrow, right eyebrow, right eye]/0.003262438045046743
+[hair, left eyebrow, right eyebrow]/0.003199698851872768
+[left eye, right eye]/0.0021958717610891525
+[nose, right eyebrow]/0.0018821757952192728
+[hair, head]/0.0015057406361754183
+[head, right eye]/0.0014430014430014426
+[head, mouth]/0.0013802622498274668
+[left eyebrow]/0.001317523056653491
+[hair, left eyebrow]/0.0011920446703055395
+[hair, head, right ear]/0.001066566283957588
+[right eyebrow, left eye, right eye]/0.001066566283957588
+[head, right eyebrow]/0.001066566283957588
+[nose, right eye]/0.0010038270907836123
+===head===
+[right eye]/0.24999999999999914
+[]/0.22891963109354324
+[hair]/0.03827404479578381
+[nose, right eye]/0.03020421607378126
+[right ear]/0.02770092226613962
+[right eyebrow]/0.027338603425559906
+[left eye, right eye]/0.02108036890645582
+[right eyebrow, right eye]/0.018280632411067154
+[hair, right eye]/0.015744400527009143
+[nose]/0.01485507246376803
+[right ear, right eye]/0.01337285902503287
+[mouth, right eye]/0.013175230566534859
+[hair, right ear]/0.012121212121212081
+[left eyebrow, right eyebrow]/0.010704874835309583
+[hair, right eyebrow]/0.01017786561264821
+[left ear]/0.009650856389986804
+[left eyebrow]/0.008333333333333342
+[left ear, right ear]/0.008300395256917005
+[left ear, right eye]/0.00806982872200265
+[hair, left ear]/0.008003952569169977
+[nose, right eyebrow]/0.007740447957839281
+[left eyebrow, right eye]/0.00737812911725957
+[left eye]/0.007345191040843233
+[nose, left eye]/0.007015810276679858
+[mouth]/0.006422924901185787
+[hair, nose]/0.006291172595520436
+[left ear, right ear, right eye]/0.005072463768115952
+[hair, right ear, right eye]/0.004545454545454555
+[nose, right eyebrow, right eye]/0.004512516469038217
+[left eyebrow, right eyebrow, right eye]/0.0043478260869565305
+[nose, left eye, right eye]/0.004249011857707519
+[right ear, right eyebrow]/0.00411725955204217
+[hair, right eyebrow, right eye]/0.003952569169960482
+[nose, left eyebrow]/0.0037549407114624584
+[right eyebrow, left eye, right eye]/0.003623188405797109
+[left eyebrow, left eye]/0.0034914361001317598
+[mouth, right eyebrow]/0.0034914361001317598
+[mouth, nose, right eye]/0.0034914361001317593
+[nose, left eyebrow, left eye]/0.00322793148880106
+[hair, left ear, right ear]/0.0029973649538866986
+[right eyebrow, left eye]/0.0027997364953886742
+[nose, left eyebrow, right eyebrow]/0.0027667984189723373
+[hair, left eye]/0.0025362318840579756
+[left ear, right ear, right eyebrow]/0.0025362318840579756
+[hair, right ear, right eyebrow]/0.002338603425559951
+[mouth, nose]/0.002305665349143614
+[right ear, left eyebrow]/0.0023056653491436135
+[right ear, nose, right eye]/0.0022727272727272765
+[hair, left ear, right eyebrow]/0.0022397891963109387
+[hair, mouth, right eye]/0.0022068511198946013
+[right ear, right eyebrow, right eye]/0.0020421607378129144
+[hair, left eyebrow]/0.0020092226613965774
+[hair, left eye, right eye]/0.002009222661396577
+[hair, left eyebrow, right eyebrow]/0.00197628458498024
+[hair, nose, right eye]/0.0019762845849802396
+[left eyebrow, right eyebrow, left eye]/0.0019433465085639027
+[hair, mouth]/0.0019104084321475653
+[nose, left eyebrow, right eye]/0.0019104084321475649
+[left eyebrow, left eye, right eye]/0.001877470355731228
+[hair, left ear, right eye]/0.0018774703557312277
+[right ear, nose]/0.0018774703557312277
+[right ear, mouth]/0.0018774703557312277
+[mouth, right eyebrow, right eye]/0.001877470355731227
+[mouth, left eye, right eye]/0.001778656126482215
+[hair, nose, left eye]/0.0016469038208168662
+[left ear, mouth, right eye]/0.0016139657444005286
+[hair, left eyebrow, right eye]/0.001548089591567854
+[right ear, left eye, right eye]/0.0015151515151515167
+[mouth, left eyebrow, right eyebrow]/0.0015151515151515167
+[right ear, left eye]/0.0015151515151515165
+[left eyebrow, right eyebrow, left eye, right eye]/0.001482213438735179
+[hair, right ear, mouth]/0.001482213438735179
+[hair, nose, right eyebrow]/0.001449275362318842
+[right ear, mouth, right eye]/0.0014163372859025043
+[nose, left eyebrow, right eyebrow, right eye]/0.0013833992094861671
+[hair, left ear, right ear, right eye]/0.0013504611330698297
+[left ear, left eye, right eye]/0.001284584980237155
+[left ear, nose, right eye]/0.0012187088274044802
+[hair, right ear, nose]/0.0011528326745718054
+[hair, nose, left eyebrow]/0.0011528326745718052
+[hair, nose, left eyebrow, left eye]/0.001119894598155468
+[right ear, left eyebrow, right eye]/0.0010869565217391307
+[mouth, left eye]/0.0010869565217391307
+[mouth, nose, right eyebrow]/0.001021080368906456
+[hair, right ear, left eyebrow]/0.001021080368906456
+[hair, right ear, mouth, right eye]/0.001021080368906456
+[nose, right eyebrow, left eye]/0.001021080368906456
+===hair===
+[]/0.7460474308300361
+[right eyebrow]/0.06047430830039517
+[left ear]/0.026152832674571667
+[right eye]/0.025889328063241002
+[left ear, right ear]/0.02042160737812909
+[left eyebrow, right eyebrow]/0.01627140974967065
+[right ear]/0.0125164690382082
+[right eyebrow, right eye]/0.011725955204216102
+[left ear, right eyebrow]/0.006851119894598169
+[right ear, right eyebrow]/0.006455862977602121
+[nose, right eyebrow]/0.004743083003952577
+[mouth, right eye]/0.004018445322793154
+[left eye, right eye]/0.0038866930171278045
+[left eyebrow, right eyebrow, right eye]/0.003491436100131756
+[left eyebrow, right eye]/0.00243741765480896
+[right ear, right eye]/0.0023715415019762856
+[left eyebrow]/0.0022397891963109357
+[left ear, right ear, right eyebrow]/0.0021739130434782613
+[right ear, mouth, right eye]/0.0019104084321475623
+[left ear, right eyebrow, right eye]/0.0017786561264822131
+[right eyebrow, left eye]/0.0017127799736495386
+[left ear, left eyebrow, right eyebrow]/0.0017127799736495386
+[right eyebrow, left eye, right eye]/0.001646903820816864
+[left ear, right eye]/0.0015810276679841895
+[nose, left eyebrow, right eyebrow]/0.001515151515151515
+[right ear, left eyebrow, right eyebrow]/0.0013833992094861658
+[right ear, right eyebrow, right eye]/0.0012516469038208167
+[mouth, right eyebrow]/0.0011857707509881422
+[nose, right eyebrow, right eye]/0.0011198945981554676
+[mouth]/0.001054018445322793

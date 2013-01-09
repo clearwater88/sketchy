@@ -61,6 +61,8 @@ public class Tree {
 	
 	public double sampleNewConfig(double decayTrav) {
 		// Generate child between 2->last (no point resampling root and 2nd elem)
+		if (nodes.size() <= 2) return 1.0; // propose and accept same move
+		
 		int childId = gen.nextInt(nodes.size()-2)+2;
 		Node child = nodes.get(childId);
 		Node originalParent = child.parent;

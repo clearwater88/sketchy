@@ -1,0 +1,162 @@
+=== Child: start===
+=== Child: body===
+   --- Parent: start: 0.9972332015810277
+   --- Parent: stem: 0.002766798418972332
+=== Child: stem===
+   --- Parent: body: 0.9124971882129889
+   --- Parent: start: 0.06748288826761785
+   --- Parent: body reflections: 0.011279282753301841
+   --- Parent: stem: 0.007294578874642501
+   --- Parent: leaf: 0.001446061891448954
+=== Child: leaf===
+   --- Parent: stem: 0.7139092791266703
+   --- Parent: body: 0.2028044419348767
+   --- Parent: start: 0.05467720685111989
+   --- Parent: leaf: 0.028609072087332956
+=== Child: body reflections===
+   --- Parent: body: 0.3806177719221197
+   --- Parent: body reflections: 0.24652320304494219
+   --- Parent: stem: 0.18986971160884203
+   --- Parent: leaf: 0.09295857121944079
+   --- Parent: start: 0.09003074220465525
+=== Child: roots===
+   --- Parent: leaf: 0.42292490118577075
+   --- Parent: stem: 0.27931488801054016
+   --- Parent: body: 0.16996047430830039
+   --- Parent: start: 0.12779973649538867
+---------------------
+=== Child: start===
+   --- Parent: start: 0.0---
+   --- Parent: body: 0.0---
+   --- Parent: stem: 0.0---
+   --- Parent: leaf: 0.0---
+   --- Parent: body reflections: 0.0---
+   --- Parent: roots: 0.0---
+=== Child: body===
+   --- Parent: start: 0.9972332015810277---
+         [body]/0.8870223978919631
+         [stem, body]/0.05925559947299078
+         [leaf, body]/0.025263504611330697
+         [body reflections, body]/0.009255599472990777
+         [leaf, stem, body]/0.005731225296442688
+         [roots, body]/0.00230566534914361
+         [leaf, leaf, body]/0.0022397891963109352
+         [body reflections, leaf, body]/0.0015480895915678525
+         [body reflections, body reflections, body]/0.0011857707509881424
+   --- Parent: body: 0.0---
+   --- Parent: stem: 0.002766798418972332---
+         [body]/0.0021409749670619235
+   --- Parent: leaf: 0.0---
+   --- Parent: body reflections: 0.0---
+   --- Parent: roots: 0.0---
+=== Child: stem===
+   --- Parent: start: 0.06748288826761785---
+         [stem, body]/0.0578103409492593
+         [leaf, stem, body]/0.005591439313602622
+         [stem]/0.0024101031524149234
+   --- Parent: body: 0.9124971882129889---
+         [stem]/0.7852758764741797
+         [leaf, stem]/0.08734213824351682
+         [body reflections, stem]/0.01121501333590411
+         [stem, stem]/0.008483563096500531
+         [leaf, leaf, stem]/0.0038561650438638773
+         [body reflections, body reflections, body reflections, stem]/0.0037597609177672806
+         [roots, stem]/0.0026029114046081173
+         [body reflections, body reflections, body reflections, body reflections, stem]/0.002474372569812655
+         [body reflections, leaf, stem]/0.0022172949002217295
+         [body reflections, body reflections, stem]/0.001895947813233073
+         [roots, leaf, stem]/0.001446061891448954
+         [body reflections, body reflections, body reflections, body reflections, body reflections, stem]/0.0013817924740512227
+   --- Parent: stem: 0.007294578874642501---
+         [stem]/0.007294578874642501
+   --- Parent: leaf: 0.001446061891448954---
+         [stem]/0.001446061891448954
+   --- Parent: body reflections: 0.011279282753301841---
+         [body reflections, stem]/0.003727626209068415
+         [body reflections, body reflections, stem]/0.0035669526655740867
+         [stem]/0.0017352742697387448
+         [body reflections, body reflections, body reflections, stem]/0.0017031395610398793
+   --- Parent: roots: 0.0---
+=== Child: leaf===
+   --- Parent: start: 0.05467720685111989---
+         [leaf, body]/0.03609072087332957
+         [leaf, stem, body]/0.00818746470920384
+         [leaf, leaf, body]/0.00639939770374553
+         [body reflections, leaf, body]/0.0022115565593826465
+         [roots, leaf, body]/0.0010351966873706005
+   --- Parent: body: 0.2028044419348767---
+         [leaf, stem]/0.12789384528514963
+         [leaf]/0.057782796913231696
+         [leaf, leaf, stem]/0.01129305477131564
+         [body reflections, leaf, stem]/0.003246753246753247
+         [roots, leaf, stem]/0.0021174477696216825
+   --- Parent: stem: 0.7139092791266705---
+         [leaf]/0.6030491247882552
+         [leaf, leaf]/0.08074534161490683
+         [body reflections, leaf]/0.019715791454921888
+         [roots, leaf]/0.009504987765857332
+   --- Parent: leaf: 0.028609072087332956---
+         [leaf]/0.028609072087332956
+   --- Parent: body reflections: 0.0---
+   --- Parent: roots: 0.0---
+=== Child: body reflections===
+   --- Parent: start: 0.09003074220465528---
+         [body reflections, body]/0.04113599765773679
+         [body reflections, body reflections, body]/0.010540184453227932
+         [body reflections, body reflections, body reflections, body reflections, body]/0.00878348704435661
+         [body reflections, body reflections, body reflections, body]/0.00878348704435661
+         [body reflections, leaf, body]/0.00688039818474601
+         [body reflections, body reflections, body reflections, body reflections, body reflections, body]/0.004391743522178305
+         [body reflections, body reflections, stem, body]/0.0029278290147855364
+         [body reflections, body reflections, body reflections, body reflections, body reflections, body reflections, body]/0.001756697408871322
+         [body reflections, stem, body]/0.001756697408871322
+   --- Parent: body: 0.38061777192211976---
+         [body reflections, body reflections, body reflections]/0.057971014492753624
+         [body reflections, body reflections, body reflections, stem]/0.05138339920948617
+         [body reflections, stem]/0.05109061630800761
+         [body reflections, body reflections, body reflections, body reflections, stem]/0.04508856682769726
+         [body reflections, body reflections, body reflections, body reflections]/0.04333186941882594
+         [body reflections, body reflections]/0.0322061191626409
+         [body reflections, body reflections, body reflections, body reflections, body reflections, stem]/0.03147416190894452
+         [body reflections, body reflections, body reflections, body reflections, body reflections]/0.0182989313424096
+         [body reflections, body reflections, stem]/0.017274191187234667
+         [body reflections, body reflections, body reflections, body reflections, body reflections, body reflections, stem]/0.014931927975406236
+         [body reflections, leaf, stem]/0.010101010101010102
+         [body reflections]/0.005562875128092519
+         [body reflections, body reflections, body reflections, body reflections, body reflections, body reflections]/0.001756697408871322
+   --- Parent: stem: 0.18986971160884206---
+         [body reflections]/0.0922266139657444
+         [body reflections, leaf]/0.06133801785975699
+         [body reflections, body reflections]/0.019909237300541647
+         [body reflections, body reflections, body reflections]/0.012296881862099254
+         [body reflections, body reflections, body reflections, body reflections]/0.004098960620699751
+   --- Parent: leaf: 0.09295857121944079---
+         [body reflections]/0.09295857121944079
+   --- Parent: body reflections: 0.24652320304494216---
+         [body reflections]/0.07802664324403455
+         [body reflections, body reflections]/0.050944224857268336
+         [body reflections, body reflections, stem]/0.032498902064119456
+         [body reflections, body reflections, body reflections]/0.028107158541941152
+         [body reflections, body reflections, body reflections, stem]/0.023276240667545016
+         [body reflections, stem]/0.016981408285756113
+         [body reflections, body reflections, body reflections, body reflections, stem]/0.009369052847313717
+         [body reflections, body reflections, body reflections, body reflections]/0.005855658029571073
+   --- Parent: roots: 0.0---
+=== Child: roots===
+   --- Parent: start: 0.12779973649538867---
+         [roots, body]/0.0922266139657444
+         [roots, leaf, body]/0.028985507246376812
+         [roots, stem, body]/0.005270092226613966
+         [roots, leaf, stem, body]/0.0013175230566534915
+   --- Parent: body: 0.16996047430830039---
+         [roots, stem]/0.1067193675889328
+         [roots, leaf, stem]/0.05928853754940711
+         [roots]/0.002635046113306983
+         [roots, leaf]/0.0013175230566534915
+   --- Parent: stem: 0.27931488801054016---
+         [roots, leaf]/0.26613965744400525
+         [roots]/0.013175230566534914
+   --- Parent: leaf: 0.42292490118577075---
+         [roots]/0.42292490118577075
+   --- Parent: body reflections: 0.0---
+   --- Parent: roots: 0.0---

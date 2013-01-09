@@ -1,0 +1,61 @@
+===start===
+[body]/0.8752635046113284
+[stem, body]/0.053722002635045986
+[leaf, body]/0.034420289855072436
+[body reflections, body]/0.010177865612648208
+[leaf, stem, body]/0.00750988142292492
+[stem]/0.005204216073781303
+[leaf, leaf, body]/0.0025032938076416378
+[roots, body]/0.002042160737812915
+[body reflections, leaf, body]/0.0014492753623188417
+[body reflections, body reflections, body]/0.0014163372859025045
+[body reflections, body reflections, body reflections, body]/0.0014163372859025045
+[leaf, stem]/0.0013504611330698297
+===body===
+[stem]/0.7972661396574443
+[leaf, stem]/0.08909749670619214
+[leaf]/0.039986824769433306
+[]/0.020586297760210783
+[body reflections, stem]/0.012483530961791781
+[stem, stem]/0.005961791831357063
+[body reflections, body reflections]/0.005039525691699616
+[leaf, leaf, stem]/0.0047760210803689165
+[body reflections, body reflections, body reflections]/0.0044466403162055435
+[roots, stem]/0.002898550724637687
+[body reflections, leaf, stem]/0.0025691699604743126
+[body reflections, body reflections, body reflections, stem]/0.002470355731225301
+[body reflections, body reflections, body reflections, body reflections]/0.002239789196310939
+[body reflections]/0.0022397891963109387
+[body reflections, body reflections, body reflections, body reflections, stem]/0.0021739130434782644
+[body reflections, body reflections, stem]/0.0019433465085639027
+[roots, leaf, stem]/0.0016798418972332036
+===stem===
+[]/0.518493524856198
+[leaf]/0.3938108551045975
+[leaf, leaf]/0.03033516501172905
+[body reflections]/0.01982711526720004
+[body reflections, leaf]/0.01243613226646096
+[stem]/0.008965583726983502
+[roots, leaf]/0.006426941739773141
+[body]/0.004884475722227586
+[body reflections, body reflections]/0.0020566213567274035
+[leaf, body]/0.0015103313088466862
+===leaf===
+[]/0.9250894033502742
+[body reflections]/0.029738377564464336
+[leaf]/0.027573875399962203
+[roots]/0.01472802559759085
+[stem]/0.0028703180877093933
+===body reflections===
+[]/0.8070560679256341
+[body reflections]/0.09208022251500479
+[body reflections, body reflections]/0.031327770458205374
+[body reflections, stem]/0.022397891963109418
+[body reflections, body reflections, stem]/0.0184453227931489
+[stem]/0.012589664763577799
+[body reflections, body reflections, body reflections]/0.00673400673400673
+[body reflections, body reflections, body reflections, stem]/0.006441223832528177
+[body reflections, body reflections, body reflections, body reflections, stem]/0.0019030888596105991
+[body reflections, body reflections, body reflections, body reflections]/0.0010247401551749377
+===roots===
+[]/0.999999999999986
