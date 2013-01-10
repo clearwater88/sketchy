@@ -164,3 +164,5 @@ pip-log.txt
 
 data/*
 *.mat
+mentalRes/*
+mentalRes2/*
