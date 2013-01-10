@@ -26,8 +26,8 @@ public class Main {
 	private static final int ITERS = 100000;
 	
 	private static final Random GEN = new Random();
-	private static final String ROOT_DATA_FOLDER = "../mentalData/";
-	private static final String ROOT_RES_FOLDER = "../mentalRes/";
+	private static final String ROOT_DATA_FOLDER = "../../mentalData/";
+	private static final String ROOT_RES_FOLDER = "../../mentalRes/";
 
 	private static ArrayList<String> partList;
 	
