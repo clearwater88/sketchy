@@ -168,10 +168,23 @@ public class IO {
 	    oi.close();
 	    
 	    return decaySamps;
-		
 	}
 
-	public static void outputInferProbs(ArrayList<Double> logProbsPost, PrintStream out) {
+	public static void outputInferLogProbsSerial(ArrayList<Double> logProbsPost, String filename) throws IOException {
+		FileOutputStream fo = new FileOutputStream(filename);  
+	    ObjectOutputStream oo=new ObjectOutputStream(fo); 
+	    oo.writeObject(logProbsPost);
+	    oo.close();
+	}
+	
+	public static void readInferLogProbsSerial(String filename) throws IOException, ClassNotFoundException {
+		FileInputStream fi=new FileInputStream(filename);  
+	    ObjectInputStream oi=new ObjectInputStream(fi);  
+		ArrayList<Double> logProbsPost=(ArrayList<Double>)oi.readObject();  
+	    oi.close();
+	}
+	
+	public static void outputInferLogProbs(ArrayList<Double> logProbsPost, PrintStream out) {
 		double totalLogProb = 0;
 		for (double logProb : logProbsPost) {
 			totalLogProb += logProb;

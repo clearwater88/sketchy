@@ -128,9 +128,9 @@ public class Main {
 
 				    // output inference results
 				    PrintStream out = new PrintStream(outFilesPrefix.concat(INFER_PROBS).concat(".txt"));
-				    IO.outputInferProbs(logProbsPost,out);
+				    IO.outputInferLogProbs(logProbsPost,out);
 				    out.close();
-				    IO.outputInferProbs(logProbsPost,System.out);
+				    IO.outputInferLogProbs(logProbsPost,System.out);
 					
 				}
 			}
