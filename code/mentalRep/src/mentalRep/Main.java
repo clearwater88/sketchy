@@ -75,7 +75,7 @@ public class Main {
 	public static void main(String [] args) throws IOException, ClassNotFoundException {
 
 	    int trialStart = 0;
-	    int trialEnd = 20;
+	    int trialEnd = 5;
 		
 		
 		for (int t= trialStart; t < trialEnd; t++) {
@@ -131,41 +131,12 @@ public class Main {
 				    IO.outputInferLogProbs(logProbsPost,out);
 				    out.close();
 				    IO.outputInferLogProbs(logProbsPost,System.out);
+				    
+				    IO.outputInferLogProbsSerial(logProbsPost, outFilesPrefix.concat(INFER_PROBS).concat("serial"));
 					
 				}
 			}
 		}
-		
-		
-		
-	    /*
-	    Ctype ct = Ctype.personSitting;
-	    double alpha = 0.5;
-	    partList = getPartList(ct);
-
-	    String outFilesPrefix = outFiles.get(ct).concat("-alpha" + new Double(alpha).toString()).concat("-trial" + 0);
-	    
-		ArrayList<int[]> seqs = IO.readFile(seqFiles.get(ct).concat(".txt"));
-	    doMain(seqs,alpha, outFilesPrefix);
-
-	    ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = IO.readRuleCounts(outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));		    
-	    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
-
-	    ArrayList<Double> decaySamps = IO.readDecaySamps(outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));	
-
-	    String filePref = seqFiles.get(ct);
-	    String file = filePref.concat(".txt");
-
-	    ArrayList<Double> logProbsPost = new ArrayList<Double>();
-	    for (int[] seq : seqs) {
-	    	logProbsPost.add(Inference.inferLogProbSeq(seq,postRules,decaySamps));
-	    }
-
-	    PrintStream out = new PrintStream(outFilesPrefix.concat(INFER_PROBS).concat(".txt"));
-	    IO.outputInferProbs(logProbsPost,out);
-	    out.close();
-	    IO.outputInferProbs(logProbsPost,System.out);
-	    */
 	}
 		
 	

@@ -40,13 +40,10 @@ public class Inference {
 			}
 			logProb -= logProbSample;
 			logProb += Node.getSeqProb(nodes, decayTrav);
-			System.out.println(logProb);
 			
 			logProbTot += logProb;
 		}
 		return logProbTot/NUM_SAMPLES;
-		
-		
 	}
 	
 	public static ArrayList<Node> sampleProposal(ArrayList<Node> nodes) {
