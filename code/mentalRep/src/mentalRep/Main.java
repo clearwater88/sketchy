@@ -4,8 +4,11 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,83 +23,203 @@ public class Main {
 	
 	private static final int THIN = 25;
 	private static final int BURNIN = 1000;
-	private static final int ITERS = 20000;
+	private static final int ITERS = 100000;
 	
 	private static final Random GEN = new Random();
 	private static final String ROOT_DATA_FOLDER = "../mentalData/";
 	private static final String ROOT_RES_FOLDER = "../mentalRes/";
 
 	private static ArrayList<String> partList;
-	private static final String resSuffix = "-res";
+	
+	private static final String CHILD_VIEW = "-childView";
+	private static final String PARENT_VIEW = "-parentView";
+	private static final String STATS = "-stats";
+	private static final String RULE_COUNTS = "-rulesCounts";
+	private static final String DECAY_SAMPLES = "-decay";
+	private static final String INFER_PROBS = "-infer_probs";
 	
 	private static HashMap<Ctype,String> partFiles = new HashMap<Ctype,String>();
 	private static HashMap<Ctype,String> seqFiles = new HashMap<Ctype,String>();
 	private static HashMap<Ctype,String> outFiles = new HashMap<Ctype,String>();
+	private static HashMap<Ctype,String> splitFilesPrefix = new HashMap<Ctype,String>();
 	
 	static {
-		partFiles.put(Ctype.airplane,ROOT_DATA_FOLDER.concat("airplaneParts.txt"));
-		partFiles.put(Ctype.personWalking,ROOT_DATA_FOLDER.concat("person-walkingParts.txt"));
-		partFiles.put(Ctype.apple,ROOT_DATA_FOLDER.concat("appleParts.txt"));
-		partFiles.put(Ctype.face,ROOT_DATA_FOLDER.concat("faceParts.txt"));
-		partFiles.put(Ctype.violin,ROOT_DATA_FOLDER.concat("violinParts.txt"));
-		partFiles.put(Ctype.camera,ROOT_DATA_FOLDER.concat("cameraParts.txt"));
-		partFiles.put(Ctype.personSitting,ROOT_DATA_FOLDER.concat("person-sittingParts.txt"));
 		
-		seqFiles.put(Ctype.airplane,ROOT_DATA_FOLDER.concat("airplaneManual"));
-		seqFiles.put(Ctype.personWalking,ROOT_DATA_FOLDER.concat("person-walkingManual"));
-		seqFiles.put(Ctype.apple,ROOT_DATA_FOLDER.concat("appleManual"));
-		seqFiles.put(Ctype.face,ROOT_DATA_FOLDER.concat("faceManual"));
-		seqFiles.put(Ctype.violin,ROOT_DATA_FOLDER.concat("violinManual"));
-		seqFiles.put(Ctype.camera,ROOT_DATA_FOLDER.concat("cameraManual"));
-		seqFiles.put(Ctype.personSitting,ROOT_DATA_FOLDER.concat("person-sittingManual"));
+		seqFiles.put(Ctype.airplane,ROOT_DATA_FOLDER.concat("airplane"));
+		seqFiles.put(Ctype.personWalking,ROOT_DATA_FOLDER.concat("person-walking"));
+		seqFiles.put(Ctype.apple,ROOT_DATA_FOLDER.concat("apple"));
+		seqFiles.put(Ctype.face,ROOT_DATA_FOLDER.concat("face"));
+		seqFiles.put(Ctype.violin,ROOT_DATA_FOLDER.concat("violin"));
+		seqFiles.put(Ctype.camera,ROOT_DATA_FOLDER.concat("camera"));
+		seqFiles.put(Ctype.personSitting,ROOT_DATA_FOLDER.concat("person-sitting"));
 		
-		outFiles.put(Ctype.airplane,ROOT_RES_FOLDER.concat("airplaneManual").concat(resSuffix));
-		outFiles.put(Ctype.personWalking,ROOT_RES_FOLDER.concat("person-walkingManual").concat(resSuffix));
-		outFiles.put(Ctype.apple,ROOT_RES_FOLDER.concat("appleManual").concat(resSuffix));
-		outFiles.put(Ctype.face,ROOT_RES_FOLDER.concat("faceManual").concat(resSuffix));
-		outFiles.put(Ctype.violin,ROOT_RES_FOLDER.concat("violinManual").concat(resSuffix));
-		outFiles.put(Ctype.camera,ROOT_RES_FOLDER.concat("cameraManual").concat(resSuffix));
-		outFiles.put(Ctype.personSitting,ROOT_RES_FOLDER.concat("person-sittingManual").concat(resSuffix));
+		outFiles.put(Ctype.airplane,ROOT_RES_FOLDER.concat("airplaneManual"));
+		outFiles.put(Ctype.personWalking,ROOT_RES_FOLDER.concat("person-walkingManual"));
+		outFiles.put(Ctype.apple,ROOT_RES_FOLDER.concat("appleManual"));
+		outFiles.put(Ctype.face,ROOT_RES_FOLDER.concat("faceManual"));
+		outFiles.put(Ctype.violin,ROOT_RES_FOLDER.concat("violinManual"));
+		outFiles.put(Ctype.camera,ROOT_RES_FOLDER.concat("cameraManual"));
+		outFiles.put(Ctype.personSitting,ROOT_RES_FOLDER.concat("person-sittingManual"));
 		
-		partFiles.put(Ctype.test,ROOT_DATA_FOLDER.concat("testParts.txt"));
 		seqFiles.put(Ctype.test,ROOT_DATA_FOLDER.concat("test"));
 		outFiles.put(Ctype.test,ROOT_RES_FOLDER.concat("test"));
+		
+		
+		for (Ctype ct: seqFiles.keySet()) {
+			partFiles.put(ct, seqFiles.get(ct).concat("Parts.txt"));
+			splitFilesPrefix.put(ct, seqFiles.get(ct).concat("SplitTrial"));
+		}		
 	
 	}
 	
-	public static void main(String [ ] args) throws FileNotFoundException {
+	public static void main(String [] args) throws IOException, ClassNotFoundException {
 
-		/*
-		double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
-		for (double alpha : alphaTry)
-			for (Ctype ct : Ctype.values()) {
-				partList = getPartList(ct);
-				doMain(ct,alpha);
+	    int trialStart = 0;
+	    int trialEnd = 20;
+		
+		
+		for (int t= trialStart; t < trialEnd; t++) {
+			//double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
+			double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
+			for (double alpha : alphaTry) {
+				for (Ctype ct : Ctype.values()) {
+					partList = getPartList(ct);
+					String outFilesPrefix = outFiles.get(ct).concat("-alpha" + new Double(alpha).toString()).concat("-trial" + new Integer(t).toString());
+					
+					//Learn
+					
+					ArrayList<int[]> seqs = IO.readFile(seqFiles.get(ct).concat(".txt"));
+					// train and test
+					ArrayList<ArrayList<int[]>> splitSeqs = splitTrainTest(ct,t);
+					ArrayList<int[]> trainSeqs = splitSeqs.get(0);
+					ArrayList<int[]> testSeqs = splitSeqs.get(1);
+					
+					/*
+					for (int[] temp: trainSeqs) {
+						System.out.println("=====");
+						for (int i : temp)
+							System.out.print(i+",");
+						System.out.println("");
+					}
+					System.out.println("XXXXXX");
+					for (int[] temp: testSeqs) {
+						System.out.println("=====");
+						for (int i : temp)
+							System.out.print(i+",");
+						System.out.println("");
+					}
+					*/
+					
+					
+					doMain(trainSeqs,alpha,outFilesPrefix);
+					
+					//Inference
+					
+					// Load stats from learning
+					ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = IO.readRuleCounts(outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));		    
+				    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
+				    ArrayList<Double> decaySamps = IO.readDecaySamps(outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));	
+
+				    // find probs
+				    ArrayList<Double> logProbsPost = new ArrayList<Double>();
+				    for (int[] seq : testSeqs) {
+				    	logProbsPost.add(Inference.inferLogProbSeq(seq,postRules,decaySamps));
+				    }
+
+				    // output inference results
+				    PrintStream out = new PrintStream(outFilesPrefix.concat(INFER_PROBS).concat(".txt"));
+				    IO.outputInferProbs(logProbsPost,out);
+				    out.close();
+				    IO.outputInferProbs(logProbsPost,System.out);
+					
+				}
 			}
-		}*/
+		}
 		
 		
-		double alpha = 0.1;
-		Ctype ct = Ctype.personSitting;
-		partList = getPartList(ct);
-		doMain(ct,alpha);
+		
+	    /*
+	    Ctype ct = Ctype.personSitting;
+	    double alpha = 0.5;
+	    partList = getPartList(ct);
+
+	    String outFilesPrefix = outFiles.get(ct).concat("-alpha" + new Double(alpha).toString()).concat("-trial" + 0);
+	    
+		ArrayList<int[]> seqs = IO.readFile(seqFiles.get(ct).concat(".txt"));
+	    doMain(seqs,alpha, outFilesPrefix);
+
+	    ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = IO.readRuleCounts(outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));		    
+	    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
+
+	    ArrayList<Double> decaySamps = IO.readDecaySamps(outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));	
+
+	    String filePref = seqFiles.get(ct);
+	    String file = filePref.concat(".txt");
+
+	    ArrayList<Double> logProbsPost = new ArrayList<Double>();
+	    for (int[] seq : seqs) {
+	    	logProbsPost.add(Inference.inferLogProbSeq(seq,postRules,decaySamps));
+	    }
+
+	    PrintStream out = new PrintStream(outFilesPrefix.concat(INFER_PROBS).concat(".txt"));
+	    IO.outputInferProbs(logProbsPost,out);
+	    out.close();
+	    IO.outputInferProbs(logProbsPost,System.out);
+	    */
 	}
 		
 	
-	private static void doMain(Ctype ct, double alpha) throws FileNotFoundException {
+	private static ArrayList<ArrayList<int[]>> splitTrainTest(Ctype ct, int t) throws IOException, ClassNotFoundException {
 		
-		String filePref = seqFiles.get(ct);
-		String file = filePref.concat(".txt");
+		String splitFile = splitFilesPrefix.get(ct).concat(new Integer(t).toString()).concat(".ser");
+		
+		ArrayList<ArrayList<int[]>> res = new ArrayList<ArrayList<int[]>>();
+		try {
+			FileInputStream fi = new FileInputStream(splitFile);
+			ObjectInputStream oi=new ObjectInputStream(fi);
+			System.out.println("Reading in existing split file: " + splitFile);
+			res=(ArrayList<ArrayList<int[]>>)oi.readObject();  
+		    oi.close();
+
+		} catch (FileNotFoundException e) { // we haven't made the split file yet
+			System.out.println("Split file does not exist. Creating...");
+			ArrayList<int[]> seqs = IO.readFile(seqFiles.get(ct).concat(".txt"));
+			java.util.Collections.shuffle(seqs);
+			
+			ArrayList<int[]> trainSeqs = new ArrayList<int[]>();
+			ArrayList<int[]> testSeqs = new ArrayList<int[]>();
+			for (int i = 0; i < seqs.size(); i++) {
+				if (i < seqs.size()/2)
+					trainSeqs.add(seqs.get(i));
+				else
+					testSeqs.add(seqs.get(i));
+			}
+			res.add(trainSeqs);
+			res.add(testSeqs);
+			
+			FileOutputStream fo = new FileOutputStream(splitFile);  
+		    ObjectOutputStream oo=new ObjectOutputStream(fo); 
+		    oo.writeObject(res);
+		    oo.close();
+		}  
+	    
+		return res;
+		
+
+	}
+
+
+	private static void doMain(ArrayList<int[]> seqs, double alpha, String outFilesPrefix) throws IOException {
+	
 		
 		// Index on parent
 		ArrayList<HashMap<Long,Integer>> ruleCounts = new ArrayList<HashMap<Long,Integer>>();
 		for (int i = 0; i < partList.size(); i++) {
 			ruleCounts.add(new HashMap<Long,Integer>());
 		}
-		ArrayList<Tree> trees = makeTrees(file,alpha,ruleCounts);
+		ArrayList<Tree> trees = makeTrees(seqs,alpha,ruleCounts);
 		
 		ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = new ArrayList<ArrayList<HashMap<Long,Integer>>>();
-		
 		
 		int treeAcceptTotal = 0;
 		int decayAcceptTotal = 0;
@@ -116,26 +239,34 @@ public class Main {
 			}
 			
 			if (((i-BURNIN) % THIN == 0) && (i > BURNIN)) {
-				allRuleCounts.add(utils.cloneRuleList(ruleCounts));
+				allRuleCounts.add(Utils.cloneRuleList(ruleCounts));
 				decaySamps.add(decayTrav);
 			}
 		}
 
-		String outFilesPrefix = outFiles.get(ct).concat("-" + new Double(alpha).toString());
+
+		// Output all rule counts- for inference later
+		IO.outputRuleCounts(allRuleCounts,outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));
+
+		// Output decay samples- for inference later
+		IO.outputDecaySamps(decaySamps,outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));
 		
-		PrintStream out = new PrintStream(outFilesPrefix.concat("-parentView").concat(".txt"));
-		ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
+		// Output posterior rules
+	    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
+		PrintStream out = new PrintStream(outFilesPrefix.concat(PARENT_VIEW).concat(".txt"));
 		IO.outputPosteriorRuleCounts(postRules,partList,out);
 		out.close();
 		IO.outputPosteriorRuleCounts(postRules,partList,System.out);
 		
-		out = new PrintStream(outFilesPrefix.concat("-childView").concat(".txt"));
+		//Output child-oriented version
+		out = new PrintStream(outFilesPrefix.concat(CHILD_VIEW).concat(".txt"));
 		ArrayList<ArrayList<HashMap<Long, Double>>> childParRules = getParentCounts(allRuleCounts);
 		IO.outputMostLikelyGens(childParRules, partList, out);
 		out.close();
 		IO.outputMostLikelyGens(childParRules, partList, System.out);
 		
-		out = new PrintStream(outFilesPrefix.concat("-childStats").concat(".txt"));
+		//Output stats
+		out = new PrintStream(outFilesPrefix.concat(STATS).concat(".txt"));
 		IO.outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, ITERS, out);
 		out.close();
 		IO.outputStats(decaySamps, treeAcceptTotal, decayAcceptTotal, trees, ITERS, System.out);
@@ -154,8 +285,8 @@ public class Main {
 		double logDecayProbNew = 0;
 		double logDecayProbOld = 0;
 		for (int j=0; j < trees.size(); j++) {	
-			logDecayProbNew += Math.log(trees.get(j).getSeqProb(decayTravPropose));
-			logDecayProbOld += Math.log(trees.get(j).getSeqProb(decayTrav));
+			logDecayProbNew += Math.log(Node.getSeqProb(trees.get(j).getNodes(),decayTravPropose));
+			logDecayProbOld += Math.log(Node.getSeqProb(trees.get(j).getNodes(),decayTrav));
 		}
 		return Math.exp(logDecayProbNew - logDecayProbOld) >= GEN.nextDouble();
 	}
@@ -238,7 +369,7 @@ public class Main {
 			for (int par = 0; par < ruleCounts.size(); par++) {
 				HashMap<Long, Integer> parentRules = ruleCounts.get(par);
 				for (long ruleId : parentRules.keySet()) {
-					ArrayList<Integer> childIds = Tree.getRuleList(ruleId);
+					ArrayList<Integer> childIds = Node.getRuleList(ruleId);
 
 					for (int child : childIds) {
 						
@@ -273,10 +404,9 @@ public class Main {
 		}
 		return res;
 	}
-	private static ArrayList<Tree> makeTrees(String filename, double alpha, ArrayList<HashMap<Long,Integer>> ruleCounts) {
+	private static ArrayList<Tree> makeTrees(ArrayList<int[]> seqs, double alpha, ArrayList<HashMap<Long,Integer>> ruleCounts) {
 		ArrayList<Tree> trees = new ArrayList<Tree>();
 
-		ArrayList<int[]> seqs = IO.readFile(filename);
 		for (int[] seq : seqs) {
 			trees.add(new Tree(seq,alpha,ruleCounts));
 		}

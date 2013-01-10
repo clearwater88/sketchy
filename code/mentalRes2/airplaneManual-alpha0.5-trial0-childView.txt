@@ -1,0 +1,1039 @@
+=== Child: start===
+=== Child: window===
+   --- Parent: left wing: 0.5866111246837459
+   --- Parent: body: 0.1578225996795016
+   --- Parent: right wing: 0.06325077950633333
+   --- Parent: doors: 0.05756545575758078
+   --- Parent: tail: 0.05490291885266598
+   --- Parent: cockpit: 0.03342870984973021
+   --- Parent: start: 0.025254762959681015
+   --- Parent: fuselage: 0.009291963941879675
+   --- Parent: gears: 0.006732947134356664
+   --- Parent: engine: 0.005138737634524366
+=== Child: left wing===
+   --- Parent: body: 0.9487756258405421
+   --- Parent: start: 0.026504782124888233
+   --- Parent: tail: 0.007526470648471151
+   --- Parent: cockpit: 0.005973389403548533
+   --- Parent: doors: 0.004225746332338906
+   --- Parent: right wing: 0.0026965586450304804
+   --- Parent: window: 0.0024610364342619964
+   --- Parent: engine: 0.0011673709577220566
+=== Child: right wing===
+   --- Parent: body: 0.9161640144817724
+   --- Parent: start: 0.04164688052538524
+   --- Parent: left wing: 0.015421402711122335
+   --- Parent: tail: 0.011093710532962873
+   --- Parent: cockpit: 0.006183379641323566
+   --- Parent: doors: 0.005405405405405406
+   --- Parent: window: 0.0020847015239538603
+   --- Parent: engine: 0.0010608739580702199
+=== Child: tail===
+   --- Parent: start: 0.889947621010091
+   --- Parent: body: 0.07234681804283367
+   --- Parent: left wing: 0.01580343255207988
+   --- Parent: right wing: 0.006716874277130056
+   --- Parent: propeller: 0.006205049121920741
+   --- Parent: window: 0.003662541045718616
+   --- Parent: gears: 0.002841626673402374
+   --- Parent: cockpit: 0.0017082995440103163
+=== Child: cockpit===
+   --- Parent: left wing: 0.40753437015119276
+   --- Parent: body: 0.26631905603868183
+   --- Parent: tail: 0.10273157002128955
+   --- Parent: right wing: 0.08528037383177564
+   --- Parent: start: 0.06766679897521015
+   --- Parent: gears: 0.0258993973947245
+   --- Parent: window: 0.012304694547685204
+   --- Parent: fuselage: 0.011537906397719483
+   --- Parent: engine: 0.010874860173925596
+   --- Parent: doors: 0.009850972467794898
+=== Child: body===
+   --- Parent: start: 0.9913172518312701
+   --- Parent: propeller: 0.006399974741096237
+   --- Parent: left wing: 0.0011840111139176561
+=== Child: fuselage===
+   --- Parent: left wing: 0.6249052791108867
+   --- Parent: right wing: 0.15988886082344025
+   --- Parent: tail: 0.0924475877746906
+   --- Parent: body: 0.08790098509724677
+   --- Parent: start: 0.03485728719373579
+=== Child: engine===
+   --- Parent: left wing: 0.22997207867124533
+   --- Parent: window: 0.21676235467596924
+   --- Parent: right wing: 0.16567792849682217
+   --- Parent: tail: 0.09734918045097382
+   --- Parent: body: 0.0732917812988538
+   --- Parent: cockpit: 0.06617832786057085
+   --- Parent: engine: 0.060798864032003706
+   --- Parent: start: 0.038420840643624166
+   --- Parent: fuselage: 0.01659578244574456
+   --- Parent: propeller: 0.013878743608473338
+   --- Parent: gears: 0.011728323423195864
+   --- Parent: doors: 0.009345794392523366
+=== Child: gears===
+   --- Parent: body: 0.19003115264797513
+   --- Parent: left wing: 0.18902079649743203
+   --- Parent: right wing: 0.18400269428306815
+   --- Parent: window: 0.16526058769049423
+   --- Parent: tail: 0.07954870758609074
+   --- Parent: cockpit: 0.05816283573292919
+   --- Parent: start: 0.05071987875726194
+   --- Parent: gears: 0.05024837922034184
+   --- Parent: propeller: 0.029199292750694616
+   --- Parent: engine: 0.003805674833712217
+=== Child: propeller===
+   --- Parent: start: 0.3496674244337796
+   --- Parent: body: 0.30622210996042776
+   --- Parent: left wing: 0.10314052370127136
+   --- Parent: window: 0.09093205354887599
+   --- Parent: cockpit: 0.06297886671718447
+   --- Parent: right wing: 0.05556958827986865
+   --- Parent: tail: 0.03148943335859224
+=== Child: doors===
+   --- Parent: body: 0.39486883412117046
+   --- Parent: left wing: 0.18283837910006137
+   --- Parent: tail: 0.14718724064518457
+   --- Parent: right wing: 0.10283982246599069
+   --- Parent: cockpit: 0.07249305380146502
+   --- Parent: gears: 0.06188431422076281
+   --- Parent: start: 0.03788835564536501
+---------------------
+=== Child: start===
+   --- Parent: start: 0.0---
+   --- Parent: window: 0.0---
+   --- Parent: left wing: 0.0---
+   --- Parent: right wing: 0.0---
+   --- Parent: tail: 0.0---
+   --- Parent: cockpit: 0.0---
+   --- Parent: body: 0.0---
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.0---
+=== Child: window===
+   --- Parent: start: 0.025254762959681022---
+         [body, cockpit, window]/0.005180145673481049
+         [body, cockpit, tail, window]/0.00466668599041818
+         [body, window]/0.0024513559062356366
+         [body, tail, window]/0.0019875858699207865
+         [body, right wing, window]/0.0011180170518304423
+         [body, tail, right wing, window]/0.0010890314245607642
+   --- Parent: window: 0.0---
+   --- Parent: left wing: 0.5866111246837459---
+         [cockpit, window]/0.2726553733141752
+         [window]/0.25923502788831426
+         [engine, engine, cockpit, window]/0.007813696951126091
+         [gears, gears, window]/0.0055155507890301825
+         [doors, cockpit, window]/0.004604573931983155
+         [propeller, cockpit, window]/0.004455504991739096
+         [gears, engine, cockpit, window]/0.0029523931776115017
+         [right wing, window]/0.002819887452950116
+         [tail, window]/0.0027743386100977643
+         [engine, cockpit, window]/0.002215330084182543
+         [gears, window]/0.0021946260647042015
+         [gears, gears, cockpit, window]/0.0016480399504759855
+         [fuselage, window]/0.0013830285011532139
+         [cockpit, tail, window]/0.001209114737535145
+         [doors, window]/0.0011552842868914571
+         [gears, gears, cockpit, tail, window]/0.001018637758334403
+   --- Parent: right wing: 0.06325077950633337---
+         [cockpit, window]/0.026256837502432722
+         [window]/0.01290274493890244
+         [gears, gears, window]/0.005039358341028327
+         [engine, engine, cockpit, window]/0.00339545919444801
+         [engine, cockpit, window]/0.0017557008517633612
+         [gears, window]/0.0012546635803874964
+         [doors, engine, cockpit, window]/0.001126298659621779
+         [engine, engine, window]/0.0011055946401434375
+   --- Parent: tail: 0.054902918852665974---
+         [cockpit, window]/0.023060136894976793
+         [window]/0.009374780019793043
+         [engine, engine, engine, cockpit, window]/0.002894421923072145
+         [doors, cockpit, window]/0.0022194708880782115
+         [engine, cockpit, window]/0.0020331347127731376
+         [gears, engine, engine, cockpit, window]/0.0014409997556925703
+         [cockpit, right wing, window]/0.0013664652855705406
+         [engine, engine, cockpit, window]/0.0012381003648048233
+         [right wing, window]/0.0011718475024741304
+         [gears, cockpit, window]/0.0010600457972910861
+   --- Parent: cockpit: 0.03342870984973022---
+         [window]/0.018977304253847842
+         [engine, engine, window]/0.0034161632139263517
+         [engine, window]/0.002501045552983656
+         [right wing, window]/0.0013416204621965308
+         [right wing, left wing, window]/0.0011097354440391058
+         [doors, window]/0.001018637758334403
+   --- Parent: body: 0.15782259967950138---
+         [cockpit, right wing, left wing, window]/0.06545368717882889
+         [cockpit, right wing, window]/0.021043565397786325
+         [window]/0.015403790491886095
+         [right wing, left wing, window]/0.00537476345657746
+         [cockpit, left wing, window]/0.004869585381305927
+         [tail, window]/0.003950326916467563
+         [cockpit, tail, right wing, window]/0.003817821191806177
+         [cockpit, tail, left wing, window]/0.0027619161984107593
+         [doors, cockpit, right wing, left wing, window]/0.0025465943958360077
+         [gears, gears, cockpit, right wing, left wing, window]/0.0020745427517298207
+         [cockpit, tail, right wing, left wing, window]/0.0019875858699207865
+         [left wing, window]/0.0019089105959030886
+         [cockpit, window]/0.0017391376361806882
+         [right wing, window]/0.0016770255777456635
+         [cockpit, tail, window]/0.0012795084037615062
+         [gears, gears, cockpit, left wing, window]/0.001262945188178833
+         [engine, cockpit, tail, right wing, window]/0.0010807498167694277
+   --- Parent: fuselage: 0.009291963941879677---
+         [engine, cockpit, window]/0.004310576855390705
+         [cockpit, window]/0.0020621203400428157
+         [engine, window]/0.0016604623621629903
+         [window]/0.0012588043842831648
+   --- Parent: engine: 0.005138737634524366---
+         [cockpit, window]/0.0017764048712417028
+         [engine, cockpit, window]/0.0011552842868914571
+   --- Parent: gears: 0.006732947134356663---
+         [cockpit, window]/0.0011470026791001206
+         [doors, cockpit, window]/0.001113876247934774
+         [engine, engine, cockpit, window]/0.001113876247934774
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.05756545575758078---
+         [window]/0.04429832007585953
+         [engine, window]/0.004074551033337612
+         [cockpit, window]/0.0034244448217176883
+         [right wing, window]/0.00197930426212945
+         [cockpit, right wing, left wing, window]/0.0010890314245607642
+=== Child: left wing===
+   --- Parent: start: 0.026504782124888247---
+         [body, left wing]/0.0040038775830642465
+         [body, right wing, left wing]/0.0035840336421291206
+         [body, cockpit, left wing]/0.0024439696073947146
+         [body, tail, left wing]/0.0017954301864380167
+         [body, tail, right wing, left wing]/0.0016930292252343275
+         [body, cockpit, tail, left wing]/0.0012663585535522893
+         [engine, body, left wing]/0.0010547299003979985
+   --- Parent: window: 0.0024610364342619964---
+   --- Parent: left wing: 0.0---
+   --- Parent: right wing: 0.0026965586450304812---
+   --- Parent: tail: 0.007526470648471148---
+         [left wing]/0.0010444898042776295
+   --- Parent: cockpit: 0.005973389403548533---
+         [left wing]/0.0011571308616016875
+   --- Parent: body: 0.948775625840542---
+         [right wing, left wing]/0.7269683171426036
+         [cockpit, right wing, left wing, window]/0.05395506645822382
+         [left wing]/0.028146610869520694
+         [cockpit, left wing]/0.026272673279493182
+         [cockpit, right wing, left wing]/0.023316698866080024
+         [tail, left wing]/0.022436050599728297
+         [doors, cockpit, right wing, left wing]/0.006123577479980612
+         [cockpit, tail, left wing]/0.00558085238560106
+         [right wing, left wing, window]/0.004430548254746284
+         [cockpit, left wing, window]/0.004014117679184615
+         [engine, right wing, left wing]/0.003283657489264966
+         [tail, right wing, left wing]/0.002290368165589181
+         [cockpit, tail, left wing, window]/0.002276714704095356
+         [doors, cockpit, right wing, left wing, window]/0.002099219704675628
+         [gears, gears, cockpit, right wing, left wing, window]/0.001710096052101609
+         [cockpit, tail, right wing, left wing]/0.001655482206126308
+         [cockpit, tail, right wing, left wing, window]/0.0016384153792590266
+         [doors, right wing, left wing]/0.0016111084562713761
+         [left wing, window]/0.0015735614371633567
+         [doors, cockpit, left wing]/0.0014097198992374543
+         [engine, cockpit, right wing, left wing]/0.0013004922072868525
+         [engine, engine, right wing, left wing]/0.0011776110538424254
+         [engine, engine, cockpit, right wing, left wing]/0.0010649699965183674
+         [gears, gears, cockpit, left wing, window]/0.0010410764389041731
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0011673709577220562---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 6.690196131974358E-4---
+   --- Parent: doors: 0.004225746332338906---
+=== Child: right wing===
+   --- Parent: start: 0.04164688052538526---
+         [body, right wing]/0.015909741517218152
+         [body, tail, right wing]/0.007197103645701777
+         [body, right wing, left wing]/0.0035362465269007325
+         [body, tail, right wing, left wing]/0.0016704555022312032
+         [body, cockpit, right wing]/0.0014515450029468722
+         [body, cockpit, tail, right wing]/0.0010575061042350762
+   --- Parent: window: 0.0020847015239538603---
+   --- Parent: left wing: 0.015421402711122332---
+         [right wing]/0.002418119053633072
+         [right wing, window]/0.0022935084617327606
+         [doors, right wing]/0.00101372400437821
+   --- Parent: right wing: 0.0---
+   --- Parent: tail: 0.011093710532962868---
+         [right wing]/0.00142123431843058
+         [cockpit, right wing, window]/0.001111391765597373
+         [cockpit, right wing]/0.0010642418119053633
+   --- Parent: cockpit: 0.006183379641323568---
+         [right wing, window]/0.0010911846425865118
+   --- Parent: body: 0.9161640144817724---
+         [right wing, left wing]/0.7172754062473689
+         [cockpit, right wing, left wing, window]/0.05323566557211417
+         [cockpit, right wing, left wing]/0.023005809547865623
+         [cockpit, right wing, window]/0.017115433190199546
+         [doors, cockpit, right wing]/0.012205102298560243
+         [right wing]/0.009595015576323987
+         [doors, cockpit, right wing, left wing]/0.006041929780247537
+         [cockpit, right wing]/0.004913698745474446
+         [propeller, right wing]/0.004886755914793298
+         [right wing, left wing, window]/0.004371474278016334
+         [propeller, engine, right wing]/0.003782099856866212
+         [engine, right wing, left wing]/0.0032398753894080996
+         [cockpit, tail, right wing, window]/0.0031051612360023574
+         [tail, right wing]/0.002744800875641997
+         [tail, right wing, left wing]/0.002259829923381325
+         [doors, cockpit, right wing, left wing, window]/0.002071230108613286
+         [gears, right wing]/0.0019701944935589795
+         [gears, gears, right wing]/0.001906205270691252
+         [gears, gears, cockpit, right wing, left wing, window]/0.001687294771406921
+         [cockpit, tail, right wing, left wing]/0.001633409110044624
+         [cockpit, tail, right wing, left wing, window]/0.0016165698408689064
+         [doors, right wing, left wing]/0.001589627010187758
+         [cockpit, tail, right wing]/0.0014313378799360107
+         [right wing, window]/0.0013639808032331396
+         [doors, gears, gears, cockpit, right wing]/0.001353877241727709
+         [doors, right wing]/0.0012831523111896943
+         [engine, cockpit, right wing, left wing]/0.0012831523111896943
+         [engine, engine, right wing, left wing]/0.0011619095731245264
+         [propeller, tail, right wing]/0.0011484381577839522
+         [engine, engine, cockpit, right wing, left wing]/0.0010507703965647892
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0010608739580702199---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 9.396312200050518E-4---
+   --- Parent: doors: 0.005405405405405406---
+         [right wing, window]/0.0016098341331986191
+=== Child: tail===
+   --- Parent: start: 0.8899476210100922---
+         [body, tail]/0.8359467435955384
+         [body, cockpit, tail]/0.015557490594381888
+         [body, tail, right wing]/0.00710240491352149
+         [body, cockpit, tail, window]/0.0037456295449409074
+         [propeller, gears, body, tail]/0.0019841533614283246
+         [body, tail, left wing]/0.0017481820236370162
+         [body, tail, right wing, left wing]/0.0016484758245702662
+         [body, tail, window]/0.0015952991850679997
+         [propeller, body, tail]/0.0015952991850679997
+         [engine, body, tail]/0.0015354754656279497
+         [body, cockpit, tail, left wing]/0.001233033328458808
+         [doors, body, cockpit, tail]/0.001153268369205408
+         [propeller, tail]/0.0011399742093298414
+         [body, cockpit, tail, right wing]/0.001043591550231983
+   --- Parent: window: 0.0036625410457186165---
+         [engine, engine, tail]/0.001073503409952008
+   --- Parent: left wing: 0.015803432552079895---
+         [tail]/0.0025458316161710163
+         [tail, window]/0.0022267717791574163
+         [cockpit, tail]/0.0018744765424548995
+         [engine, engine, cockpit, tail]/0.0015587402454101914
+   --- Parent: right wing: 0.006716874277130059---
+         [tail]/0.001552093165472408
+   --- Parent: tail: 0.0---
+   --- Parent: cockpit: 0.0017082995440103163---
+   --- Parent: body: 0.07234681804283367---
+         [tail, left wing]/0.02184562821552492
+         [tail]/0.006354608420520865
+         [cockpit, tail, left wing]/0.005433987849137874
+         [tail, window]/0.0031706571303226493
+         [cockpit, tail, right wing, window]/0.003064303851318116
+         [tail, right wing]/0.002708685074646708
+         [tail, right wing, left wing]/0.002230095319126308
+         [cockpit, tail, left wing, window]/0.002216801159250741
+         [cockpit, tail, right wing, left wing]/0.001611916884912458
+         [cockpit, tail, right wing, left wing, window]/0.0015952991850679997
+         [cockpit, tail]/0.001591975645099108
+         [cockpit, tail, right wing]/0.001412504486778958
+         [propeller, tail, right wing]/0.001133327129392058
+         [cockpit, tail, window]/0.0010269738503875248
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 7.677377328139748E-4---
+   --- Parent: gears: 0.002841626673402374---
+         [cockpit, tail]/0.0015055636059079247
+   --- Parent: propeller: 0.006205049121920741---
+         [gears, body, tail]/0.0022766248786907912
+         [body, tail]/0.001582005025192433
+         [gears, tail]/0.0010469150902008748
+   --- Parent: doors: 0.0---
+=== Child: cockpit===
+   --- Parent: start: 0.06766679897520994---
+         [body, cockpit, tail]/0.021113737235232563
+         [body, cockpit]/0.014384043589651067
+         [body, cockpit, window]/0.005642658680041858
+         [body, cockpit, tail, window]/0.005083354382419803
+         [body, cockpit, left wing]/0.0032295312669144444
+         [body, cockpit, right wing]/0.001944033486089561
+         [body, cockpit, tail, left wing]/0.0016734023743369538
+         [doors, body, cockpit, tail]/0.0015651499296359108
+         [body, cockpit, tail, right wing]/0.0014163028181719771
+         [body, cockpit, right wing, left wing]/0.0011005665211272688
+   --- Parent: window: 0.012304694547685206---
+         [cockpit]/0.004537581640385379
+         [gears, engine, cockpit]/0.003279146970735756
+         [gears, gears, cockpit]/0.0013260924475877746
+         [gears, gears, cockpit, tail]/0.0012358820770035724
+   --- Parent: left wing: 0.40753437015119276---
+         [cockpit, window]/0.29699960307436946
+         [engine, engine, cockpit]/0.032308844224732076
+         [cockpit]/0.014758416627575505
+         [engine, engine, cockpit, window]/0.008511348464619492
+         [doors, cockpit]/0.008321906686392667
+         [doors, cockpit, window]/0.005015696604481651
+         [propeller, cockpit, window]/0.004853317937430087
+         [gears, gears, cockpit]/0.0035723306751344135
+         [gears, engine, cockpit, window]/0.003215999711326814
+         [cockpit, tail]/0.0025439324504745067
+         [engine, cockpit, window]/0.002413127413127413
+         [engine, engine, cockpit, tail]/0.0021154331901995452
+         [engine, cockpit]/0.0019034388193266698
+         [gears, gears, cockpit, window]/0.001795186374625627
+         [fuselage, cockpit]/0.0014614080034640782
+         [cockpit, tail, window]/0.0013170714105293544
+         [gears, gears, cockpit, right wing]/0.0011817558546530508
+         [gears, gears, cockpit, tail, window]/0.001109587558185689
+   --- Parent: right wing: 0.08528037383177563---
+         [cockpit, window]/0.028601197993721357
+         [engine, engine, cockpit]/0.011217659582145564
+         [cockpit]/0.010238877061306969
+         [gears, gears, cockpit]/0.00688305127557464
+         [doors, cockpit]/0.0038429617868870206
+         [engine, engine, cockpit, window]/0.0036986251939522966
+         [doors, engine, cockpit]/0.0023590011907768916
+         [engine, cockpit]/0.00191245985638509
+         [engine, cockpit, window]/0.00191245985638509
+         [gears, cockpit]/0.0017816548190379966
+         [doors, engine, cockpit, window]/0.001226861039945152
+         [doors, cockpit, window]/0.0010013351134846463
+   --- Parent: tail: 0.10273157002128955---
+         [cockpit]/0.033319200375275144
+         [cockpit, window]/0.025119077689171147
+         [doors, cockpit]/0.008993973947244976
+         [engine, engine, engine, cockpit, window]/0.0031528524519178723
+         [engine, cockpit]/0.002552953487532927
+         [doors, cockpit, window]/0.002417637931656623
+         [engine, cockpit, window]/0.002214664597842168
+         [engine, engine, cockpit]/0.0018087179302132574
+         [gears, engine, engine, cockpit, window]/0.001569660448165121
+         [cockpit, right wing, window]/0.001488471114639339
+         [engine, engine, engine, cockpit]/0.0014749395590517086
+         [cockpit, right wing]/0.0014253238552303974
+         [engine, engine, cockpit, window]/0.0013486450402338253
+         [gears, cockpit]/0.0013351134846461949
+         [cockpit, left wing]/0.0012133294843575217
+         [gears, cockpit, window]/0.0011546927434777903
+         [gears, gears, cockpit]/0.0010509508173059574
+   --- Parent: cockpit: 0.0---
+   --- Parent: body: 0.2663190560386828---
+         [cockpit, right wing, left wing, window]/0.07129776639122433
+         [cockpit, left wing]/0.03471746111933028
+         [cockpit, right wing, left wing]/0.030811352073034315
+         [cockpit, right wing, window]/0.022922455165445818
+         [doors, cockpit, right wing]/0.016346119149857466
+         [doors, cockpit, right wing, left wing]/0.008091870241402952
+         [cockpit, tail, left wing]/0.0073746977952585425
+         [cockpit, right wing]/0.006580846534117562
+         [cockpit, left wing, window]/0.0053043697903510986
+         [cockpit]/0.004605239418323531
+         [cockpit, tail, right wing, window]/0.0041586980839317285
+         [cockpit, tail, left wing, window]/0.0030085158589831487
+         [doors, cockpit, right wing, left wing, window]/0.0027739688954642227
+         [gears, gears, cockpit, right wing, left wing, window]/0.0022597697831342693
+         [cockpit, tail, right wing, left wing]/0.0021876014866669072
+         [cockpit, tail, right wing, left wing, window]/0.0021650488940208566
+         [cockpit, tail]/0.0021605383754916465
+         [cockpit, tail, right wing]/0.0019169703749143002
+         [cockpit, window]/0.0018944177822682495
+         [doors, cockpit, left wing]/0.0018628441525637787
+         [doors, gears, gears, cockpit, right wing]/0.0018132284487424675
+         [engine, cockpit, right wing, left wing]/0.0017185075596290549
+         [doors, cockpit]/0.0014839605961101288
+         [engine, engine, cockpit, right wing, left wing]/0.001407281781113557
+         [cockpit, tail, window]/0.0013937502255259265
+         [gears, gears, cockpit, left wing, window]/0.001375708151409086
+         [gears, gears, cockpit, left wing]/0.0012854977808248837
+         [engine, cockpit, tail, right wing, window]/0.0011772453361238407
+         [engine, cockpit, right wing, left wing, window]/0.0010780139284812182
+   --- Parent: fuselage: 0.011537906397719481---
+         [engine, cockpit, window]/0.0046954497889077325
+         [engine, cockpit]/0.002746905784288962
+         [cockpit, window]/0.002246238227546639
+         [cockpit]/0.0018493125969761483
+   --- Parent: engine: 0.010874860173925598---
+         [cockpit]/0.004465413343918017
+         [cockpit, window]/0.0019350124490311407
+         [engine, cockpit]/0.0013125608920001443
+         [engine, cockpit, window]/0.001258434669649623
+   --- Parent: gears: 0.0258993973947245---
+         [cockpit]/0.010022372171904883
+         [doors, cockpit]/0.0028822213401652652
+         [gears, cockpit]/0.002525890376357666
+         [cockpit, tail]/0.0020432648937321832
+         [cockpit, window]/0.0012494136325912027
+         [doors, cockpit, window]/0.0012133294843575217
+         [engine, engine, cockpit, window]/0.0012133294843575217
+         [doors, gears, cockpit]/0.0010960560025980587
+         [engine, cockpit, window]/0.0010825244470104283
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.0098509724677949---
+         [cockpit, window]/0.0037301988236567675
+         [cockpit]/0.0019575650416771913
+         [cockpit, right wing, left wing, window]/0.001186266373182261
+=== Child: body===
+   --- Parent: start: 0.9913172518312694---
+         [body, tail]/0.7941494064157616
+         [body]/0.09194240969941904
+         [body, right wing]/0.014915382672392018
+         [body, cockpit, tail]/0.014779616064662793
+         [body, cockpit]/0.010068830512755747
+         [body, tail, right wing]/0.006747284667845415
+         [body, cockpit, window]/0.003949861076029301
+         [body, left wing]/0.003703586764334428
+         [body, cockpit, tail, window]/0.003558348067693862
+         [body, right wing, left wing]/0.003315231118969437
+         [body, cockpit, left wing]/0.002260671886840111
+         [propeller, gears, body, tail]/0.0018849456933569084
+         [body, window]/0.001869158878504673
+         [body, tail, left wing]/0.0016607729224551655
+         [propeller, body]/0.0016260419297802475
+         [body, tail, right wing, left wing]/0.001566052033341753
+         [body, tail, window]/0.0015155342258145997
+         [propeller, body, tail]/0.0015155342258145997
+         [engine, body, tail]/0.0014587016923465522
+         [body, cockpit, right wing]/0.0013608234402626926
+         [engine, body]/0.001297676180853751
+         [body, cockpit, tail, left wing]/0.0011713816620358677
+         [doors, body, cockpit, tail]/0.0010956049507451376
+   --- Parent: window: 0.0---
+   --- Parent: left wing: 0.0011840111139176557---
+   --- Parent: right wing: 5.872695125031575E-4---
+   --- Parent: tail: 2.052285930790603E-4---
+   --- Parent: cockpit: 3.0626420813336703E-4---
+   --- Parent: body: 0.0---
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 0.006399974741096237---
+         [gears, body, tail]/0.0021627936347562516
+         [body, tail]/0.0015029047739328113
+         [body]/0.0010135135135135136
+   --- Parent: doors: 0.0---
+=== Child: fuselage===
+   --- Parent: start: 0.03485728719373579---
+         [fuselage, body, tail]/0.018944177822682495
+         [engine, fuselage, body, tail]/0.006314725940894165
+         [engine, fuselage, body, cockpit, tail]/0.002525890376357666
+         [fuselage, body, cockpit, tail]/0.0015155342258145997
+         [fuselage, body, right wing]/0.001262945188178833
+   --- Parent: window: 0.0---
+   --- Parent: left wing: 0.6249052791108866---
+         [fuselage]/0.18817883303864613
+         [fuselage, window]/0.08436473857034604
+         [fuselage, cockpit]/0.08183884819398839
+         [engine, fuselage]/0.07703965647890881
+         [fuselage, cockpit, window]/0.05354887597878252
+         [engine, fuselage, window]/0.05279110886587522
+         [engine, fuselage, cockpit]/0.05203334175296792
+         [engine, fuselage, cockpit, window]/0.03510987623137156
+   --- Parent: right wing: 0.1598888608234402---
+         [fuselage]/0.06036877999494822
+         [engine, fuselage]/0.02298560242485476
+         [fuselage, window]/0.014397575145238697
+         [fuselage, cockpit]/0.01338721899469563
+         [engine, fuselage, cockpit]/0.012882040919424097
+         [fuselage, left wing]/0.010103561505430665
+         [engine, fuselage, window]/0.006819904016165698
+         [fuselage, cockpit, window]/0.0055569588279868656
+         [engine, fuselage, cockpit, window]/0.004799191715079565
+         [engine, fuselage, left wing]/0.002525890376357666
+         [fuselage, cockpit, left wing]/0.0017681232634503663
+         [engine, fuselage, cockpit, left wing]/0.0015155342258145997
+         [fuselage, left wing, window]/0.001262945188178833
+   --- Parent: tail: 0.09244758777469061---
+         [fuselage]/0.04395049254862339
+         [engine, fuselage]/0.009345794392523364
+         [fuselage, cockpit]/0.008840616317251832
+         [fuselage, window]/0.007577671129072998
+         [fuselage, right wing, left wing]/0.004041424602172266
+         [fuselage, right wing]/0.0030310684516291994
+         [engine, fuselage, cockpit]/0.002525890376357666
+         [engine, fuselage, window]/0.002020712301086133
+         [fuselage, cockpit, window]/0.0015155342258145997
+         [fuselage, left wing]/0.0015155342258145997
+         [fuselage, cockpit, right wing, left wing]/0.001262945188178833
+         [fuselage, cockpit, right wing]/0.0010103561505430665
+   --- Parent: cockpit: 0.0---
+   --- Parent: body: 0.08790098509724681---
+         [fuselage, right wing, left wing]/0.03687799949482193
+         [engine, fuselage, right wing, left wing]/0.008082849204344532
+         [fuselage, cockpit, right wing, left wing]/0.007325082091437232
+         [fuselage, tail, right wing, left wing]/0.006314725940894165
+         [fuselage, right wing, left wing, window]/0.005809547865622632
+         [fuselage, cockpit, tail, right wing, left wing]/0.002525890376357666
+         [engine, fuselage, tail, right wing, left wing]/0.0022733013387218996
+         [fuselage, cockpit, right wing, left wing, window]/0.0017681232634503663
+         [engine, fuselage, cockpit, right wing, left wing]/0.0017681232634503663
+         [fuselage, tail, left wing]/0.0017681232634503663
+         [fuselage, right wing]/0.0015155342258145997
+         [fuselage, left wing]/0.0015155342258145997
+         [fuselage, tail, right wing]/0.0015155342258145997
+         [fuselage]/0.001262945188178833
+         [engine, fuselage, right wing, left wing, window]/0.001262945188178833
+         [fuselage, tail]/0.0010103561505430665
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.0---
+=== Child: engine===
+   --- Parent: start: 0.03842084064362424---
+         [engine, engine, engine, engine, body]/0.005434077674542438
+         [engine, engine, body]/0.003822969218271062
+         [engine, body, tail]/0.0031539496050736263
+         [engine, body]/0.002805786336981083
+         [engine, engine, engine, body]/0.0024166626844070644
+         [engine, body, left wing]/0.002109459800795997
+         [engine, body, tail, left wing]/0.0018500440324133176
+         [engine, engine, body, tail]/0.001419959995357823
+   --- Parent: window: 0.21676235467596924---
+         [engine, engine]/0.14849504720684312
+         [engine, engine, engine, engine]/0.03203102066451397
+         [engine, engine, engine]/0.012636278612535244
+         [engine]/0.010342497081572605
+         [gears, engine, cockpit]/0.0049630332530054685
+         [engine, engine, tail]/0.004410068062505546
+         [gears, engine]/0.002737519029511957
+   --- Parent: left wing: 0.22997207867124536---
+         [engine, engine, cockpit]/0.09779974468027007
+         [engine, engine, cockpit, window]/0.025764081838848193
+         [engine, engine]/0.018732549169528205
+         [engine, engine, engine, engine]/0.013025402265109261
+         [engine, engine, engine]/0.006656062478239796
+         [engine, engine, cockpit, tail]/0.006403473440604029
+         [engine]/0.0049630332530054685
+         [gears, engine, cockpit, window]/0.004867459022548691
+         [engine, cockpit, window]/0.003652300949598247
+         [engine, cockpit]/0.002880880375197122
+         [engine, engine, cockpit, tail, window]/0.0024576230688885398
+         [engine, engine, engine, engine, right wing, window]/0.002348395376937938
+         [engine, engine, window]/0.0023210884539502877
+         [engine, engine, tail]/0.002280128069468812
+         [engine, fuselage]/0.0020821528778083463
+         [engine, engine, right wing]/0.0020616726855676084
+         [engine, engine, engine, cockpit, window]/0.0018841776861478806
+         [engine, engine, right wing, window]/0.0017476430712096284
+         [engine, engine, engine, engine, right wing]/0.001720336148221978
+         [engine, engine, engine, right wing, window]/0.0015155342258145997
+         [engine, engine, engine, right wing]/0.0014950540335738618
+         [engine, fuselage, window]/0.0014267867261047358
+         [engine, fuselage, cockpit]/0.001406306533863998
+         [engine, engine, cockpit, right wing]/0.0013243857649010466
+         [engine, window]/0.0011810244192158818
+         [engine, engine, engine, window]/0.001105930380999843
+   --- Parent: right wing: 0.16567792849682228---
+         [engine, engine, engine, engine]/0.03746509833905641
+         [engine, engine, cockpit]/0.03395615873514333
+         [engine, engine]/0.01665722302246677
+         [engine, engine, engine]/0.011591788808257614
+         [engine, engine, cockpit, window]/0.011195838424936683
+         [engine, engine, engine, cockpit, window]/0.004198439409351256
+         [engine]/0.0040482513329191784
+         [engine, engine, window]/0.0036454742188513343
+         [doors, engine, cockpit]/0.0035703801806352955
+         [engine, cockpit]/0.002894533836690947
+         [engine, cockpit, window]/0.002894533836690947
+         [engine, engine, engine, engine, window]/0.0028672269137032967
+         [engine, engine, engine, engine, cockpit, window]/0.002703385375777394
+         [engine, engine, engine, cockpit]/0.0026624249912959182
+         [engine, engine, engine, window]/0.0025395438378514913
+         [doors, engine, cockpit, window]/0.0018568707631602302
+         [engine, engine, engine, cockpit, tail, window]/0.0017612965327034537
+         [engine, window]/0.001440440187598561
+         [engine, engine, cockpit, tail]/0.0013243857649010466
+         [engine, engine, engine, tail]/0.0012697719189257457
+         [gears, engine, engine, cockpit, window]/0.001051316535024542
+   --- Parent: tail: 0.0973491804509738---
+         [engine, engine]/0.014950540335738617
+         [engine, engine, engine, cockpit, window]/0.014315654376275746
+         [engine]/0.007666418628782862
+         [engine, engine, engine, cockpit]/0.0066970228627212715
+         [engine, engine, engine]/0.005591092481721428
+         [engine, engine, cockpit]/0.005475038059023914
+         [gears, engine, engine, cockpit, window]/0.004751404599851177
+         [engine, engine, cockpit, window]/0.004082384986653741
+         [engine, cockpit]/0.003863929602752538
+         [engine, cockpit, window]/0.003351924796734092
+         [engine, engine, engine, window]/0.002068499416314521
+         [gears, engine, engine, cockpit]/0.0013926530723701726
+         [engine, engine, engine, engine, cockpit, window]/0.0012834253804195708
+         [doors, engine, cockpit]/0.0011878511499627943
+         [engine, engine, window]/0.0011605442269751439
+         [engine, engine, engine, engine, cockpit]/0.0010922769195060179
+         [engine, window]/0.0010308363427838042
+         [gears, engine]/0.0010035294197961538
+   --- Parent: cockpit: 0.06617832786057082---
+         [engine, engine]/0.018213717632762846
+         [engine, engine, window]/0.011264105732405808
+         [gears, engine]/0.007884874012684066
+         [engine]/0.005079087675702983
+         [engine, engine, engine, engine]/0.004860632291801779
+         [engine, window]/0.004123345371135217
+         [engine, engine, engine]/0.002068499416314521
+         [engine, engine, engine, engine, window]/0.002020712301086133
+         [engine, engine, engine, window]/0.0018227371094256672
+         [doors, engine]/0.0017681232634503663
+         [engine, engine, tail]/0.0010103561505430665
+   --- Parent: body: 0.07329178129885384---
+         [propeller, engine, right wing]/0.007666418628782862
+         [engine, right wing, left wing]/0.006567314978529932
+         [engine, engine, right wing, left wing]/0.0047104442153697015
+         [engine, engine, cockpit, right wing, left wing]/0.00425987998607347
+         [engine, cockpit, right wing, left wing]/0.002600984414573705
+         [engine]/0.0023961824921663265
+         [engine, right wing]/0.0019387915321231815
+         [propeller, engine, tail, right wing]/0.0019387915321231815
+         [engine, tail, right wing]/0.0019183113398824436
+         [engine, engine, engine, engine, right wing, left wing]/0.001911484609135531
+         [engine, cockpit, tail, right wing, window]/0.0017817767249441914
+         [engine, left wing]/0.0017817767249441914
+         [engine, cockpit, right wing, left wing, window]/0.001631588648512114
+         [engine, engine, cockpit, right wing, left wing, window]/0.0013653461493825221
+         [engine, tail]/0.0013448659571417844
+         [engine, cockpit, tail, right wing]/0.0013380392263948717
+         [engine, tail, right wing, left wing]/0.0012561184574319203
+         [engine, engine, engine, right wing, left wing]/0.0012492917266850078
+         [engine, engine, left wing]/0.0011878511499627943
+         [engine, cockpit, right wing]/0.0010308363427838042
+         [engine, engine, cockpit, tail, right wing, left wing]/0.0010103561505430665
+   --- Parent: fuselage: 0.01659578244574456---
+         [engine, cockpit, window]/0.0071066267075360285
+         [engine, cockpit]/0.00415747902486978
+         [engine, window]/0.002737519029511957
+         [engine]/0.002594157683826792
+   --- Parent: engine: 0.06079886403200372---
+         [engine]/0.025497839339718602
+         [engine, engine]/0.021872845313108007
+         [engine, engine, engine]/0.00643078036359168
+         [engine, cockpit]/0.0019865786473515696
+         [engine, cockpit, window]/0.0019046578783886185
+   --- Parent: gears: 0.011728323423195868---
+         [engine, engine, cockpit, window]/0.0036727811418389845
+         [engine, engine, cockpit]/0.001720336148221978
+         [engine, cockpit, window]/0.0016384153792590266
+         [engine, engine, window]/0.0011468907654813188
+         [engine, cockpit]/0.0010786234580121925
+   --- Parent: propeller: 0.013878743608473338---
+         [engine]/0.013878743608473338
+   --- Parent: doors: 0.009345794392523366---
+         [engine, window]/0.0067175030549620094
+         [engine]/0.0026282913375613552
+=== Child: gears===
+   --- Parent: start: 0.050719878757261985---
+         [propeller, gears, body, tail]/0.01005304369790351
+         [propeller, gears]/0.006853582554517134
+         [propeller, gears, body]/0.0041761387555780075
+         [propeller, gears, tail]/0.0033678538351435547
+         [gears, body, tail]/0.0027784794139934328
+         [gears, body]/0.002155426454491875
+         [gears, gears, body, cockpit, tail, window]/0.0019196766860318261
+         [gears, gears, body, tail]/0.0018523196093289552
+         [gears, gears, body]/0.0013808200724088574
+   --- Parent: window: 0.16526058769049426---
+         [gears, gears]/0.10039572282562936
+         [gears, engine, cockpit]/0.012242148690746822
+         [gears, gears, cockpit]/0.00990149027532205
+         [gears, gears, cockpit, tail]/0.00922791950829334
+         [gears, gears, tail]/0.008049170665993095
+         [gears]/0.007796581628357329
+         [gears, engine]/0.006752546939462828
+         [gears, gears, cockpit, right wing, left wing]/0.0019196766860318261
+         [gears, cockpit]/0.001566052033341753
+         [gears, gears, left wing]/0.0010777132272459375
+   --- Parent: left wing: 0.18902079649743206---
+         [gears, gears, window]/0.044859813084112146
+         [gears, gears, cockpit]/0.026673402374336953
+         [gears, gears]/0.022699334848867558
+         [gears, gears, cockpit, window]/0.013404058263871348
+         [gears, engine, cockpit, window]/0.012006398922286773
+         [gears]/0.011736970615475288
+         [gears, window]/0.00892481266313042
+         [gears, gears, cockpit, right wing]/0.008823777048076114
+         [gears, gears, cockpit, tail, window]/0.008284920434453145
+         [gears, gears, right wing]/0.004950745137661025
+         [gears, right wing]/0.003923549717942241
+         [gears, cockpit]/0.0036877999494821924
+         [gears, cockpit, window]/0.0030142291824534814
+         [gears, cockpit, right wing]/0.0025427296455333838
+         [gears, gears, tail, window]/0.0020543908394375686
+         [gears, engine]/0.0015323734949903175
+   --- Parent: right wing: 0.1840026942830682---
+         [gears, gears, cockpit]/0.051393449524290646
+         [gears, gears]/0.041188852403805674
+         [gears, gears, window]/0.040986781173697064
+         [gears]/0.012360023574976845
+         [gears, cockpit]/0.006651511324408521
+         [gears, window]/0.005102298560242485
+         [gears, engine]/0.002239622800370464
+         [gears, engine, cockpit, window]/0.0019870337627346975
+         [gears, tail]/0.0019701944935589795
+         [gears, gears, cockpit, window]/0.0018523196093289552
+         [gears, engine, cockpit]/0.0016502483792203418
+         [gears, cockpit, window]/0.001566052033341753
+         [gears, engine, engine, cockpit, window]/0.0012966237265302687
+         [gears, cockpit, tail]/0.0011787488423002442
+         [gears, gears, tail]/0.0010103561505430665
+   --- Parent: tail: 0.0795487075860908---
+         [gears, gears]/0.008049170665993095
+         [gears, gears, cockpit]/0.007847099435884483
+         [gears]/0.007291403553085796
+         [gears, engine, engine, cockpit, window]/0.005860065673149785
+         [gears, gears, cockpit, window]/0.005455923212932558
+         [gears, cockpit]/0.004984423676012461
+         [gears, cockpit, window]/0.00431085290898375
+         [gears, window]/0.0033004967584406835
+         [doors, gears, gears, cockpit]/0.0033004967584406835
+         [gears, gears, window]/0.0028626757598720215
+         [gears, engine]/0.0024753725688305126
+         [gears, engine, cockpit, window]/0.002155426454491875
+         [doors, gears, gears]/0.0019870337627346975
+         [gears, engine, cockpit]/0.0017344447250989307
+         [gears, engine, engine, cockpit]/0.001717605455923213
+         [gears, gears, cockpit, left wing]/0.001717605455923213
+         [gears, engine, engine]/0.001195588111475962
+         [gears, engine, window]/0.0011787488423002442
+         [gears, gears, cockpit, left wing, window]/0.0010103561505430665
+   --- Parent: cockpit: 0.0581628357329292---
+         [gears, gears]/0.026336616990822598
+         [gears, engine]/0.01944935589795403
+         [gears]/0.003940388987117959
+         [gears, gears, left wing]/0.0023238191462490528
+         [gears, gears, left wing, window]/0.002155426454491875
+         [gears, gears, window]/0.001481855687463164
+   --- Parent: body: 0.19003115264797518---
+         [gears, gears, right wing]/0.01906205270691252
+         [gears, gears, cockpit, right wing, left wing, window]/0.01687294771406921
+         [doors, gears, gears, cockpit, right wing]/0.01353877241727709
+         [gears, gears, cockpit, left wing, window]/0.010271954197187842
+         [gears, right wing]/0.009850972467794898
+         [gears, gears, cockpit, left wing]/0.00959838343015913
+         [doors, gears, gears, right wing]/0.006634672055232803
+         [gears, gears, right wing, left wing, window]/0.0055232802896354296
+         [gears, gears, cockpit, right wing]/0.0051191378294182036
+         [gears, gears, right wing, left wing]/0.004849709522606719
+         [gears, right wing, left wing]/0.004361370716510903
+         [gears, gears, tail, right wing]/0.0042098172939294435
+         [doors, gears, gears, cockpit, tail, right wing]/0.0034688894501978614
+         [gears, cockpit, right wing, left wing, window]/0.0034183716426707082
+         [gears, cockpit, left wing]/0.0034015323734949902
+         [gears, cockpit, left wing, window]/0.0033678538351435547
+         [gears, tail, right wing]/0.003132104066683506
+         [gears, gears, cockpit, tail, left wing]/0.0028626757598720215
+         [gears, right wing, left wing, window]/0.002744800875641997
+         [gears, left wing]/0.002677443798939126
+         [gears, gears, right wing, window]/0.0024922118380062306
+         [gears, gears, cockpit, tail, left wing, window]/0.0023238191462490528
+         [gears, left wing, window]/0.0023238191462490528
+         [doors, gears, right wing]/0.0021217479161404393
+         [gears, cockpit, right wing]/0.0019870337627346975
+         [doors, gears, gears, cockpit, right wing, window]/0.001953355224383262
+         [gears, gears, left wing, window]/0.001953355224383262
+         [gears]/0.0018186410709775196
+         [gears, gears, cockpit, tail, right wing]/0.0016502483792203418
+         [gears, tail, right wing, left wing]/0.0015997305716931886
+         [doors, gears, gears, tail, right wing]/0.0015828913025174708
+         [gears, gears, left wing]/0.0015492127641660353
+         [gears, gears, cockpit, right wing, left wing]/0.001481855687463164
+         [gears, tail]/0.0014313378799360107
+         [gears, tail, left wing]/0.0013639808032331396
+         [gears, right wing, window]/0.0012966237265302687
+         [gears, cockpit]/0.0012461059190031153
+         [gears, gears, tail]/0.0011787488423002442
+         [gears, cockpit, right wing, left wing]/0.0010945524964216552
+         [gears, gears, cockpit, right wing, window]/0.0010777132272459375
+         [doors, gears, gears, right wing, window]/0.0010103561505430665
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.003805674833712217---
+         [gears]/0.003805674833712217
+   --- Parent: gears: 0.05024837922034184---
+         [gears]/0.028003704639218658
+         [gears, cockpit]/0.009429990738401953
+         [doors, gears, cockpit]/0.004091942409699419
+         [gears, cockpit, tail]/0.0026437652605876905
+         [doors, gears]/0.0017681232634503663
+         [doors, gears, cockpit, window]/0.0016165698408689064
+         [gears, tail]/0.0010945524964216552
+   --- Parent: propeller: 0.02919929275069462---
+         [gears, body, tail]/0.011534899385366676
+         [gears, tail]/0.0053043697903510986
+         [gears, body]/0.0050854592910667675
+         [gears]/0.004344531447335186
+   --- Parent: doors: 0.0---
+=== Child: propeller===
+   --- Parent: start: 0.34966742443377963---
+         [propeller]/0.07737644186242316
+         [propeller, gears, body, tail]/0.05026521848951755
+         [propeller, body]/0.043361118127473265
+         [propeller, body, tail]/0.04041424602172266
+         [propeller, gears]/0.03426791277258567
+         [propeller, tail]/0.028879346636355982
+         [propeller, gears, body]/0.02088069377789004
+         [propeller, gears, tail]/0.016839269175717774
+         [propeller, body, right wing]/0.004967584406836744
+         [propeller, right wing]/0.0033678538351435547
+         [propeller, body, tail, right wing]/0.0027784794139934328
+         [propeller, gears, body, right wing]/0.002610086722236255
+         [propeller, body, left wing]/0.002610086722236255
+         [propeller, left wing]/0.002525890376357666
+         [propeller, gears, right wing]/0.0018523196093289552
+         [propeller, gears, body, left wing]/0.0017681232634503663
+         [propeller, tail, right wing]/0.0013471415340574218
+         [propeller, gears, body, tail, left wing]/0.001262945188178833
+         [propeller, gears, body, tail, right wing]/0.001262945188178833
+         [propeller, body, tail, left wing]/0.0010945524964216552
+         [propeller, gears, left wing]/0.0010103561505430665
+   --- Parent: window: 0.09093205354887599---
+         [propeller]/0.09093205354887599
+   --- Parent: left wing: 0.10314052370127136---
+         [propeller, cockpit, window]/0.09059526816536162
+         [propeller, cockpit]/0.006651511324408521
+         [propeller, window]/0.0031994611433863772
+         [propeller]/0.0026942830681148436
+   --- Parent: right wing: 0.05556958827986865---
+         [propeller]/0.022059442620190283
+         [propeller, engine]/0.01195588111475962
+         [propeller, cockpit, window]/0.009514187084280543
+         [propeller, cockpit]/0.009009009009009009
+         [propeller, window]/0.0011787488423002442
+         [propeller, left wing]/0.0010103561505430665
+   --- Parent: tail: 0.03148943335859225---
+         [propeller]/0.009850972467794898
+         [propeller, right wing]/0.008503830933737477
+         [propeller, engine, right wing]/0.005641155173865454
+         [propeller, engine]/0.0028626757598720215
+         [propeller, cockpit]/0.0018523196093289552
+         [propeller, cockpit, window]/0.0015997305716931886
+   --- Parent: cockpit: 0.06297886671718447---
+         [propeller]/0.05194914540708933
+         [propeller, window]/0.011029721310095142
+   --- Parent: body: 0.3062221099604277---
+         [propeller, right wing]/0.12216889786983245
+         [propeller, engine, right wing]/0.0945524964216553
+         [propeller, tail, right wing]/0.028710953944598803
+         [propeller, engine, tail, right wing]/0.02391176222951924
+         [propeller, right wing, left wing]/0.012124273806516797
+         [propeller, cockpit, right wing, left wing]/0.005472762482108277
+         [propeller]/0.0042098172939294435
+         [propeller, cockpit, right wing, left wing, window]/0.0042098172939294435
+         [propeller, tail]/0.004125620948050855
+         [propeller, engine, tail]/0.002525890376357666
+         [propeller, engine]/0.0018523196093289552
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0---
+   --- Parent: gears: 0.0---
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.0---
+=== Child: doors===
+   --- Parent: start: 0.03788835564536501---
+         [doors, body, cockpit, tail]/0.012521199437087287
+         [doors, body, tail]/0.009093205354887599
+         [doors, body, cockpit, tail, window]/0.002561974524591347
+         [doors, body, tail, right wing]/0.001262945188178833
+         [doors, body]/0.0011546927434777903
+         [doors, body, tail, window]/0.0010464402987767473
+   --- Parent: window: 0.0---
+   --- Parent: left wing: 0.18283837910006115---
+         [doors, cockpit]/0.06657525349114134
+         [doors, cockpit, window]/0.04012557283585321
+         [doors]/0.028867318586944756
+         [doors, right wing]/0.010861328618337964
+         [doors, window]/0.010067477357196984
+         [doors, cockpit, tail]/0.0054487063832858226
+         [doors, right wing, window]/0.005087864900949013
+         [doors, engine, cockpit]/0.0030671525998628804
+         [doors, cockpit, tail, window]/0.002381553783422942
+         [doors, engine, cockpit, tail]/0.0015877025222819615
+         [doors, tail]/0.0013711976328798759
+         [doors, cockpit, right wing]/0.0013711976328798759
+         [doors, engine]/0.0011186085952441093
+         [doors, engine, cockpit, window]/0.0010464402987767473
+   --- Parent: right wing: 0.1028398224659907---
+         [doors, cockpit]/0.030743694295096165
+         [doors]/0.02067621693789918
+         [doors, engine, cockpit]/0.018872009526215133
+         [doors, engine, cockpit, window]/0.009814888319561217
+         [doors, cockpit, window]/0.00801068090787717
+         [doors, window]/0.004943528308014289
+         [doors, engine]/0.0027784794139934328
+         [doors, gears, gears]/0.0010464402987767473
+   --- Parent: tail: 0.14718724064518438---
+         [doors, cockpit]/0.0719517915779598
+         [doors, cockpit, window]/0.019341103453252986
+         [doors]/0.014036733662901887
+         [doors, engine, cockpit]/0.006278641792660484
+         [doors, cockpit, right wing]/0.004618770973911161
+         [doors, gears, gears, cockpit]/0.0035362465269007325
+         [doors, right wing]/0.0030310684516291994
+         [doors, window]/0.002381553783422942
+         [doors, gears, gears]/0.0021289647457871756
+         [doors, cockpit, right wing, window]/0.001948544004618771
+         [doors, engine, cockpit, window]/0.001840291559917728
+         [doors, gears, cockpit]/0.001840291559917728
+         [doors, gears]/0.0018042074116840473
+         [doors, engine, cockpit, right wing]/0.0016237866705156425
+         [doors, engine]/0.0014794500775809187
+         [doors, cockpit, left wing]/0.0013351134846461949
+         [doors, cockpit, right wing, left wing]/0.001190776891711471
+         [doors, gears, gears, cockpit, window]/0.0010464402987767473
+   --- Parent: cockpit: 0.07249305380146502---
+         [doors]/0.03409952008082849
+         [doors, engine]/0.009345794392523364
+         [doors, window]/0.008876700465485513
+         [doors, right wing]/0.008082849204344532
+         [doors, engine, window]/0.004185761195106989
+         [doors, right wing, window]/0.0035001623786670515
+         [doors, right wing, left wing]/0.002561974524591347
+         [doors, left wing]/0.0010825244470104283
+   --- Parent: body: 0.39486883412116996---
+         [doors, cockpit, right wing]/0.13076895319885973
+         [doors, cockpit, right wing, left wing]/0.06473496193122362
+         [doors, cockpit, right wing, left wing, window]/0.02219175116371378
+         [doors, right wing, left wing]/0.017031717966297405
+         [doors]/0.015011005665211272
+         [doors, cockpit, left wing]/0.01490275322051023
+         [doors, gears, gears, cockpit, right wing]/0.01450582758993974
+         [doors, right wing]/0.013748060477032439
+         [doors, cockpit]/0.01187168476888103
+         [doors, left wing]/0.00912928950312128
+         [doors, gears, gears, right wing]/0.007108577202035146
+         [doors, window]/0.006062136903258399
+         [doors, cockpit, window]/0.005665211272687909
+         [doors, cockpit, tail, right wing, left wing]/0.0055208746797531846
+         [doors, cockpit, left wing, window]/0.0052682856421174176
+         [doors, gears, right wing]/0.004546602677443799
+         [doors, right wing, left wing, window]/0.004077508750405946
+         [doors, right wing, window]/0.00382491971277018
+         [doors, gears, gears, cockpit, tail, right wing]/0.003716667268069137
+         [doors, left wing, window]/0.0035723306751344135
+         [doors, cockpit, right wing, window]/0.0034279940821996895
+         [doors, cockpit, tail, left wing]/0.0029228160069281564
+         [doors, gears, gears, cockpit, right wing, window]/0.0020928805975534946
+         [doors, gears, cockpit, right wing]/0.001948544004618771
+         [doors, gears, gears, tail, right wing]/0.0016959549669830045
+         [doors, tail, right wing, left wing]/0.0013351134846461949
+         [doors, gears, tail, right wing]/0.001262945188178833
+         [doors, engine, cockpit, right wing, left wing]/0.001226861039945152
+         [doors, cockpit, tail, right wing, left wing, window]/0.001190776891711471
+         [doors, gears, gears, right wing, window]/0.0010825244470104283
+   --- Parent: fuselage: 0.0---
+   --- Parent: engine: 0.0---
+   --- Parent: gears: 0.061884314220762814---
+         [doors, cockpit]/0.023057770721322122
+         [doors, cockpit, window]/0.009706635874860174
+         [doors]/0.009309710244289683
+         [doors, gears, cockpit]/0.00876844802078447
+         [doors, gears]/0.003788835564536499
+         [doors, gears, cockpit, window]/0.0034640782304333705
+         [doors, window]/0.0026341428210587088
+         [doors, gears, window]/0.0011546927434777903
+   --- Parent: propeller: 0.0---
+   --- Parent: doors: 0.0---

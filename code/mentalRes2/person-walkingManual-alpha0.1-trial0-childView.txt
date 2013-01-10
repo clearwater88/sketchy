@@ -1,0 +1,1649 @@
+=== Child: start===
+=== Child: head===
+   --- Parent: start: 0.8110763531324462
+   --- Parent: body: 0.06418999876943797
+   --- Parent: neck: 0.05428073652372716
+   --- Parent: right foot: 0.015220108678052593
+   --- Parent: left arm: 0.010550449802786244
+   --- Parent: right leg    : 0.010297860765150484
+   --- Parent: hair: 0.008575073995634739
+   --- Parent: left leg: 0.007681297400923556
+   --- Parent: left hand: 0.007402801795325158
+   --- Parent: right arm: 0.005680015025809419
+   --- Parent: left foot    : 0.0043911632696679425
+=== Child: right arm===
+   --- Parent: body: 0.39084906000793784
+   --- Parent: start: 0.2779561938440439
+   --- Parent: head: 0.144545880994479
+   --- Parent: left leg: 0.05814599646375354
+   --- Parent: neck: 0.04221123660376001
+   --- Parent: right leg    : 0.03622126799696902
+   --- Parent: left foot    : 0.012600584563201374
+   --- Parent: right foot: 0.01157579475336484
+   --- Parent: hair: 0.010767509832930386
+   --- Parent: left arm: 0.007613755277306674
+   --- Parent: left hand: 0.007512719662252372
+=== Child: left arm===
+   --- Parent: body: 0.38657422794166557
+   --- Parent: start: 0.2666542587841151
+   --- Parent: head: 0.1143763044894375
+   --- Parent: left leg: 0.0650150888714588
+   --- Parent: neck: 0.040015421225455684
+   --- Parent: right leg    : 0.03953018438999754
+   --- Parent: right foot: 0.02275960170697015
+   --- Parent: left foot    : 0.021264008720968897
+   --- Parent: right arm: 0.01999441645285227
+   --- Parent: hair: 0.012868746759548537
+   --- Parent: right hand: 0.009698089629225883
+   --- Parent: left hand: 0.001249651028303266
+=== Child: right leg    ===
+   --- Parent: body: 0.6308221773175047
+   --- Parent: start: 0.21428391007830297
+   --- Parent: right hand: 0.03103687799949483
+   --- Parent: left leg: 0.030121242738065202
+   --- Parent: head: 0.02571356403132108
+   --- Parent: left arm: 0.0190578428896186
+   --- Parent: left hand: 0.017990654205607477
+   --- Parent: left foot    : 0.015054306643091715
+   --- Parent: right arm: 0.009023743369537766
+   --- Parent: right foot: 0.002506946198534982
+   --- Parent: neck: 0.0023932811315988873
+   --- Parent: hair: 0.0019954533973225554
+=== Child: left leg===
+   --- Parent: body: 0.6182116696135389
+   --- Parent: start: 0.24239906409114284
+   --- Parent: right hand: 0.031367570226399556
+   --- Parent: head: 0.025006314725940944
+   --- Parent: right leg    : 0.02134377368022231
+   --- Parent: left arm: 0.019349649698887306
+   --- Parent: left hand: 0.016139110088937928
+   --- Parent: right arm: 0.009558500950532433
+   --- Parent: left foot    : 0.006534079578841009
+   --- Parent: right foot: 0.004699485516012813
+   --- Parent: neck: 0.0030377155315669834
+   --- Parent: hair: 0.002353066297975299
+=== Child: right hand===
+   --- Parent: start: 0.17674496926833447
+   --- Parent: body: 0.1574303275237857
+   --- Parent: right arm: 0.14640060621369053
+   --- Parent: head: 0.10622210996042782
+   --- Parent: left leg: 0.10376357666077302
+   --- Parent: left arm: 0.1006483118632651
+   --- Parent: left hand: 0.05811231792540204
+   --- Parent: left foot    : 0.0457522943504252
+   --- Parent: neck: 0.037164267070809116
+   --- Parent: right foot: 0.035530857960764495
+   --- Parent: right leg    : 0.019887176896522682
+   --- Parent: hair: 0.01234318430580112
+=== Child: left hand===
+   --- Parent: left arm: 0.3522428420724188
+   --- Parent: start: 0.14593703103873543
+   --- Parent: body: 0.1220747960714976
+   --- Parent: left leg: 0.08411214953271026
+   --- Parent: head: 0.07745568548207361
+   --- Parent: right foot: 0.050042345809250675
+   --- Parent: left foot    : 0.04736787364604844
+   --- Parent: right hand: 0.044143648871521314
+   --- Parent: right leg    : 0.02846827035941934
+   --- Parent: right arm: 0.018453857926095413
+   --- Parent: neck: 0.016031974800528946
+   --- Parent: hair: 0.010162994220168491
+   --- Parent: left hand: 0.0035065301695318186
+=== Child: right foot===
+   --- Parent: right leg    : 0.7351367138166217
+   --- Parent: start: 0.09513134629957028
+   --- Parent: body: 0.03775416771912097
+   --- Parent: left foot    : 0.036996400606213696
+   --- Parent: left leg: 0.03373642333922706
+   --- Parent: left arm: 0.01635514018691588
+   --- Parent: right hand: 0.016110444556706235
+   --- Parent: head: 0.010585059358423812
+   --- Parent: left hand: 0.008840616317251832
+   --- Parent: right arm: 0.0040572114170245
+   --- Parent: neck: 0.0030310684516292
+   --- Parent: hair: 0.002265407931295783
+=== Child: left foot    ===
+   --- Parent: left leg: 0.7474188557716606
+   --- Parent: start: 0.13692693862086347
+   --- Parent: body: 0.023561821166961344
+   --- Parent: right leg    : 0.02132798686537004
+   --- Parent: right hand: 0.019109939378630963
+   --- Parent: left arm: 0.017215521596362707
+   --- Parent: right foot: 0.00873800202071228
+   --- Parent: left hand: 0.007996021722657235
+   --- Parent: right arm: 0.007183000757767107
+   --- Parent: head: 0.006385766607729217
+   --- Parent: hair: 0.002904773932811318
+   --- Parent: neck: 0.0012313715584743624
+=== Child: body===
+   --- Parent: start: 0.7663357102609542
+   --- Parent: head: 0.09346442056722408
+   --- Parent: neck: 0.03817332789295401
+   --- Parent: right foot: 0.028866393352374634
+   --- Parent: right leg    : 0.02128872222330164
+   --- Parent: left leg: 0.01737035381895192
+   --- Parent: left foot    : 0.009721439627981667
+   --- Parent: hair: 0.007642437548979599
+   --- Parent: right arm: 0.0062758660889502
+   --- Parent: left hand: 0.004021994676200283
+   --- Parent: right hand: 0.003665779366713947
+   --- Parent: left arm: 0.003173554575423735
+=== Child: hair===
+   --- Parent: start: 0.3596194325166302
+   --- Parent: body: 0.16280205439083947
+   --- Parent: head: 0.11299149616906624
+   --- Parent: neck: 0.09758356487328451
+   --- Parent: right foot: 0.05661362296876321
+   --- Parent: right hand: 0.05454239286014986
+   --- Parent: left hand: 0.03824198029805506
+   --- Parent: right leg    : 0.03403216300412563
+   --- Parent: left foot    : 0.030243327439589116
+   --- Parent: left arm: 0.024888439841710856
+   --- Parent: right arm: 0.014515450029468713
+   --- Parent: left leg: 0.013926075608318586
+=== Child: neck===
+   --- Parent: start: 0.5471639864163241
+   --- Parent: body: 0.20807723611461929
+   --- Parent: head: 0.1367068002582023
+   --- Parent: right leg    : 0.024276613061659784
+   --- Parent: right foot: 0.02422048216440738
+   --- Parent: left leg: 0.01602537116555807
+   --- Parent: right arm: 0.01490275322051023
+   --- Parent: left foot    : 0.014032724313098132
+   --- Parent: hair: 0.010215823299935447
+   --- Parent: left arm: 0.004378209985686621
+---------------------
+=== Child: start===
+   --- Parent: start: 0.0---
+   --- Parent: head: 0.0---
+   --- Parent: right arm: 0.0---
+   --- Parent: left arm: 0.0---
+   --- Parent: right leg    : 0.0---
+   --- Parent: left leg: 0.0---
+   --- Parent: right hand: 0.0---
+   --- Parent: left hand: 0.0---
+   --- Parent: right foot: 0.0---
+   --- Parent: left foot    : 0.0---
+   --- Parent: body: 0.0---
+   --- Parent: hair: 0.0---
+   --- Parent: neck: 0.0---
+=== Child: head===
+   --- Parent: start: 0.8110763531324495---
+         [body, head]/0.3450236721264759
+         [body, left arm, right arm, head]/0.1386130918841199
+         [head]/0.08815357413488255
+         [neck, hair, body, left arm, head]/0.013685144526266022
+         [hair, body, right arm, head]/0.0130957701051159
+         [neck, hair, head]/0.01292090077136806
+         [left leg, right leg    , left arm, right arm, head]/0.01129526363171223
+         [neck, head]/0.010375580469038413
+         [body, left leg, right leg    , head]/0.007525857993147713
+         [left leg, right leg    , head]/0.005764211371688008
+         [hair, body, left arm, right arm, head]/0.0047344252951729586
+         [body, left hand, right hand, left arm, right arm, head]/0.004604892455359745
+         [hair, head]/0.004164480799994819
+         [body, left hand, left leg, right leg    , head]/0.003950751614303016
+         [body, right foot, left leg, right leg    , head]/0.0038795085524057486
+         [neck, hair, body, left foot    , head]/0.003445573539031483
+         [left leg, head]/0.0033289939831995905
+         [neck, right hand, right arm, head]/0.00294687210575061
+         [neck, hair, body, left arm, right arm, head]/0.002933918821769289
+         [neck, body, right hand, right arm, head]/0.0027655261300121112
+         [hair, right arm, head]/0.0024028341785351133
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0023380677586285065
+         [hair, body, head]/0.0023121611906658634
+         [body, left hand, left hand, left leg, right leg    , head]/0.0022862546227032207
+         [hair, left foot    , right foot, right hand, head]/0.002202058276824632
+         [hair, left leg, right leg    , head]/0.0020142356590954723
+         [left hand, left leg, right leg    , head]/0.0020012823751141507
+         [body, left leg, right leg    , right arm, head]/0.0019624225231701866
+         [hair, body, right foot, right arm, head]/0.001917086029235562
+         [body, left hand, right hand, head]/0.0018264130413663123
+         [neck, hair, body, head]/0.0017810765474316876
+         [neck, hair, left arm, head]/0.0017422166954877236
+         [neck, right hand, head]/0.0017227867695157415
+         [neck, body, right hand, head]/0.0016450670656278134
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.0015997305716931886
+         [body, left leg, head]/0.0014831510158612963
+         [left leg, right arm, head]/0.001470197731879975
+         [left leg, left arm, right arm, head]/0.0014507678059079928
+         [body, left hand, left arm, right arm, head]/0.001444291163917332
+         [hair, body, left arm, head]/0.0014248612379453502
+         [body, right hand, left arm, right arm, head]/0.0014248612379453502
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0013795247440107252
+         [body, left leg, right leg    , left arm, right arm, head]/0.0012758984721601544
+         [neck, hair, body, left foot    , right leg    , head]/0.0012758984721601544
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.0012694218301694937
+         [neck, left hand, right hand, right arm, head]/0.0012305619782255297
+         [neck, body, head]/0.0011139824223936373
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.0010751225704496731
+         [body, left foot    , left leg, right leg    , head]/0.0010621692864683518
+         [body, left hand, left leg, right leg    , left arm, head]/0.0010556926444776913
+         [hair, body, left foot    , head]/0.0010492160024870305
+         [hair, body, left leg, right leg    , right arm, head]/0.0010362627185057092
+   --- Parent: head: 0.0---
+   --- Parent: right arm: 0.005680015025809418---
+         [neck, hair, head]/0.0013795247440107252
+   --- Parent: left arm: 0.01055044980278624---
+         [head]/0.0031087881555171273
+         [left foot    , right foot, head]/0.003018115167647878
+         [hair, left hand, right hand, head]/0.0012564685461881723
+   --- Parent: right leg    : 0.010297860765150471---
+         [hair, left foot    , right foot, left hand, right hand, head]/0.0015155342258145997
+   --- Parent: left leg: 0.0076812974009235445---
+   --- Parent: right hand: 6.541408410567289E-4---
+   --- Parent: left hand: 0.007402801795325158---
+         [hair, head]/0.0023121611906658634
+         [hair, right hand, head]/0.002221488202796614
+         [head]/0.0017227867695157415
+   --- Parent: right foot: 0.015220108678052588---
+         [body, head]/0.00246760059844172
+         [body, left arm, right arm, head]/0.0015673473617398852
+         [hair, body, left hand, right hand, head]/0.0013536181760480826
+         [hair, body, right hand, head]/0.0010103561505430665
+   --- Parent: left foot    : 0.004391163269667932---
+   --- Parent: body: 0.06418999876943796---
+         [left arm, right arm, head]/0.015828913025174706
+         [left hand, right arm, head]/0.010874281902319285
+         [right arm, head]/0.006275866088950201
+         [neck, hair, right hand, left arm, right arm, head]/0.0036398727987513035
+         [neck, hair, left arm, right arm, head]/0.0026165633642269157
+         [neck, left arm, right arm, head]/0.002590656796264273
+         [neck, head]/0.0024352173884884167
+         [neck, hair, head]/0.002156721782890007
+         [left arm, head]/0.001632113781646492
+         [left foot    , right foot, left arm, right arm, head]/0.0015997305716931886
+         [neck, hair, left arm, head]/0.0013082816821134578
+         [hair, left hand, right hand, left arm, right arm, head]/0.001016832792533727
+   --- Parent: hair: 0.008575073995634735---
+   --- Parent: neck: 0.05428073652372716---
+         [hair, head]/0.02762935473215847
+         [head]/0.015919586013043958
+         [left arm, head]/0.0017486933374783842
+         [hair, left arm, head]/0.001262945188178833
+         [left arm, right arm, head]/0.0012499919041975118
+         [hair, right hand, left arm, right arm, head]/0.0011787488423002442
+=== Child: right arm===
+   --- Parent: start: 0.27795619384404013---
+         [body, left arm, right arm, head]/0.15445458809944793
+         [hair, body, right arm, head]/0.014592429545700574
+         [left leg, right leg    , left arm, right arm, head]/0.012586150903907913
+         [hair, body, left arm, right arm, head]/0.005275502471764154
+         [body, left hand, right hand, left arm, right arm, head]/0.00513116587882943
+         [neck, right hand, right arm, head]/0.003283657489264966
+         [neck, hair, body, left arm, right arm, head]/0.0032692238299714934
+         [neck, body, right hand, right arm, head]/0.0030815862591563525
+         [hair, right arm, head]/0.002677443798939126
+         [body, left leg, right leg    , right arm, head]/0.002186699382961065
+         [hair, body, right foot, right arm, head]/0.002136181575433912
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.0017825569227438386
+         [left leg, right arm, head]/0.0016382203298091148
+         [left leg, left arm, right arm, head]/0.0016165698408689064
+         [body, left hand, left arm, right arm, head]/0.0016093530112221701
+         [body, right hand, left arm, right arm, head]/0.0015877025222819615
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.001537184714754808
+         [body, left leg, right leg    , left arm, right arm, head]/0.0014217154404070292
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.001414498610760293
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.001407281781113557
+         [neck, left hand, right hand, right arm, head]/0.0013711976328798759
+         [neck, body, left foot    , right leg    , right arm]/0.0012990293364125139
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.0011979937213582074
+         [hair, body, left leg, right leg    , right arm, head]/0.0011546927434777903
+         [neck, body, left foot    , right leg    , left arm, right arm]/0.001111391765597373
+         [body, right arm, head]/0.001075307617363692
+         [left leg, right leg    , right arm, head]/0.001068090787716956
+         [neck, right arm, head]/0.0010031393208963302
+   --- Parent: head: 0.14454588099447882---
+         [body, left arm, right arm]/0.05066214412008804
+         [left arm, right arm]/0.022235052141594196
+         [body, left leg, right leg    , left arm, right arm]/0.007815826507415292
+         [hair, right arm]/0.005643560783747699
+         [neck, right hand, right arm]/0.004366181936275394
+         [hair, left arm, right arm]/0.004120809728286364
+         [left leg, right leg    , left arm, right arm]/0.003160971385270451
+         [right arm]/0.002828997221520586
+         [neck, right arm]/0.0020062786417926605
+         [left hand, left arm, right arm]/0.001717605455923213
+         [neck, body, left hand, right hand, left arm, right arm]/0.001529967885108072
+         [body, left hand, left arm, right arm]/0.0014433659293472377
+         [body, right arm]/0.0014289322700537653
+         [hair, body, left arm, right arm]/0.0012990293364125139
+         [neck, hair, left arm, right arm]/0.0012701620178255692
+         [neck, hair, body, left arm, right arm]/0.001262945188178833
+         [hair, left leg, right leg    , right arm]/0.0012196442102984158
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0011979937213582074
+   --- Parent: right arm: 0.0---
+   --- Parent: left arm: 0.007613755277306675---
+         [right arm]/0.0013711976328798759
+         [left hand, right hand, right arm]/0.0013278966549994588
+         [left hand, right arm]/0.0010969581063039007
+   --- Parent: right leg    : 0.03622126799696899---
+         [left arm, right arm]/0.02605997185436438
+   --- Parent: left leg: 0.05814599646375357---
+         [left foot    , left hand, right hand, left arm, right arm]/0.017565763360155882
+         [left arm, right arm]/0.017067802114531086
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.002828997221520586
+         [left foot    , left arm, right arm]/0.0026990942878793345
+         [left foot    , left hand, right arm]/0.001984628152852452
+         [right hand, left arm, right arm]/0.0019701944935589795
+         [left foot    , right hand, left arm, right arm]/0.00191245985638509
+         [left foot    , right foot, left arm, right arm]/0.001407281781113557
+   --- Parent: right hand: 0.0---
+   --- Parent: left hand: 0.007512719662252371---
+         [right hand, right arm]/0.004012557283585321
+         [right arm]/0.0020134954714393968
+   --- Parent: right foot: 0.011575794753364827---
+         [body, left arm, right arm, head]/0.0017464727745101576
+         [left arm, right arm]/0.0015516183740482807
+   --- Parent: left foot    : 0.012600584563201369---
+         [left hand, right hand, left arm, right arm]/0.004741457077905676
+         [right hand, left arm, right arm]/0.0022300003608414823
+         [left arm, right arm]/0.0012773788474723055
+   --- Parent: body: 0.3908490600079374---
+         [left arm, right arm]/0.1345072709558691
+         [left leg, right leg    , left arm, right arm]/0.07164868473279688
+         [right leg    , left arm, right arm]/0.0352181286760726
+         [right arm]/0.0187854075704543
+         [left arm, right arm, head]/0.017637931656623244
+         [left hand, right arm, head]/0.012117056976870062
+         [right hand, left arm, right arm]/0.011633529390538737
+         [left hand, right hand, left arm, right arm]/0.00844369068668134
+         [right arm, head]/0.006993107927687367
+         [neck, hair, right hand, left arm, right arm, head]/0.004055858261465738
+         [right hand, right arm]/0.0035362465269007325
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.0032620070003247575
+         [left foot    , left leg, right leg    , left arm, right arm]/0.003168188214917187
+         [neck, hair, left arm, right arm, head]/0.00291559917728142
+         [neck, left arm, right arm]/0.0028867318586944754
+         [neck, left arm, right arm, head]/0.0028867318586944754
+         [right hand, left leg, right leg    , left arm, right arm]/0.002677443798939126
+         [left hand, left arm, right arm]/0.002020712301086133
+         [left foot    , right foot, left arm, right arm, head]/0.0017825569227438386
+         [neck, right hand, left arm, right arm]/0.0017320391152166853
+         [neck, hair, right hand, left arm, right arm]/0.0013639808032331396
+         [hair, left hand, right hand, left arm, right arm, head]/0.0011330422545375817
+         [left foot    , left arm, right arm]/0.001111391765597373
+         [neck, right leg    , left arm, right arm]/0.0010392234691300112
+         [neck, right hand, left arm, right arm, head]/0.001032006639483275
+         [left leg, left arm, right arm]/0.0010103561505430665
+   --- Parent: hair: 0.010767509832930388---
+   --- Parent: neck: 0.04221123660376001---
+         [right arm]/0.007469418684371955
+         [body, left arm, right arm]/0.006184823007252913
+         [body, right arm]/0.003940388987117959
+         [body, right hand, right arm]/0.002626925991411973
+         [hair, body, left arm, right arm]/0.0024609389095370405
+         [right hand, right arm]/0.0018908093674448814
+         [left arm, right arm, head]/0.0013928481218200845
+         [hair, right hand, left arm, right arm, head]/0.0013134629957059865
+         [hair, left arm, right arm, head]/0.0010536571284234836
+=== Child: left arm===
+   --- Parent: start: 0.26665425878411875---
+         [body, left arm, right arm, head]/0.14226080482843886
+         [neck, body, left arm]/0.02097153720370641
+         [neck, hair, body, left arm, head]/0.01404527990853618
+         [left leg, right leg    , left arm, right arm, head]/0.01159250741149413
+         [hair, body, left arm, right arm, head]/0.004859015434519615
+         [body, left hand, right hand, left arm, right arm, head]/0.004726073835763949
+         [neck, body, right foot, left arm]/0.003270363329389399
+         [neck, hair, body, left arm, right arm, head]/0.0030111272118158493
+         [body, left leg, right leg    , left arm]/0.002326477978224166
+         [neck, hair, left arm, head]/0.0017880645032637163
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.001641828744632483
+         [left leg, left arm, right arm, head]/0.0014889459060634664
+         [body, left hand, left arm, right arm, head]/0.001482298826125683
+         [body, right hand, left arm, right arm, head]/0.001462357586312333
+         [hair, body, left arm, head]/0.001462357586312333
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0014158280267478496
+         [body, left hand, left leg, right leg    , left arm]/0.0013294159875566665
+         [body, left leg, right leg    , left arm, right arm, head]/0.0013094747477433164
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.001302827667805533
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.0011034152696720331
+         [body, left hand, left leg, right leg    , left arm, head]/0.001083474029858683
+         [neck, body, left foot    , right leg    , left arm, right arm]/0.0010236503104186332
+         [body, left foot    , left leg, right leg    , left arm]/0.0010236503104186332
+         [body, right foot, left leg, right leg    , left arm]/0.0010103561505430665
+   --- Parent: head: 0.1143763044894374---
+         [body, left arm, right arm]/0.04666250116323899
+         [left arm, right arm]/0.020479653288310445
+         [body, left leg, right leg    , left arm, right arm]/0.0071987875726193485
+         [hair, left arm, right arm]/0.0037954826444742823
+         [left leg, right leg    , left arm, right arm]/0.0029114210127490995
+         [neck, left arm]/0.0019542415017082997
+         [left hand, left arm, right arm]/0.001582005025192433
+         [neck, body, left arm]/0.001542122545565733
+         [neck, body, left hand, right hand, left arm, right arm]/0.0014091809468100664
+         [body, left hand, left arm, right arm]/0.0013294159875566665
+         [hair, body, left arm, right arm]/0.0011964743888009997
+         [neck, hair, left arm, right arm]/0.0011698860690498665
+         [neck, hair, body, left arm, right arm]/0.001163238989112083
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0011034152696720331
+   --- Parent: right arm: 0.019994416452852277---
+         [right hand, left arm]/0.0043737785990614324
+         [left arm]/0.0037556001648475826
+         [body, left arm]/0.002020712301086133
+         [left hand, right hand, left arm]/0.0016950053841347497
+   --- Parent: left arm: 0.0---
+   --- Parent: right leg    : 0.03953018438999754---
+         [left arm, right arm]/0.024002605655335612
+         [left foot    , right foot, left arm]/0.002007418141210566
+         [body, left foot    , right foot, left arm]/0.0013294159875566665
+         [right foot, left arm]/0.0012762393480543997
+   --- Parent: left leg: 0.06501508887145843---
+         [left foot    , left hand, right hand, left arm, right arm]/0.01617899256856463
+         [left arm, right arm]/0.01572034405285758
+         [left foot    , right hand, left arm]/0.0037556001648475826
+         [left foot    , right foot, right hand, left arm]/0.0030443626115047658
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.002605655335611066
+         [left foot    , left arm, right arm]/0.002486007896730966
+         [right hand, left arm, right arm]/0.0018146528230148496
+         [left foot    , right hand, left arm, right arm]/0.0017614761835125828
+         [right hand, left arm]/0.0014091809468100664
+         [left foot    , right foot, left arm, right arm]/0.0012961805878677498
+         [left foot    , right leg    , left arm]/0.0010302973903564164
+   --- Parent: right hand: 0.009698089629225887---
+         [left hand, left arm]/0.002904773932811316
+         [left arm]/0.0019143590220815996
+   --- Parent: left hand: 0.0012496510283032663---
+   --- Parent: right foot: 0.022759601706970153---
+         [hair, left hand, left arm]/0.0038353651241009824
+         [left arm]/0.0033301870488294492
+         [hair, left arm]/0.003223833769824916
+         [body, left arm, right arm, head]/0.0016085933449435663
+         [left arm, right arm]/0.0014291221866234163
+         [body, left arm]/0.001402533866872283
+   --- Parent: left foot    : 0.02126400872096892---
+         [hair, right foot, left hand, left arm]/0.004719426755826165
+         [left hand, right hand, left arm, right arm]/0.004367131519123649
+         [hair, right foot, left arm]/0.0024195370973531327
+         [right hand, left arm, right arm]/0.0020539477007750495
+         [right foot, left arm]/0.001262945188178833
+         [left arm, right arm]/0.0011765331489876497
+   --- Parent: body: 0.38657422794166596---
+         [left arm, right arm]/0.12388827588040574
+         [left leg, right leg    , left arm, right arm]/0.06599220962231292
+         [right leg    , left arm, right arm]/0.03243775009638266
+         [left arm]/0.024514430810544927
+         [left leg, right leg    , left arm]/0.019469297137767377
+         [left arm, right arm, head]/0.016245463367942463
+         [right hand, left arm, right arm]/0.01071509285970673
+         [left hand, right hand, left arm, right arm]/0.007777083527206498
+         [right leg    , left arm]/0.004240837000305766
+         [neck, hair, right hand, left arm, right arm, head]/0.0037356589250342326
+         [left hand, left leg, right leg    , left arm]/0.003137421730633733
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.003004480131878066
+         [left foot    , left leg, right leg    , left arm, right arm]/0.0029180680926868827
+         [neck, hair, left arm, right arm, head]/0.002685420294864466
+         [neck, left arm, right arm]/0.002658831975113333
+         [neck, left arm, right arm, head]/0.002658831975113333
+         [left leg, left arm]/0.0025990082556732828
+         [right hand, left leg, right leg    , left arm, right arm]/0.002466066656917616
+         [left hand, right leg    , left arm]/0.0019741827415216497
+         [left hand, left arm]/0.0019143590220815996
+         [left hand, left arm, right arm]/0.0018611823825793329
+         [neck, left arm]/0.0018080057430770661
+         [left arm, head]/0.0016750641443213996
+         [left foot    , right foot, left arm, right arm, head]/0.001641828744632483
+         [neck, right hand, left arm, right arm]/0.0015952991850679997
+         [right foot, left leg, right leg    , left arm]/0.001482298826125683
+         [neck, hair, left arm, head]/0.001342710147432233
+         [neck, hair, right hand, left arm, right arm]/0.0012562981082410497
+         [hair, left hand, right hand, left arm, right arm, head]/0.001043591550231983
+         [left foot    , left leg, right leg    , left arm]/0.0010236503104186332
+         [left foot    , left arm, right arm]/0.0010236503104186332
+   --- Parent: hair: 0.012868746759548539---
+         [left hand, left arm]/0.003223833769824916
+         [left arm]/0.0020406535408994827
+   --- Parent: neck: 0.04001542122545572---
+         [body, left arm]/0.012616157721912763
+         [body, left arm, right arm]/0.0056965475066803155
+         [left arm]/0.002605655335611066
+         [hair, body, left arm, right arm]/0.002266654258784116
+         [left arm, head]/0.0017947115832014995
+         [hair, left arm, head]/0.0012961805878677498
+         [left arm, right arm, head]/0.001282886427992183
+         [hair, right hand, left arm, right arm, head]/0.0012097685486765664
+         [body, left hand, left arm]/0.0010901211097964665
+=== Child: right leg    ===
+   --- Parent: start: 0.2142839100783032---
+         [body, left leg, right leg    ]/0.044506188431422074
+         [left leg, right leg    ]/0.0222972972972973
+         [left leg, right leg    , left arm, right arm, head]/0.011012882040919424
+         [body, left foot    , left leg, right leg    ]/0.009636271785804496
+         [body, left leg, right leg    , head]/0.00733771154331902
+         [left leg, right leg    , head]/0.005620106087395807
+         [body, left hand, left leg, right leg    , head]/0.003851982823945441
+         [body, right foot, left leg, right leg    , head]/0.003782520838595605
+         [body, left foot    , right foot, left leg, right leg    ]/0.003239454407678707
+         [left foot    , left leg, right leg    ]/0.0028984592068704218
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.002677443798939126
+         [left foot    , right foot, right leg    ]/0.0024753725688305126
+         [body, left foot    , right hand, left leg, right leg    ]/0.002330133872189947
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0022796160646627937
+         [body, left hand, left hand, left leg, right leg    , head]/0.00222909825713564
+         [body, left leg, right leg    , left arm]/0.002210154079312958
+         [body, left hand, left leg, right leg    ]/0.002178580449608487
+         [hair, left leg, right leg    , head]/0.0019638797676180854
+         [left hand, left leg, right leg    , head]/0.001951250315736297
+         [left foot    , right foot, left leg, right leg    ]/0.0019323061379136145
+         [body, left leg, right leg    , right arm, head]/0.001913361960090932
+         [left hand, left leg, right leg    ]/0.0017049760040414245
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.0015597373074008587
+         [hair, left foot    , right foot, right leg    ]/0.0014650164182874463
+         [hair, body, left leg, right leg    ]/0.001414498610760293
+         [neck, body, left foot    , right leg    ]/0.0014081838848193989
+         [right foot, left leg, right leg    ]/0.001382924981055822
+         [body, left hand, left leg, right leg    , left arm]/0.001262945188178833
+         [body, left leg, right leg    , left arm, right arm, head]/0.0012440010103561506
+         [neck, hair, body, left foot    , right leg    , head]/0.0012440010103561506
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.0012376862844152563
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.0012313715584743622
+         [neck, body, left foot    , right leg    , right arm]/0.0011366506693609498
+         [hair, body, right hand, left leg, right leg    ]/0.0010861328618337965
+         [right hand, left leg, right leg    ]/0.0010798181358929021
+         [body, right foot, left leg, right leg    ]/0.001035615054306643
+         [body, left foot    , left leg, right leg    , head]/0.001035615054306643
+         [body, left hand, left leg, right leg    , left arm, head]/0.001029300328365749
+         [hair, right hand, left leg, right leg    ]/0.0010166708764839606
+         [hair, body, left leg, right leg    , right arm, head]/0.0010103561505430665
+   --- Parent: head: 0.02571356403132109---
+         [body, left leg, right leg    , left arm, right arm]/0.006838848193988381
+         [left leg, right leg    , left arm, right arm]/0.002765849962111644
+         [body, right leg    ]/0.0018817883303864612
+         [hair, left leg, right leg    , right arm]/0.001067188684011114
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0010482445061884315
+   --- Parent: right arm: 0.009023743369537767---
+         [left leg, right leg    ]/0.002266986612781005
+         [left foot    , left leg, right leg    ]/0.0013892397069967164
+   --- Parent: left arm: 0.019057842889618596---
+         [left leg, right leg    ]/0.008537509472088912
+         [right foot, left leg, right leg    ]/0.0015597373074008587
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.0011619095731245264
+   --- Parent: right leg    : 0.0---
+   --- Parent: left leg: 0.030121242738065223---
+         [left foot    , right leg    ]/0.0075587269512503155
+         [right leg    ]/0.003978277342763324
+         [body, right leg    ]/0.001414498610760293
+         [left foot    , right foot, right leg    ]/0.001111391765597373
+   --- Parent: right hand: 0.031036877999494835---
+         [hair, left leg, right leg    ]/0.007861833796413236
+         [left leg, right leg    ]/0.004218236928517302
+         [hair, left foot    , left leg, right leg    ]/0.0036814852235412983
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0031384187926244
+         [hair, right foot, left leg, right leg    ]/0.002866885577165951
+         [right foot, left leg, right leg    ]/0.001951250315736297
+         [left foot    , right foot, left leg, right leg    ]/0.0016228845668098005
+         [left foot    , left leg, right leg    ]/0.0012376862844152563
+   --- Parent: left hand: 0.017990654205607474---
+         [left leg, right leg    ]/0.004205607476635514
+         [hair, right hand, left leg, right leg    ]/0.003283657489264966
+         [right leg    ]/0.0014587016923465522
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.0011808537509472089
+         [right foot, left leg, right leg    ]/0.0010608739580702197
+         [hair, left foot    , right hand, left leg, right leg    ]/0.0010229856024248547
+   --- Parent: right foot: 0.0025069461985349813---
+   --- Parent: left foot    : 0.015054306643091724---
+         [right leg    ]/0.0035488759787825207
+         [left leg, right leg    ]/0.0015471078555190706
+         [body, right leg    ]/0.0012692599141197272
+         [body, left leg, right leg    ]/0.0012250568325334681
+   --- Parent: body: 0.6308221773175047---
+         [left leg, right leg    ]/0.44021848951755493
+         [left leg, right leg    , left arm, right arm]/0.06269259914119728
+         [right leg    , left arm, right arm]/0.030815862591563527
+         [left leg, right leg    , left arm]/0.01849583228087901
+         [hair, right foot, left leg, right leg    ]/0.013273553927759535
+         [hair, left leg, right leg    ]/0.010697145743874715
+         [right leg    ]/0.006794645112402122
+         [right leg    , left arm]/0.004028795150290477
+         [left hand, left leg, right leg    , left arm]/0.002980550644102046
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.0028542561252841627
+         [left foot    , left leg, right leg    , left arm, right arm]/0.0027721646880525387
+         [right hand, left leg, right leg    , left arm, right arm]/0.0023427633240717355
+         [left hand, right leg    , left arm]/0.001875473604445567
+         [hair, right leg    ]/0.0018249557969184137
+         [left hand, right hand, left leg, right leg    ]/0.001603940388987118
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0015092194998737054
+         [right foot, left leg, right leg    , left arm]/0.0014081838848193989
+   --- Parent: hair: 0.0019954533973225554---
+   --- Parent: neck: 0.0023932811315988864---
+=== Child: left leg===
+   --- Parent: start: 0.24239906409114265---
+         [body, left leg, right leg    ]/0.04684861940149692
+         [left leg, right leg    ]/0.023470839260312945
+         [left leg, right leg    , left arm, right arm, head]/0.01159250741149413
+         [body, left foot    , left leg, right leg    ]/0.010143443985057364
+         [body, left leg, right leg    , head]/0.007723906887704231
+         [left leg, right leg    , head]/0.005915901144627166
+         [body, left hand, left leg, right leg    , head]/0.0040547187620478325
+         [body, right foot, left leg, right leg    , head]/0.0039816008827322155
+         [left leg, head]/0.0034165990880206326
+         [body, left foot    , right foot, left leg, right leg    ]/0.003409952008082849
+         [left foot    , left leg, right leg    ]/0.0030510096914425494
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.002818361893620133
+         [left leg]/0.0026920673748022494
+         [body, left foot    , right hand, left leg, right leg    ]/0.0024527724970420496
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0023995958575397827
+         [body, left hand, left hand, left leg, right leg    , head]/0.002346419218037516
+         [body, left leg, right leg    , left arm]/0.002326477978224166
+         [body, left hand, left leg, right leg    ]/0.0022932425785352497
+         [hair, left leg, right leg    , head]/0.0020672418606506164
+         [left hand, left leg, right leg    , head]/0.0020539477007750495
+         [left foot    , right foot, left leg, right leg    ]/0.0020340064609616995
+         [body, left leg, right leg    , right arm, head]/0.0020140652211483494
+         [left hand, left leg, right leg    ]/0.0017947115832014995
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.001641828744632483
+         [left foot    , left leg]/0.0015687108653168664
+         [body, left leg, head]/0.0015221813057523829
+         [left leg, right arm, head]/0.0015088871458768163
+         [left leg, left arm, right arm, head]/0.0014889459060634664
+         [hair, body, left leg, right leg    ]/0.0014889459060634664
+         [right foot, left leg, right leg    ]/0.0014557105063745497
+         [body, left hand, left leg, right leg    , left arm]/0.0013294159875566665
+         [body, left leg, right leg    , left arm, right arm, head]/0.0013094747477433164
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.001302827667805533
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.0012961805878677498
+         [hair, body, right hand, left leg, right leg    ]/0.001143297749298733
+         [right hand, left leg, right leg    ]/0.0011366506693609498
+         [body, right foot, left leg, right leg    ]/0.0010901211097964665
+         [body, left foot    , left leg, right leg    , head]/0.0010901211097964665
+         [body, left leg]/0.001083474029858683
+         [body, left hand, left leg, right leg    , left arm, head]/0.001083474029858683
+         [hair, right hand, left leg, right leg    ]/0.0010701798699831165
+         [hair, body, left leg, right leg    , right arm, head]/0.001063532790045333
+         [left foot    , right hand, left leg, right leg    ]/0.0010502386301697664
+         [left foot    , right hand, left leg]/0.001043591550231983
+         [body, left foot    , left leg, right leg    , left arm]/0.0010236503104186332
+         [body, right foot, left leg, right leg    , left arm]/0.0010103561505430665
+   --- Parent: head: 0.025006314725940972---
+         [body, left leg, right leg    , left arm, right arm]/0.0071987875726193485
+         [left leg, right leg    , left arm, right arm]/0.0029114210127490995
+         [hair, left leg, right leg    , right arm]/0.001123356509485383
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0011034152696720331
+   --- Parent: right arm: 0.009558500950532444---
+         [left leg, right leg    ]/0.0023863016976642163
+         [left foot    , left leg, right leg    ]/0.001462357586312333
+   --- Parent: left arm: 0.019349649698887295---
+         [left leg, right leg    ]/0.008986852075883064
+         [right foot, left leg, right leg    ]/0.001641828744632483
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.001223062708552133
+         [left foot    , left leg, right leg    ]/0.001003709070605283
+   --- Parent: right leg    : 0.021343773680222316---
+         [right foot, left leg]/0.007610906528761915
+         [left leg]/0.0026920673748022494
+         [neck, body, left leg]/0.0014889459060634664
+         [body, left leg]/0.0013094747477433164
+         [hair, right foot, left leg]/0.001282886427992183
+   --- Parent: left leg: 0.0---
+   --- Parent: right hand: 0.031367570226399556---
+         [hair, left leg, right leg    ]/0.008275614522540248
+         [left leg, right leg    ]/0.004440249398439265
+         [hair, left foot    , left leg, right leg    ]/0.0038752476037276825
+         [hair, left foot    , right foot, left leg, right leg    ]/0.003303598729078316
+         [hair, right foot, left leg, right leg    ]/0.0030177742917536325
+         [right foot, left leg, right leg    ]/0.0020539477007750495
+         [left foot    , right foot, left leg, right leg    ]/0.0017082995440103163
+         [left foot    , left leg, right leg    ]/0.001302827667805533
+   --- Parent: left hand: 0.016139110088937935---
+         [left leg, right leg    ]/0.004426955238563699
+         [hair, right hand, left leg, right leg    ]/0.0034564815676473323
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.001243003948365483
+         [right foot, left leg, right leg    ]/0.0011167094295475998
+         [hair, left foot    , right hand, left leg, right leg    ]/0.0010768269499208997
+   --- Parent: right foot: 0.004699485516012809---
+         [left leg]/0.0015088871458768163
+   --- Parent: left foot    : 0.006534079578840999---
+         [left leg, right leg    ]/0.0016285345847569163
+         [body, left leg, right leg    ]/0.0012895335079299664
+   --- Parent: body: 0.618211669613539---
+         [left leg, right leg    ]/0.4633878837026894
+         [left leg, right leg    , left arm, right arm]/0.06599220962231292
+         [left leg, right leg    , left arm]/0.019469297137767377
+         [hair, right foot, left leg, right leg    ]/0.013972162029220563
+         [hair, left leg, right leg    ]/0.011260153414604963
+         [left hand, left leg, right leg    , left arm]/0.003137421730633733
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.003004480131878066
+         [left foot    , left leg, right leg    , left arm, right arm]/0.0029180680926868827
+         [left leg, left arm]/0.0025990082556732828
+         [right hand, left leg, right leg    , left arm, right arm]/0.002466066656917616
+         [left hand, right hand, left leg, right leg    ]/0.0016883583041969663
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0015886521051302162
+         [right foot, left leg, right leg    , left arm]/0.001482298826125683
+         [left foot    , left leg, right leg    , left arm]/0.0010236503104186332
+   --- Parent: hair: 0.0023530662979752994---
+   --- Parent: neck: 0.003037715531566982---
+=== Child: right hand===
+   --- Parent: start: 0.17674496926833555---
+         [body, left hand, right hand, left arm, right arm, head]/0.011972720383935338
+         [neck, right hand, right arm, head]/0.007661867474951587
+         [neck, body, right hand, right arm, head]/0.00719036793803149
+         [body, left foot    , right hand, left leg, right leg    ]/0.006213690325839859
+         [hair, left foot    , right foot, right hand, head]/0.005725351519744043
+         [body, left hand, right hand, head]/0.004748673907552412
+         [neck, right hand, head]/0.004479245600740928
+         [neck, body, right hand, head]/0.004277174370632315
+         [body, right hand, left arm, right arm, head]/0.0037046392186579104
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0035867643344278857
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.003283657489264966
+         [neck, left hand, right hand, right arm, head]/0.0031994611433863772
+         [hair, body, right hand, left leg, right leg    ]/0.002896354298223457
+         [right hand, left leg, right leg    ]/0.0028795150290477395
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.0027953186831691504
+         [hair, right hand, left leg, right leg    ]/0.0027111223372905616
+         [left foot    , right hand, left leg, right leg    ]/0.002660604529763408
+         [left foot    , right hand, left leg]/0.0026437652605876905
+         [left hand, right hand, head]/0.0023406584154247708
+         [body, right foot, left hand, right hand, head]/0.0023238191462490528
+         [hair, body, left hand, right hand, head]/0.002003873031910415
+         [hair, body, left hand, right hand, left leg, right leg    , head]/0.001953355224383262
+         [hair, body, right hand, left leg, right leg    , head]/0.001936515955207544
+         [neck, body, right hand, left arm, right arm, head]/0.001784962532626084
+         [body, right hand, left leg, right leg    ]/0.0017007661867474951
+         [body, right hand, head]/0.0016165698408689064
+         [hair, right hand, left leg, right leg    , head]/0.0015323734949903175
+         [hair, body, left foot    , left hand, right hand, head]/0.001414498610760293
+         [hair, left foot    , right foot, right hand]/0.0012124273806516797
+         [left foot    , right hand, left leg, right arm]/0.0012124273806516797
+         [hair, body, left foot    , right foot, right hand, right arm, head]/0.001195588111475962
+         [neck, body, right hand, left leg, right arm, head]/0.0010945524964216552
+         [body, left foot    , left hand, right hand, left leg, right leg    , right arm]/0.0010608739580702197
+         [body, right hand, right arm, head]/0.0010440346888945019
+   --- Parent: head: 0.10622210996042776---
+         [hair, left hand, right hand]/0.02618506356824114
+         [neck, right hand, right arm]/0.010187757851309253
+         [hair, right hand]/0.009093205354887599
+         [left hand, right hand]/0.006028458364906963
+         [body, left hand, right hand]/0.005624315904689737
+         [neck, body, left hand, right hand, left arm, right arm]/0.003569925065252168
+         [neck, right hand]/0.0022733013387218996
+         [body, left hand, right hand, left arm, right arm]/0.001953355224383262
+         [right hand, left arm, right arm]/0.0019196766860318261
+         [right hand]/0.0018859981476803908
+         [neck, left hand, right hand, left arm, right arm]/0.0018186410709775196
+         [hair, right hand, left arm, right arm]/0.001784962532626084
+         [neck, left hand, right hand, right arm]/0.0015997305716931886
+         [body, right hand, left arm, right arm]/0.001498694956638882
+         [body, right hand, right arm]/0.0013471415340574218
+         [body, left hand, right hand, left leg, right leg    , right arm]/0.0011787488423002442
+         [neck, right hand, left arm, right arm]/0.0011619095731245264
+         [neck, body, right hand, right arm]/0.0010440346888945019
+         [body, left foot    , right foot, left hand, right hand]/0.0010440346888945019
+   --- Parent: right arm: 0.14640060621369055---
+         [right hand]/0.10831017933821672
+         [right hand, left arm]/0.011080239117622296
+         [left hand, right hand, left arm]/0.004294013639808032
+         [left hand, right hand]/0.003435210911846426
+         [hair, left hand, right hand, left arm]/0.0024080154921276415
+         [hair, right hand]/0.0012797844573545509
+         [body, right hand, left arm]/0.001195588111475962
+   --- Parent: left arm: 0.1006483118632651---
+         [left hand, right hand]/0.05945945945945946
+         [right hand]/0.004226656563105161
+         [left foot    , right foot, right hand]/0.0035362465269007325
+         [hair, left hand, right hand, head]/0.003266818220089248
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.0030984255283320705
+         [left hand, right hand, right arm]/0.0030984255283320705
+         [left foot    , right foot, left hand, right hand]/0.0027111223372905616
+         [hair, left hand, right hand]/0.002626925991411973
+         [left foot    , right hand]/0.0024248547613033595
+         [left hand, right hand, left leg]/0.0017512839942746485
+         [hair, left hand, right hand, left leg]/0.0016165698408689064
+         [left hand, right hand, left leg, right leg    ]/0.0013639808032331396
+         [right hand, right arm]/0.0012292666498273975
+         [left foot    , left hand, right hand]/0.0011619095731245264
+   --- Parent: right leg    : 0.019887176896522654---
+         [hair, left foot    , right foot, left hand, right hand, head]/0.003940388987117959
+         [right foot, left hand, right hand]/0.0016670876483960595
+   --- Parent: left leg: 0.10376357666077278---
+         [left foot    , left hand, right hand, left arm, right arm]/0.040986781173697064
+         [left foot    , right hand, left arm]/0.009514187084280543
+         [left foot    , right foot, left hand, right hand]/0.007914456512587353
+         [left foot    , right foot, right hand, left arm]/0.0077123852824787405
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.006600993516881367
+         [right hand, left arm, right arm]/0.004597120484970952
+         [left foot    , right hand, left arm, right arm]/0.00446240633156521
+         [right hand, left arm]/0.003569925065252168
+         [left hand, right hand, left arm, right arm]/0.0020543908394375686
+         [left foot    , right foot, right hand, left arm, right arm]/0.0019196766860318261
+         [right foot, right hand, left arm, right arm]/0.0013639808032331396
+         [left foot    , left hand, right hand]/0.0011619095731245264
+   --- Parent: right hand: 0.0---
+   --- Parent: left hand: 0.05811231792540205---
+         [right hand, right arm]/0.009362633661699083
+         [hair, right hand, left leg, right leg    ]/0.008756419971373242
+         [hair, right hand, head]/0.005775869327271197
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.0031489433358592236
+         [right hand]/0.0030984255283320705
+         [hair, left foot    , right hand, left leg, right leg    ]/0.002727961606466279
+         [right hand, left leg, right leg    ]/0.0023406584154247708
+         [hair, right foot, right hand, left leg, right leg    ]/0.0022733013387218996
+         [hair, right hand]/0.0018186410709775196
+         [right hand, right leg    ]/0.0015997305716931886
+         [hair, right hand, right leg    ]/0.0013976593415845752
+         [body, right hand]/0.0012966237265302687
+         [left foot    , right foot, right hand, left leg, right leg    ]/0.0012292666498273975
+         [hair, right hand, left leg]/0.0011450703039488086
+   --- Parent: right foot: 0.035530857960764564---
+         [left hand, right hand]/0.005657994443041172
+         [hair, body, left hand, right hand, head]/0.003519407257725015
+         [hair, body, right hand, head]/0.002626925991411973
+         [body, left hand, right hand]/0.0015828913025174708
+         [neck, hair, body, right hand]/0.0014481771491117285
+         [hair, body, right hand]/0.001414498610760293
+         [right hand]/0.0012797844573545509
+         [left foot    , left hand, right hand, head]/0.001111391765597373
+   --- Parent: left foot    : 0.045752294350425285---
+         [right foot, left hand, right hand]/0.021975246274311695
+         [left hand, right hand, left arm, right arm]/0.011063399848446577
+         [right hand, left arm, right arm]/0.005203334175296792
+         [right foot, right hand]/0.0022733013387218996
+   --- Parent: body: 0.15743032752378597---
+         [right hand, left arm, right arm]/0.02714490191125705
+         [left hand, right hand, left arm, right arm]/0.019701944935589796
+         [neck, hair, right hand, left arm, right arm, head]/0.009463669276753389
+         [right hand, right arm]/0.00825124189610171
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.007611349667424434
+         [right hand, left leg, right leg    , left arm, right arm]/0.006247368864191294
+         [left hand, right hand, left leg, right leg    ]/0.004277174370632315
+         [neck, right hand, left arm, right arm]/0.004041424602172266
+         [neck, hair, right hand, left arm, right arm]/0.0031826218742106592
+         [neck, right hand]/0.002660604529763408
+         [hair, left hand, right hand, left arm, right arm, head]/0.0026437652605876905
+         [neck, right hand, left arm, right arm, head]/0.0024080154921276415
+         [right hand, left leg, right leg    , right arm]/0.0022059442620190285
+         [neck, hair, right hand, head]/0.0019870337627346975
+         [right foot, left hand, right hand, left leg, right leg    ]/0.0019196766860318261
+         [neck, hair, right hand, right arm]/0.0018859981476803908
+         [neck, left hand, right hand, left arm, right arm]/0.0018018018018018018
+         [left hand, right hand, right leg    , left arm, right arm]/0.001784962532626084
+         [neck, hair, right hand]/0.0017681232634503663
+         [right hand, left arm, right arm, head]/0.0017681232634503663
+         [right hand, left leg, right arm]/0.0017512839942746485
+         [left hand, right hand, left arm, right arm, head]/0.0015997305716931886
+         [neck, right hand, right arm]/0.0015492127641660353
+         [hair, right hand, left arm, right arm, head]/0.0015492127641660353
+         [hair, left hand, right hand, left arm, right arm]/0.0015323734949903175
+         [right foot, left hand, right hand, left leg, right leg    , left arm, right arm]/0.0013471415340574218
+         [left foot    , left hand, right hand, left leg, right leg    , left arm, right arm]/0.0012797844573545509
+         [right hand, left leg, left arm, right arm]/0.0011787488423002442
+         [hair, right hand, left arm, right arm]/0.0011450703039488086
+         [left hand, right hand, left leg, left arm, right arm]/0.0011282310347730908
+         [left foot    , right foot, right hand, left leg, right leg    , left arm]/0.0010777132272459375
+         [left foot    , right hand, left leg, right leg    , left arm]/0.0010103561505430665
+   --- Parent: hair: 0.012343184305801117---
+         [right hand]/0.002374336953776206
+         [left hand, right hand, left arm, right arm]/0.0015997305716931886
+         [body, right hand, left arm, right arm, head]/0.0013134629957059865
+   --- Parent: neck: 0.0371642670708092---
+         [body, right hand, right arm]/0.00612949397996127
+         [right hand, right arm]/0.004411888524038057
+         [hair, right hand, left arm, right arm, head]/0.003064746989980635
+         [right hand, left arm, right arm, head]/0.002172265723667593
+         [body, right hand, left arm, right arm]/0.002020712301086133
+         [body, right hand, left leg, right arm]/0.001633409110044624
+         [body, left hand, right hand, right arm]/0.0013639808032331396
+         [right hand, head]/0.001262945188178833
+         [body, left hand, right hand, left arm, right arm]/0.0010777132272459375
+         [right hand, left arm, right arm]/0.0010271954197187843
+=== Child: left hand===
+   --- Parent: start: 0.1459370310387365---
+         [body, left hand, right hand, left arm, right arm, head]/0.010564165044648827
+         [body, left hand, left hand, left leg, right leg    , head]/0.010489874151226543
+         [body, left hand, left leg, right leg    , head]/0.009063488997518684
+         [body, left hand, left leg, right leg    ]/0.005126071646137617
+         [left hand, left leg, right leg    , head]/0.00459117721349717
+         [body, left hand, right hand, head]/0.004190006389016834
+         [left hand, left leg, right leg    ]/0.004011708244803352
+         [body, left hand, left arm, right arm, head]/0.0033133738466338794
+         [body, left hand, left leg, right leg    , left arm]/0.002971635736891372
+         [neck, left hand, right hand, right arm, head]/0.0028230539500468032
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.002466457661619839
+         [body, left hand, left leg, right leg    , left arm, head]/0.002421883125566468
+         [hair, body, left hand, left arm, head]/0.002139577730561788
+         [left hand, right hand, head]/0.0020652868371395035
+         [body, right foot, left hand, right hand, head]/0.0020504286584550465
+         [body, left hand, head]/0.0019315632289793917
+         [left hand, left leg, head]/0.0019167050502949348
+         [hair, body, left hand, right hand, head]/0.0017681232634503663
+         [hair, body, left hand, right hand, left leg, right leg    , head]/0.0017235487273969956
+         [left hand, left hand, left leg, right leg    , head]/0.0015155342258145997
+         [hair, body, right foot, left hand, left arm, head]/0.001470959689761229
+         [body, left hand, left leg, head]/0.0014561015110767723
+         [body, right foot, left hand, left leg, right leg    , left arm]/0.0014115269750234016
+         [left hand, left leg]/0.0013075197242322035
+         [hair, body, left foot    , left hand, right hand, head]/0.0012480870094943761
+         [body, right foot, left hand, left hand, left leg, right leg    , head]/0.0012480870094943761
+         [body, left hand, left leg, right leg    , left arm, right arm, head]/0.0011886542947565487
+         [body, left hand, left hand, left leg, right leg    , left arm, head]/0.001158937937387635
+         [body, left foot    , left hand, left arm, right arm, head]/0.0011143634013342644
+   --- Parent: head: 0.07745568548207393---
+         [hair, left hand, right hand]/0.023104467854330415
+         [left hand, right hand]/0.005319227969035556
+         [body, left hand, right hand]/0.004962631680608591
+         [left hand, left arm, right arm]/0.0035362465269007325
+         [neck, body, left hand, right hand, left arm, right arm]/0.003149933881104854
+         [body, left hand, left arm, right arm]/0.002971635736891372
+         [left hand]/0.002139577730561788
+         [body, left hand, right hand, left arm, right arm]/0.0017235487273969956
+         [neck, left hand, right hand, left arm, right arm]/0.0016046832979213408
+         [neck, left hand, right hand, right arm]/0.0014115269750234016
+         [body, left hand, right hand, left leg, right leg    , right arm]/0.0010400725079119802
+   --- Parent: right arm: 0.018453857926095402---
+         [left hand, right hand, left arm]/0.003788835564536499
+         [left hand, right hand]/0.0030310684516291994
+         [hair, left hand, right hand, left arm]/0.002124719551877331
+   --- Parent: left arm: 0.3522428420724188---
+         [left hand]/0.26038958144510643
+         [left hand, right hand]/0.05246422893481717
+         [hair, left hand, right hand, head]/0.0028824866647846306
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.002733904877940062
+         [left hand, right hand, right arm]/0.002733904877940062
+         [left foot    , right foot, left hand, right hand]/0.0023921667681975544
+         [hair, left hand, right hand]/0.00231787587477527
+         [left hand, right arm]/0.0022584431600374427
+         [hair, left hand, head]/0.0020801450158239605
+         [left hand, head]/0.001961279586348305
+         [left hand, left leg, right leg    ]/0.0018721305142415643
+         [left hand, right hand, left leg]/0.0015452505831835134
+         [left hand, right leg    ]/0.0014561015110767723
+         [hair, left hand, right hand, left leg]/0.0014263851537078586
+         [left hand, right hand, left leg, right leg    ]/0.0012035124734410057
+         [left foot    , left hand, right hand]/0.0010252143292275233
+   --- Parent: right leg    : 0.02846827035941931---
+         [hair, left foot    , right foot, left hand, right hand, head]/0.003476813812162905
+         [body, left foot    , right foot, left hand, left arm]/0.001990995943717219
+         [body, right foot, left hand, left hand, head]/0.0019315632289793917
+         [right foot, left hand]/0.0017681232634503663
+         [right foot, left hand, right hand]/0.001470959689761229
+         [body, right foot, left hand]/0.0011143634013342644
+         [body, left foot    , right foot, left hand, left arm, head]/0.0010103561505430665
+   --- Parent: left leg: 0.08411214953271041---
+         [left foot    , left hand, right hand, left arm, right arm]/0.036164806917967994
+         [left foot    , right foot, left hand, right hand]/0.006983343981694724
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.005824406044307089
+         [left foot    , left hand, right arm]/0.0040859991382256365
+         [left foot    , left hand, left arm, right arm]/0.001886988692926021
+         [left hand, right hand, left arm, right arm]/0.001812697799503737
+         [hair, left foot    , right foot, left hand, left arm]/0.0017384069060814526
+         [left hand, right leg    ]/0.0016641160126591682
+         [body, left hand, left hand, right leg    ]/0.0011886542947565487
+         [left foot    , left hand, right hand]/0.0010252143292275233
+   --- Parent: right hand: 0.044143648871521314---
+         [left hand]/0.019137334145580435
+         [left hand, left arm]/0.0064930240851076475
+         [hair, left hand]/0.0030905011663670268
+         [left foot    , left hand]/0.0028824866647846306
+         [left foot    , right foot, left hand]/0.0024813158403042953
+         [left hand, left leg, right leg    , left arm]/0.0018424141568726506
+         [left hand, right leg    , left arm]/0.0016492578339747114
+         [left hand, left arm, head]/0.0011737961160720918
+         [body, left hand, left arm]/0.0010995052226498076
+   --- Parent: left hand: 0.0035065301695318186---
+   --- Parent: right foot: 0.05004234580925067---
+         [hair, left hand, left arm]/0.008573169100931607
+         [left hand, right hand]/0.004992348037977505
+         [body, left hand]/0.0041751482103323774
+         [hair, body, left hand, right hand, head]/0.0031053593450514837
+         [left hand]/0.0021990104452996153
+         [body, left hand, left hand, head]/0.0018721305142415643
+         [body, left hand, head]/0.001693832370028082
+         [left hand, left arm]/0.0016046832979213408
+         [body, left hand, right hand]/0.0013966687963389449
+         [left hand, left arm, right arm]/0.0013075197242322035
+         [body, left hand, left arm]/0.0012183706521254624
+         [hair, body, left hand, head]/0.0012183706521254624
+         [body, left hand, left arm, right arm, head]/0.001158937937387635
+         [body, left hand, left arm, right arm]/0.0010103561505430665
+   --- Parent: left foot    : 0.04736787364604843---
+         [right foot, left hand, right hand]/0.019389923183216203
+         [hair, right foot, left hand, left arm]/0.01054930686596437
+         [left hand, right hand, left arm, right arm]/0.009761823395688157
+   --- Parent: body: 0.12207479607149774---
+         [left hand, right arm, head]/0.024946882011203066
+         [left hand, right hand, left arm, right arm]/0.017384069060814526
+         [left hand, left leg, right leg    , left arm]/0.007013060339063637
+         [left hand, right hand, left leg, right leg    , left arm, right arm]/0.006715896765374501
+         [left hand, right leg    , left arm]/0.004412879069283687
+         [left hand, left arm]/0.004279155461123576
+         [left hand, left arm, right arm]/0.004160290031647921
+         [left hand, right hand, left leg, right leg    ]/0.003773977385852042
+         [hair, left hand, right hand, left arm, right arm, head]/0.002332734053459727
+         [neck, left hand, left arm, right arm]/0.0017384069060814526
+         [right foot, left hand, right hand, left leg, right leg    ]/0.001693832370028082
+         [neck, left hand, left arm]/0.0016789741913436252
+         [hair, left hand, left leg, right leg    , left arm]/0.0016046832979213408
+         [neck, left hand, right hand, left arm, right arm]/0.001589825119236884
+         [left hand, right hand, right leg    , left arm, right arm]/0.001574966940552427
+         [hair, left hand, left arm, right arm]/0.0015303924044990564
+         [left hand, right hand, left arm, right arm, head]/0.0014115269750234016
+         [neck, hair, left hand, left arm, head]/0.0013966687963389449
+         [hair, left hand, right hand, left arm, right arm]/0.0013520942602855742
+         [right foot, left hand, left leg, right leg    , left arm]/0.0012183706521254624
+         [right foot, left hand, right hand, left leg, right leg    , left arm, right arm]/0.0011886542947565487
+         [left hand, left arm, right arm, head]/0.0011737961160720918
+         [left foot    , left hand, right hand, left leg, right leg    , left arm, right arm]/0.0011292215800187213
+         [left hand, right arm]/0.001069788865280894
+   --- Parent: hair: 0.010162994220168491---
+         [left hand, left arm]/0.007206216661961576
+         [left hand, right hand, left arm, right arm]/0.0014115269750234016
+         [left hand, left arm, right arm]/0.0014115269750234016
+   --- Parent: neck: 0.016031974800528932---
+         [body, left hand, left arm]/0.002436741304250925
+         [hair, left hand, left arm, head]/0.0013223779029166605
+         [body, left hand, right hand, right arm]/0.0012035124734410057
+=== Child: right foot===
+   --- Parent: start: 0.09513134629957004---
+         [body, right foot, left leg, right leg    , head]/0.004728151048244506
+         [body, left foot    , right foot, left leg, right leg    ]/0.004049318009598383
+         [neck, body, right foot, left arm]/0.0038835564536499117
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.0033468047486739077
+         [left foot    , right foot, right leg    ]/0.003094215711038141
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0028495200808284923
+         [hair, left foot    , right foot, right hand, head]/0.00268375852488002
+         [left foot    , right foot, left leg, right leg    ]/0.002415382672392018
+         [hair, body, right foot, right arm, head]/0.002336448598130841
+         [right foot, left leg, right leg    , left arm, right arm, head]/0.0019496716342510736
+         [hair, left foot    , right foot]/0.0019259914119727204
+         [hair, left foot    , right foot, right leg    ]/0.001831270522859308
+         [right foot, left leg, right leg    ]/0.0017286562263197777
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0016812957817630716
+         [body, right foot, left leg, right leg    ]/0.0012945188178833038
+         [hair, right foot]/0.001207691336196009
+         [body, right foot, left leg, right leg    , left arm]/0.0011997979287698913
+         [hair, left foot    , right foot, head]/0.0011603308916393028
+         [right foot, left leg, right leg    , head]/0.0010892902248042435
+         [body, right foot, left hand, right hand, head]/0.0010892902248042435
+         [hair, body, left foot    , right foot, left leg, right leg    ]/0.0010577165950997726
+         [neck, hair, body, left foot    , right foot, left leg, right leg    , head]/0.0010261429653953017
+         [left foot    , right foot]/0.0010103561505430665
+   --- Parent: head: 0.010585059358423783---
+   --- Parent: right arm: 0.004057211417024495---
+   --- Parent: left arm: 0.016355140186915897---
+         [left foot    , right foot, head]/0.003678327860570851
+         [left foot    , right foot]/0.00199703207880778
+         [right foot, left leg, right leg    ]/0.0019496716342510736
+         [left foot    , right foot, right hand]/0.0016576155594847184
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.001452386966405658
+         [left foot    , right foot, left hand, right hand]/0.0012708385956049508
+   --- Parent: right leg    : 0.7351367138166218---
+         [right foot]/0.6838611391765598
+         [right foot, left leg]/0.009037951502904774
+         [hair, right foot]/0.0034573124526395553
+         [hair, left foot    , right foot]/0.0026679717100277847
+         [left foot    , right foot]/0.0024548497095226067
+         [left foot    , right foot, left arm]/0.0023838090426875473
+         [hair, left foot    , right foot, left hand, right hand, head]/0.0018470573377115432
+         [body, right foot]/0.0017996968931548371
+         [body, left foot    , right foot, left arm]/0.0015786814852235412
+         [hair, right foot, left leg]/0.0015234276332407174
+         [right foot, left arm]/0.0015155342258145997
+         [body, left foot    , right foot, left hand, left arm]/0.0010577165950997726
+   --- Parent: left leg: 0.033736423339227044---
+         [left foot    , right foot]/0.005809547865622632
+         [left foot    , right foot, left hand, right hand]/0.003709901490275322
+         [left foot    , right foot, right hand, left arm]/0.0036151806011619097
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.003094215711038141
+         [left foot    , right foot, left arm, right arm]/0.0015392144480929528
+         [left foot    , right foot, right leg    ]/0.0013892397069967164
+   --- Parent: right hand: 0.016110444556706238---
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0039230234907805
+         [hair, right foot, left leg, right leg    ]/0.003583606971457439
+         [right foot, left leg, right leg    ]/0.0024390628946703713
+         [left foot    , right foot, left leg, right leg    ]/0.0020286057085122508
+         [left foot    , right foot]/0.0017286562263197777
+         [left foot    , right foot, left hand]/0.001318199040161657
+   --- Parent: left hand: 0.008840616317251828---
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.001476067188684011
+         [left foot    , right foot]/0.0013892397069967164
+         [right foot, left leg, right leg    ]/0.0013260924475877746
+         [hair, right foot, right hand, left leg, right leg    ]/0.0010656100025258903
+   --- Parent: right foot: 0.0---
+   --- Parent: left foot    : 0.03699640060621364---
+         [right foot, left hand, right hand]/0.010300896691083607
+         [right foot]/0.007404016165698408
+         [hair, right foot, left hand, left arm]/0.005604319272543572
+         [hair, right foot, left arm]/0.002873200303106845
+         [hair, right foot]/0.0027311189694367265
+         [right foot, left arm]/0.0014997474109623642
+         [right foot, head]/0.0011129704470825967
+         [right foot, right hand]/0.0010656100025258903
+   --- Parent: body: 0.03775416771912096---
+         [hair, right foot, left leg, right leg    ]/0.01659194240969942
+         [left foot    , right foot, left arm, right arm, head]/0.0019496716342510736
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0018865243748421318
+         [right foot, left leg, right leg    , left arm]/0.0017602298560242485
+   --- Parent: hair: 0.002265407931295783---
+   --- Parent: neck: 0.003031068451629201---
+=== Child: left foot    ===
+   --- Parent: start: 0.13692693862086583---
+         [body, left foot    , left leg, right leg    ]/0.01204533973225562
+         [neck, body, left foot    ]/0.004704470825966153
+         [neck, hair, body, left foot    , head]/0.00419929275069462
+         [body, left foot    , right foot, left leg, right leg    ]/0.004049318009598383
+         [left foot    , left leg, right leg    ]/0.0036230740085880274
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.0033468047486739077
+         [left foot    , right foot, right leg    ]/0.003094215711038141
+         [body, left foot    , right hand, left leg, right leg    ]/0.0029126673402374336
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0028495200808284923
+         [hair, left foot    , right foot, right hand, head]/0.00268375852488002
+         [neck, hair, body, left foot    ]/0.002446956302096489
+         [left foot    , right foot, left leg, right leg    ]/0.002415382672392018
+         [body, left foot    ]/0.002123326597625663
+         [hair, left foot    , right foot]/0.0019259914119727204
+         [left foot    , left leg]/0.0018628441525637787
+         [hair, left foot    , right foot, right leg    ]/0.001831270522859308
+         [neck, body, left foot    , right leg    ]/0.0017602298560242485
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0016812957817630716
+         [neck, hair, body, left foot    , right leg    , head]/0.0015550012629451883
+         [left foot    , left leg, right leg    , left arm, right arm, head]/0.0015471078555190706
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.0015392144480929528
+         [hair, body, left foot    ]/0.0015313210406668351
+         [neck, body, left foot    , right leg    , right arm]/0.0014208133367011873
+         [body, left foot    , left leg, right leg    , head]/0.0012945188178833038
+         [hair, body, left foot    , head]/0.0012787320030310685
+         [left foot    , right hand, left leg, right leg    ]/0.0012471583733265977
+         [left foot    , right hand, left leg]/0.00123926496590048
+         [neck, body, left foot    , right leg    , left arm, right arm]/0.0012155847436221268
+         [body, left foot    , left leg, right leg    , left arm]/0.0012155847436221268
+         [hair, left foot    , right foot, head]/0.0011603308916393028
+         [hair, body, left foot    , right foot, left leg, right leg    ]/0.0010577165950997726
+         [neck, body, left foot    , right arm]/0.0010577165950997726
+         [neck, hair, body, left foot    , right foot, left leg, right leg    , head]/0.0010261429653953017
+         [left foot    , right foot]/0.0010103561505430665
+   --- Parent: head: 0.006385766607729194---
+   --- Parent: right arm: 0.0071830007577671---
+         [left foot    , left leg, right leg    ]/0.0017365496337458954
+   --- Parent: left arm: 0.017215521596362724---
+         [left foot    , right foot, head]/0.003678327860570851
+         [left foot    , right foot]/0.00199703207880778
+         [left foot    , right foot, right hand]/0.0016576155594847184
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.001452386966405658
+         [left foot    , right foot, left hand, right hand]/0.0012708385956049508
+         [left foot    , left leg, right leg    ]/0.0011919045213437736
+         [left foot    , right hand]/0.0011366506693609498
+   --- Parent: right leg    : 0.02132798686537005---
+         [hair, left foot    , right foot]/0.0026679717100277847
+         [left foot    , right foot]/0.0024548497095226067
+         [left foot    , right foot, left arm]/0.0023838090426875473
+         [hair, left foot    , right foot, left hand, right hand, head]/0.0018470573377115432
+         [body, left foot    , right foot, left arm]/0.0015786814852235412
+         [body, left foot    , right foot, left hand, left arm]/0.0010577165950997726
+   --- Parent: left leg: 0.7474188557716609---
+         [left foot    ]/0.6661325460974994
+         [left foot    , left hand, right hand, left arm, right arm]/0.019212553675170496
+         [left foot    , right leg    ]/0.009448408689062895
+         [left foot    , right foot]/0.005809547865622632
+         [left foot    , right hand, left arm]/0.004459775195756504
+         [left foot    , right foot, left hand, right hand]/0.003709901490275322
+         [left foot    , right foot, right hand, left arm]/0.0036151806011619097
+         [left foot    , right foot, left hand, right hand, left arm, right arm]/0.003094215711038141
+         [left foot    , left arm, right arm]/0.002952134377368022
+         [left foot    , left hand, right arm]/0.0021706870421823693
+         [left foot    , right hand, left arm, right arm]/0.002091752967921192
+         [left foot    , right foot, left arm, right arm]/0.0015392144480929528
+         [left foot    , right foot, right leg    ]/0.0013892397069967164
+         [left foot    , right leg    , left arm]/0.0012234781510482445
+         [body, left foot    , right leg    ]/0.0011366506693609498
+         [left foot    , left hand, left arm, right arm]/0.0010024627431169488
+   --- Parent: right hand: 0.019109939378630963---
+         [hair, left foot    , left leg, right leg    ]/0.004601856529426623
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0039230234907805
+         [left foot    , right foot, left leg, right leg    ]/0.0020286057085122508
+         [left foot    , right foot]/0.0017286562263197777
+         [left foot    , left leg, right leg    ]/0.0015471078555190706
+         [left foot    , left hand]/0.0015313210406668351
+         [left foot    , right foot, left hand]/0.001318199040161657
+         [left foot    ]/0.0010103561505430665
+   --- Parent: left hand: 0.007996021722657233---
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.001476067188684011
+         [left foot    , right foot]/0.0013892397069967164
+         [hair, left foot    , right hand, left leg, right leg    ]/0.0012787320030310685
+   --- Parent: right foot: 0.008738002020712269---
+         [left foot    ]/0.0027784794139934328
+   --- Parent: left foot    : 0.0---
+   --- Parent: body: 0.023561821166961365---
+         [left foot    , left leg, right leg    , left arm, right arm]/0.003465205860065673
+         [left foot    , right foot, left arm, right arm, head]/0.0019496716342510736
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0018865243748421318
+         [left foot    , left leg, right leg    , left arm]/0.0012155847436221268
+         [left foot    , left arm, right arm]/0.0012155847436221268
+   --- Parent: hair: 0.002904773932811318---
+   --- Parent: neck: 0.0012313715584743627---
+=== Child: body===
+   --- Parent: start: 0.7663357102609634---
+         [body, head]/0.3450236721264759
+         [body, left arm, right arm, head]/0.1386130918841199
+         [body, left leg, right leg    ]/0.04564737275017649
+         [neck, body, left arm]/0.020433805480534452
+         [neck, hair, body, left arm, head]/0.013685144526266022
+         [hair, body, right arm, head]/0.0130957701051159
+         [body, left foot    , left leg, right leg    ]/0.009883355677748201
+         [body, left leg, right leg    , head]/0.007525857993147713
+         [hair, body, left arm, right arm, head]/0.0047344252951729586
+         [body, left hand, right hand, left arm, right arm, head]/0.004604892455359745
+         [body, left hand, left leg, right leg    , head]/0.003950751614303016
+         [body, right foot, left leg, right leg    , head]/0.0038795085524057486
+         [neck, body, left foot    ]/0.0038600786264337667
+         [neck, hair, body, left foot    , head]/0.003445573539031483
+         [body, left foot    , right foot, left leg, right leg    ]/0.00332251734120893
+         [neck, body, right foot, left arm]/0.0031865078594050557
+         [neck, hair, body, left arm, right arm, head]/0.002933918821769289
+         [neck, body, right hand, right arm, head]/0.0027655261300121112
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.0027460962040401294
+         [body, left foot    , right hand, left leg, right leg    ]/0.0023898808945537918
+         [body, left foot    , right foot, left leg, right leg    , head]/0.0023380677586285065
+         [hair, body, head]/0.0023121611906658634
+         [body, left hand, left hand, left leg, right leg    , head]/0.0022862546227032207
+         [body, left leg, right leg    , left arm]/0.002266824696731239
+         [body, left hand, left leg, right leg    ]/0.0022344414867779354
+         [neck, hair, body, left foot    ]/0.0020077590171048115
+         [body, left leg, right leg    , right arm, head]/0.0019624225231701866
+         [hair, body, right foot, right arm, head]/0.001917086029235562
+         [hair, body]/0.0018911794612729192
+         [body, left hand, right hand, head]/0.0018264130413663123
+         [neck, hair, body, head]/0.0017810765474316876
+         [body, left foot    ]/0.0017422166954877236
+         [neck, body, right hand, head]/0.0016450670656278134
+         [body, left leg, head]/0.0014831510158612963
+         [hair, body, left leg, right leg    ]/0.0014507678059079928
+         [neck, body, left foot    , right leg    ]/0.001444291163917332
+         [body, left hand, left arm, right arm, head]/0.001444291163917332
+         [hair, body, left arm, head]/0.0014248612379453502
+         [body, right hand, left arm, right arm, head]/0.0014248612379453502
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0013795247440107252
+         [body, left hand, left leg, right leg    , left arm]/0.0012953283981321365
+         [body, left leg, right leg    , left arm, right arm, head]/0.0012758984721601544
+         [neck, hair, body, left foot    , right leg    , head]/0.0012758984721601544
+         [body, left foot    , right hand, left leg, right leg    , right arm]/0.001262945188178833
+         [hair, body, left foot    ]/0.0012564685461881723
+         [neck, body, left foot    , right leg    , right arm]/0.0011657955583189228
+         [hair, body, right hand, left leg, right leg    ]/0.0011139824223936373
+         [neck, body, head]/0.0011139824223936373
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.0010751225704496731
+         [body, right foot, left leg, right leg    ]/0.0010621692864683518
+         [body, left foot    , left leg, right leg    , head]/0.0010621692864683518
+         [body, left leg]/0.0010556926444776913
+         [body, left hand, left leg, right leg    , left arm, head]/0.0010556926444776913
+         [hair, body, left foot    , head]/0.0010492160024870305
+         [hair, body, left leg, right leg    , right arm, head]/0.0010362627185057092
+   --- Parent: head: 0.09346442056722397---
+         [body, left arm, right arm]/0.04546602677443799
+         [body, left leg, right leg    , left arm, right arm]/0.0070142032758855185
+         [body]/0.006858763868109663
+         [body, left hand, right hand]/0.002163198424880668
+         [body, right leg    ]/0.0019300393132168833
+         [neck, body, left arm]/0.0015025809418332784
+         [neck, body, left hand, right hand, left arm, right arm]/0.0013730481020200647
+         [body, left hand, left arm, right arm]/0.0012953283981321365
+         [body, right arm]/0.001282375114150815
+         [hair, body, left arm, right arm]/0.0011657955583189228
+         [neck, hair, body, left arm, right arm]/0.0011334123483656194
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0010751225704496731
+   --- Parent: right arm: 0.006275866088950199---
+         [body, left arm]/0.0019688991651608473
+   --- Parent: left arm: 0.0031735545754237367---
+         [body]/0.0012499919041975118
+   --- Parent: right leg    : 0.021288722223301613---
+         [body, right foot]/0.0014766743738706355
+         [neck, body, left leg]/0.0014507678059079928
+         [body, left foot    , right foot, left arm]/0.0012953283981321365
+         [body, left leg]/0.0012758984721601544
+   --- Parent: left leg: 0.01737035381895186---
+         [body, right leg    ]/0.0014507678059079928
+         [neck, body]/0.0012953283981321365
+         [body]/0.0010945524964216552
+   --- Parent: right hand: 0.003665779366713947---
+   --- Parent: left hand: 0.004021994676200283---
+   --- Parent: right foot: 0.02886639335237461---
+         [body, head]/0.00246760059844172
+         [body]/0.0020660487950207576
+         [body, left hand]/0.0018199363993756518
+         [body, left arm, right arm, head]/0.0015673473617398852
+         [body, left arm]/0.001366571460029404
+         [hair, body, left hand, right hand, head]/0.0013536181760480826
+         [hair, body, right hand, head]/0.0010103561505430665
+   --- Parent: left foot    : 0.009721439627981651---
+         [body, right leg    ]/0.001301805040122797
+         [body, left leg, right leg    ]/0.0012564685461881723
+   --- Parent: body: 0.0---
+   --- Parent: hair: 0.0076424375489795955---
+   --- Parent: neck: 0.03817332789295399---
+         [body, left arm]/0.012292666498273975
+         [body, left arm, right arm]/0.005550482185996204
+         [body, right arm]/0.0035362465269007325
+         [body, right hand, right arm]/0.0023574976846004883
+         [hair, body, left arm, right arm]/0.002208534918815293
+         [body]/0.0016191604976651705
+         [body, left hand, left arm]/0.0010621692864683518
+=== Child: hair===
+   --- Parent: start: 0.3596194325166308---
+         [neck, hair, body, left arm, head]/0.03558137576829166
+         [hair, body, right arm, head]/0.03404900227330134
+         [neck, hair, head]/0.03359434200555696
+         [hair, body, left arm, right arm, head]/0.012309505767449692
+         [hair, head]/0.010827650079986529
+         [neck, hair, body, left foot    , head]/0.008958491201481856
+         [neck, hair, body, left arm, right arm, head]/0.007628188936600152
+         [hair, right arm, head]/0.006247368864191294
+         [hair, body, head]/0.006011619095731245
+         [hair, left foot    , right foot, right hand, head]/0.005725351519744043
+         [hair, left leg, right leg    , head]/0.005237012713648227
+         [neck, hair, body, left foot    ]/0.00522017344447251
+         [hair, body, right foot, right arm, head]/0.004984423676012461
+         [hair, body]/0.00491706659930959
+         [neck, hair, body, head]/0.004630799023322388
+         [neck, hair, left arm, head]/0.004529763408268081
+         [hair, left foot    , right foot]/0.004108781678875137
+         [hair, left foot    , right foot, right leg    ]/0.003906710448766524
+         [hair, body, left leg, right leg    ]/0.0037719962953607815
+         [hair, body, left arm, head]/0.0037046392186579104
+         [hair, body, left foot    , right foot, right hand, left arm, right arm, head]/0.0035867643344278857
+         [neck, hair, body, left foot    , right leg    , head]/0.0033173360276164015
+         [hair, body, left foot    ]/0.003266818220089248
+         [hair]/0.0030815862591563525
+         [hair, body, right hand, left leg, right leg    ]/0.002896354298223457
+         [hair, body, left foot    , head]/0.002727961606466279
+         [hair, right hand, left leg, right leg    ]/0.0027111223372905616
+         [hair, body, left leg, right leg    , right arm, head]/0.0026942830681148436
+         [hair, right foot]/0.0025764081838848193
+         [hair, left foot    , right foot, head]/0.0024753725688305126
+         [hair, body, left hand, left arm, head]/0.0024248547613033595
+         [hair, body, left foot    , right foot, left leg, right leg    ]/0.0022564620695461816
+         [neck, hair, body, left foot    , right foot, left leg, right leg    , head]/0.0021891049928433105
+         [hair, left foot    , right foot, left leg, right leg    ]/0.0020543908394375686
+         [hair, left leg, right leg    ]/0.002020712301086133
+         [hair, left foot    , right foot, right leg    , head]/0.002020712301086133
+         [hair, body, left hand, right hand, head]/0.002003873031910415
+         [hair, body, left hand, right hand, left leg, right leg    , head]/0.001953355224383262
+         [hair, body, right hand, left leg, right leg    , head]/0.001936515955207544
+         [neck, hair, body, left foot    , right foot, left leg, right leg    ]/0.0018523196093289552
+         [hair, body, right leg    , right arm, head]/0.0017681232634503663
+         [hair, right foot, head]/0.0016839269175717773
+         [hair, body, right foot, left hand, left arm, head]/0.0016670876483960595
+         [neck, hair, body, left foot    , right leg    ]/0.0016165698408689064
+         [hair, body, left foot    , right foot, right arm, head]/0.0015997305716931886
+         [hair, right hand, left leg, right leg    , head]/0.0015323734949903175
+         [hair, right foot, right arm, head]/0.001498694956638882
+         [hair, body, right foot, left arm, right arm, head]/0.0014650164182874463
+         [hair, body, left foot    , left hand, right hand, head]/0.001414498610760293
+         [hair, body, left leg]/0.0012797844573545509
+         [hair, body, right foot, left arm, head]/0.0012797844573545509
+         [hair, left foot    , right foot, right hand]/0.0012124273806516797
+         [hair, body, left foot    , right foot, right hand, right arm, head]/0.001195588111475962
+         [neck, hair, body, left foot    , right leg    , right arm]/0.0011282310347730908
+         [hair, body, left hand, left leg]/0.0010777132272459375
+         [hair, body, left hand]/0.0010440346888945019
+         [neck, hair, body, left foot    , right leg    , right arm, head]/0.0010103561505430665
+   --- Parent: head: 0.11299149616906623---
+         [hair, left hand, right hand]/0.02618506356824114
+         [hair, right arm]/0.013168308495411299
+         [hair, left arm, right arm]/0.009615222699334848
+         [hair]/0.009463669276753389
+         [hair, right hand]/0.009093205354887599
+         [hair, body, left arm, right arm]/0.0030310684516291994
+         [neck, hair, left arm, right arm]/0.002963711374926328
+         [neck, hair, body, left arm, right arm]/0.00294687210575061
+         [hair, left leg, right leg    , right arm]/0.002845836490696304
+         [hair, body, left leg, right leg    , left arm, right arm]/0.0027953186831691504
+         [hair, right hand, left arm, right arm]/0.001784962532626084
+         [hair, body, right arm]/0.0016502483792203418
+         [hair, right leg    , right arm]/0.0015828913025174708
+         [hair, right foot, left arm, right arm]/0.0015492127641660353
+         [hair, left arm]/0.0013471415340574218
+         [hair, body, right leg    , left arm, right arm]/0.0013134629957059865
+         [hair, left hand, left arm]/0.0011282310347730908
+         [hair, body, left leg, right leg    , right arm]/0.0010777132272459375
+   --- Parent: right arm: 0.014515450029468706---
+         [neck, hair, head]/0.0035867643344278857
+         [hair, left hand, right hand, left arm]/0.0024080154921276415
+         [hair, right hand]/0.0012797844573545509
+   --- Parent: left arm: 0.02488843984171085---
+         [hair, left hand, right hand, head]/0.003266818220089248
+         [hair, left foot    , right foot, left hand, right hand, left leg, right leg    ]/0.0030984255283320705
+         [hair, left hand, right hand]/0.002626925991411973
+         [hair, left hand, head]/0.0023574976846004883
+         [hair, left hand, right hand, left leg]/0.0016165698408689064
+         [hair]/0.001330302264881704
+   --- Parent: right leg    : 0.034032163004125725---
+         [hair, right foot]/0.007375599898964385
+         [hair, left foot    , right foot]/0.005691672981392608
+         [hair, left foot    , right foot, left hand, right hand, head]/0.003940388987117959
+         [hair, right foot, left leg]/0.0032499789509135304
+         [hair, left foot    , right foot, left leg]/0.0016165698408689064
+         [neck, hair, body, left leg, head]/0.0013134629957059865
+         [neck, hair, body, left leg]/0.0010271954197187843
+         [hair, right foot, left arm]/0.0010103561505430665
+   --- Parent: left leg: 0.013926075608318584---
+         [hair, left foot    , right foot, left hand, left arm]/0.0019701944935589795
+         [hair, left foot    , right foot]/0.0015828913025174708
+         [hair, left foot    ]/0.001566052033341753
+         [hair, left foot    , right foot, left arm]/0.0015155342258145997
+   --- Parent: right hand: 0.05454239286014986---
+         [hair, left leg, right leg    ]/0.020964890123768627
+         [hair, left foot    , left leg, right leg    ]/0.009817293929443463
+         [hair, left foot    , right foot, left leg, right leg    ]/0.008369116780331734
+         [hair, right foot, left leg, right leg    ]/0.007645028205775869
+         [hair, left hand]/0.003502567988549297
+         [hair]/0.0025932474530605374
+   --- Parent: left hand: 0.03824198029805508---
+         [hair, right hand, left leg, right leg    ]/0.008756419971373242
+         [hair, head]/0.006011619095731245
+         [hair, right hand, head]/0.005775869327271197
+         [hair, left foot    , right foot, right hand, left leg, right leg    ]/0.0031489433358592236
+         [hair, left foot    , right hand, left leg, right leg    ]/0.002727961606466279
+         [hair, right foot, right hand, left leg, right leg    ]/0.0022733013387218996
+         [hair]/0.0020375515702618506
+         [hair, right hand]/0.0018186410709775196
+         [hair, right hand, right leg    ]/0.0013976593415845752
+         [hair, right hand, left leg]/0.0011450703039488086
+   --- Parent: right foot: 0.05661362296876327---
+         [hair]/0.015306895680727456
+         [hair, left hand, left arm]/0.009716258314389156
+         [hair, left arm]/0.00816704555022312
+         [hair, body, left hand, right hand, head]/0.003519407257725015
+         [hair, body, right hand, head]/0.002626925991411973
+         [neck, hair, body, right hand]/0.0014481771491117285
+         [hair, body, right hand]/0.001414498610760293
+         [hair, body, left hand, head]/0.0013808200724088574
+         [hair, body]/0.0011787488423002442
+         [hair, body, head]/0.0011619095731245264
+   --- Parent: left foot    : 0.030243327439589098---
+         [hair, right foot, left hand, left arm]/0.01195588111475962
+         [hair, right foot, left arm]/0.00612949397996127
+         [hair, right foot]/0.00582638713479835
+   --- Parent: body: 0.16280205439083975---
+         [hair, right foot, left leg, right leg    ]/0.03539614380735876
+         [hair, left leg, right leg    ]/0.02852572198366591
+         [neck, hair, right hand, left arm, right arm, head]/0.009463669276753389
+         [neck, hair, left arm, right arm, head]/0.0068030647469899804
+         [neck, hair, head]/0.005607476635514018
+         [hair, right leg    ]/0.0048665487917824365
+         [hair, left foot    , right foot, left leg, right leg    ]/0.004024585332996548
+         [neck, hair]/0.003974067525469395
+         [neck, hair, left arm, head]/0.0034015323734949902
+         [neck, hair, right hand, left arm, right arm]/0.0031826218742106592
+         [hair, left hand, right hand, left arm, right arm, head]/0.0026437652605876905
+         [hair, left arm, right arm]/0.002155426454491875
+         [hair]/0.0021049086469647218
+         [neck, hair, right hand, head]/0.0019870337627346975
+         [neck, hair, right hand, right arm]/0.0018859981476803908
+         [hair, left hand, left leg, right leg    , left arm]/0.0018186410709775196
+         [neck, hair, right hand]/0.0017681232634503663
+         [hair, left hand, left arm, right arm]/0.0017344447250989307
+         [neck, hair, left arm]/0.0016670876483960595
+         [neck, hair, left arm, right arm]/0.0016502483792203418
+         [hair, right foot, right leg    ]/0.0015997305716931886
+         [neck, hair, left hand, left arm, head]/0.0015828913025174708
+         [hair, right hand, left arm, right arm, head]/0.0015492127641660353
+         [hair, left hand, right hand, left arm, right arm]/0.0015323734949903175
+         [hair, left leg, right leg    , left arm]/0.0014650164182874463
+         [hair, left foot    , left leg, right leg    ]/0.0011787488423002442
+         [hair, right hand, left arm, right arm]/0.0011450703039488086
+   --- Parent: hair: 0.0---
+   --- Parent: neck: 0.09758356487328451---
+         [hair, head]/0.07183632230361202
+         [hair, body, left arm, right arm]/0.0057421907889197606
+         [hair, left arm, head]/0.003283657489264966
+         [hair, right hand, left arm, right arm, head]/0.003064746989980635
+         [hair, left arm, right arm, head]/0.002458533299654795
+         [hair, left hand, left arm, head]/0.001498694956638882
+         [hair, body, right arm]/0.0010608739580702197
+=== Child: neck===
+   --- Parent: start: 0.5471639864163268---
+         [neck, body, left arm]/0.0885464904156493
+         [neck, hair, body, left arm, head]/0.05930229294715276
+         [neck, hair, head]/0.055990570009261595
+         [neck, head]/0.04496084869916646
+         [neck, body, left foot    ]/0.01672700738121299
+         [neck, hair, body, left foot    , head]/0.014930818669136425
+         [neck, body, right foot, left arm]/0.013808200724088575
+         [neck, right hand, right arm, head]/0.012769779124919311
+         [neck, hair, body, left arm, right arm, head]/0.01271364822766692
+         [neck, body, right hand, right arm, head]/0.011983946563385816
+         [neck, body, left foot    , right foot, left leg, right leg    ]/0.011899750217507226
+         [neck, hair, body, left foot    ]/0.00870028907412085
+         [neck, hair, body, head]/0.00771799837220398
+         [neck, hair, left arm, head]/0.007549605680446802
+         [neck, right hand, head]/0.007465409334568213
+         [neck, body, right hand, head]/0.007128623951053858
+         [neck, body, left foot    , right leg    ]/0.006258595043641773
+         [neck, hair, body, left foot    , right leg    , head]/0.005528893379360669
+         [neck, left hand, right hand, right arm, head]/0.005332435238977295
+         [neck, body, left foot    , right leg    , right arm]/0.005051780752715332
+         [neck, body, head]/0.004827257163705762
+         [neck, body, left hand, right hand, left arm, right arm, head]/0.004658864471948584
+         [neck, body, left foot    , right leg    , left arm, right arm]/0.004322079088434228
+         [neck, right arm, head]/0.003901097359041284
+         [neck, body, left foot    , right arm]/0.0037607701159103027
+         [neck, hair, body, left foot    , right foot, left leg, right leg    , head]/0.0036485083214055176
+         [neck, hair, body, left foot    , right foot, left leg, right leg    ]/0.0030871993488815917
+         [neck, body, right hand, left arm, right arm, head]/0.0029749375543768066
+         [neck, hair, body, left foot    , right leg    ]/0.0026942830681148436
+         [neck, left leg, head]/0.0024697594791052734
+         [neck, left foot    , right foot, right leg    ]/0.0021049086469647218
+         [neck, body, right arm, head]/0.0020768431983385254
+         [neck, body, left foot    , right foot]/0.001936515955207544
+         [neck, hair, body, left foot    , right leg    , right arm]/0.0018803850579551514
+         [neck, body, right hand, left leg, right arm, head]/0.0018242541607027588
+         [neck, left foot    , right foot]/0.0017400578148241699
+         [neck, hair, body, left foot    , right leg    , right arm, head]/0.0016839269175717773
+         [neck, left leg, right leg    , head]/0.0015716651230669922
+         [neck, left arm]/0.0015435996744407958
+         [neck, hair, body, right arm, head]/0.0015435996744407958
+         [neck, left hand, right arm, head]/0.0014874687771884033
+         [neck, body, left foot    , left leg, right leg    ]/0.0014032724313098146
+         [neck, body, left foot    , left arm]/0.0014032724313098146
+         [neck, hair, right arm, head]/0.0013471415340574218
+         [neck, body, left foot    , head]/0.0013471415340574218
+         [neck, body, right foot]/0.0012910106368050293
+         [neck, right foot]/0.0012910106368050293
+         [neck, hair, body, left foot    , right arm, head]/0.0011787488423002442
+         [neck, left foot    ]/0.0011506833936740478
+         [neck, body, left leg, right leg    ]/0.0011226179450478516
+         [neck, hair, left foot    , right foot]/0.0011226179450478516
+         [neck, body, right hand, left leg, right leg    , right arm, head]/0.0010945524964216552
+         [neck, left foot    , right foot, left leg, right leg    ]/0.0010945524964216552
+         [neck, body, left arm, right arm, head]/0.0010945524964216552
+         [neck, hair, left foot    , right foot, right leg    , head]/0.001066487047795459
+         [neck, hair, body, right foot, left arm, right arm, head]/0.0010103561505430665
+   --- Parent: head: 0.13670680025820178---
+         [neck]/0.017456709045494092
+         [neck, right hand, right arm]/0.016979596418848754
+         [neck, left arm]/0.00825124189610171
+         [neck, right arm]/0.007802194718082568
+         [neck, body, left arm]/0.006511184081277539
+         [neck, body, left hand, right hand, left arm, right arm]/0.005949875108753613
+         [neck, hair, left arm, right arm]/0.004939518958210547
+         [neck, hair, body, left arm, right arm]/0.004911453509584351
+         [neck, right hand]/0.003788835564536499
+         [neck, left hand, right hand, left arm, right arm]/0.0030310684516291994
+         [neck, body, right arm]/0.0029188066571244143
+         [neck, left hand, right hand, right arm]/0.0026662176194886477
+         [neck, body]/0.0024697594791052734
+         [neck, right hand, left arm, right arm]/0.001936515955207544
+         [neck, body, right hand, right arm]/0.0017400578148241699
+         [neck, hair]/0.0016277960203193848
+         [neck, right hand, left leg, right arm]/0.0014594033285622071
+         [neck, hair, right arm]/0.0014032724313098146
+         [neck, left arm, right arm]/0.0013190760854312257
+         [neck, hair, left arm]/0.0012910106368050293
+         [neck, body, right hand]/0.001262945188178833
+         [neck, left hand, left arm]/0.0012348797395526367
+         [neck, left hand, right hand]/0.0012348797395526367
+         [neck, right hand, left arm]/0.0011226179450478516
+         [neck, left leg]/0.0011226179450478516
+   --- Parent: right arm: 0.01490275322051023---
+         [neck, hair, head]/0.00597794055737981
+         [neck, head]/0.004294013639808032
+         [neck]/0.0037607701159103027
+   --- Parent: left arm: 0.004378209985686619---
+   --- Parent: right leg    : 0.024276613061659773---
+         [neck, body, left leg]/0.006286660492267969
+         [neck, body, left leg, head]/0.0022452358900957032
+         [neck, hair, body, left leg, head]/0.0021891049928433105
+         [neck, hair, body, left leg]/0.0017119923661979737
+         [neck, body, left leg, left arm, right arm]/0.0011226179450478516
+   --- Parent: left leg: 0.01602537116555807---
+         [neck, body]/0.005613089725239258
+         [neck, body, head]/0.0023013667873480956
+         [neck, hair, body, head]/0.0015997305716931886
+   --- Parent: right hand: 0.0---
+   --- Parent: left hand: 0.0---
+   --- Parent: right foot: 0.024220482164407357---
+         [neck, body]/0.003003003003003003
+         [neck, hair, body, right hand]/0.002413628581852881
+         [neck, hair, body, right hand, head]/0.0016277960203193848
+         [neck, hair, body]/0.0015155342258145997
+         [neck]/0.0013190760854312257
+         [neck, body, right hand]/0.0011787488423002442
+         [neck, body, left foot    , left leg, right leg    ]/0.001066487047795459
+         [neck, body, left arm]/0.0010384215991692627
+   --- Parent: left foot    : 0.014032724313098124---
+         [neck, body, left leg, right leg    ]/0.003003003003003003
+         [neck, body, left leg, right leg    , head]/0.0011506833936740478
+         [neck, body, right leg    ]/0.0010103561505430665
+   --- Parent: body: 0.20807723611461917---
+         [neck]/0.026830568886643653
+         [neck, hair, right hand, left arm, right arm, head]/0.015772782127922314
+         [neck, hair, left arm, right arm, head]/0.0113384412449833
+         [neck, left arm, right arm]/0.011226179450478517
+         [neck, left arm, right arm, head]/0.011226179450478517
+         [neck, head]/0.010552608683449805
+         [neck, hair, head]/0.009345794392523364
+         [neck, left arm]/0.007633802026325391
+         [neck, right hand, left arm, right arm]/0.006735707670287109
+         [neck, hair]/0.006623445875782325
+         [neck, hair, left arm, head]/0.00566922062249165
+         [neck, hair, right hand, left arm, right arm]/0.0053043697903510986
+         [neck, right hand]/0.004434340882939014
+         [neck, right leg    , left arm, right arm]/0.004041424602172266
+         [neck, right hand, left arm, right arm, head]/0.004013359153546069
+         [neck, left arm, head]/0.0039572282562936765
+         [neck, hair, right hand, head]/0.0033117229378911623
+         [neck, left hand, left arm, right arm]/0.003283657489264966
+         [neck, right arm]/0.0032555920406387696
+         [neck, left hand, left arm]/0.003171395694760181
+         [neck, hair, right hand, right arm]/0.0031433302461339845
+         [neck, left hand, right hand, left arm, right arm]/0.003003003003003003
+         [neck, hair, right hand]/0.00294687210575061
+         [neck, hair, left arm]/0.0027784794139934328
+         [neck, hair, left arm, right arm]/0.0027504139653672364
+         [neck, hair, left hand, left arm, head]/0.0026381521708624513
+         [neck, right arm, head]/0.0025820212736100585
+         [neck, right hand, right arm]/0.0025820212736100585
+         [neck, right hand, head]/0.0014874687771884033
+         [neck, right leg    , left arm, right arm, head]/0.0014594033285622071
+         [neck, hair, right hand, right arm, head]/0.0013752069826836182
+         [neck, hair, left hand, right hand, left arm, right arm, head]/0.0013190760854312257
+         [neck, hair, right hand, left arm, head]/0.0012068142909264406
+         [neck, hair, right arm]/0.0012068142909264406
+         [neck, hair, left hand, left arm]/0.0011787488423002442
+         [neck, hair, left hand, left arm, right arm, head]/0.0011506833936740478
+         [neck, left hand]/0.0010945524964216552
+         [neck, right hand, right arm, head]/0.0010384215991692627
+         [neck, hair, left hand, left arm, right arm]/0.0010384215991692627
+   --- Parent: hair: 0.01021582329993545---
+         [neck, left arm, head]/0.003227526592012573
+         [neck, body, left arm, head]/0.002161039544217114
+         [neck, head]/0.002048777749712329
+   --- Parent: neck: 0.0---

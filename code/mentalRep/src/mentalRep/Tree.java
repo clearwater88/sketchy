@@ -8,10 +8,8 @@ public class Tree {
 	
 	// arraylist index is parent id; start from 0 for start symbol
 	private ArrayList<HashMap<Long,Integer>> ruleCounts;
-	private final Random gen = new Random();
-	private static final int[] factors = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
-	
-	
+	private static final Random gen = new Random();
+
 	private final double alpha;
 	
 	private ArrayList<Node> nodes;
@@ -26,7 +24,7 @@ public class Tree {
 		for (int id: seq) {
 			Node n = new Node(id);
 			nodes.add(n);
-			long ruleId = getRuleId(n);
+			long ruleId = Node.getRuleId(n);
 			
 			HashMap<Long,Integer> rule = ruleCounts.get(id);
 
@@ -41,24 +39,20 @@ public class Tree {
 		initializeTree();
 	}
 	
-	public double getSeqProb(double decayTrav) {
+	private void initializeTree() {
+		for (int i = nodes.size()-1; i>0; i--) {
+			int parentNode = gen.nextInt(i);
+			//int parentNode = i-1;
+			linkNodes(nodes.get(parentNode),nodes.get(i));
+		}
+		
 		ArrayList <Node> frontier = new ArrayList<Node>();
 		ArrayList <Double> frontierWeights = new ArrayList<Double>();
 		frontier.addAll(root.getChildren());
-		for (int i = 0; i < frontier.size(); i++) {
+		for (int i = 0; i < frontier.size(); i++)
 			frontierWeights.add(1.0);
-		}
-		
-		return root.seqProb(nodes, 1, frontier,frontierWeights,1.0,decayTrav);
 	}
-	
-	/*
-	 * should clone for defensive copying.
-	 */
-	public ArrayList<HashMap<Long,Integer>> getRuleCounts() {
-		return ruleCounts;
-	}
-	
+
 	public double sampleNewConfig(double decayTrav) {
 		// Generate child between 2->last (no point resampling root and 2nd elem)
 		if (nodes.size() <= 2) return 1.0; // propose and accept same move
@@ -82,11 +76,11 @@ public class Tree {
 		if(originalParent==newParent)
 			return true;
 		
-		long origParent_origRule = getRuleId(originalParent);
-		long origParent_newRule = getRuleId(originalParent)/factors[child.id];
+		long origParent_origRule = Node.getRuleId(originalParent);
+		long origParent_newRule = Node.getRuleId(originalParent)/Node.factors[child.id];
 		
-		long newParent_origRule = getRuleId(newParent);
-		long newParent_newRule = getRuleId(newParent)*factors[child.id];
+		long newParent_origRule = Node.getRuleId(newParent);
+		long newParent_newRule = Node.getRuleId(newParent)*Node.factors[child.id];
 			
 		HashMap<Long,Integer> origParentRules = ruleCounts.get(originalParent.id);
 		HashMap<Long,Integer> newParentRules = ruleCounts.get(newParent.id);
@@ -102,12 +96,12 @@ public class Tree {
 		double acceptFactorTreeLike = (count_origPar_newRule/(count_origPar_origRule-1))
 				                      *(count_newPar_newRule/(count_newPar_origRule-1));
 
-		double acceptFactorSeq = 1/getSeqProb(decayTrav);
+		double acceptFactorSeq = 1/Node.getSeqProb(nodes,decayTrav);
 		
 		// ugly
 		unlinkNode(child);
 		linkNodes(newParent,child);
-		acceptFactorSeq *= getSeqProb(decayTrav);
+		acceptFactorSeq *= Node.getSeqProb(nodes,decayTrav);
 		unlinkNode(child);
 		linkNodes(originalParent,child);
 		// ugly
@@ -116,18 +110,8 @@ public class Tree {
 		return acceptprob > gen.nextDouble(); 
 	}
 	
-	private void initializeTree() {
-		for (int i = nodes.size()-1; i>0; i--) {
-			int parentNode = gen.nextInt(i);
-			//int parentNode = i-1;
-			linkNodes(nodes.get(parentNode),nodes.get(i));
-		}
-		
-		ArrayList <Node> frontier = new ArrayList<Node>();
-		ArrayList <Double> frontierWeights = new ArrayList<Double>();
-		frontier.addAll(root.getChildren());
-		for (int i = 0; i < frontier.size(); i++)
-			frontierWeights.add(1.0);
+	public ArrayList<Node> getNodes() {
+		return nodes;
 	}
 	
 	private void linkNodes(Node parent, Node child) {
@@ -143,9 +127,22 @@ public class Tree {
 		incrementRule(parent);
 	}
 	
+	private void incrementRule(Node parent) {
+		HashMap<Long,Integer> parentRules = ruleCounts.get(parent.id);
+		long ruleId = Node.getRuleId(parent);
+		Integer count = parentRules.get(ruleId);
+
+		int oldVal = 0;
+		if (count != null) {
+			oldVal = count.intValue();
+		}
+		parentRules.put(ruleId, oldVal+1);
+		return;
+	}
+	
 	private void decrementRule(Node parent) {
 		HashMap<Long,Integer> parentRules = ruleCounts.get(parent.id);
-		long ruleId = getRuleId(parent);
+		long ruleId = Node.getRuleId(parent);
 		Integer count = parentRules.get(ruleId);
 		if (count == null) {
 			throw new RuntimeException("Rules does not exist: " + ruleId);
@@ -159,67 +156,10 @@ public class Tree {
 		return;
 	}
 	
-	private void incrementRule(Node parent) {
-		HashMap<Long,Integer> parentRules = ruleCounts.get(parent.id);
-		long ruleId = getRuleId(parent);
-		Integer count = parentRules.get(ruleId);
-
-		int oldVal = 0;
-		if (count != null) {
-			oldVal = count.intValue();
-		}
-		parentRules.put(ruleId, oldVal+1);
-		return;
-	}
 	
-	/*
-	 * 1 is the special 'stop' rule
-	 */
-	private long getRuleId(Node parent) {
-		
-		long res = 1;
-		ArrayList<Node> children = parent.getChildren();
-		long old = res;
-		for (Node c: children) {
-			res *= factors[c.id];
-			if (res < old) {
-				System.out.println(old);
-				System.out.println(res);
-				throw new RuntimeException("Rule id went over");
-			}
-			old = res;
-		}
-		return res;
-	}
-	
-	public static ArrayList<Integer> getRuleList(long ruleId) {
-		ArrayList<Integer> res = new ArrayList<Integer>();
-
-		for (int i=factors.length-1; i>= 0; i--) {
-			while (true) {
-				if (ruleId % factors[i] != 0) break;
-				ruleId /= factors[i];
-				res.add(i);	
-			}
-		}
-		return res;
-	}
-	
-	// stop rule not included (null terminator, in a sense)
-	public static ArrayList<String> getRuleListStrings(long ruleId, ArrayList<String> partList) {
-		ArrayList<String> res = new ArrayList<String>();
-		ArrayList<Integer> rules = getRuleList(ruleId);
-		
-		for (int rule : rules) {
-			res.add(partList.get(rule));
-		}
-		return res;
-	}
 	
 	@Override
 	public String toString() {
 		return root.toSubTree();
 	}
-	
-	
 }

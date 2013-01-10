@@ -1,0 +1,385 @@
+=== Child: start===
+=== Child: body===
+   --- Parent: start: 0.9974299065420562
+   --- Parent: flash: 0.0014397575145238695
+   --- Parent: lens: 0.0011303359434200555
+=== Child: lens===
+   --- Parent: start: 0.9298838738091078
+   --- Parent: body: 0.058665423151404446
+   --- Parent: display: 0.007998652858465943
+   --- Parent: flash: 0.0031735545754237346
+=== Child: flash===
+   --- Parent: body: 0.7953748140664029
+   --- Parent: lens: 0.0979694647918947
+   --- Parent: start: 0.05216665263394235
+   --- Parent: top-bar-thingy: 0.03651314866268138
+   --- Parent: picture-button: 0.007423311161628919
+   --- Parent: flash: 0.005472762482108276
+   --- Parent: handle: 0.005079846201341528
+=== Child: picture-button===
+   --- Parent: lens: 0.7558604730748234
+   --- Parent: body: 0.15359043094949032
+   --- Parent: flash: 0.037456509871342546
+   --- Parent: start: 0.0239470703745651
+   --- Parent: controls: 0.019270099161567356
+   --- Parent: display: 0.006135469204507492
+   --- Parent: picture-button: 0.00373994736370377
+=== Child: top-bar-thingy===
+   --- Parent: lens: 0.6357034604698156
+   --- Parent: body: 0.17719120990149026
+   --- Parent: picture-button: 0.0736928517302349
+   --- Parent: flash: 0.05910583480676938
+   --- Parent: start: 0.05430664309168981
+=== Child: handle===
+   --- Parent: lens: 0.47335185652942663
+   --- Parent: body: 0.13911341247789846
+   --- Parent: flash: 0.12591563526142965
+   --- Parent: top-bar-thingy: 0.1055190704723415
+   --- Parent: picture-button: 0.09977266986612782
+   --- Parent: start: 0.056327355392775946
+=== Child: specularities===
+   --- Parent: body: 0.4587016923465521
+   --- Parent: picture-button: 0.2637029552917403
+   --- Parent: lens: 0.20762818893660012
+   --- Parent: start: 0.06996716342510735
+=== Child: display===
+   --- Parent: body: 0.5671886840111139
+   --- Parent: start: 0.43281131598888606
+=== Child: controls===
+   --- Parent: display: 0.4546602677443799
+   --- Parent: controls: 0.2308663803990907
+   --- Parent: start: 0.18001178748842303
+   --- Parent: body: 0.1344615643681064
+---------------------
+=== Child: start===
+   --- Parent: start: 0.0---
+   --- Parent: body: 0.0---
+   --- Parent: lens: 0.0---
+   --- Parent: flash: 0.0---
+   --- Parent: picture-button: 0.0---
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: body===
+   --- Parent: start: 0.9974299065420562---
+         [lens, body]/0.8503473099267492
+         [body]/0.0607097751957565
+         [flash, lens, body]/0.0272733013387219
+         [display, body]/0.012863096741601415
+         [picture-button, lens, body]/0.0094152563778732
+         [controls, display, body]/0.004028795150290477
+         [flash, body]/0.003662541045718616
+         [top-bar-thingy, lens, body]/0.0031257893407426116
+         [flash, flash, lens, body]/0.002727961606466279
+         [picture-button, flash, lens, body]/0.0026963879767618083
+         [handle, lens, body]/0.002595352361707502
+         [controls, body]/0.0021217479161404393
+         [controls, controls, display, body]/0.0014460722404647638
+         [display, lens, body]/0.0014334427885829754
+         [picture-button, body]/0.0013513513513513514
+         [handle, flash, lens, body]/0.0012818893660015156
+         [specularities, lens, body]/0.0012061126547107857
+   --- Parent: body: 0.0---
+   --- Parent: lens: 0.0011303359434200555---
+   --- Parent: flash: 0.0014397575145238695---
+   --- Parent: picture-button: 0.0---
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: lens===
+   --- Parent: start: 0.9298838738091078---
+         [lens, body]/0.8721510871043582
+         [flash, lens, body]/0.027972616757663486
+         [picture-button, lens, body]/0.009656673208075077
+         [top-bar-thingy, lens, body]/0.0032059377853770376
+         [flash, flash, lens, body]/0.0027979093399654147
+         [picture-button, flash, lens, body]/0.0027655261300121112
+         [handle, lens, body]/0.00266189985816154
+         [display, lens, body]/0.001470197731879975
+         [handle, flash, lens, body]/0.0013147583241041184
+         [specularities, lens, body]/0.0012370386202161902
+   --- Parent: body: 0.058665423151404446---
+         [flash, lens]/0.03862021619030965
+         [lens]/0.005284939864379117
+         [picture-button, flash, lens]/0.004222770577910765
+         [picture-button, lens]/0.0024805538824230412
+         [top-bar-thingy, lens]/0.0013536181760480826
+         [specularities, lens]/0.0012046554102628868
+         [top-bar-thingy, flash, lens]/0.0010621692864683518
+         [handle, flash, lens]/0.0010103561505430665
+   --- Parent: lens: 0.0---
+   --- Parent: flash: 0.0031735545754237346---
+         [lens]/0.0010038795085524058
+   --- Parent: picture-button: 2.7849560559840933E-4---
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.007998652858465943---
+         [lens]/0.007998652858465943
+   --- Parent: controls: 0.0---
+=== Child: flash===
+   --- Parent: start: 0.05216665263394234---
+         [flash, lens, body]/0.030303668154135443
+         [flash, flash, lens, body]/0.006062136903258399
+         [flash, body]/0.004069490050798462
+         [picture-button, flash, lens, body]/0.002995986640846454
+         [handle, flash, lens, body]/0.0014243215177794618
+         [flash, flash, body]/0.0013752069826836182
+         [picture-button, flash, flash, lens, body]/0.0010384215991692627
+   --- Parent: body: 0.7953748140664029---
+         [flash]/0.6987314417220959
+         [flash, lens]/0.04183856753950212
+         [picture-button, flash]/0.018424967023097864
+         [flash, flash]/0.01035615054306643
+         [top-bar-thingy, flash]/0.005984956919536359
+         [handle, flash]/0.005107911649967724
+         [picture-button, flash, lens]/0.004574668126069995
+         [handle, flash, flash]/0.0031292975218208865
+         [top-bar-thingy, flash, lens]/0.0011506833936740478
+         [handle, flash, lens]/0.0010945524964216552
+         [top-bar-thingy, flash, flash]/0.0010945524964216552
+   --- Parent: lens: 0.0979694647918947---
+         [flash]/0.03439420729140355
+         [handle, flash]/0.02744099239426342
+         [top-bar-thingy, flash]/0.019238865033257557
+         [picture-button, flash]/0.006763773118913306
+         [top-bar-thingy, flash, flash]/0.002553955824983862
+         [handle, top-bar-thingy, flash]/0.0021750722685302125
+         [handle, picture-button, flash]/0.001641828744632483
+         [top-bar-thingy, picture-button, flash]/0.0016207796581628358
+         [flash, flash]/0.0015997305716931886
+   --- Parent: flash: 0.005472762482108276---
+         [flash]/0.0037397210294406557
+         [handle, flash]/0.0012278633773960877
+   --- Parent: picture-button: 0.007423311161628919---
+         [handle, flash]/0.004041424602172266
+         [flash]/0.003381886559456653
+   --- Parent: top-bar-thingy: 0.03651314866268138---
+         [flash]/0.023806516797171003
+         [flash, flash]/0.0069461985349835815
+         [handle, flash]/0.005760433330526789
+   --- Parent: handle: 0.005079846201341528---
+         [flash]/0.005079846201341528
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: picture-button===
+   --- Parent: start: 0.023947070374565102---
+         [picture-button, lens, body]/0.012148717906933162
+         [picture-button, flash, lens, body]/0.003479210292595882
+         [picture-button, body]/0.0017436791630340018
+   --- Parent: body: 0.15359043094949035---
+         [picture-button]/0.09142093555720326
+         [picture-button, picture-button]/0.023238191462490527
+         [picture-button, flash]/0.021396735897791067
+         [picture-button, flash, lens]/0.005312517823823221
+         [picture-button, lens]/0.003120696819822536
+         [specularities, picture-button]/0.002754035313577068
+   --- Parent: lens: 0.7558604730748233---
+         [picture-button]/0.7225105720734301
+         [picture-button, flash]/0.00785470426712513
+         [picture-button, picture-button]/0.007072493053801465
+         [handle, picture-button]/0.00536955405812807
+         [specularities, picture-button]/0.005345109957711707
+         [top-bar-thingy, picture-button]/0.003625874895094069
+         [handle, picture-button, flash]/0.0019066398324764319
+         [top-bar-thingy, picture-button, flash]/0.0018821957320600672
+   --- Parent: flash: 0.037456509871342546---
+         [picture-button]/0.0318669589094672
+         [top-bar-thingy, picture-button]/0.004098460836477116
+         [picture-button, lens]/0.001181464853457618
+   --- Parent: picture-button: 0.00373994736370377---
+         [picture-button]/0.00373994736370377
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.006135469204507491---
+         [controls, controls, picture-button]/0.002102192635807348
+         [controls, picture-button]/0.0018496035981715813
+         [controls, controls, controls, picture-button]/0.0017029389956733942
+   --- Parent: controls: 0.019270099161567356---
+         [picture-button]/0.014568683848153248
+         [controls, picture-button]/0.003992536401339537
+=== Child: top-bar-thingy===
+   --- Parent: start: 0.05430664309168981---
+         [top-bar-thingy, lens, body]/0.031257893407426116
+         [top-bar-thingy, flash, lens, body]/0.008461732760798181
+         [handle, top-bar-thingy, lens, body]/0.004799191715079565
+         [top-bar-thingy, body]/0.003978277342763324
+         [top-bar-thingy, picture-button, lens, body]/0.0023995958575397827
+         [top-bar-thingy, flash, body]/0.0010103561505430665
+   --- Parent: body: 0.17719120990149026---
+         [top-bar-thingy]/0.06264208133367012
+         [top-bar-thingy, flash]/0.05386461227582723
+         [top-bar-thingy, lens]/0.013197777216468806
+         [top-bar-thingy, flash, lens]/0.01035615054306643
+         [handle, top-bar-thingy]/0.009408941651932306
+         [handle, top-bar-thingy, flash]/0.008966910836069715
+         [top-bar-thingy, picture-button, flash]/0.0055569588279868656
+         [top-bar-thingy, flash, flash]/0.004925486233897449
+         [handle, top-bar-thingy, lens]/0.003094215711038141
+         [top-bar-thingy, picture-button]/0.001452386966405658
+         [handle, top-bar-thingy, flash, lens]/0.0011997979287698913
+         [top-bar-thingy, flash, flash, lens]/0.0011366506693609498
+         [top-bar-thingy, picture-button, flash, lens]/0.001073503409952008
+   --- Parent: lens: 0.6357034604698156---
+         [top-bar-thingy]/0.33284920434453147
+         [top-bar-thingy, flash]/0.17314978529931802
+         [handle, top-bar-thingy]/0.0559484718363223
+         [top-bar-thingy, picture-button]/0.028100530436979035
+         [handle, top-bar-thingy, flash]/0.019575650416771912
+         [top-bar-thingy, picture-button, flash]/0.014587016923465522
+         [top-bar-thingy, flash, flash]/0.01149280121242738
+   --- Parent: flash: 0.05910583480676938---
+         [top-bar-thingy, picture-button]/0.03176307148269765
+         [top-bar-thingy]/0.027342763324071734
+   --- Parent: picture-button: 0.0736928517302349---
+         [top-bar-thingy]/0.0736928517302349
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: handle===
+   --- Parent: start: 0.05632735539277594---
+         [handle, lens, body]/0.02595352361707502
+         [handle, flash, lens, body]/0.012818893660015155
+         [handle, top-bar-thingy, lens, body]/0.004799191715079565
+         [handle, body]/0.0044834554180348575
+         [handle, flash, body]/0.002525890376357666
+         [handle, picture-button, lens, body]/0.0024627431169487245
+   --- Parent: body: 0.1391134124778985---
+         [handle, flash]/0.04597120484970952
+         [handle]/0.026079818135892902
+         [handle, flash, flash]/0.014081838848193988
+         [handle, flash, lens]/0.009850972467794898
+         [handle, top-bar-thingy]/0.009408941651932306
+         [handle, top-bar-thingy, flash]/0.008966910836069715
+         [handle, picture-button, flash]/0.005430664309168982
+         [handle, picture-button]/0.0053043697903510986
+         [handle, lens]/0.003915130083354383
+         [handle, top-bar-thingy, lens]/0.003094215711038141
+         [handle, flash, flash, lens]/0.002904773932811316
+         [handle, picture-button, flash, lens]/0.0018944177822682495
+         [handle, top-bar-thingy, flash, lens]/0.0011997979287698913
+         [handle, picture-button, lens]/0.0010103561505430665
+   --- Parent: lens: 0.47335185652942663---
+         [handle, flash]/0.2469689315483708
+         [handle]/0.09446830007577671
+         [handle, top-bar-thingy]/0.0559484718363223
+         [handle, picture-button]/0.04161404395049255
+         [handle, top-bar-thingy, flash]/0.019575650416771912
+         [handle, picture-button, flash]/0.014776458701692346
+   --- Parent: flash: 0.12591563526142965---
+         [handle]/0.11315988886082344
+         [handle, flash]/0.01105077039656479
+         [handle, flash, lens]/0.0010103561505430665
+   --- Parent: picture-button: 0.09977266986612782---
+         [handle]/0.06339984844657742
+         [handle, flash]/0.036372821419550394
+   --- Parent: top-bar-thingy: 0.1055190704723415---
+         [handle]/0.05367517049760041
+         [handle, flash]/0.0518438999747411
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: specularities===
+   --- Parent: start: 0.06996716342510735---
+         [specularities, lens, body]/0.04824450618843142
+         [specularities, picture-button, lens, body]/0.01035615054306643
+         [specularities, body]/0.009345794392523364
+         [specularities, picture-button, body]/0.002020712301086133
+   --- Parent: body: 0.4587016923465521---
+         [specularities]/0.30639050265218487
+         [specularities, picture-button]/0.08537509472088911
+         [specularities, lens]/0.04698156100025259
+         [specularities, picture-button, lens]/0.019954533973225563
+   --- Parent: lens: 0.20762818893660012---
+         [specularities, picture-button]/0.16569840868906288
+         [specularities]/0.041929780247537254
+   --- Parent: flash: 0.0---
+   --- Parent: picture-button: 0.2637029552917403---
+         [specularities]/0.2637029552917403
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: display===
+   --- Parent: start: 0.43281131598888606---
+         [display, body]/0.2572619348320283
+         [controls, display, body]/0.08057590300580955
+         [controls, controls, display, body]/0.028921444809295278
+         [display, lens, body]/0.02866885577165951
+         [display, picture-button, body]/0.01300833543824198
+         [controls, display, picture-button, body]/0.010608739580702197
+         [controls, controls, controls, display, body]/0.005809547865622632
+         [controls, controls, display, picture-button, body]/0.0053043697903510986
+         [controls, controls, controls, display, picture-button, body]/0.0026521848951755493
+   --- Parent: body: 0.5671886840111139---
+         [display]/0.44051528163677695
+         [controls, display]/0.05089669108360697
+         [controls, controls, display]/0.02298560242485476
+         [display, lens]/0.017681232634503663
+         [controls, display, picture-button]/0.011240212174791615
+         [display, picture-button]/0.009219499873705482
+         [controls, controls, display, picture-button]/0.007325082091437232
+         [controls, controls, controls, display]/0.004672897196261682
+         [controls, controls, controls, display, picture-button]/0.0026521848951755493
+   --- Parent: lens: 0.0---
+   --- Parent: flash: 0.0---
+   --- Parent: picture-button: 0.0---
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.0---
+   --- Parent: controls: 0.0---
+=== Child: controls===
+   --- Parent: start: 0.18001178748842303---
+         [controls, display, body]/0.0537172686705397
+         [controls, controls, display, body]/0.0385619264123937
+         [controls, body]/0.02828997221520586
+         [controls, controls, body]/0.016839269175717774
+         [controls, controls, controls, display, body]/0.011619095731245263
+         [controls, controls, display, picture-button, body]/0.007072493053801465
+         [controls, display, picture-button, body]/0.007072493053801465
+         [controls, controls, controls, display, picture-button, body]/0.0053043697903510986
+         [controls, picture-button, body]/0.004125620948050855
+         [controls, controls, controls, body]/0.004041424602172266
+         [controls, controls, picture-button, body]/0.0023574976846004883
+         [controls, controls, controls, picture-button, body]/0.0010103561505430665
+   --- Parent: body: 0.13446156436810638---
+         [controls, display]/0.033931127389071315
+         [controls, controls, display]/0.030647469899806348
+         [controls, controls]/0.013808200724088575
+         [controls]/0.013639808032331396
+         [controls, controls, display, picture-button]/0.009766776121916308
+         [controls, controls, controls, display]/0.009345794392523364
+         [controls, display, picture-button]/0.0074934747831944095
+         [controls, controls, controls, display, picture-button]/0.0053043697903510986
+         [controls, controls, controls]/0.0035362465269007325
+         [controls, controls, picture-button]/0.0031994611433863772
+         [controls, picture-button]/0.0030310684516291994
+   --- Parent: lens: 0.0---
+   --- Parent: flash: 0.0---
+   --- Parent: picture-button: 0.0---
+   --- Parent: top-bar-thingy: 0.0---
+   --- Parent: handle: 0.0---
+   --- Parent: specularities: 0.0---
+   --- Parent: display: 0.4546602677443799---
+         [controls, controls]/0.15475288372484633
+         [controls, controls, controls]/0.09497347815104824
+         [controls]/0.08958491201481855
+         [controls, controls, controls, picture-button]/0.05279110886587522
+         [controls, controls, picture-button]/0.043445314473351856
+         [controls, picture-button]/0.019112570514439674
+   --- Parent: controls: 0.2308663803990907---
+         [controls]/0.13724004378209986
+         [controls, picture-button]/0.041256209480508545
+         [controls, controls]/0.037719962953607813
+         [controls, controls, picture-button]/0.014650164182874464

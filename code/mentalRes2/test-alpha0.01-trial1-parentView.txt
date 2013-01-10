@@ -1,0 +1,71 @@
+===start===
+[body]/0.9879641323566972
+[picture-button, body]/0.004205607476635512
+[handle, body]/0.0033531194746147966
+===body===
+[flash, lens]/0.6093079060368735
+[picture-button, flash]/0.07679338216720964
+[picture-button, lens]/0.05560116190957314
+[picture-button, picture-button]/0.04995579691841605
+[display]/0.04552917403384887
+[lens]/0.036896943672644865
+[handle, flash, lens]/0.026313462995706558
+[]/0.02559358423844521
+[flash, flash]/0.024962111644355783
+[specularities, lens]/0.015111139176560337
+[picture-button, flash, lens]/0.01041298307653463
+[top-bar-thingy, flash, lens]/0.009794139934326877
+[specularities, picture-button, lens]/0.0038582975498863015
+[display, lens]/0.0017807527153321464
+[handle, flash, flash, lens]/0.0011366506693609494
+===lens===
+[picture-button]/0.5726114549128506
+[]/0.2648317125536747
+[top-bar-thingy]/0.04856024248547602
+[top-bar-thingy, flash]/0.04566336196009104
+[handle, flash]/0.04398206617832779
+[handle, top-bar-thingy]/0.0067567567567566105
+[handle]/0.004522922455165436
+[handle, picture-button]/0.0030705354887597923
+[flash]/0.0029916014144986147
+[specularities, picture-button]/0.0019891386713816648
+[specularities]/0.001373452892144483
+[handle, top-bar-thingy, flash]/0.0012629451881788348
+[top-bar-thingy, picture-button]/0.001120863854508716
+===flash===
+[]/0.9465449428066495
+[picture-button]/0.036755313390827944
+[handle]/0.013069678490239121
+[top-bar-thingy, picture-button]/0.001096958106303901
+===picture-button===
+[]/0.9874275843525654
+[specularities]/0.003642170962038348
+[handle]/0.0034955063595401574
+[top-bar-thingy]/0.0024932982424691885
+[lens]/0.001662198828312783
+===top-bar-thingy===
+[]/0.9091942409699514
+[flash]/0.06693609497347673
+[handle]/0.02033341752967924
+[handle, flash]/0.0025258903763576684
+[flash, flash]/0.0010103561505430665
+===handle===
+[]/0.9991159383683375
+===specularities===
+[]/1.0000000000000633
+===display===
+[lens]/0.46400606213692897
+[controls, controls, controls, picture-button]/0.4099520080828659
+[]/0.06150543066430926
+[controls, controls, controls]/0.01667087648396062
+[controls, controls]/0.0160394038898712
+[controls]/0.013008335438241998
+[controls, controls, picture-button]/0.011113917655973745
+[controls, picture-button]/0.007451376610255123
+===controls===
+[]/0.9614380735876584
+[controls]/0.014818556874631643
+[picture-button]/0.013892397069967205
+[controls, picture-button]/0.006567314978529924
+[controls, controls]/0.0017681232634503665
+[controls, controls, picture-button]/0.0015155342258145997

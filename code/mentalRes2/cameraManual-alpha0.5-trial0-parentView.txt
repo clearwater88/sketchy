@@ -1,0 +1,108 @@
+===start===
+[lens, body]/0.8503473099267352
+[body]/0.060709775195754476
+[flash, lens, body]/0.027273301338722827
+[display, body]/0.012863096741601755
+[picture-button, lens, body]/0.009415256377873339
+[controls, display, body]/0.00402879515029045
+[flash, body]/0.003662541045718591
+[top-bar-thingy, lens, body]/0.0031257893407425938
+[flash, flash, lens, body]/0.0027279616064662606
+[picture-button, flash, lens, body]/0.002696387976761792
+[handle, lens, body]/0.002595352361707485
+[controls, body]/0.002121747916140427
+[controls, controls, display, body]/0.0014460722404647597
+[display, lens, body]/0.0014334427885829715
+[picture-button, body]/0.0013513513513513493
+[handle, flash, lens, body]/0.0012818893660015132
+[specularities, lens, body]/0.0012061126547107844
+===body===
+[flash]/0.628858297549892
+[]/0.14921065925738797
+[picture-button]/0.07085122505683138
+[flash, lens]/0.03765471078555134
+[display]/0.0220257640818397
+[picture-button, flash]/0.016582470320788467
+[picture-button, picture-button]/0.009004799191715221
+[specularities]/0.0076597625663048004
+[top-bar-thingy]/0.006264208133367057
+[top-bar-thingy, flash]/0.005386461227582741
+[lens]/0.0051528163677696855
+[flash, flash]/0.004660267744379898
+[handle, flash]/0.004597120484970951
+[picture-button, flash, lens]/0.004117201313463002
+[handle]/0.0026079818135892737
+[controls, display]/0.002544834554180331
+[picture-button, lens]/0.002418540035362457
+[specularities, picture-button]/0.0021343773680222154
+[handle, flash, flash]/0.0014081838848193952
+[top-bar-thingy, lens]/0.0013197777216468764
+[specularities, lens]/0.001174539025006314
+[controls, controls, display]/0.0011492801212427376
+[top-bar-thingy, flash, lens]/0.0010356150543066433
+[controls]/0.0010229856024248558
+===lens===
+[picture-button]/0.5743032752378453
+[]/0.2716692249402422
+[top-bar-thingy]/0.03413837993277129
+[flash]/0.03174849903821772
+[handle, flash]/0.02533014682547302
+[top-bar-thingy, flash]/0.017758952338391133
+[handle]/0.00968905641802817
+[picture-button, flash]/0.006243482878996872
+[handle, top-bar-thingy]/0.005738304803725305
+[handle, picture-button]/0.004268107071845408
+[specularities, picture-button]/0.004248677145873427
+[top-bar-thingy, picture-button]/0.0028821056858440272
+[picture-button, picture-button]/0.002810862623946755
+[handle, top-bar-thingy, flash]/0.0020077590171048232
+[handle, picture-button, flash]/0.0015155342258146049
+[top-bar-thingy, picture-button, flash]/0.0014961042998426226
+[top-bar-thingy, flash, flash]/0.0011787488423002448
+[specularities]/0.0010751225704496725
+===flash===
+[]/0.9444023462715058
+[picture-button]/0.027440992394264323
+[handle]/0.012573320984536144
+[flash]/0.0037397210294406267
+[top-bar-thingy, picture-button]/0.003529230164744155
+[top-bar-thingy]/0.003038084813785726
+[handle, flash]/0.001227863377396087
+[lens]/0.0010875361342651071
+[picture-button, lens]/0.0010173725126996172
+===picture-button===
+[]/0.9610931401706367
+[top-bar-thingy]/0.009508755061965853
+[specularities]/0.008506546944894831
+[handle]/0.008180625606009946
+[handle, flash]/0.0046932672799420054
+[flash]/0.003927352133562588
+[picture-button]/0.0037399473637038
+===top-bar-thingy===
+[]/0.6489643849456753
+[flash]/0.21425865117453927
+[handle]/0.053675170497599255
+[handle, flash]/0.051843899974740044
+[flash, flash]/0.031257893407426164
+===handle===
+[]/0.954281384187958
+[flash]/0.04571861581207303
+===specularities===
+[]/1.0000000000000633
+===display===
+[]/0.4509977266986686
+[lens]/0.155973730740081
+[controls]/0.1343773680222241
+[controls, controls]/0.11606466279363199
+[controls, controls, controls]/0.04748673907552419
+[controls, controls, picture-button]/0.03258398585501394
+[controls, picture-button]/0.028668855771659552
+[controls, controls, controls, picture-button]/0.02639555443293765
+[picture-button]/0.007451376610255123
+===controls===
+[]/0.6447756167382293
+[picture-button]/0.15054306643091298
+[controls]/0.13724004378209848
+[controls, picture-button]/0.041256209480508704
+[controls, controls]/0.018859981476803924
+[controls, controls, picture-button]/0.0073250820914372225

@@ -1,3 +1,0 @@
-Decay mean/var: 0.41690330993895297/0.15537167182107114
-Tree accept ratio: 0.48780125
-Decay accept ratio: 0.4178

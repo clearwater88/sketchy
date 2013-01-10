@@ -1,0 +1,291 @@
+===start===
+[body, tail]/0.619376736549639
+[body]/0.26921886840111103
+[body, right wing]/0.01728340490022771
+[body, cockpit]/0.012923086638040315
+[body, cockpit, tail]/0.010984465774185605
+[body, tail, right wing]/0.005061252841626748
+[body, left wing]/0.0034825713564031824
+[body, cockpit, window]/0.0034320535488760314
+[body, cockpit, tail, window]/0.003122631977772184
+[propeller]/0.0030689568072746103
+[body, right wing, left wing]/0.002888987117959095
+[body, cockpit, left wing]/0.002153321545844903
+[propeller, body]/0.001850214700681975
+[body, window]/0.0016765597373073898
+[body, tail, left wing]/0.0015976256630462133
+[body, tail, right wing, left wing]/0.001537635766607721
+[propeller, gears, body, tail]/0.001518691588785035
+[propeller, body, tail]/0.0015155342258145888
+[body, tail, window]/0.001427128062642074
+[body, cockpit, right wing]/0.0013829249810558151
+[engine, body, tail]/0.0013292498105582137
+[engine, body]/0.001307148269765084
+[propeller, gears, body]/0.001297676180853742
+[body, cockpit, tail, left wing]/0.0012218994695630146
+[body, right wing, window]/0.0011808537509472039
+[propeller, gears]/0.0011303359434200486
+[doors, body, cockpit, tail]/0.0010956049507451324
+[engine, body, left wing]/0.0010766607729224493
+[propeller, tail]/0.001004041424602167
+===window===
+[]/0.9066331537604824
+[engine, engine]/0.041652346386527636
+[gears, gears]/0.012173963453265152
+[engine]/0.006057996099362821
+[engine, engine, engine, engine]/0.005871659924057765
+[cockpit]/0.004339562482660424
+[propeller]/0.0037308643099972054
+[gears]/0.0021739220452258556
+[gears, engine, cockpit]/0.0021532180257475136
+[engine, engine, engine]/0.0019834450660251063
+[engine, engine, tail]/0.0019378962231727534
+[gears, gears, cockpit]/0.0014617037751709031
+[gears, gears, cockpit, tail]/0.0013002124232398406
+[gears, engine]/0.001167706698578456
+[right wing, left wing]/0.0011055946401434323
+===left wing===
+[]/0.464627294634872
+[cockpit, window]/0.20436842500495173
+[window]/0.20018363905709255
+[engine, engine, cockpit]/0.02083518223957745
+[cockpit]/0.010810128137735912
+[engine, engine, cockpit, window]/0.007843913628202453
+[doors, cockpit]/0.005758347385020691
+[gears, gears, window]/0.005543305366492968
+[engine, engine]/0.0044783353699746255
+[propeller, cockpit, window]/0.0036386474881043725
+[doors]/0.00300717489401499
+[right wing]/0.0028740536444501986
+[right wing, window]/0.002730692298765041
+[engine]/0.002560024030092225
+[gears, gears, cockpit]/0.0025054101841169253
+[tail]/0.0024951700879965585
+[doors, cockpit, window]/0.0024234894151539785
+[fuselage]/0.0021947939351324125
+[gears]/0.0021504201852774805
+[tail, window]/0.0021435934545305656
+[gears, engine, cockpit, window]/0.002140180089157113
+[cockpit, tail]/0.0020684994163145333
+[gears, gears]/0.001955858358990473
+[engine, engine, cockpit, tail]/0.001935378166749742
+[gears, window]/0.0017339896097158102
+[engine, cockpit]/0.0015121208604411496
+[engine, cockpit, window]/0.0014609203798393014
+[engine, engine, engine, engine]/0.0014540936490923919
+[fuselage, cockpit]/0.0012117447075769884
+[doors, right wing]/0.0011332373039874917
+[gears, gears, cockpit, window]/0.0010820368233856457
+[cockpit, tail, window]/0.0010820368233856452
+[fuselage, window]/0.0010615566311449073
+[engine, fuselage]/0.0010444898042776254
+===right wing===
+[]/0.8539765934158976
+[cockpit, window]/0.03809379472930881
+[window]/0.021544160983412892
+[engine, engine, cockpit]/0.008712637871516552
+[cockpit]/0.007692178159467957
+[gears, gears, cockpit]/0.006092447587774805
+[engine, engine, engine, engine]/0.005001262945188225
+[engine, engine]/0.004294013639808033
+[gears, gears]/0.003734949903174196
+[doors, cockpit]/0.0030546434284752003
+[gears, gears, window]/0.0028626757598720163
+[gears]/0.0026875473604445594
+[engine, engine, cockpit, window]/0.002377704807611352
+[doors, engine, cockpit]/0.0023541298307653514
+[engine]/0.0023002441694030544
+[engine, engine, engine]/0.0022396228003704753
+[doors]/0.002135219331481025
+[tail]/0.00181864107097753
+[engine, cockpit]/0.0016738233560663555
+[gears, cockpit]/0.001236002357497687
+[engine, cockpit, window]/0.0011854845499705332
+[left wing]/0.00109118464258651
+[doors, engine, cockpit, window]/0.001070977519575649
+===tail===
+[]/0.893836162773679
+[cockpit]/0.02521237420401275
+[cockpit, window]/0.016727376663432155
+[window]/0.008062907964531312
+[doors, cockpit]/0.005862724505124953
+[engine]/0.003895188843540994
+[engine, engine]/0.0031507158905092676
+[engine, engine, engine, cockpit, window]/0.002818361893620104
+[engine, cockpit]/0.0019509179617394007
+[right wing]/0.0016883583041969635
+[gears]/0.0015886521051302121
+[doors, cockpit, window]/0.001469004666250114
+[engine, cockpit, window]/0.0013759455471211498
+[engine, engine, cockpit]/0.0013493572273700148
+[cockpit, right wing, window]/0.001256298108241051
+[doors]/0.0011565919091743018
+[gears, cockpit, window]/0.0011333271293920612
+[cockpit, right wing]/0.00113332712939206
+[left wing]/0.001100091729703144
+[right wing, window]/0.001056885710107553
+===cockpit===
+[]/0.923903041893683
+[window]/0.019819218417348804
+[engine, engine]/0.006928156460866751
+[gears, engine]/0.006589867571175992
+[doors]/0.00398729837982175
+[engine]/0.003513693934254687
+[engine, engine, window]/0.0028867318586944797
+[engine, window]/0.002616100746941872
+[gears, gears]/0.002359001190776895
+[propeller]/0.0023454696351892647
+[right wing, left wing, window]/0.001953054523147984
+[right wing, window]/0.0017230180781582676
+[left wing]/0.001375708151409088
+[right wing]/0.0012764767437664652
+[right wing, left wing]/0.0012494136325912045
+[gears]/0.0011366506693609513
+[left wing, window]/0.0011140980767149007
+[doors, right wing]/0.001055461335835169
+[doors, window]/0.0010013351134846476
+===body===
+[right wing, left wing]/0.5277153321545834
+[tail, right wing, left wing]/0.12967605455922876
+[cockpit, right wing, left wing, window]/0.04463564031321033
+[tail, left wing]/0.02906668350593505
+[left wing]/0.019294645112402076
+[cockpit, left wing]/0.018044329376105166
+[cockpit, right wing, left wing]/0.017340237433695418
+[cockpit, tail, left wing]/0.013020964890124028
+[doors, cockpit, right wing]/0.011309674160141938
+[cockpit, right wing, window]/0.011237054811821499
+[cockpit, tail, right wing, left wing, window]/0.009961480171760656
+[right wing]/0.00914056579944446
+[window]/0.009115306895681043
+[cockpit, tail, right wing, left wing]/0.007056706238949309
+[]/0.0067093963122001376
+[tail]/0.006118969436726553
+[cockpit, tail, right wing, window]/0.005831649406415865
+[tail, window]/0.005598004546602828
+[tail, right wing]/0.005528542561252919
+[doors, cockpit, right wing, left wing]/0.005203334175296867
+[right wing, left wing, window]/0.004556074766355207
+[cockpit, right wing]/0.004085627683758565
+[cockpit]/0.003523617075018973
+[cockpit, tail, left wing, window]/0.0033783783783784176
+[propeller, right wing]/0.003349962111644415
+[cockpit, left wing, window]/0.003024753725688328
+[engine, right wing, left wing]/0.002806895680727474
+[propeller, engine, right wing]/0.0025764081838848376
+[propeller, tail, right wing]/0.00218173781257893
+[cockpit, tail]/0.002153321545844905
+[doors, cockpit, right wing, left wing, window]/0.001957565041677178
+[cockpit, tail, right wing]/0.001910204597120473
+[gears, gears, cockpit, right wing, left wing, window]/0.001856529426622869
+[propeller, engine, tail, right wing]/0.0017018186410709636
+[doors, right wing, left wing]/0.0016007830260166595
+[cockpit, window]/0.0014587016923465433
+[left wing, window]/0.001436600151553414
+[gears, right wing]/0.001382924981055813
+[doors, right wing]/0.0013545087143217902
+[doors, cockpit, left wing]/0.0013481939883808966
+[doors]/0.0013481939883808948
+[gears, gears, right wing]/0.001297676180853742
+[doors, cockpit, tail, right wing, left wing]/0.0012913614549128493
+[doors, cockpit]/0.0012566304622379312
+[engine, tail, right wing, left wing]/0.0012345289214448021
+[right wing, window]/0.0011934832028289914
+[cockpit, tail, window]/0.00109876231371558
+[engine, engine, cockpit, right wing, left wing]/0.0010924475877746851
+[tail, right wing, left wing, window]/0.0010892902248042387
+[gears, gears, right wing, left wing, window]/0.0010640313210406615
+[engine, cockpit, right wing, left wing]/0.0010608739580702151
+[engine, engine, right wing, left wing]/0.0010514018691588738
+[engine, tail, right wing]/0.0010419297802475318
+[gears, right wing, left wing]/0.0010166708764839556
+===fuselage===
+[engine, cockpit, window]/0.26218742106591864
+[engine, cockpit]/0.14826976509219394
+[cockpit, window]/0.11593836827481704
+[engine, window]/0.11543319019954551
+[cockpit]/0.09926749179085642
+[engine]/0.09850972467794912
+[window]/0.0825966153068958
+[]/0.07779742359181623
+===engine===
+[]/0.9424779667265508
+[engine]/0.022405330311366774
+[engine, engine]/0.010390284196800872
+[cockpit]/0.007099799976789072
+[engine, cockpit]/0.0028877071059440406
+[cockpit, window]/0.002389355761419413
+[engine, cockpit, window]/0.0017135094174750558
+[gears]/0.00161793518701828
+[engine, engine, engine]/0.0015223609565615057
+[window]/0.001092276919506013
+===gears===
+[]/0.8568493727372597
+[cockpit]/0.03478993011703292
+[gears]/0.028710953944598508
+[doors, cockpit]/0.010204597120484873
+[cockpit, tail]/0.009160562431590384
+[gears, cockpit]/0.008588027279615992
+[engine, engine, cockpit, window]/0.0046813168308495095
+[cockpit, window]/0.00441188852403803
+[doors]/0.004378209985686593
+[doors, gears, cockpit]/0.004108781678875112
+[engine, cockpit, window]/0.003822514102887913
+[doors, cockpit, window]/0.0036036036036035846
+[tail]/0.003502567988549279
+[gears, cockpit, tail]/0.002610086722236248
+[window]/0.002593247453060531
+[engine, cockpit]/0.0025932474530605304
+[engine, engine, cockpit]/0.0020880693777890033
+[engine]/0.0020880693777890033
+[engine, window]/0.0018354803401532385
+[doors, gears]/0.001801801801801803
+[engine, engine, window]/0.0014144986107602938
+[engine, engine]/0.0013134629957059871
+[doors, gears, cockpit, window]/0.001246105919003116
+[doors, window]/0.0010271954197187847
+[gears, tail]/0.0010271954197187847
+===propeller===
+[]/0.584238444051522
+[engine]/0.1714237602088019
+[gears, body, tail]/0.043950492548623626
+[gears, body]/0.037383177570093504
+[body]/0.034267912772585625
+[body, tail]/0.028626757598720114
+[gears]/0.02567988549296954
+[gears, tail]/0.021049086469647208
+[tail]/0.017176054559232167
+[body, right wing]/0.0049675844068367385
+[gears, body, right wing]/0.004125620948050851
+[gears, right wing]/0.002610086722236254
+[right wing]/0.0025258903763576653
+[left wing]/0.0024416940304790766
+[gears, body, left wing]/0.002020712301086133
+[body, left wing]/0.0019365159552075443
+[body, tail, right wing]/0.0017681232634503665
+[gears, left wing]/0.0015155342258145997
+[gears, body, tail, right wing]/0.0015155342258145997
+[gears, body, right wing, left wing]/0.0012629451881788329
+[body, tail, left wing]/0.0012629451881788329
+[gears, body, tail, left wing]/0.0012629451881788329
+[right wing, left wing]/0.001010356150543066
+[gears, tail, right wing]/0.001010356150543066
+===doors===
+[]/0.41872045610361575
+[window]/0.41150362645688393
+[engine, window]/0.03243964926207921
+[cockpit, window]/0.03222314437267713
+[right wing, window]/0.01775340093097105
+[cockpit]/0.014505827589939761
+[engine]/0.010572655432468532
+[cockpit, right wing, left wing, window]/0.00941796268899074
+[left wing, window]/0.009273626096056016
+[right wing]/0.008948868761952887
+[cockpit, left wing, window]/0.005881716162090002
+[cockpit, right wing, left wing]/0.005556958827986873
+[right wing, left wing, window]/0.005232201493883744
+[cockpit, right wing, window]/0.004582686825677486
+[cockpit, right wing]/0.0035001623786670563
+[right wing, left wing]/0.0034640782304333753
+[cockpit, left wing]/0.0034640782304333753
+[left wing]/0.0029589001551618413

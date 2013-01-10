@@ -1,0 +1,71 @@
+===start===
+[lens, body]/0.8637092700176825
+[flash, lens, body]/0.0875473604445547
+[display, body]/0.03331017933821808
+[controls, controls, controls, display, body]/0.003050012629451858
+[controls, controls, controls, display, picture-button, body]/0.002121747916140427
+[picture-button, lens, body]/0.0017112907299823177
+[handle, lens, body]/0.0012818893660015128
+[specularities, lens, body]/0.0012313715584743607
+===body===
+[flash]/0.6572366759282734
+[]/0.15545592321293122
+[picture-button]/0.15123137155847122
+[display]/0.008815357413488444
+[specularities]/0.008430159131093932
+[top-bar-thingy, flash]/0.006163172518312703
+[handle, flash]/0.004167719120990156
+[picture-button, flash]/0.0022417277090174227
+[specularities, picture-button]/0.002115433190199533
+[handle]/0.0012124273806516776
+[top-bar-thingy]/0.001073503409952007
+===lens===
+[picture-button]/0.6025155277491663
+[]/0.22931198632132208
+[top-bar-thingy, flash]/0.07132725824314327
+[handle, flash]/0.056029429861203545
+[handle, top-bar-thingy]/0.00777197038879265
+[flash]/0.0076812974009235375
+[top-bar-thingy]/0.0070336332018574935
+[handle]/0.005731828161734704
+[specularities, picture-button]/0.004073807812125598
+[handle, top-bar-thingy, flash]/0.003711115860648606
+[specularities]/0.0020012823751141624
+[handle, picture-button]/0.0012499919041975133
+===flash===
+[]/0.9813996239230198
+[handle]/0.011170048553226173
+[picture-button]/0.006027055092475625
+===picture-button===
+[]/0.9849179900431438
+[specularities]/0.009182833723080968
+[handle]/0.002151080836640077
+[handle, flash]/0.0019555280333091564
+[top-bar-thingy]/0.0017029389956733905
+===top-bar-thingy===
+[]/0.9362844152564007
+[handle]/0.05089669108360597
+[flash]/0.0087774690578429
+[handle, flash]/0.003346804748673911
+===handle===
+[]/0.9988002020712924
+[flash]/0.0011997979287698918
+===specularities===
+[]/1.0000000000000633
+===display===
+[lens]/0.32962869411467877
+[]/0.29350846173275263
+[controls, controls, controls, picture-button]/0.21558474362211874
+[controls, controls, controls]/0.11189694367264207
+[controls, controls]/0.016797171002778503
+[controls, controls, picture-button]/0.013892397069967182
+[controls]/0.01199797928769893
+[controls, picture-button]/0.005430664309168987
+[picture-button]/0.001262945188178833
+===controls===
+[]/0.9693525301002482
+[controls]/0.012713648227666916
+[picture-button]/0.009429990738401957
+[controls, picture-button]/0.004630799023322384
+[controls, controls, picture-button]/0.0024416940304790766
+[controls, controls]/0.0014313378799360107

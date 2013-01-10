@@ -4,8 +4,11 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,7 +86,7 @@ public class IO {
 				parentProbs.put(partList.get(j),totParentProb);
 			}
 
-			LinkedHashMap<String, Double> parentProbsSorted = utils.getSortedHashMap(parentProbs);
+			LinkedHashMap<String, Double> parentProbsSorted = Utils.getSortedHashMap(parentProbs);
 			for (String rule : parentProbsSorted.keySet()) {
 				if (parentProbsSorted.get(rule) > 0.001) {
 					out.println("   --- Parent: " + rule + ": " + parentProbsSorted.get(rule)); 
@@ -98,7 +101,7 @@ public class IO {
 
 			for (int j = 0; j < child.size(); j++) {
 
-				LinkedHashMap<Long, Double> childParProbs = utils.getSortedHashMap(child.get(j));
+				LinkedHashMap<Long, Double> childParProbs = Utils.getSortedHashMap(child.get(j));
 
 				double totParentProb = 0;
 				for (long rule : childParProbs.keySet()) {
@@ -111,7 +114,7 @@ public class IO {
 
 				for (long rule : childParProbs.keySet()) {
 					if (childParProbs.get(rule) > 0.001) {
-						out.println("         " + Tree.getRuleListStrings(rule, partList) + "/" + childParProbs.get(rule));
+						out.println("         " + Node.getRuleListStrings(rule, partList) + "/" + childParProbs.get(rule));
 					}
 				}
 			}
@@ -122,14 +125,66 @@ public class IO {
 
 		for (int par = 0; par < postRules.size(); par++) {
 
-			LinkedHashMap<Long, Double> parentRules = utils.getSortedHashMap(postRules.get(par));
+			LinkedHashMap<Long, Double> parentRules = Utils.getSortedHashMap(postRules.get(par));
 
 			out.println("===" + partList.get(par) + "===");
 
 			for (long rule : parentRules.keySet())
 				if (parentRules.get(rule) > 0.001)
-					out.println(Tree.getRuleListStrings(rule, partList) + "/" + parentRules.get(rule));
+					out.println(Node.getRuleListStrings(rule, partList) + "/" + parentRules.get(rule));
 		}
 	}
+
+	public static void outputRuleCounts(ArrayList<ArrayList<HashMap<Long, Integer>>> allRuleCounts, String filename) throws IOException {
+			FileOutputStream fo = new FileOutputStream(filename);  
+		    ObjectOutputStream oo=new ObjectOutputStream(fo); 
+		    oo.writeObject(allRuleCounts);
+		    oo.close();
+	}
+	
+	public static ArrayList<ArrayList<HashMap<Long, Integer>>> readRuleCounts(String filename) throws IOException, ClassNotFoundException {
+		
+		FileInputStream fi=new FileInputStream(filename);  
+	    ObjectInputStream oi=new ObjectInputStream(fi);  
+
+		ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts=(ArrayList<ArrayList<HashMap<Long,Integer>>>)oi.readObject();  
+	    oi.close();
+	    
+	    return allRuleCounts;
+	}
+	
+	public static void outputDecaySamps(ArrayList<Double> decaySamps, String filename) throws IOException {
+		FileOutputStream fo = new FileOutputStream(filename);  
+	    ObjectOutputStream oo=new ObjectOutputStream(fo); 
+	    oo.writeObject(decaySamps);
+	    oo.close();
+	}
+
+	public static ArrayList<Double> readDecaySamps(String filename) throws IOException, ClassNotFoundException {
+		FileInputStream fi=new FileInputStream(filename);  
+	    ObjectInputStream oi=new ObjectInputStream(fi);  
+
+		ArrayList<Double> decaySamps=(ArrayList<Double>)oi.readObject();  
+	    oi.close();
+	    
+	    return decaySamps;
+		
+	}
+
+	public static void outputInferProbs(ArrayList<Double> logProbsPost, PrintStream out) {
+		double totalLogProb = 0;
+		for (double logProb : logProbsPost) {
+			totalLogProb += logProb;
+		}
+		
+		out.println("Overall logProb: " + totalLogProb);
+		out.println("Seq probs: ");
+		
+		for (double logProb : logProbsPost) {
+			out.println(logProb);
+		}
+	}
+
+
 	
 }

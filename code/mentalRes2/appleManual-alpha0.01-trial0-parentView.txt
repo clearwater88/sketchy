@@ -1,0 +1,40 @@
+===start===
+[body]/0.8861960090931861
+[stem, body]/0.07862465269006966
+[body reflections, body]/0.024943167466532322
+[leaf, body]/0.003403637282141954
+[roots, body]/0.002551149280121225
+[body reflections, body reflections, body reflections, body reflections, body reflections, body reflections, body]/0.002096489012376851
+===body===
+[stem]/0.7132482950239972
+[leaf, stem]/0.17234150037888174
+[leaf]/0.050359939378632534
+[body reflections, stem]/0.03403005809547922
+[body reflections, body reflections, body reflections, body reflections, body reflections, body reflections, stem]/0.015616317251831898
+[]/0.0031510482445061805
+[roots, stem]/0.003024753725688282
+[body reflections, body reflections, body reflections, body reflections, body reflections, stem]/0.0027342763324071538
+[roots, leaf, stem]/0.001679717100277841
+===stem===
+[]/0.537953043081828
+[leaf]/0.4377244808063062
+[body reflections]/0.009456687140753782
+[roots, leaf]/0.006019011945613379
+[leaf, leaf]/0.00507642358565539
+[body reflections, leaf]/0.0029140149951638306
+===leaf===
+[]/0.9721249954894984
+[roots]/0.014541911738173442
+[body reflections]/0.009887056616028593
+[leaf]/0.0034009309710244335
+===body reflections===
+[]/0.9826836181976999
+[body reflections]/0.006539249529903724
+[body reflections, body reflections]/0.0021891049928433144
+[body reflections, body reflections, stem]/0.0021329740955909216
+[body reflections, body reflections, body reflections, body reflections, body reflections]/0.0017681232634503686
+[body reflections, body reflections, body reflections]/0.0012910106368050301
+[body reflections, stem]/0.001206814290926441
+[body reflections, body reflections, body reflections, stem]/0.0010945524964216555
+===roots===
+[]/1.0000000000000633

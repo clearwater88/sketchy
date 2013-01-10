@@ -6,7 +6,8 @@ class Node implements Comparable<Node> {
 
 	/* remove private, just for debugging */
 	private ArrayList<Node> children; //guaranteed to be sorted in increasing id order
-		
+	static final int[] factors = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+	
 	Node parent;
 	final int id;
 	
@@ -44,10 +45,30 @@ class Node implements Comparable<Node> {
 		return this;
 	}
 	
+	String toSubTree() {
+		String str = Integer.toString(id) + "(";
+		for (Node c: children) {
+			str += c.toSubTree()+ ",";
+		}
+		str += ")";
+		return str;
+	}
+	
 	/*
 	 * Probability of sequence
 	 */
-	public double seqProb(ArrayList<Node> nodes, int root, ArrayList<Node> frontier, ArrayList<Double> frontierWeights, double prob, double decayTrav) {
+	
+	public static double getSeqProb(ArrayList<Node> nodes, double decayTrav) {
+		ArrayList <Node> frontier = new ArrayList<Node>();
+		ArrayList <Double> frontierWeights = new ArrayList<Double>();
+		frontier.addAll(nodes.get(0).getChildren());
+		for (int i = 0; i < frontier.size(); i++) {
+			frontierWeights.add(1.0);
+		}
+		return seqProb(nodes, 1, frontier,frontierWeights,1.0,decayTrav);
+	}
+	
+	public static double seqProb(ArrayList<Node> nodes, int root, ArrayList<Node> frontier, ArrayList<Double> frontierWeights, double prob, double decayTrav) {
 		if(frontier.size() != frontierWeights.size())
 			throw new RuntimeException("Frontier nodes and weight sizes do not match");
 				
@@ -76,36 +97,63 @@ class Node implements Comparable<Node> {
 					frontierWeightsCurr.set(j, Math.exp(-decayTrav)*frontierWeightsCurr.get(j));
 				}
 				
-				frontierCurr.addAll(f.children);
-				for (int j = 0; j < f.children.size(); j++) {
+				frontierCurr.addAll(f.getChildren());
+				for (int j = 0; j < f.getChildren().size(); j++) {
 					frontierWeightsCurr.add(1.0);
 				}
 
 				totalProb += seqProb(nodes, root+1,frontierCurr,frontierWeightsCurr,probNode, decayTrav);
-
 			}
 		}
 		
 		return totalProb;
-
-		
-		/*Assume all frontier nodes equal-probably*/
-		/*
-		prob /= frontier.size();
-		frontier.remove(foundNode);
-		frontier.addAll(foundNode.children);
-		return doSeqProb(nodes, root+1, frontier,prob);
-		*/
 	}
 	
-	String toSubTree() {
-		String str = Integer.toString(id) + "(";
+	/*
+	 * 1 is the special 'stop' rule
+	 */
+	public static long getRuleId(Node parent) {
+		
+		long res = 1;
+		ArrayList<Node> children = parent.getChildren();
+		long old = res;
 		for (Node c: children) {
-			str += c.toSubTree()+ ",";
+			res *= factors[c.id];
+			if (res < old) {
+				System.out.println(old);
+				System.out.println(res);
+				throw new RuntimeException("Rule id went over");
+			}
+			old = res;
 		}
-		str += ")";
-		return str;
+		return res;
 	}
+	
+	public static ArrayList<Integer> getRuleList(long ruleId) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+
+		for (int i=factors.length-1; i>= 0; i--) {
+			while (true) {
+				if (ruleId % factors[i] != 0) break;
+				ruleId /= factors[i];
+				res.add(i);	
+			}
+		}
+		return res;
+	}
+	
+	// stop rule not included (null terminator, in a sense)
+	public static ArrayList<String> getRuleListStrings(long ruleId, ArrayList<String> partList) {
+		ArrayList<String> res = new ArrayList<String>();
+		ArrayList<Integer> rules = getRuleList(ruleId);
+		
+		for (int rule : rules) {
+			res.add(partList.get(rule));
+		}
+		return res;
+	}
+	
+	
 	
 	@Override
 	public String toString() {

@@ -1,0 +1,1357 @@
+=== Child: start===
+=== Child: right eye===
+   --- Parent: head: 0.4816484349194623
+   --- Parent: start: 0.17042635734224487
+   --- Parent: left eyebrow: 0.09257064397251312
+   --- Parent: right eyebrow: 0.06898919048451754
+   --- Parent: left eye: 0.05115251844223801
+   --- Parent: hair: 0.04064740513338639
+   --- Parent: nose: 0.03827695416480458
+   --- Parent: left ear: 0.02126281565533901
+   --- Parent: mouth: 0.020181216442898685
+   --- Parent: right ear: 0.014844463442594283
+=== Child: left eye===
+   --- Parent: right eye: 0.6916456175801974
+   --- Parent: start: 0.09516291992927506
+   --- Parent: head: 0.09351477645870168
+   --- Parent: left eyebrow: 0.04728466784541549
+   --- Parent: right eyebrow: 0.030253851982823942
+   --- Parent: nose: 0.01393660015155343
+   --- Parent: mouth: 0.012054811821166966
+   --- Parent: hair: 0.008493306390502655
+   --- Parent: left ear: 0.004527658499621116
+   --- Parent: right ear: 0.0031257893407426107
+=== Child: right eyebrow===
+   --- Parent: head: 0.217460451105311
+   --- Parent: left eye: 0.1701795253197122
+   --- Parent: left eyebrow: 0.1605998521886372
+   --- Parent: start: 0.1094552496421657
+   --- Parent: hair: 0.1044221791885344
+   --- Parent: right eye: 0.08514121598233748
+   --- Parent: left ear: 0.04897420785271258
+   --- Parent: nose: 0.041246854330966476
+   --- Parent: mouth: 0.03841224401972067
+   --- Parent: right ear: 0.024108220369902608
+=== Child: left eyebrow===
+   --- Parent: right eyebrow: 0.3834395142806358
+   --- Parent: left eye: 0.15495869701477166
+   --- Parent: head: 0.1267622762949866
+   --- Parent: right eye: 0.11081174632576511
+   --- Parent: start: 0.07021975246274327
+   --- Parent: mouth: 0.0551298962513916
+   --- Parent: nose: 0.03438952971663253
+   --- Parent: hair: 0.030189067572245126
+   --- Parent: left ear: 0.020852628329263826
+   --- Parent: right ear: 0.013246891751564646
+=== Child: nose===
+   --- Parent: left eye: 0.4067502713625472
+   --- Parent: head: 0.139442802236437
+   --- Parent: right eyebrow: 0.11740611538540309
+   --- Parent: left eyebrow: 0.1140951509731505
+   --- Parent: right eye: 0.10217567908904107
+   --- Parent: start: 0.10164319409078187
+   --- Parent: hair: 0.007734685936251986
+   --- Parent: right ear: 0.0045534294081907125
+   --- Parent: left ear: 0.004403241331758634
+   --- Parent: mouth: 0.0017954301864380167
+=== Child: mouth===
+   --- Parent: nose: 0.6836574892649661
+   --- Parent: left eye: 0.08493937863096736
+   --- Parent: head: 0.0656226319777721
+   --- Parent: start: 0.05015786814852233
+   --- Parent: right eye: 0.04758777469057835
+   --- Parent: right eyebrow: 0.029515029047739328
+   --- Parent: left eyebrow: 0.023787572619348323
+   --- Parent: hair: 0.007830260166708769
+   --- Parent: left ear: 0.00394038898711796
+   --- Parent: right ear: 0.0029616064662793627
+=== Child: right ear===
+   --- Parent: head: 0.24688774221484483
+   --- Parent: mouth: 0.13475023755397583
+   --- Parent: start: 0.12287855278509478
+   --- Parent: left ear: 0.10664068607993837
+   --- Parent: left eye: 0.09106436209239947
+   --- Parent: nose: 0.06770589013579668
+   --- Parent: right eye: 0.06502363511709308
+   --- Parent: right eyebrow: 0.06140319224431377
+   --- Parent: left eyebrow: 0.052658800322351734
+   --- Parent: hair: 0.0509869014541912
+=== Child: left ear===
+   --- Parent: right ear: 0.34786321702209566
+   --- Parent: start: 0.13602521079156565
+   --- Parent: head: 0.1351591912339575
+   --- Parent: mouth: 0.09746328437917225
+   --- Parent: hair: 0.05857660063267542
+   --- Parent: left eye: 0.05453517603050313
+   --- Parent: nose: 0.04698156100025258
+   --- Parent: right eyebrow: 0.04520140968739101
+   --- Parent: right eye: 0.04253118271809864
+   --- Parent: left eyebrow: 0.03566316650428801
+=== Child: head===
+   --- Parent: start: 0.8791424602172254
+   --- Parent: right eyebrow: 0.022549886334933072
+   --- Parent: left ear: 0.02061126547107858
+   --- Parent: mouth: 0.01718236928517302
+   --- Parent: left eye: 0.015029047739328116
+   --- Parent: right ear: 0.012256883051275574
+   --- Parent: left eyebrow: 0.01203586764334428
+   --- Parent: right eye: 0.01141702450113666
+   --- Parent: nose: 0.007583985855013892
+   --- Parent: hair: 0.002191209901490274
+=== Child: hair===
+   --- Parent: head: 0.3113286183379642
+   --- Parent: start: 0.1685526648143469
+   --- Parent: right ear: 0.08250820914372317
+   --- Parent: mouth: 0.07707754483455416
+   --- Parent: nose: 0.070106087395807
+   --- Parent: right eyebrow: 0.06539530184389998
+   --- Parent: left eyebrow: 0.06343773680222278
+   --- Parent: left ear: 0.05824703207880778
+   --- Parent: left eye: 0.05625157868148526
+   --- Parent: right eye: 0.04709522606718871
+---------------------
+=== Child: start===
+   --- Parent: start: 0.0---
+   --- Parent: right eye: 0.0---
+   --- Parent: left eye: 0.0---
+   --- Parent: right eyebrow: 0.0---
+   --- Parent: left eyebrow: 0.0---
+   --- Parent: nose: 0.0---
+   --- Parent: mouth: 0.0---
+   --- Parent: right ear: 0.0---
+   --- Parent: left ear: 0.0---
+   --- Parent: head: 0.0---
+   --- Parent: hair: 0.0---
+=== Child: right eye===
+   --- Parent: start: 0.17042635734224482---
+         [head, right eye]/0.051146041800247406
+         [right eye]/0.016418287446324828
+         [left eye, right eye]/0.012383339486143225
+         [head, nose, right eye]/0.008464971081793511
+         [head, mouth, right eye]/0.007370418585371856
+         [head, left eye, right eye]/0.0073121288074559105
+         [head, right eyebrow, right eye]/0.004578985887397103
+         [nose, right eye]/0.004112667664069533
+         [hair, head, right eye]/0.0036333961567606428
+         [head, right ear, right eye]/0.0034973866749567683
+         [head, left ear, right eye]/0.0029274421797786283
+         [right eyebrow, right eye]/0.0026165633642269157
+         [mouth, right eye]/0.0025971334382549334
+         [head, left eyebrow, right eye]/0.0022927312646938815
+         [nose, left eye, right eye]/0.0014896276578519568
+         [left eyebrow, left eye, right eye]/0.0014507678059079928
+         [right eyebrow, left eye, right eye]/0.0014248612379453502
+         [head, nose, right eyebrow, right eye]/0.0013406648920667613
+         [right ear, left eye, right eye]/0.0012953283981321365
+         [head, nose, left eye, right eye]/0.001243515262206851
+         [head, mouth, left eye, right eye]/0.00113988899035628
+         [head, left ear, right ear, right eye]/0.0011139824223936373
+         [nose, right eyebrow, right eye]/0.0010297860765150484
+   --- Parent: right eye: 0.0---
+   --- Parent: left eye: 0.051152518442238004---
+         [right eye]/0.02459180963853861
+         [nose, right eye]/0.005479239124098937
+         [left eyebrow, right eye]/0.0032512742793116625
+         [mouth, right eye]/0.003095834871535806
+         [head, right eye]/0.0015803006457212065
+         [right eyebrow, right eye]/0.001470197731879975
+         [nose, left eyebrow, right eye]/0.0012499919041975118
+         [hair, right eye]/0.001120459064384298
+   --- Parent: right eyebrow: 0.06898919048451747---
+         [left eyebrow, right eye]/0.023102181980686653
+         [right eye]/0.014850940084584945
+         [left eye, right eye]/0.006865240510100323
+         [nose, left eyebrow, right eye]/0.004585462529387763
+         [left eyebrow, left eye, right eye]/0.0038147421324991417
+         [nose, left eye, right eye]/0.001755169979469045
+         [nose, right eye]/0.0016385904236371526
+         [mouth, left eyebrow, right eye]/0.001470197731879975
+         [right ear, left eyebrow, right eye]/0.0010880758544309947
+   --- Parent: left eyebrow: 0.09257064397251313---
+         [right eye]/0.04734425295172959
+         [nose, right eye]/0.012065984028600851
+         [left eye, right eye]/0.008866522885214475
+         [right eyebrow, right eye]/0.0035427231688913933
+         [right ear, right eye]/0.0025194137343670054
+         [left ear, right eye]/0.002040142227058115
+         [mouth, right eye]/0.0017875531894223484
+         [mouth, nose, right eye]/0.0017422166954877236
+         [nose, left eye, right eye]/0.0017227867695157415
+         [hair, right eye]/0.0017163101275250807
+         [mouth, left eye, right eye]/0.0011334123483656194
+   --- Parent: nose: 0.03827695416480457---
+         [right eye]/0.015019332776342122
+         [mouth, right eye]/0.006936483571997591
+         [left eye, right eye]/0.002629516648208237
+         [right eyebrow, right eye]/0.0017875531894223484
+   --- Parent: mouth: 0.02018121644289867---
+         [right eye]/0.008529737501700118
+         [left eyebrow, right eye]/0.0025582735863109696
+         [left eye, right eye]/0.001729263411506402
+         [right ear, right eye]/0.0016774502755811168
+   --- Parent: right ear: 0.014844463442594281---
+         [left ear, right eye]/0.00351033995893809
+         [hair, right eye]/0.002791432697974754
+         [left ear, right eyebrow, right eye]/0.001185225484290905
+         [right eye]/0.0010686459284590126
+   --- Parent: left ear: 0.021262815655339---
+         [right eye]/0.006275866088950201
+         [right eyebrow, right eye]/0.00294687210575061
+         [left eyebrow, right eyebrow, right eye]/0.0017875531894223484
+         [left eyebrow, right eye]/0.0017616466214597055
+         [left eye, right eye]/0.001185225484290905
+   --- Parent: head: 0.4816484349194623---
+         [right eye]/0.25803589354991224
+         [nose, right eye]/0.028782197006496073
+         [left eye, right eye]/0.022195452101994157
+         [right eyebrow, right eye]/0.018646252291112105
+         [hair, right eye]/0.015744716679296118
+         [right ear, right eye]/0.014449388281163981
+         [mouth, right eye]/0.013814677366079236
+         [left eyebrow, right eye]/0.00843906451383087
+         [left ear, right eye]/0.007202025893614679
+         [left eyebrow, right eyebrow, right eye]/0.005699444951781401
+         [nose, left eye, right eye]/0.004799191715079565
+         [left ear, right ear, right eye]/0.004617845739341066
+         [hair, right ear, right eye]/0.004313443565780014
+         [nose, right eyebrow, right eye]/0.0042098172939294435
+         [hair, right eyebrow, right eye]/0.0036010129468073394
+         [mouth, nose, right eye]/0.0035815830208353575
+         [right eyebrow, left eye, right eye]/0.003160601291442413
+         [right ear, nose, right eye]/0.002448170672469738
+         [right ear, left eye, right eye]/0.002266824696731239
+         [hair, nose, right eye]/0.002260348054740578
+         [left eyebrow, left eye, right eye]/0.002221488202796614
+         [mouth, left eye, right eye]/0.0020725254370114183
+         [hair, left eye, right eye]/0.002033665585067454
+         [hair, left ear, right eye]/0.0019429925971982047
+         [hair, mouth, right eye]/0.0018782261772915978
+         [right ear, mouth, right eye]/0.0018782261772915978
+         [right ear, right eyebrow, right eye]/0.0018458429673382944
+         [mouth, right eyebrow, right eye]/0.0017422166954877236
+         [hair, left eyebrow, right eye]/0.0016644969915997952
+         [nose, left eyebrow, right eye]/0.0016062072136838492
+         [left ear, mouth, right eye]/0.001586777287711867
+         [nose, left eyebrow, right eyebrow, right eye]/0.0014766743738706355
+         [right ear, left eyebrow, right eye]/0.0014507678059079928
+         [left ear, nose, right eye]/0.001366571460029404
+         [left eyebrow, right eyebrow, left eye, right eye]/0.0011269357063749587
+         [left ear, left eye, right eye]/0.0010621692864683518
+         [hair, left ear, right ear, right eye]/0.0010297860765150484
+   --- Parent: hair: 0.04064740513338638---
+         [right eye]/0.013050433611181274
+         [right eyebrow, right eye]/0.006224052953024916
+         [mouth, right eye]/0.002648946574180219
+         [left eye, right eye]/0.002448170672469738
+         [left eyebrow, right eyebrow, right eye]/0.002202058276824632
+         [left eyebrow, right eye]/0.002143768498908686
+         [right ear, right eye]/0.001301805040122797
+=== Child: left eye===
+   --- Parent: start: 0.09516291992927507---
+         [head, left eye]/0.015167971710027785
+         [left eye]/0.012597878252083859
+         [left eye, right eye]/0.012073755998989643
+         [head, left eye, right eye]/0.007129325587269512
+         [head, nose, left eye]/0.0038772417277090176
+         [right ear, left eye]/0.0019765092194998736
+         [head, right eyebrow, left eye]/0.0017491790856276838
+         [head, left eyebrow, left eye]/0.0016986612781005304
+         [left eyebrow, left eye]/0.0016734023743369538
+         [hair, head, left eye]/0.001603940388987118
+         [nose, left eye]/0.001490275322051023
+         [nose, left eye, right eye]/0.001452386966405658
+         [left eyebrow, left eye, right eye]/0.001414498610760293
+         [right eyebrow, left eye, right eye]/0.0013892397069967164
+         [right eyebrow, left eye]/0.001262945188178833
+         [right ear, left eye, right eye]/0.001262945188178833
+         [head, mouth, left eye]/0.0012124273806516797
+         [head, nose, left eye, right eye]/0.0012124273806516797
+         [head, right ear, left eye]/0.0011177064915382673
+         [head, mouth, left eye, right eye]/0.001111391765597373
+   --- Parent: right eye: 0.6916456175801975---
+         [left eye]/0.5398774943167467
+         [nose, left eye]/0.03686537004294014
+         [left eyebrow, left eye]/0.017308663803990907
+         [mouth, left eye]/0.014290224804243495
+         [right eyebrow, left eye]/0.014126041929780248
+         [right ear, left eye]/0.009970952260671887
+         [left ear, left eye]/0.006112654710785552
+         [hair, left eye]/0.00536751704976004
+         [left eyebrow, right eyebrow, left eye]/0.003788835564536499
+         [mouth, nose, left eye]/0.003239454407678707
+         [nose, left eyebrow, left eye]/0.002980550644102046
+         [nose, right eyebrow, left eye]/0.0028921444809295277
+         [left ear, right ear, left eye]/0.0026521848951755493
+         [right ear, nose, left eye]/0.0023238191462490528
+         [head, left eye]/0.0020459712048497094
+         [hair, nose, left eye]/0.0019323061379136145
+         [left ear, nose, left eye]/0.0015786814852235412
+         [right ear, mouth, left eye]/0.0015092194998737054
+         [hair, right eyebrow, left eye]/0.0014839605961101288
+         [head, mouth, left eye]/0.0012692599141197272
+         [mouth, right eyebrow, left eye]/0.001262945188178833
+         [mouth, left eyebrow, left eye]/0.0011177064915382673
+         [right ear, left eyebrow, left eye]/0.0010798181358929021
+         [right ear, right eyebrow, left eye]/0.0010166708764839606
+   --- Parent: left eye: 0.0---
+   --- Parent: right eyebrow: 0.030253851982823942---
+         [left eye]/0.007779742359181612
+         [left eye, right eye]/0.006693609497347815
+         [left eyebrow, left eye]/0.004388734528921445
+         [left eyebrow, left eye, right eye]/0.0037193735791866632
+         [nose, left eye, right eye]/0.0017112907299823188
+         [nose, left eye]/0.001035615054306643
+   --- Parent: left eyebrow: 0.047284667845415476---
+         [left eye]/0.01961985349835817
+         [left eye, right eye]/0.008644859813084112
+         [nose, left eye]/0.003915130083354383
+         [right eyebrow, left eye]/0.0026963879767618083
+         [nose, left eye, right eye]/0.001679717100277848
+         [mouth, left eye]/0.0015407931295781763
+         [right ear, left eye]/0.001111391765597373
+         [mouth, left eye, right eye]/0.001105077039656479
+   --- Parent: nose: 0.013936600151553428---
+         [left eye, right eye]/0.002563778732003031
+         [mouth, left eye]/0.0023490780500126296
+         [right eyebrow, left eye]/0.0015092194998737054
+   --- Parent: mouth: 0.012054811821166963---
+         [left eye]/0.004837080070724931
+         [left eyebrow, left eye]/0.002626925991411973
+         [left eye, right eye]/0.001686031826218742
+         [hair, left eyebrow, left eye]/0.001029300328365749
+   --- Parent: right ear: 0.003125789340742611---
+   --- Parent: left ear: 0.004527658499621122---
+         [left eye, right eye]/0.0011555948471836323
+   --- Parent: head: 0.09351477645870165---
+         [left eye, right eye]/0.021640565799444303
+         [left eye]/0.008392270775448345
+         [nose, left eye]/0.007621874210659257
+         [nose, left eye, right eye]/0.004679211922202576
+         [right eyebrow, left eye, right eye]/0.0030815862591563525
+         [left eyebrow, left eye]/0.0030626420813336702
+         [right eyebrow, left eye]/0.0028984592068704218
+         [nose, left eyebrow, left eye]/0.002702702702702703
+         [hair, left eye]/0.002601667087648396
+         [right ear, left eye, right eye]/0.002210154079312958
+         [left eyebrow, left eye, right eye]/0.002165950997726699
+         [mouth, left eye, right eye]/0.002020712301086133
+         [hair, left eye, right eye]/0.001982823945440768
+         [hair, nose, left eye]/0.001944935589795403
+         [left eyebrow, right eyebrow, left eye]/0.0015976256630462237
+         [right ear, left eye]/0.0014460722404647638
+         [left eyebrow, right eyebrow, left eye, right eye]/0.0010987623137155848
+         [nose, right eyebrow, left eye]/0.001067188684011114
+         [left ear, left eye, right eye]/0.001035615054306643
+         [hair, nose, left eyebrow, left eye]/0.001035615054306643
+   --- Parent: hair: 0.008493306390502659---
+         [left eye, right eye]/0.0023869664056579945
+         [right eyebrow, left eye]/0.0010166708764839606
+=== Child: right eyebrow===
+   --- Parent: start: 0.10945524964216566---
+         [head, right eyebrow]/0.023060443621191286
+         [head, right eyebrow, right eye]/0.006614090726240259
+         [hair, head, right eyebrow]/0.005566313977528931
+         [hair, right eyebrow]/0.0051453322481359864
+         [head, left eyebrow, right eyebrow]/0.0046775747710327146
+         [head, nose, right eyebrow]/0.004630799023322388
+         [right eyebrow, right eye]/0.0037794804149944338
+         [head, right eyebrow, left eye]/0.0025913764231521243
+         [head, right ear, right eyebrow]/0.002226525591011572
+         [head, mouth, right eyebrow]/0.0021984601423853762
+         [head, left ear, right eyebrow]/0.0020861983478805907
+         [right eyebrow, left eye, right eye]/0.0020581328992543948
+         [hair, left ear, right eyebrow]/0.0020394226001702637
+         [head, nose, right eyebrow, right eye]/0.001936515955207544
+         [right eyebrow, left eye]/0.001871029908413086
+         [nose, right eyebrow, right eye]/0.0014874687771884033
+         [head, right eyebrow, left eye, right eye]/0.0014313378799360107
+         [nose, right eyebrow]/0.0014032724313098146
+         [head, left eyebrow, right eyebrow, right eye]/0.0012348797395526367
+         [hair, head, right eyebrow, right eye]/0.0012068142909264406
+         [hair, right eyebrow, right eye]/0.00108519734687959
+   --- Parent: right eye: 0.08514121598233751---
+         [right eyebrow, left eye]/0.020927469525600366
+         [right eyebrow]/0.014725005379210987
+         [left eyebrow, right eyebrow]/0.005790837566538501
+         [left eyebrow, right eyebrow, left eye]/0.005613089725239258
+         [right ear, right eyebrow]/0.005135977098593921
+         [nose, right eyebrow, left eye]/0.004284658490265967
+         [nose, left eyebrow, right eyebrow]/0.002226525591011572
+         [hair, right eyebrow, left eye]/0.0021984601423853762
+         [mouth, right eyebrow, left eye]/0.001871029908413086
+         [right ear, right eyebrow, left eye]/0.0015061790762725341
+         [hair, right eyebrow]/0.001478113627646338
+         [nose, right eyebrow]/0.0014032724313098146
+         [left ear, right eyebrow]/0.0013377863845153565
+         [left ear, right ear, right eyebrow]/0.0013190760854312257
+         [nose, left eyebrow, right eyebrow, left eye]/0.0012348797395526367
+         [head, left eyebrow, right eyebrow]/0.001197459141384375
+         [left ear, right eyebrow, left eye]/0.0011787488423002442
+   --- Parent: left eye: 0.17017952531971198---
+         [right eyebrow]/0.055644429476205175
+         [left eyebrow, right eyebrow]/0.03307980878074336
+         [nose, right eyebrow]/0.018869336626345972
+         [nose, left eyebrow, right eyebrow]/0.009448701037486084
+         [mouth, right eyebrow]/0.007699288073119849
+         [hair, right eyebrow]/0.0036204428727793212
+         [hair, nose, right eyebrow]/0.003236881741554639
+         [mouth, left eyebrow, right eyebrow]/0.003115264797507788
+         [left ear, right eyebrow]/0.0026849279185727783
+         [right ear, right eyebrow]/0.0023200770864322266
+         [right eyebrow, right eye]/0.0021236189460488524
+         [hair, left eyebrow, right eyebrow]/0.001955226254291675
+         [head, right eyebrow]/0.001786833562534497
+         [mouth, nose, right eyebrow]/0.0017400578148241699
+         [right ear, left eyebrow, right eyebrow]/0.0016371511698614503
+         [left ear, left eyebrow, right eyebrow]/0.0015810202726090578
+         [right ear, nose, right eyebrow]/0.0013003657863470948
+         [left eyebrow, right eyebrow, right eye]/0.0013003657863470948
+         [hair, nose, left eyebrow, right eyebrow]/0.001262945188178833
+         [left ear, nose, right eyebrow]/0.0010384215991692627
+   --- Parent: right eyebrow: 0.0---
+   --- Parent: left eyebrow: 0.1605998521886372---
+         [right eyebrow]/0.09255984956919536
+         [nose, right eyebrow]/0.015810202726090575
+         [hair, right eyebrow]/0.00849447578419541
+         [mouth, right eyebrow]/0.0061182678005107915
+         [right eyebrow, right eye]/0.0051172667995097905
+         [head, right eyebrow]/0.005079846201341528
+         [right eyebrow, left eye]/0.003994648854461939
+         [right ear, right eyebrow]/0.0032088162929284425
+         [left ear, right eyebrow]/0.0031059096479657228
+         [right ear, nose, right eyebrow]/0.0015810202726090578
+         [left ear, nose, right eyebrow]/0.001328431234973291
+         [mouth, nose, right eyebrow]/0.0013190760854312257
+         [right eyebrow, left eye, right eye]/0.0013190760854312257
+         [hair, nose, right eyebrow]/0.0012161694404685059
+         [head, nose, right eyebrow]/0.0010384215991692627
+   --- Parent: nose: 0.04124685433096658---
+         [right eyebrow]/0.009832262168710767
+         [mouth, right eyebrow]/0.0057721272674543704
+         [left eyebrow, right eyebrow]/0.0037701252654523685
+         [mouth, left eyebrow, right eyebrow]/0.0033772089846856204
+         [right eyebrow, right eye]/0.0025820212736100585
+         [right eyebrow, left eye]/0.002235880740553638
+         [hair, mouth, right eyebrow]/0.001328431234973291
+         [left eyebrow, right eyebrow, left eye]/0.001262945188178833
+         [mouth, right eyebrow, right eye]/0.001131973094589917
+         [hair, right eyebrow]/0.0010945524964216552
+         [right eyebrow, left eye, right eye]/0.0010571318982533935
+   --- Parent: mouth: 0.03841224401972068---
+         [right eyebrow]/0.013780135275462378
+         [left eyebrow, right eyebrow]/0.010917459515590356
+         [hair, left eyebrow, right eyebrow]/0.002413628581852881
+         [right ear, right eyebrow]/0.0023013667873480956
+         [hair, right eyebrow]/0.002179749843301245
+         [right ear, left eyebrow, right eyebrow]/0.0011506833936740478
+   --- Parent: right ear: 0.024108220369902605---
+         [left ear, right eyebrow]/0.01001001001001001
+         [left ear, left eyebrow, right eyebrow]/0.0020955534974226564
+         [hair, left ear, right eyebrow]/0.0019084505065813477
+         [left ear, right eyebrow, right eye]/0.0017119923661979737
+         [right eyebrow]/0.0013752069826836182
+   --- Parent: left ear: 0.04897420785271263---
+         [right eyebrow]/0.01879449543000945
+         [left eyebrow, right eyebrow]/0.005500827930734473
+         [hair, right eyebrow]/0.005500827930734473
+         [right eyebrow, right eye]/0.004256593041639771
+         [left eyebrow, right eyebrow, right eye]/0.0025820212736100585
+         [hair, left eyebrow, right eyebrow]/0.0016277960203193848
+         [nose, right eyebrow]/0.0013471415340574218
+   --- Parent: head: 0.21746045110531084---
+         [right eyebrow]/0.03926356262804861
+         [right eyebrow, right eye]/0.026933475531606372
+         [left eyebrow, right eyebrow]/0.016932820671138427
+         [hair, right eyebrow]/0.01510856651043567
+         [nose, right eyebrow]/0.011824909021170704
+         [left eyebrow, right eyebrow, right eye]/0.008232531597017579
+         [right ear, right eyebrow]/0.006829259165707764
+         [nose, right eyebrow, right eye]/0.006080847202342529
+         [hair, right eyebrow, right eye]/0.005201463145388379
+         [mouth, right eyebrow]/0.004724350518743042
+         [right eyebrow, left eye, right eye]/0.00456531297652793
+         [nose, left eyebrow, right eyebrow]/0.004415630583854883
+         [hair, right ear, right eyebrow]/0.0043969202847707525
+         [right eyebrow, left eye]/0.004294013639808032
+         [hair, nose, right eyebrow]/0.00294687210575061
+         [left ear, right ear, right eyebrow]/0.002872030909414087
+         [hair, left eyebrow, right eyebrow]/0.00282525516170376
+         [right ear, right eyebrow, right eye]/0.0026662176194886477
+         [hair, left ear, right eyebrow]/0.002628797021320386
+         [mouth, right eyebrow, right eye]/0.0025165352268156005
+         [left eyebrow, right eyebrow, left eye]/0.0023668528341425537
+         [nose, left eyebrow, right eyebrow, right eye]/0.002132974095590918
+         [mouth, left eyebrow, right eyebrow]/0.0019926468524599367
+         [left eyebrow, right eyebrow, left eye, right eye]/0.0016277960203193848
+         [nose, right eyebrow, left eye]/0.0015810202726090578
+         [hair, left eyebrow, right eyebrow, right eye]/0.0013003657863470948
+         [hair, left ear, right ear, right eyebrow]/0.001281655487262964
+         [nose, right eyebrow, left eye, right eye]/0.001197459141384375
+         [right ear, left eyebrow, right eyebrow]/0.0011787488423002442
+         [hair, nose, right eyebrow, right eye]/0.0011506833936740478
+         [mouth, nose, right eyebrow]/0.0011413282441319825
+   --- Parent: hair: 0.1044221791885344---
+         [right eyebrow]/0.04702833674796292
+         [left eyebrow, right eyebrow]/0.012245890750563648
+         [right eyebrow, right eye]/0.008990298709924878
+         [right ear, right eyebrow]/0.004022714303088135
+         [left ear, right eyebrow]/0.0034333398819380127
+         [nose, right eyebrow]/0.0032088162929284425
+         [left eyebrow, right eyebrow, right eye]/0.003180750844302246
+         [right eyebrow, left eye]/0.0015061790762725341
+         [right ear, left eyebrow, right eyebrow]/0.0013471415340574218
+         [nose, left eyebrow, right eyebrow]/0.0011413282441319825
+         [right ear, right eyebrow, right eye]/0.0011226179450478516
+         [nose, right eyebrow, right eye]/0.00108519734687959
+         [mouth, right eyebrow]/0.0010197113000851318
+         [left ear, right ear, right eyebrow]/0.001001001001001001
+=== Child: left eyebrow===
+   --- Parent: start: 0.07021975246274333---
+         [head, left eyebrow]/0.014350799397528369
+         [head, left eyebrow, right eyebrow]/0.0046775747710327146
+         [head, left eyebrow, right eye]/0.0033117229378911623
+         [hair, head, left eyebrow]/0.0030965544984236574
+         [head, nose, left eyebrow]/0.0028813860589561526
+         [head, left eyebrow, left eye]/0.0025165352268156005
+         [left eyebrow, left eye]/0.0024791146286473388
+         [left eyebrow, left eye, right eye]/0.0020955534974226564
+         [head, left ear, left eyebrow]/0.0013377863845153565
+         [head, right ear, left eyebrow]/0.0013190760854312257
+         [head, left eyebrow, left eye, right eye]/0.0012442348890947023
+         [head, left eyebrow, right eyebrow, right eye]/0.0012348797395526367
+         [head, mouth, left eyebrow]/0.0010384215991692627
+   --- Parent: right eye: 0.11081174632576511---
+         [left eyebrow]/0.03332304266883706
+         [left eyebrow, left eye]/0.025642464894801344
+         [nose, left eyebrow]/0.007783484418998438
+         [left eyebrow, right eyebrow]/0.005790837566538501
+         [left eyebrow, right eyebrow, left eye]/0.005613089725239258
+         [nose, left eyebrow, left eye]/0.004415630583854883
+         [head, left eyebrow]/0.002525890376357666
+         [nose, left eyebrow, right eyebrow]/0.002226525591011572
+         [mouth, left eyebrow, left eye]/0.0016558614689455812
+         [right ear, left eyebrow, left eye]/0.0015997305716931886
+         [mouth, left eyebrow]/0.001262945188178833
+         [nose, left eyebrow, right eyebrow, left eye]/0.0012348797395526367
+         [hair, left eyebrow, left eye]/0.0012161694404685059
+         [head, left eyebrow, right eyebrow]/0.001197459141384375
+         [right ear, left eyebrow]/0.001131973094589917
+         [head, nose, left eyebrow]/0.0010197113000851318
+   --- Parent: left eye: 0.15495869701477158---
+         [left eyebrow]/0.055017634456886795
+         [left eyebrow, right eyebrow]/0.03307980878074336
+         [nose, left eyebrow, right eyebrow]/0.009448701037486084
+         [nose, left eyebrow]/0.009270953196186841
+         [hair, left eyebrow]/0.008120269802512793
+         [left eyebrow, right eye]/0.004696285070116846
+         [mouth, left eyebrow, right eyebrow]/0.003115264797507788
+         [mouth, left eyebrow]/0.002507180077273535
+         [right ear, left eyebrow]/0.002235880740553638
+         [hair, left eyebrow, right eyebrow]/0.001955226254291675
+         [left ear, left eyebrow]/0.001917805656123413
+         [nose, left eyebrow, right eye]/0.001805543861618628
+         [right ear, left eyebrow, right eyebrow]/0.0016371511698614503
+         [left ear, left eyebrow, right eyebrow]/0.0015810202726090578
+         [hair, nose, left eyebrow]/0.0013845621322256837
+         [left eyebrow, right eyebrow, right eye]/0.0013003657863470948
+         [mouth, nose, left eyebrow]/0.0012910106368050293
+         [hair, nose, left eyebrow, right eyebrow]/0.001262945188178833
+         [head, left eyebrow, right eye]/0.0011693936927581786
+   --- Parent: right eyebrow: 0.38343951428063583---
+         [left eyebrow]/0.24764951867755605
+         [left eyebrow, right eye]/0.03336981841654739
+         [nose, left eyebrow]/0.029796151291478393
+         [hair, left eyebrow]/0.008092204353886598
+         [right ear, left eyebrow]/0.006698287072118848
+         [nose, left eyebrow, right eye]/0.006623445875782325
+         [left eyebrow, left eye]/0.006501828931735474
+         [mouth, left eyebrow]/0.0055850242766130615
+         [left eyebrow, left eye, right eye]/0.005510183080276538
+         [left ear, left eyebrow]/0.003994648854461939
+         [mouth, nose, left eyebrow]/0.0031994611433863772
+         [head, left eyebrow]/0.0023387873855163573
+         [mouth, left eyebrow, right eye]/0.0021236189460488524
+         [left ear, right ear, left eyebrow]/0.0016839269175717773
+         [right ear, left eyebrow, right eye]/0.0015716651230669922
+         [hair, nose, left eyebrow]/0.0015435996744407958
+         [head, nose, left eyebrow]/0.00141262758085188
+         [left ear, left eyebrow, right eye]/0.0013658518331415527
+         [left ear, nose, left eyebrow]/0.001113262795505786
+   --- Parent: left eyebrow: 0.0---
+   --- Parent: nose: 0.03438952971663264---
+         [mouth, left eyebrow]/0.010936169814674488
+         [left eyebrow, right eyebrow]/0.0037701252654523685
+         [mouth, left eyebrow, right eyebrow]/0.0033772089846856204
+         [left eyebrow]/0.0018148990111606935
+         [hair, mouth, left eyebrow]/0.0016371511698614503
+         [mouth, left eyebrow, left eye]/0.001328431234973291
+         [left eyebrow, right eyebrow, left eye]/0.001262945188178833
+         [mouth, left eyebrow, right eye]/0.0011600385432161133
+   --- Parent: mouth: 0.055129896251391614---
+         [left eyebrow]/0.0206748804879646
+         [left eyebrow, right eyebrow]/0.010917459515590356
+         [left eyebrow, left eye]/0.003891742209499219
+         [left eyebrow, right eye]/0.0036952840691158446
+         [hair, left eyebrow, right eyebrow]/0.002413628581852881
+         [hair, left eyebrow]/0.0021236189460488524
+         [hair, left eyebrow, left eye]/0.001524889375356665
+         [right ear, left eyebrow]/0.0013564966835994874
+         [right ear, left eyebrow, right eyebrow]/0.0011506833936740478
+   --- Parent: right ear: 0.013246891751564639---
+         [left ear, left eyebrow]/0.0027691242644513675
+         [left ear, left eyebrow, right eyebrow]/0.0020955534974226564
+         [left ear, left eyebrow, right eye]/0.0011226179450478516
+   --- Parent: left ear: 0.02085262832926382---
+         [left eyebrow, right eyebrow]/0.005500827930734473
+         [left eyebrow, right eyebrow, right eye]/0.0025820212736100585
+         [left eyebrow, right eye]/0.002544600675441797
+         [hair, left eyebrow, right eyebrow]/0.0016277960203193848
+         [left eyebrow]/0.0010945524964216552
+         [hair, left eyebrow]/0.001001001001001001
+   --- Parent: head: 0.12676227629498638---
+         [left eyebrow, right eyebrow]/0.016932820671138427
+         [left eyebrow]/0.012479769489115283
+         [left eyebrow, right eye]/0.012189759853311255
+         [left eyebrow, right eyebrow, right eye]/0.008232531597017579
+         [nose, left eyebrow]/0.005005005005005005
+         [left eyebrow, left eye]/0.004537247527901734
+         [nose, left eyebrow, right eyebrow]/0.004415630583854883
+         [nose, left eyebrow, left eye]/0.004004004004004004
+         [left eyebrow, left eye, right eye]/0.0032088162929284425
+         [right ear, left eyebrow]/0.0032088162929284425
+         [hair, left eyebrow]/0.003180750844302246
+         [hair, left eyebrow, right eyebrow]/0.00282525516170376
+         [hair, left eyebrow, right eye]/0.0024042734323108154
+         [left eyebrow, right eyebrow, left eye]/0.0023668528341425537
+         [nose, left eyebrow, right eye]/0.0023200770864322266
+         [nose, left eyebrow, right eyebrow, right eye]/0.002132974095590918
+         [right ear, left eyebrow, right eye]/0.0020955534974226564
+         [mouth, left eyebrow, right eyebrow]/0.0019926468524599367
+         [hair, nose, left eyebrow]/0.0018616747588710205
+         [left eyebrow, right eyebrow, left eye, right eye]/0.0016277960203193848
+         [hair, nose, left eyebrow, left eye]/0.0015342445248987305
+         [hair, left eyebrow, right eyebrow, right eye]/0.0013003657863470948
+         [hair, right ear, left eyebrow]/0.0012161694404685059
+         [right ear, left eyebrow, right eyebrow]/0.0011787488423002442
+         [mouth, left eyebrow]/0.00108519734687959
+   --- Parent: hair: 0.030189067572245112---
+         [left eyebrow, right eyebrow]/0.012245890750563648
+         [left eyebrow, right eyebrow, right eye]/0.003180750844302246
+         [left eyebrow, right eye]/0.0030965544984236574
+         [left eyebrow]/0.0018242541607027588
+         [right ear, left eyebrow, right eyebrow]/0.0013471415340574218
+         [nose, left eyebrow, right eyebrow]/0.0011413282441319825
+=== Child: nose===
+   --- Parent: start: 0.10164319409078185---
+         [head, nose]/0.0284742939453725
+         [head, nose, right eye]/0.008922537086214783
+         [nose]/0.006813077285418786
+         [nose, right eye]/0.004334974024289508
+         [head, nose, left eye]/0.004191612678604343
+         [head, nose, right eyebrow]/0.0033792317197217426
+         [hair, head, nose]/0.0030378951823761117
+         [head, mouth, nose]/0.0028877071059440346
+         [head, right ear, nose]/0.002334741915444113
+         [head, nose, left eyebrow]/0.002102633070049084
+         [nose, left eye]/0.0016111084562713761
+         [head, left ear, nose]/0.0016042817255244636
+         [nose, left eye, right eye]/0.0015701480717899006
+         [head, nose, right eyebrow, right eye]/0.0014131332646109105
+         [head, nose, left eye, right eye]/0.0013107323034072212
+         [nose, right eyebrow, right eye]/0.001085450188759105
+         [nose, right eyebrow]/0.0010240096120368916
+   --- Parent: right eye: 0.10217567908904109---
+         [nose, left eye]/0.03985445410047583
+         [nose]/0.020958063393021715
+         [nose, left eyebrow]/0.005679839981431292
+         [mouth, nose, left eye]/0.0035021128731661695
+         [nose, left eyebrow, left eye]/0.0032222169125427523
+         [mouth, nose]/0.003140296143579801
+         [nose, right eyebrow, left eye]/0.003126642682085976
+         [right ear, nose, left eye]/0.0025122369148638407
+         [hair, nose, left eye]/0.002088979608555259
+         [left ear, nose, left eye]/0.0017066826867281528
+         [nose, left eyebrow, right eyebrow]/0.0016247619177652015
+         [nose, right eyebrow]/0.0010240096120368916
+   --- Parent: left eye: 0.4067502713625473---
+         [nose]/0.2997003065202105
+         [mouth, nose]/0.018800816476997332
+         [nose, right eyebrow]/0.013769515916522736
+         [right ear, nose]/0.012902521111664835
+         [nose, left eyebrow, right eyebrow]/0.006894998054381737
+         [nose, left eyebrow]/0.0067652901701903976
+         [left ear, nose]/0.00648539420956698
+         [hair, nose]/0.005891468634585583
+         [nose, right eye]/0.005775414211888069
+         [left ear, right ear, nose]/0.0033997119119624805
+         [hair, nose, right eyebrow]/0.0023620488384317635
+         [right ear, mouth, nose]/0.0018363905709194923
+         [nose, left eyebrow, right eye]/0.001317559034154134
+         [mouth, nose, right eyebrow]/0.0012697719189257457
+         [left ear, mouth, nose]/0.001105930380999843
+         [hair, right ear, nose]/0.001051316535024542
+         [hair, nose, left eyebrow]/0.0010103561505430665
+   --- Parent: right eyebrow: 0.11740611538540308---
+         [nose]/0.04601899196493791
+         [nose, left eyebrow]/0.021743137428916665
+         [mouth, nose]/0.006130404210727525
+         [hair, nose]/0.005611572673962166
+         [nose, left eyebrow, right eye]/0.004833325368814129
+         [left ear, nose]/0.004382761139517896
+         [right ear, nose]/0.004191612678604343
+         [head, nose]/0.0029764546056538985
+         [mouth, nose, left eyebrow]/0.002334741915444113
+         [nose, left eye, right eye]/0.0018500440324133176
+         [nose, right eye]/0.0017271628789688907
+         [left ear, right ear, nose]/0.001617935187018289
+         [hair, left ear, nose]/0.0011946778807097069
+         [hair, nose, left eyebrow]/0.0011264105732405809
+         [nose, left eye]/0.0011195838424936683
+         [head, nose, left eyebrow]/0.0010308363427838042
+   --- Parent: left eyebrow: 0.11409515097315048---
+         [nose]/0.05230641098284443
+         [nose, right eye]/0.012718199381498194
+         [nose, right eyebrow]/0.011537174962282312
+         [mouth, nose]/0.006915478246622475
+         [nose, left eye]/0.004232573063085819
+         [left ear, nose]/0.002860400182956384
+         [hair, nose]/0.002655598260549006
+         [head, nose]/0.0024166626844070644
+         [mouth, nose, right eye]/0.0018363905709194923
+         [nose, left eye, right eye]/0.0018159103786787546
+         [right ear, nose]/0.0013448659571417844
+         [right ear, nose, right eyebrow]/0.0011537174962282313
+         [left ear, right ear, nose]/0.0010240096120368916
+   --- Parent: nose: 0.0---
+   --- Parent: mouth: 0.0017954301864380167---
+   --- Parent: right ear: 0.0045534294081907125---
+         [left ear, nose]/0.0013380392263948717
+   --- Parent: left ear: 0.004403241331758635---
+   --- Parent: head: 0.13944280223643724---
+         [nose, right eye]/0.030337991439279642
+         [nose]/0.016404633984831003
+         [nose, right eyebrow]/0.00862898766409754
+         [nose, left eye]/0.008239864011523521
+         [hair, nose]/0.006321552671641078
+         [nose, left eye, right eye]/0.005058607483462245
+         [nose, right eyebrow, right eye]/0.0044373749854931975
+         [mouth, nose, right eye]/0.003775182103042674
+         [nose, left eyebrow]/0.003652300949598247
+         [nose, left eyebrow, right eyebrow]/0.0032222169125427523
+         [nose, left eyebrow, left eye]/0.0029218407596785976
+         [right ear, nose, right eye]/0.002580504222332967
+         [mouth, nose]/0.002560024030092229
+         [hair, nose, right eye]/0.0023825290306725014
+         [hair, nose, right eyebrow]/0.0021504201852774723
+         [hair, nose, left eye]/0.002102633070049084
+         [right ear, nose]/0.0019797519166046573
+         [nose, left eyebrow, right eye]/0.0016930292252343275
+         [nose, left eyebrow, right eyebrow, right eye]/0.0015564946102960752
+         [left ear, nose, right eye]/0.001440440187598561
+         [hair, nose, left eyebrow]/0.0013585194186356096
+         [nose, right eyebrow, left eye]/0.0011537174962282313
+         [hair, nose, left eyebrow, left eye]/0.0011195838424936683
+         [hair, mouth, nose]/0.0011195838424936683
+   --- Parent: hair: 0.0077346859362519855---
+         [nose, right eyebrow]/0.0023415686461910256
+=== Child: mouth===
+   --- Parent: start: 0.05015786814852218---
+         [head, mouth]/0.011101288204091942
+         [head, mouth, right eye]/0.00718615812073756
+         [head, mouth, nose]/0.002671129072998232
+         [mouth, right eye]/0.0025322051022985603
+         [left ear, mouth]/0.0020522859307906035
+         [head, left ear, mouth]/0.0020396564789088153
+         [head, mouth, right eyebrow]/0.0014839605961101288
+         [head, right ear, mouth]/0.0012250568325334681
+         [hair, head, mouth]/0.0012187421065925738
+         [head, mouth, left eye]/0.0012124273806516797
+         [head, mouth, left eye, right eye]/0.001111391765597373
+   --- Parent: right eye: 0.04758777469057832---
+         [mouth, left eye]/0.014290224804243495
+         [mouth]/0.009699419045213438
+         [hair, mouth]/0.004641323566557211
+         [mouth, nose, left eye]/0.003239454407678707
+         [mouth, nose]/0.002904773932811316
+         [right ear, mouth, left eye]/0.0015092194998737054
+         [head, mouth, left eye]/0.0012692599141197272
+         [mouth, right eyebrow, left eye]/0.001262945188178833
+         [mouth, left eyebrow, left eye]/0.0011177064915382673
+   --- Parent: left eye: 0.08493937863096741---
+         [mouth]/0.030512755746400607
+         [mouth, nose]/0.017390755241222532
+         [head, mouth]/0.005771659509977267
+         [mouth, right eyebrow]/0.005197019449355898
+         [right ear, mouth]/0.004388734528921445
+         [mouth, right eye]/0.0030184389997474107
+         [mouth, left eyebrow, right eyebrow]/0.002102803738317757
+         [right ear, mouth, nose]/0.0016986612781005304
+         [mouth, left eyebrow]/0.0016923465521596363
+         [mouth, nose, right eyebrow]/0.0011745390250063148
+         [left ear, mouth, nose]/0.0010229856024248547
+         [left ear, right ear, mouth]/0.0010166708764839606
+   --- Parent: right eyebrow: 0.029515029047739335---
+         [mouth]/0.008827986865370042
+         [mouth, nose]/0.00567062389492296
+         [mouth, left eyebrow]/0.003769891386713817
+         [mouth, nose, left eyebrow]/0.0021596362717858043
+         [mouth, left eyebrow, right eye]/0.0014334427885829754
+   --- Parent: left eyebrow: 0.02378757261934833---
+         [mouth, nose]/0.006396817378125789
+         [mouth, right eyebrow]/0.004129830765344784
+         [mouth, right eye]/0.0017428643596867897
+         [mouth, nose, right eye]/0.0016986612781005304
+         [mouth, left eye]/0.0015407931295781763
+         [mouth]/0.0012250568325334681
+         [mouth, left eye, right eye]/0.001105077039656479
+   --- Parent: nose: 0.6836574892649661---
+         [mouth]/0.6005051780752715
+         [right ear, mouth]/0.015483708007072492
+         [left ear, mouth]/0.0101730234907805
+         [hair, mouth]/0.009775195756504167
+         [mouth, left eyebrow]/0.007381914624905279
+         [mouth, right eye]/0.006763071482697651
+         [left ear, right ear, mouth]/0.005910583480676939
+         [mouth, right eyebrow]/0.0038961859055317
+         [head, mouth]/0.003814094468300076
+         [mouth, left eye]/0.0023490780500126296
+         [mouth, left eyebrow, right eyebrow]/0.0022796160646627937
+         [hair, left ear, mouth]/0.0014081838848193989
+         [hair, mouth, left eyebrow]/0.001105077039656479
+   --- Parent: mouth: 0.0---
+   --- Parent: right ear: 0.002961606466279362---
+   --- Parent: left ear: 0.003940388987117961---
+   --- Parent: head: 0.06562263197777231---
+         [mouth, right eye]/0.013469310431927254
+         [mouth]/0.006194746148017176
+         [mouth, nose, right eye]/0.0034920434453144735
+         [mouth, right eyebrow]/0.0031889366001515533
+         [right ear, mouth]/0.0024880020207123012
+         [mouth, nose]/0.002368022227835312
+         [mouth, left eye, right eye]/0.002020712301086133
+         [hair, mouth, right eye]/0.001831270522859308
+         [right ear, mouth, right eye]/0.001831270522859308
+         [hair, mouth]/0.0017996968931548371
+         [mouth, right eyebrow, right eye]/0.0016986612781005304
+         [left ear, mouth, right eye]/0.0015471078555190706
+         [hair, right ear, mouth]/0.0014776458701692347
+         [mouth, left eyebrow, right eyebrow]/0.0013450366254104571
+         [left ear, mouth]/0.0010545592321293256
+         [hair, mouth, nose]/0.001035615054306643
+   --- Parent: hair: 0.00783026016670877---
+         [mouth, right eye]/0.0025827229098257134
+=== Child: right ear===
+   --- Parent: start: 0.12287855278509477---
+         [head, right ear]/0.03277643464559352
+         [head, left ear, right ear]/0.010632795679524652
+         [hair, head, right ear]/0.007842288216119991
+         [head, right ear, right eye]/0.00649514668206257
+         [head, right ear, nose]/0.004113592898639627
+         [right ear, left eye]/0.0037647794657140452
+         [head, right ear, right eyebrow]/0.0028626757598720215
+         [right ear, left eye, right eye]/0.002405609882245396
+         [head, right ear, mouth]/0.0023334415857780345
+         [hair, head, left ear, right ear]/0.0023093854869555806
+         [head, right ear, left eye]/0.0021289647457871756
+         [head, left ear, right ear, right eye]/0.0020688244987310408
+         [head, right ear, left eyebrow]/0.0016959549669830045
+         [hair, right ear]/0.0015877025222819615
+         [left ear, right ear]/0.0015155342258145997
+         [hair, head, right ear, right eye]/0.0013952537317023297
+         [head, left ear, right ear, mouth]/0.001311057385823741
+         [right ear, nose]/0.001238889089356379
+         [hair, head, right ear, right eyebrow]/0.001226861039945152
+         [head, left ear, right ear, nose]/0.0011426646940665632
+         [head, left ear, right ear, right eyebrow]/0.0010103561505430665
+   --- Parent: right eye: 0.06502363511709303---
+         [right ear, left eye]/0.018992290020327405
+         [right ear, right eyebrow]/0.006603399126763613
+         [left ear, right ear, left eye]/0.005051780752715332
+         [right ear, nose, left eye]/0.0044263221833315295
+         [right ear, mouth, left eye]/0.0028747038092832486
+         [right ear]/0.0024657501293015313
+         [right ear, left eyebrow, left eye]/0.0020567964493198136
+         [right ear, right eyebrow, left eye]/0.001936515955207544
+         [left ear, right ear, right eyebrow]/0.0016959549669830045
+         [hair, right ear, left eye]/0.0015035061764033728
+         [left ear, right ear, nose, left eye]/0.0014794500775809187
+         [right ear, left eyebrow]/0.0014553939787584648
+         [right ear, nose]/0.001311057385823741
+         [hair, right ear, right eyebrow]/0.0012148329905339252
+   --- Parent: left eye: 0.09106436209239942---
+         [right ear, nose]/0.022733013387218996
+         [right ear]/0.014602051985229555
+         [right ear, mouth]/0.008359494340802753
+         [left ear, right ear, nose]/0.005989968606791037
+         [left ear, right ear]/0.005172061246827602
+         [right ear, mouth, nose]/0.003235545291620058
+         [right ear, right eyebrow]/0.002982956253984291
+         [right ear, left eyebrow]/0.0028747038092832486
+         [right ear, left eyebrow, right eyebrow]/0.0021049086469647218
+         [left ear, right ear, mouth]/0.001936515955207544
+         [hair, right ear, nose]/0.0018523196093289552
+         [right ear, nose, right eyebrow]/0.0016718988681605504
+         [right ear, right eye]/0.0013952537317023297
+         [left ear, right ear, right eyebrow]/0.0010584683481879745
+         [right ear, mouth, right eyebrow]/0.0010344122493655204
+   --- Parent: right eyebrow: 0.06140319224431377---
+         [right ear]/0.014301350749948882
+         [right ear, left eyebrow]/0.008612083378438518
+         [right ear, nose]/0.0073852223384933665
+         [left ear, right ear]/0.004751079517434658
+         [left ear, right ear, nose]/0.002850647710460795
+         [hair, right ear]/0.002718339166937298
+         [left ear, right ear, left eyebrow]/0.0021650488940208566
+         [right ear, left eyebrow, right eye]/0.002020712301086133
+         [right ear, right eye]/0.0014914781269921456
+         [head, right ear]/0.0013351134846461949
+         [hair, left ear, right ear]/0.00127497323759006
+         [right ear, mouth, nose]/0.0011787488423002442
+         [right ear, nose, left eyebrow]/0.0010584683481879745
+         [head, right ear, left eyebrow]/0.0010344122493655204
+   --- Parent: left eyebrow: 0.05265880032235176---
+         [right ear]/0.013218826302938453
+         [left ear, right ear]/0.004907444159780608
+         [right ear, right eye]/0.004678911220967296
+         [right ear, right eyebrow]/0.004125620948050855
+         [head, right ear]/0.002453722079890304
+         [right ear, nose]/0.0023695257340117155
+         [right ear, left eye]/0.002116936696375949
+         [right ear, nose, right eyebrow]/0.0020327403504973598
+         [left ear, right ear, nose]/0.0018042074116840473
+         [right ear, nose, right eye]/0.0016959549669830045
+         [head, left ear, right ear]/0.0014674220281696918
+         [left ear, right ear, right eye]/0.001226861039945152
+         [right ear, right eyebrow, right eye]/0.0010464402987767473
+   --- Parent: nose: 0.06770589013579666---
+         [right ear, mouth]/0.02949277715632856
+         [left ear, right ear, mouth]/0.011258254248908455
+         [hair, right ear]/0.009345794392523364
+         [right ear]/0.0025980586728250278
+         [hair, left ear, right ear]/0.0021409927951984028
+         [right ear, right eye]/0.0015155342258145997
+         [hair, left ear, right ear, mouth]/0.0014794500775809187
+         [hair, right ear, mouth]/0.0013351134846461949
+         [right ear, mouth, right eye]/0.0010945524964216552
+   --- Parent: mouth: 0.13475023755397575---
+         [right ear]/0.06727288035699251
+         [left ear, right ear]/0.03895885204296419
+         [hair, left ear, right ear]/0.005508846630341958
+         [head, right ear]/0.003175405044563923
+         [right ear, right eye]/0.003115264797507788
+         [right ear, right eyebrow]/0.0029589001551618374
+         [hair, right ear]/0.0026702269692923898
+         [right ear, left eyebrow]/0.0017440671646279122
+         [right ear, left eyebrow, right eyebrow]/0.0014794500775809187
+   --- Parent: right ear: 0.0---
+   --- Parent: left ear: 0.10664068607993837---
+         [right ear]/0.08529089837501053
+         [hair, right ear]/0.011847628670058577
+         [head, right ear]/0.004185761195106989
+   --- Parent: head: 0.24688774221484458---
+         [right ear]/0.05383754916465197
+         [right ear, right eye]/0.026834578236447394
+         [hair, right ear]/0.02498225862711844
+         [left ear, right ear]/0.014349462947593788
+         [right ear, right eyebrow]/0.008780476070195697
+         [left ear, right ear, right eye]/0.008575999230204837
+         [hair, right ear, right eye]/0.00801068090787717
+         [hair, left ear, right ear]/0.006868016213810607
+         [hair, right ear, right eyebrow]/0.005653183223276681
+         [right ear, mouth]/0.004739051468023431
+         [right ear, nose, right eye]/0.004546602677443799
+         [right ear, left eye, right eye]/0.0042098172939294435
+         [right ear, left eyebrow]/0.004125620948050855
+         [left ear, right ear, right eyebrow]/0.0036926111692466832
+         [right ear, mouth, right eye]/0.0034881343292558244
+         [right ear, nose]/0.0034881343292558244
+         [right ear, right eyebrow, right eye]/0.0034279940821996895
+         [hair, right ear, mouth]/0.002814563562227114
+         [right ear, left eye]/0.002754423315170979
+         [right ear, left eyebrow, right eye]/0.0026942830681148436
+         [hair, left ear, right ear, right eye]/0.00191245985638509
+         [hair, right ear, mouth, right eye]/0.0017801513128615932
+         [hair, right ear, nose]/0.0017440671646279122
+         [hair, left ear, right ear, right eyebrow]/0.0016478427693380965
+         [hair, right ear, left eyebrow]/0.0015636464234595076
+         [left ear, right ear, nose]/0.0015516183740482807
+         [right ear, left eyebrow, right eyebrow]/0.0015155342258145997
+         [left ear, right ear, nose, right eye]/0.001311057385823741
+         [hair, right ear, left eye]/0.001287001287001287
+         [left ear, right ear, left eyebrow]/0.0012148329905339252
+         [left ear, right ear, right eyebrow, right eye]/0.001202804941122698
+         [left ear, right ear, left eye, right eye]/0.0011667207928890172
+         [hair, right ear, right eyebrow, right eye]/0.0011546927434777903
+         [left ear, right ear, mouth]/0.0010344122493655204
+   --- Parent: hair: 0.05098690145419122---
+         [left ear, right ear]/0.015756744728707344
+         [right ear]/0.01323085435234968
+         [right ear, right eyebrow]/0.005172061246827602
+         [right ear, right eye]/0.002417637931656623
+         [right ear, mouth, right eye]/0.0017921793622728201
+         [right ear, left eyebrow, right eyebrow]/0.0017320391152166853
+         [right ear, right eyebrow, right eye]/0.0014433659293472377
+         [left ear, right ear, right eyebrow]/0.001287001287001287
+=== Child: left ear===
+   --- Parent: start: 0.13602521079156496---
+         [head, left ear]/0.03079180649274107
+         [left ear]/0.011895740867703484
+         [head, left ear, right ear]/0.010632795679524652
+         [hair, head, left ear]/0.006627455225586066
+         [head, left ear, right eye]/0.005436678333874596
+         [hair, left ear]/0.005160033197416375
+         [left ear, mouth]/0.003909116058648769
+         [head, left ear, mouth]/0.003885059959826315
+         [head, left ear, nose]/0.0028265916116383405
+         [head, left ear, right eyebrow]/0.002682255018703617
+         [hair, left ear, right eyebrow]/0.002622114771647482
+         [hair, head, left ear, right ear]/0.0023093854869555806
+         [head, left ear, right ear, right eye]/0.0020688244987310408
+         [head, left ear, left eyebrow]/0.0017200110658054583
+         [head, left ear, left eye]/0.0016718988681605504
+         [left ear, left eye]/0.0015997305716931886
+         [left ear, right ear]/0.0015155342258145997
+         [head, left ear, right ear, mouth]/0.001311057385823741
+         [left ear, right eyebrow]/0.0011787488423002442
+         [hair, head, left ear, right eye]/0.0011667207928890172
+         [head, left ear, right ear, nose]/0.0011426646940665632
+         [left ear, left eyebrow]/0.0010344122493655204
+         [head, left ear, right ear, right eyebrow]/0.0010103561505430665
+   --- Parent: right eye: 0.04253118271809866---
+         [left ear, left eye]/0.011643151830067719
+         [left ear, right ear, left eye]/0.005051780752715332
+         [left ear, nose, left eye]/0.0030070123528067455
+         [left ear, right eyebrow]/0.0017200110658054583
+         [left ear, right ear, right eyebrow]/0.0016959549669830045
+         [left ear, right eyebrow, left eye]/0.0015155342258145997
+         [left ear, right ear, nose, left eye]/0.0014794500775809187
+         [left ear]/0.001250917138767606
+         [left ear, left eyebrow, left eye]/0.001190776891711471
+         [left ear, mouth, left eye]/0.0010704963975992014
+   --- Parent: left eye: 0.05453517603050316---
+         [left ear, nose]/0.011426646940665633
+         [left ear, right ear, nose]/0.005989968606791037
+         [left ear, right ear]/0.005172061246827602
+         [left ear, right eyebrow]/0.003452050181022144
+         [left ear, left eyebrow]/0.0024657501293015313
+         [left ear, left eyebrow, right eyebrow]/0.0020327403504973598
+         [left ear, mouth, nose]/0.001948544004618771
+         [left ear, right ear, mouth]/0.001936515955207544
+         [left ear, mouth]/0.0015275622752258266
+         [left ear]/0.0013351134846461949
+         [left ear, nose, right eyebrow]/0.0013351134846461949
+         [hair, left ear, nose]/0.001190776891711471
+         [left ear, right ear, right eyebrow]/0.0010584683481879745
+   --- Parent: right eyebrow: 0.04520140968739104---
+         [left ear, nose]/0.007722007722007722
+         [left ear, left eyebrow]/0.005135977098593921
+         [left ear, right ear]/0.004751079517434658
+         [left ear, right ear, nose]/0.002850647710460795
+         [head, left ear]/0.0024657501293015313
+         [left ear]/0.0022733013387218996
+         [left ear, right ear, left eyebrow]/0.0021650488940208566
+         [hair, left ear, nose]/0.0021049086469647218
+         [left ear, left eyebrow, right eye]/0.0017560952140391393
+         [hair, head, left ear]/0.0017320391152166853
+         [left ear, nose, left eyebrow]/0.0014313378799360107
+         [hair, left ear, right ear]/0.00127497323759006
+   --- Parent: left eyebrow: 0.03566316650428802---
+         [left ear, nose]/0.005039752703304105
+         [left ear, right ear]/0.004907444159780608
+         [left ear, right eyebrow]/0.0039933124045273575
+         [left ear, right eye]/0.003788835564536499
+         [left ear, right ear, nose]/0.0018042074116840473
+         [left ear, nose, right eyebrow]/0.0017079830163942314
+         [head, left ear, right ear]/0.0014674220281696918
+         [left ear]/0.001407281781113557
+         [left ear, right ear, right eye]/0.001226861039945152
+         [left ear, nose, right eye]/0.0010103561505430665
+   --- Parent: nose: 0.046981561000252615---
+         [left ear, mouth]/0.019377187601486667
+         [left ear, right ear, mouth]/0.011258254248908455
+         [hair, left ear, mouth]/0.002682255018703617
+         [hair, left ear, right ear]/0.0021409927951984028
+         [hair, left ear]/0.0020567964493198136
+         [left ear]/0.0017320391152166853
+         [hair, left ear, right ear, mouth]/0.0014794500775809187
+         [left ear, right eye]/0.0010223841999542935
+   --- Parent: mouth: 0.09746328437917223---
+         [left ear, right ear]/0.03895885204296419
+         [left ear]/0.03685394339599947
+         [hair, left ear]/0.006086193002080852
+         [hair, left ear, right ear]/0.005508846630341958
+         [left ear, right eye]/0.001262945188178833
+         [left ear, left eyebrow]/0.0010464402987767473
+   --- Parent: right ear: 0.34786321702209566---
+         [left ear]/0.27731870722524926
+         [left ear, right eyebrow]/0.01287001287001287
+         [hair, left ear]/0.012364834794741337
+         [head, left ear]/0.010729020074814468
+         [left ear, right eye]/0.006519202780885024
+         [left ear, left eyebrow]/0.0035603026257231864
+         [left ear, left eyebrow, right eyebrow]/0.0026942830681148436
+         [hair, left ear, right eyebrow]/0.002453722079890304
+         [left ear, nose]/0.0023574976846004883
+         [left ear, right eyebrow, right eye]/0.0022011330422545376
+         [left ear, left eyebrow, right eye]/0.0014433659293472377
+   --- Parent: left ear: 0.0---
+   --- Parent: head: 0.1351591912339571---
+         [left ear]/0.019268935156785624
+         [hair, left ear]/0.014409603194649923
+         [left ear, right ear]/0.014349462947593788
+         [left ear, right eye]/0.013375190945284403
+         [left ear, right ear, right eye]/0.008575999230204837
+         [hair, left ear, right ear]/0.006868016213810607
+         [left ear, right ear, right eyebrow]/0.0036926111692466832
+         [hair, left ear, right eye]/0.0036084148233680945
+         [hair, left ear, right eyebrow]/0.003379881884554782
+         [left ear, mouth, right eye]/0.00294687210575061
+         [left ear, nose, right eye]/0.002537918425768893
+         [left ear, mouth]/0.002008684251674906
+         [left ear, left eye, right eye]/0.001972600103441225
+         [hair, left ear, right ear, right eye]/0.00191245985638509
+         [hair, left ear, right ear, right eyebrow]/0.0016478427693380965
+         [left ear, right ear, nose]/0.0015516183740482807
+         [left ear, right ear, nose, right eye]/0.001311057385823741
+         [left ear, right eyebrow, right eye]/0.001238889089356379
+         [left ear, right ear, left eyebrow]/0.0012148329905339252
+         [left ear, right ear, right eyebrow, right eye]/0.001202804941122698
+         [left ear, right ear, left eye, right eye]/0.0011667207928890172
+         [left ear, right ear, mouth]/0.0010344122493655204
+         [left ear, left eyebrow, right eye]/0.0010103561505430665
+   --- Parent: hair: 0.05857660063267544---
+         [left ear]/0.026485764803521814
+         [left ear, right ear]/0.015756744728707344
+         [left ear, right eyebrow]/0.004414294133920302
+         [left ear, right eye]/0.0015877025222819615
+         [left ear, right ear, right eyebrow]/0.001287001287001287
+         [left ear, right eyebrow, right eye]/0.00127497323759006
+         [left ear, left eyebrow, right eyebrow]/0.0010945524964216552
+=== Child: head===
+   --- Parent: start: 0.8791424602172254---
+         [head]/0.5546223793887345
+         [head, right eye]/0.04986739075524122
+         [head, nose]/0.026338721899469564
+         [hair, head]/0.022644607224046476
+         [head, right ear]/0.0172076281889366
+         [head, left ear]/0.016165698408689064
+         [head, right eyebrow]/0.015565799444304118
+         [head, left eye]/0.015167971710027785
+         [head, mouth]/0.011101288204091942
+         [head, left eyebrow]/0.009686789593331649
+         [head, nose, right eye]/0.008253346804748674
+         [head, mouth, right eye]/0.00718615812073756
+         [head, left eye, right eye]/0.007129325587269512
+         [head, left ear, right ear]/0.005582217731750442
+         [head, right eyebrow, right eye]/0.004464511240212175
+         [hair, head, right ear]/0.004117201313462996
+         [head, nose, left eye]/0.0038772417277090176
+         [hair, head, right eyebrow]/0.003757261934832028
+         [hair, head, right eye]/0.0035425612528416266
+         [hair, head, left ear]/0.003479413993432685
+         [head, right ear, right eye]/0.003409952008082849
+         [head, left eyebrow, right eyebrow]/0.0031573629704470824
+         [head, nose, right eyebrow]/0.0031257893407426116
+         [head, left ear, right eye]/0.0028542561252841627
+         [hair, head, nose]/0.0028100530436979037
+         [head, mouth, nose]/0.002671129072998232
+         [head, left eyebrow, right eye]/0.0022354129830765347
+         [head, right ear, nose]/0.0021596362717858043
+         [hair, head, left eyebrow]/0.002090174286435969
+         [head, left ear, mouth]/0.0020396564789088153
+         [head, nose, left eyebrow]/0.001944935589795403
+         [head, right eyebrow, left eye]/0.0017491790856276838
+         [head, left eyebrow, left eye]/0.0016986612781005304
+         [hair, head, left eye]/0.001603940388987118
+         [head, right ear, right eyebrow]/0.0015029047739328113
+         [head, left ear, nose]/0.0014839605961101288
+         [head, mouth, right eyebrow]/0.0014839605961101288
+         [head, left ear, right eyebrow]/0.0014081838848193989
+         [head, nose, right eyebrow, right eye]/0.0013071482697650922
+         [head, right ear, mouth]/0.0012250568325334681
+         [hair, head, mouth]/0.0012187421065925738
+         [hair, head, left ear, right ear]/0.0012124273806516797
+         [head, mouth, left eye]/0.0012124273806516797
+         [head, nose, left eye, right eye]/0.0012124273806516797
+         [head, right ear, left eye]/0.0011177064915382673
+         [head, mouth, left eye, right eye]/0.001111391765597373
+         [head, left ear, right ear, right eye]/0.0010861328618337965
+   --- Parent: right eye: 0.011417024501136663---
+         [head, left eye]/0.0020459712048497094
+         [head, left eyebrow]/0.0017049760040414245
+         [head, mouth, left eye]/0.0012692599141197272
+   --- Parent: left eye: 0.015029047739328123---
+         [head, mouth]/0.005771659509977267
+         [head, right eye]/0.0015407931295781763
+         [head, right eyebrow]/0.0012061126547107857
+   --- Parent: right eyebrow: 0.022549886334933072---
+         [head]/0.007047234150037889
+         [hair, head]/0.0029174033846931045
+         [head, nose]/0.002753220510229856
+         [head, left eyebrow]/0.0015786814852235412
+         [head, left ear]/0.0012945188178833038
+   --- Parent: left eyebrow: 0.012035867643344283---
+         [head, right eyebrow]/0.0034288961859055317
+         [head, nose]/0.0022354129830765347
+         [head, right ear]/0.0012882040919424097
+   --- Parent: nose: 0.0075839858550138944---
+         [head, mouth]/0.003814094468300076
+   --- Parent: mouth: 0.017182369285173027---
+         [head]/0.012730487496842637
+         [head, right ear]/0.0016670876483960595
+   --- Parent: right ear: 0.012256883051275574---
+         [head]/0.006624147511997979
+         [head, left ear]/0.0056327355392775955
+   --- Parent: left ear: 0.02061126547107859---
+         [head]/0.011360191967668604
+         [head, right ear]/0.0021975246274311697
+   --- Parent: head: 0.0---
+   --- Parent: hair: 0.002191209901490272---
+=== Child: hair===
+   --- Parent: start: 0.16855266481434697---
+         [hair, head]/0.04528921444809295
+         [hair]/0.012414751199797928
+         [hair, head, right ear]/0.008234402626925992
+         [hair, head, right eyebrow]/0.007514523869664056
+         [hair, head, right eye]/0.007085122505683253
+         [hair, head, left ear]/0.00695882798686537
+         [hair, right eyebrow]/0.0069461985349835815
+         [hair, head, nose]/0.005620106087395807
+         [hair, left ear]/0.005418034857287194
+         [hair, head, left eyebrow]/0.004180348572871938
+         [hair, head, left eye]/0.003207880777974236
+         [hair, left ear, right eyebrow]/0.002753220510229856
+         [hair, head, mouth]/0.0024374842131851477
+         [hair, head, left ear, right ear]/0.0024248547613033595
+         [hair, right eye]/0.0017302349078050013
+         [hair, right ear]/0.0016670876483960595
+         [hair, head, right eyebrow, right eye]/0.0016291992927506946
+         [hair, right eyebrow, right eye]/0.0014650164182874463
+         [hair, head, right ear, right eye]/0.0014650164182874463
+         [hair, left eye]/0.0014018691588785046
+         [hair, head, right ear, right eyebrow]/0.0012882040919424097
+         [hair, head, left ear, right eye]/0.0012250568325334681
+         [hair, head, left eyebrow, right eyebrow]/0.001149280121242738
+         [hair, head, left ear, right eyebrow]/0.001035615054306643
+         [hair, head, nose, left eyebrow]/0.001035615054306643
+         [hair, head, nose, right eyebrow]/0.0010103561505430665
+   --- Parent: right eye: 0.04709522606718873---
+         [hair, left eye]/0.01073503409952008
+         [hair, mouth]/0.009282647133114422
+         [hair, nose, left eye]/0.003864612275827229
+         [hair, right eyebrow, left eye]/0.0029679211922202576
+         [hair, right eyebrow]/0.0019954533973225563
+         [hair, left eyebrow, left eye]/0.001641828744632483
+         [hair, right ear, left eye]/0.0015786814852235412
+         [hair]/0.001528163677696388
+         [hair, right ear, right eyebrow]/0.0012755746400606213
+   --- Parent: left eye: 0.05625157868148529---
+         [hair, left eyebrow]/0.010962364233392271
+         [hair, nose]/0.01089921697398333
+         [hair, right eyebrow]/0.0048875978782520835
+         [hair, nose, right eyebrow]/0.004369790351098762
+         [hair, left eyebrow, right eyebrow]/0.002639555443293761
+         [hair, right eye]/0.002184895175549381
+         [hair, right ear, nose]/0.001944935589795403
+         [hair, nose, left eyebrow]/0.001869158878504673
+         [hair, nose, left eyebrow, right eyebrow]/0.0017049760040414245
+         [hair, mouth, right eye]/0.001603940388987118
+         [hair]/0.0014776458701692347
+         [hair, left ear, nose]/0.0012503157362970447
+         [hair, mouth, nose]/0.0011745390250063148
+   --- Parent: right eyebrow: 0.06539530184389995---
+         [hair]/0.01881788330386461
+         [hair, left eyebrow]/0.010924475877746906
+         [hair, nose]/0.010381409446830008
+         [hair, head]/0.005834806769386209
+         [hair, right ear]/0.0028542561252841627
+         [hair, left ear, nose]/0.002210154079312958
+         [hair, nose, left eyebrow]/0.0020838595604950744
+         [hair, head, left ear]/0.0018186410709775196
+         [hair, mouth, nose]/0.0016670876483960595
+         [hair, left ear, right ear]/0.001338721899469563
+   --- Parent: left eyebrow: 0.06343773680222274---
+         [hair]/0.032407173528668856
+         [hair, right eyebrow]/0.011467542308663804
+         [hair, nose]/0.004912856782015661
+         [hair, right eye]/0.0033468047486739077
+         [hair, nose, right eyebrow]/0.001641828744632483
+         [hair, left eye]/0.0011745390250063148
+         [hair, left eye, right eye]/0.0010861328618337965
+   --- Parent: nose: 0.07010608739580693---
+         [hair, mouth]/0.019550391513008334
+         [hair]/0.017971710027784794
+         [hair, right ear]/0.009813084112149532
+         [hair, left ear, mouth]/0.0028163677696387977
+         [hair, left ear, right ear]/0.002248042434958323
+         [hair, mouth, left eyebrow]/0.002210154079312958
+         [hair, left ear]/0.0021596362717858043
+         [hair, mouth, right eyebrow]/0.0017933821672139428
+         [hair, left ear, right ear, mouth]/0.0015534225814599646
+         [hair, right eyebrow]/0.0014776458701692347
+         [hair, right ear, mouth]/0.0014018691588785046
+         [hair, mouth, left eyebrow, right eyebrow]/0.0010229856024248547
+   --- Parent: mouth: 0.07707754483455409---
+         [hair]/0.043660015155342256
+         [hair, left ear]/0.006390502652184895
+         [hair, left ear, right ear]/0.005784288961859055
+         [hair, left eyebrow, right eyebrow]/0.003258398585501389
+         [hair, right eyebrow]/0.002942662288456681
+         [hair, left eyebrow]/0.002866885577165951
+         [hair, right ear]/0.002803738317757009
+         [hair, left eyebrow, left eye]/0.002058600656731498
+         [hair, left eye]/0.0017933821672139428
+         [hair, right eye]/0.001111391765597373
+   --- Parent: right ear: 0.08250820914372309---
+         [hair]/0.04756251578681485
+         [hair, left ear]/0.012983076534478404
+         [hair, right eye]/0.00544329376105077
+         [hair, left ear, right eyebrow]/0.0025764081838848193
+         [hair, left eyebrow, right eye]/0.001262945188178833
+         [hair, left eyebrow]/0.001149280121242738
+         [hair, left ear, left eyebrow]/0.0010103561505430665
+   --- Parent: left ear: 0.058247032078807805---
+         [hair]/0.025587269512503157
+         [hair, right ear]/0.012440010103561506
+         [hair, right eyebrow]/0.007426117706491538
+         [hair, left eyebrow, right eyebrow]/0.0021975246274311697
+         [hair, right eye]/0.001414498610760293
+         [hair, head]/0.001376610255114928
+         [hair, left eyebrow]/0.0013513513513513514
+   --- Parent: head: 0.31132861833796466---
+         [hair]/0.07253094215711038
+         [hair, right eye]/0.030702197524627432
+         [hair, right ear]/0.026231371558474364
+         [hair, right eyebrow]/0.020396564789088155
+         [hair, left ear]/0.01513008335438242
+         [hair, nose]/0.011694872442535994
+         [hair, right ear, right eye]/0.008411214953271028
+         [hair, left ear, right ear]/0.007211417024501137
+         [hair, right eyebrow, right eye]/0.0070219752462743115
+         [hair, right ear, right eyebrow]/0.005935842384440515
+         [hair, left eye]/0.005203334175296792
+         [hair, nose, right eye]/0.004407678706744128
+         [hair, left eyebrow]/0.004294013639808032
+         [hair, nose, right eyebrow]/0.003978277342763324
+         [hair, left eye, right eye]/0.003965647890881536
+         [hair, nose, left eye]/0.003889871179590806
+         [hair, left eyebrow, right eyebrow]/0.003814094468300076
+         [hair, left ear, right eye]/0.003788835564536499
+         [hair, mouth, right eye]/0.003662541045718616
+         [hair, mouth]/0.0035993937863096743
+         [hair, left ear, right eyebrow]/0.0035488759787825207
+         [hair, left eyebrow, right eye]/0.003245769133619601
+         [hair, right ear, mouth]/0.0029552917403384694
+         [hair, nose, left eyebrow]/0.0025132609244758776
+         [hair, nose, left eyebrow, left eye]/0.002071230108613286
+         [hair, mouth, nose]/0.002071230108613286
+         [hair, left ear, right ear, right eye]/0.0020080828492043444
+         [hair, right ear, mouth, right eye]/0.001869158878504673
+         [hair, right ear, nose]/0.001831270522859308
+         [hair, left eyebrow, right eyebrow, right eye]/0.0017554938115685779
+         [hair, left ear, right ear, right eyebrow]/0.0017302349078050013
+         [hair, right ear, left eyebrow]/0.001641828744632483
+         [hair, nose, right eyebrow, right eye]/0.0015534225814599646
+         [hair, right ear, left eye]/0.0013513513513513514
+         [hair, right ear, right eyebrow, right eye]/0.0012124273806516797
+   --- Parent: hair: 0.0---
