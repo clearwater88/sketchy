@@ -190,7 +190,7 @@ public class IO {
 			totalLogProb += logProb;
 		}
 		
-		out.println("Overall logProb: " + totalLogProb);
+		out.println("Overall average logProb: " + totalLogProb/logProbsPost.size());
 		out.println("Seq probs: ");
 		
 		for (double logProb : logProbsPost) {

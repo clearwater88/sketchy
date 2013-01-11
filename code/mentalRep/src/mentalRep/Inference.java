@@ -34,7 +34,7 @@ public class Inference {
 				long ruleId = Node.getRuleId(n);
 				Double prob = postRules.get(n.id).get(ruleId);
 				if (prob == null) // zero-prob; actually alpha, but forget it 
-					continue;
+					prob = 0.0001; // assign small non-zero prob
 				
 				logProb += Math.log(prob);
 			}

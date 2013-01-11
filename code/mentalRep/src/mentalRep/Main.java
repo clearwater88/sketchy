@@ -75,12 +75,12 @@ public class Main {
 	public static void main(String [] args) throws IOException, ClassNotFoundException {
 
 	    int trialStart = 0;
-	    int trialEnd = 5;
+	    int trialEnd = 10;
 		
 		
 		for (int t= trialStart; t < trialEnd; t++) {
 			//double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
-			double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5};
+			double[] alphaTry = {0.01,0.1,0.2,0.5,1,2,5,10};
 			for (double alpha : alphaTry) {
 				for (Ctype ct : Ctype.values()) {
 					partList = getPartList(ct);
@@ -116,9 +116,9 @@ public class Main {
 					//Inference
 					
 					// Load stats from learning
-					ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = IO.readRuleCounts(outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));		    
+					ArrayList<ArrayList<HashMap<Long,Integer>>> allRuleCounts = IO.readRuleCounts(outFilesPrefix.concat(RULE_COUNTS).concat(".ser"));		    
 				    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
-				    ArrayList<Double> decaySamps = IO.readDecaySamps(outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));	
+				    ArrayList<Double> decaySamps = IO.readDecaySamps(outFilesPrefix.concat(DECAY_SAMPLES).concat(".ser"));	
 
 				    // find probs
 				    ArrayList<Double> logProbsPost = new ArrayList<Double>();
@@ -132,7 +132,7 @@ public class Main {
 				    out.close();
 				    IO.outputInferLogProbs(logProbsPost,System.out);
 				    
-				    IO.outputInferLogProbsSerial(logProbsPost, outFilesPrefix.concat(INFER_PROBS).concat("serial"));
+				    IO.outputInferLogProbsSerial(logProbsPost, outFilesPrefix.concat(INFER_PROBS).concat("serial.ser"));
 					
 				}
 			}
@@ -217,10 +217,10 @@ public class Main {
 
 
 		// Output all rule counts- for inference later
-		IO.outputRuleCounts(allRuleCounts,outFilesPrefix.concat(RULE_COUNTS).concat(".txt"));
+		IO.outputRuleCounts(allRuleCounts,outFilesPrefix.concat(RULE_COUNTS).concat(".ser"));
 
 		// Output decay samples- for inference later
-		IO.outputDecaySamps(decaySamps,outFilesPrefix.concat(DECAY_SAMPLES).concat(".txt"));
+		IO.outputDecaySamps(decaySamps,outFilesPrefix.concat(DECAY_SAMPLES).concat(".ser"));
 		
 		// Output posterior rules
 	    ArrayList<HashMap<Long,Double>> postRules = getPosteriorRuleCounts(allRuleCounts);
