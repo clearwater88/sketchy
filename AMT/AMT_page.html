@@ -1,0 +1,69 @@
+<h3>Provide 3 tags for this image.</h3>
+<div class="highlight-box">
+<p>Instructions:&nbsp;</p>
+<ul class="overview-list">
+    <li class="overview-list-item">You must provide 3 tags for this image.</li>
+    <li class="overview-list-item">Each tag must be a single word</li>
+    <li class="overview-list-item">No tag can be longer than 25 characters</li>
+    <li class="overview-list-item">The tags must describe the image, the contents of the image, or some relevant context.</li>
+</ul>
+</div>
+
+<script>
+var boxes = [];
+
+var i = 0;
+
+function checkAddress(checkbox,val)
+{
+   if(checkbox.checked) {
+      boxes[i++] = val;
+   } else {      
+      for (j=0; j < boxes.length; j++) {
+	    if (boxes[j] == val) {
+            boxes.splice(j,1);
+            i--;
+            break;
+          }
+      }
+   }
+   txt="";
+   for (j=0; j < boxes.length; j++) {
+      txt = txt + boxes[j] + ",";
+   }
+   document.getElementById("test2").innerHTML=txt;
+   document.getElementById("partOrder").value=txt;
+}
+</script>
+
+<p>This an object of type: ${class}.</p>
+<table cellspacing="4" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <p>Image 1:</p>
+            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
+            </td>
+            <td>
+            <p>Image 2:</p>
+            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
+            </td>
+	    <td>
+	    Box 1: <input type="checkbox" name="box1" onclick="checkAddress(this,1)" /><br>
+	    Box 2: <input type="checkbox" name="box2" onclick="checkAddress(this,2)" /><br>
+	    Box 3: <input type="checkbox" name="box3" onclick="checkAddress(this,3)" /><br>
+	    Box 4: <input type="checkbox" name="box4" onclick="checkAddress(this,4)" /><br>
+	    </td>
+        </tr>
+    </tbody>
+</table>
+
+<input type="hidden" name= "partOrder" id="test">
+
+<p id ="test2">Stuff</p>
+
+<p><style type="text/css">
+<!--
+.highlight-box { border:solid 0px #98BE10; background:#FCF9CE; color:#222222; padding:4px; text-align:left; font-size: smaller;}
+-->
+</style></p>
