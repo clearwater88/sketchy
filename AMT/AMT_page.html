@@ -1,3 +1,44 @@
+<script>
+var boxes = [];
+var cblen = 0;
+
+function checkAddress(checked,val) {
+   boxes[cblen++] = val
+   txt="";
+   for (j=0; j < boxes.length; j++) {
+	txt = txt + boxes[j] + ",";
+   }
+   document.getElementById("test2").innerHTML=txt;
+   document.getElementById("partOrder").value=txt;
+
+}
+
+window.onload = function() {
+	var check_value = new Array();
+	var testStr = "${parts}";
+	//var testStr = "s,d,sd,f,g,e";
+	var parts= testStr.split(",");
+
+	for(i in parts) {
+
+		var cb = document.createElement("input");
+		cb.type = "checkbox";
+		cb.value = i;
+		cb.checked = false;
+		cb.name=parts[i];
+		cb.onclick=function(){checkAddress(this.checked,this.value)};
+
+		br = document.createElement("br");
+		var text = document.createTextNode(parts[i]);
+
+		document.getElementById("cbContain").appendChild(cb);
+		document.getElementById("cbContain").appendChild(text);
+		document.getElementById("cbContain").appendChild(br);
+	}
+}
+</script>
+
+
 <h3>Provide 3 tags for this image.</h3>
 <div class="highlight-box">
 <p>Instructions:&nbsp;</p>
@@ -9,77 +50,8 @@
 </ul>
 </div>
 
-<script>
-var boxes = [];
-
-var i = 0;
-
-var tg = new Array();
-tg[0] = "p1";
-tg[1] = "p2";
-tg[2] = "p3";
-tg[3] = "p4";
-tg[4] = "p5";
-
-
-function checkAddress(checkbox,val) {
-   if(checkbox.checked) {
-      boxes[i++] = val;
-   } else {      
-      for (j=0; j < boxes.length; j++) {
-	    if (boxes[j] == val) {
-            boxes.splice(j,1);
-            i--;
-            break;
-          }
-      }
-   }
-   txt="";
-   for (j=0; j < boxes.length; j++) {
-      txt = txt + boxes[j] + ",";
-   }
-   document.getElementById("test2").innerHTML=txt
-   document.getElementById("partOrder").value=txt
-}
-
-function makeBoxes() {
-	var check_value = new Array()
-	<!-- var testStr = "${parts}" -->
-	var testStr = "s,d,sd,f,g,e"
-	var parts= testStr.split(",");
-	for (ss in parts) {
-		check_value[ss] = parts[ss]
-	}
-	for(count in check_value) {
-		var checkbox = "<input type='checkbox' value='"+check_value[count]+"' />"
-		document.getElementById(tg[count]).innerHTML=(checkbox + check_value[count] + "<br/>")
-	}
-}
-
-</script>
-
 
 <p>This an object of type: ${class}.</p>
-<table cellspacing="4" cellpadding="0" border="0">
-    <tbody>
-        <tr>
-            <td>
-            <p>Image 1:</p>
-            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
-            </td>
-            <td>
-            <p>Image 2:</p>
-            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
-            </td>
-	    <td>
-	    Box 1: <input type="checkbox" name="box1" onclick="checkAddress(this,1)" /><br>
-	    Box 2: <input type="checkbox" name="box2" onclick="checkAddress(this,2)" /><br>
-	    Box 3: <input type="checkbox" name="box3" onclick="checkAddress(this,3)" /><br>
-	    Box 4: <input type="checkbox" name="box4" onclick="checkAddress(this,4)" /><br>
-	    </td>
-        </tr>
-    </tbody>
-</table>
 
 <table cellspacing="4" cellpadding="0" border="0">
     <tbody>
@@ -93,28 +65,14 @@ function makeBoxes() {
             <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
             </td>
 	    <td>
-	    <p id = "p1">hiyeah</p>
-	    <p id = "p2">hiyeah</p>
-   	    <p id = "p3">hiyeah</p>
-	    <p id = "p4">hiyeah</p>
-	    <p id = "p5">hiyeah</p>
-
+	    <div id = "cbContain"></div>
 	    </td>
         </tr>
     </tbody>
 </table>
 
-<input type="button" onclick="makeBoxes()">
-
-<input type="hidden" name= "partOrder" id="test">
-
-
-
+<input type="hidden" name= "partOrder" id="partOrder">
 <p id ="test2">Stuff</p>
 
-
 <p><style type="text/css">
-<!--
-.highlight-box { border:solid 0px #98BE10; background:#FCF9CE; color:#222222; padding:4px; text-align:left; font-size: smaller;}
--->
 </style></p>
