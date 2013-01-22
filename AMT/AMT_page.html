@@ -14,8 +14,15 @@ var boxes = [];
 
 var i = 0;
 
-function checkAddress(checkbox,val)
-{
+var tg = new Array();
+tg[0] = "p1";
+tg[1] = "p2";
+tg[2] = "p3";
+tg[3] = "p4";
+tg[4] = "p5";
+
+
+function checkAddress(checkbox,val) {
    if(checkbox.checked) {
       boxes[i++] = val;
    } else {      
@@ -31,10 +38,26 @@ function checkAddress(checkbox,val)
    for (j=0; j < boxes.length; j++) {
       txt = txt + boxes[j] + ",";
    }
-   document.getElementById("test2").innerHTML=txt;
-   document.getElementById("partOrder").value=txt;
+   document.getElementById("test2").innerHTML=txt
+   document.getElementById("partOrder").value=txt
 }
+
+function makeBoxes() {
+	var check_value = new Array()
+	<!-- var testStr = "${parts}" -->
+	var testStr = "s,d,sd,f,g,e"
+	var parts= testStr.split(",");
+	for (ss in parts) {
+		check_value[ss] = parts[ss]
+	}
+	for(count in check_value) {
+		var checkbox = "<input type='checkbox' value='"+check_value[count]+"' />"
+		document.getElementById(tg[count]).innerHTML=(checkbox + check_value[count] + "<br/>")
+	}
+}
+
 </script>
+
 
 <p>This an object of type: ${class}.</p>
 <table cellspacing="4" cellpadding="0" border="0">
@@ -58,9 +81,37 @@ function checkAddress(checkbox,val)
     </tbody>
 </table>
 
+<table cellspacing="4" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <p>Image 1:</p>
+            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
+            </td>
+            <td>
+            <p>Image 2:</p>
+            <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
+            </td>
+	    <td>
+	    <p id = "p1">hiyeah</p>
+	    <p id = "p2">hiyeah</p>
+   	    <p id = "p3">hiyeah</p>
+	    <p id = "p4">hiyeah</p>
+	    <p id = "p5">hiyeah</p>
+
+	    </td>
+        </tr>
+    </tbody>
+</table>
+
+<input type="button" onclick="makeBoxes()">
+
 <input type="hidden" name= "partOrder" id="test">
 
+
+
 <p id ="test2">Stuff</p>
+
 
 <p><style type="text/css">
 <!--
