@@ -1,4 +1,5 @@
 import os
+import glob
 import random;
 
 NUM_BATCHES = 20;
@@ -39,12 +40,19 @@ def getClassPartitions(classNames):
     
     for d in classNames:
         dirUse = READ_SOURCE_DIR+d;
-        imList = os.listdir(dirUse);
+        imListAll = os.listdir(dirUse);
+
+        imList = [];
+        for i in range(len(imListAll)):
+            if(not imListAll[i].endswith(".png")):
+                continue;
+            imList.append(imListAll[i]);
+
         for i in range(len(imList)):
             imList[i] = READ_OUT_WWW + d + "/" + imList[i];
 
         random.shuffle(imList);
-        res[d] = partition(imList,NUM_PARTITIONS_PER_CLASS);
+        res[d] = partition(imList,NUM_PARTITIONS_PER_CLASS);        
     return res;
 
 def printPartitions(classDict):

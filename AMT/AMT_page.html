@@ -13,23 +13,44 @@ function checkAddress(checked,val) {
 
 }
 
+function fisherYates (arr) {
+  var i = arr.length, j, tempi, tempj;
+  if ( i == 0 ) return false;
+  while ( --i ) {
+     j = Math.floor( Math.random() * ( i + 1 ) );
+     tempi = arr[i];
+     tempj = arr[j];
+     arr[i] = tempj;
+     arr[j] = tempi;
+   }
+   return arr;
+}
+
+
 window.onload = function() {
 	var check_value = new Array();
-	//var testStr = "${parts}";
-	var testStr = "s,d,sd,f,g,e";
+	<!-- var testStr = "${parts}"; -->
+	var testStr = "00,11,22,33,44,55";
 	var parts= testStr.split(",");
+
+	var randInds = [];
+	for (var i = 0; i < parts.length; i++) {
+		randInds[i] = i;
+	}
+	randInds = fisherYates(randInds);
+
 
 	for(i in parts) {
 
 		var cb = document.createElement("input");
 		cb.type = "checkbox";
-		cb.value = i;
+		cb.value = parts[randInds[i]];
 		cb.checked = false;
-		cb.name=parts[i];
+		cb.name=parts[randInds[i]];
 		cb.onclick=function(){checkAddress(this.checked,this.value)};
 
 		br = document.createElement("br");
-		var text = document.createTextNode(parts[i]);
+		var text = document.createTextNode(parts[randInds[i]]);
 
 		document.getElementById("cbContain").appendChild(cb);
 		document.getElementById("cbContain").appendChild(text);
