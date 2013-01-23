@@ -8,9 +8,7 @@ function checkAddress(checked,val) {
    for (j=0; j < boxes.length; j++) {
 	txt = txt + boxes[j] + ",";
    }
-   document.getElementById("test2").innerHTML=txt;
    document.getElementById("partOrder").value=txt;
-
 }
 
 function fisherYates (arr) {
@@ -29,8 +27,8 @@ function fisherYates (arr) {
 
 window.onload = function() {
 	var check_value = new Array();
-	<!-- var testStr = "${parts}"; -->
 	var testStr = "00,11,22,33,44,55";
+	<!-- var testStr = "${parts}"; -->
 	var parts= testStr.split(",");
 
 	var randInds = [];
@@ -39,15 +37,19 @@ window.onload = function() {
 	}
 	randInds = fisherYates(randInds);
 
+	boxOrder = "";
 
 	for(i in parts) {
+		var partName = parts[randInds[i]];
 
 		var cb = document.createElement("input");
 		cb.type = "checkbox";
-		cb.value = parts[randInds[i]];
+		cb.value = partName;
+		cb.name= partName;
 		cb.checked = false;
-		cb.name=parts[randInds[i]];
 		cb.onclick=function(){checkAddress(this.checked,this.value)};
+
+		boxOrder = boxOrder + partName + ",";
 
 		br = document.createElement("br");
 		var text = document.createTextNode(parts[randInds[i]]);
@@ -56,6 +58,7 @@ window.onload = function() {
 		document.getElementById("cbContain").appendChild(text);
 		document.getElementById("cbContain").appendChild(br);
 	}
+	document.getElementById("boxOrder").value=boxOrder;
 }
 </script>
 
@@ -64,10 +67,8 @@ window.onload = function() {
 <div class="highlight-box">
 <p>Instructions:&nbsp;</p>
 <ul class="overview-list">
-    <li class="overview-list-item">You must provide 3 tags for this image.</li>
-    <li class="overview-list-item">Each tag must be a single word</li>
-    <li class="overview-list-item">No tag can be longer than 25 characters</li>
-    <li class="overview-list-item">The tags must describe the image, the contents of the image, or some relevant context.</li>
+    <li class="overview-list-item">Select the parts of the object parts you see in the sketches from the list of parts to the right of the sketches. </li>
+    <li class="overview-list-item"> <b> Before clicking on any parts, you must select the "start" part. </b> </li>
 </ul>
 </div>
 
@@ -93,7 +94,8 @@ window.onload = function() {
 </table>
 
 <input type="hidden" name= "partOrder" id="partOrder">
-<p id ="test2">Stuff</p>
+<input type="hidden" name= "boxOrder" id="boxOrder">
+<!-- <p id ="test2">Stuff</p> -->
 
 <p><style type="text/css">
 </style></p>
