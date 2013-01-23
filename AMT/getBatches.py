@@ -1,25 +1,43 @@
 import os
 import random;
 
-NUM_BATCHES = 500;
+NUM_BATCHES = 20;
 
 NUM_PARTITIONS_PER_CLASS = 10; #80 examples per class
 
-READ_SOURCE_DIR = 'png/';
+READ_SOURCE_DIR = 'pngSubset/';
 
 READ_OUT_WWW = 'http://cs.brown.edu/people/jchua/sketchy/'
 OUT_DIR = "batches/";
 
-headers = ["class","image_url"];
+headers = ["class","image_url","parts"];
 
+def getPartNames(classNames):
+    res = {};
+    for d in classNames:
+        dirUse = READ_SOURCE_DIR+d;
+        partFile = dirUse + "/" + d + "Parts.txt";
+        f = open(partFile,'r');
+        cont = f.readlines();
+
+        partNames = "";
+        for s in cont:
+            if (len(partNames) != 0):
+                partNames += ",";
+            partNames += s.strip();
+        partNames = "\"" + partNames + "\"";
+
+        res[d] = partNames;
+    return res;
+    
 def partition(arr, n):
     division = len(arr) / float(n) 
     return [ arr[int(round(division * i)): int(round(division * (i + 1)))] for i in xrange(n) ]
 
-def getClassPartitions(dirs):
+def getClassPartitions(classNames):
     res = {};
     
-    for d in dirs:
+    for d in classNames:
         dirUse = READ_SOURCE_DIR+d;
         imList = os.listdir(dirUse);
         for i in range(len(imList)):
@@ -46,6 +64,7 @@ def reorder(arr,order):
 
 classNames = os.listdir(READ_SOURCE_DIR);
 classDict = getClassPartitions(classNames);
+partNames = getPartNames(classNames);
 
 # Build list of partitions and corresponding classes
 partitionList = [];
@@ -73,9 +92,11 @@ for i in range(0,len(classList)):
     cListUse = classList[i];
     
     for j in range(0,len(cListUse)):
+        classUse = cListUse[j];
         for k in range(0,len(pListUse[j])):
-            f.write(cListUse[j] + "," + pListUse[j][k] + "\n");        
-
+            f.write(classUse + "," +
+                    pListUse[j][k] + "," +
+                    partNames[classUse] + "\n");
     f.close();
         
 
