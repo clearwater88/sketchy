@@ -1,14 +1,16 @@
 <script>
+var parts = [];
 var boxes = [];
 var cblen = 0;
+var txt = "";
+var boxOrder ="";
 
 function checkAddress(checked,val) {
-   boxes[cblen++] = val
-   txt="";
-   for (j=0; j < boxes.length; j++) {
-	txt = txt + boxes[j] + ",";
-   }
+   txt = txt + val + ",";
+
+   document.getElementById("test").innerHTML=txt;
    document.getElementById("partOrder").value=txt;
+   orderBoxes();
 }
 
 function fisherYates (arr) {
@@ -24,12 +26,21 @@ function fisherYates (arr) {
    return arr;
 }
 
+function makeBoxes() {
+	for(i in parts) {
+		var partName = parts[i];
+		var cb = document.createElement("input");
+		cb.type = "checkbox";
+		cb.value = partName;
+		cb.name= partName;
+		cb.checked = false;
+		cb.onclick=function(){checkAddress(this.checked,this.value)};
+		boxes[i] = cb;
+	}
+}
 
-window.onload = function() {
-	var check_value = new Array();
-	var testStr = "00,11,22,33,44,55";
-	<!-- var testStr = "${parts}"; -->
-	var parts= testStr.split(",");
+function orderBoxes() {
+	document.getElementById("cbContain").innerHTML = "";
 
 	var randInds = [];
 	for (var i = 0; i < parts.length; i++) {
@@ -37,55 +48,72 @@ window.onload = function() {
 	}
 	randInds = fisherYates(randInds);
 
-	boxOrder = "";
 
-	for(i in parts) {
-		var partName = parts[randInds[i]];
-
-		var cb = document.createElement("input");
-		cb.type = "checkbox";
-		cb.value = partName;
-		cb.name= partName;
-		cb.checked = false;
-		cb.onclick=function(){checkAddress(this.checked,this.value)};
-
-		boxOrder = boxOrder + partName + ",";
-
+	for(i in randInds) {
+		ind = randInds[i];
 		br = document.createElement("br");
-		var text = document.createTextNode(parts[randInds[i]]);
+		var text = document.createTextNode(parts[ind]);
 
-		document.getElementById("cbContain").appendChild(cb);
+		document.getElementById("cbContain").appendChild(boxes[ind]);
 		document.getElementById("cbContain").appendChild(text);
 		document.getElementById("cbContain").appendChild(br);
+		boxOrder = boxOrder + parts[ind] + ",";
 	}
+
+	boxOrder = boxOrder+"<br>";
+
+
+	document.getElementById("boxOrder").innerHTML = boxOrder;
+	document.getElementById("test2").innerHTML = boxOrder;
+
+}
+
+
+window.onload = function() {
+	var check_value = new Array();
+	var testStr = "00,11,22,33,44,55";
+	<!-- var testStr = "${parts}"; -->
+	parts= testStr.split(",");
+
+	var boxOrder = "";
+	makeBoxes();
+	orderBoxes();
+	
+
 	document.getElementById("boxOrder").value=boxOrder;
+	document.getElementById("test").innerHTML="ok";
 }
 </script>
 
 
-<h3>Provide 3 tags for this image.</h3>
+<h3>Check off the parts of this object</h3>
 <div class="highlight-box">
 <p>Instructions:&nbsp;</p>
 <ul class="overview-list">
-    <li class="overview-list-item">Select the parts of the object parts you see in the sketches from the list of parts to the right of the sketches. </li>
-    <li class="overview-list-item"> <b> Before clicking on any parts, you must select the "start" part. </b> </li>
+    <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
+    <li class="overview-list-item">Select the parts of the object that you see from the available list. </li>
+    <li class="overview-list-item"> <b> Please check the "start" box before checking any other. </b> </li>
 </ul>
 </div>
 
 
-<p>This an object of type: ${class}.</p>
+<p>This is a(n): ${class}.</p>
 
 <table cellspacing="4" cellpadding="0" border="0">
     <tbody>
         <tr>
             <td>
-            <p>Image 1:</p>
+            <p>Sketch:</p>
             <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
             </td>
+
+	    <!--
             <td>
             <p>Image 2:</p>
             <p><img width="200" height="200" src="${image_url}" style="margin-right: 10px;" alt="image_url" /></p>
             </td>
+            -->             
+
 	    <td>
 	    <div id = "cbContain"></div>
 	    </td>
@@ -95,7 +123,8 @@ window.onload = function() {
 
 <input type="hidden" name= "partOrder" id="partOrder">
 <input type="hidden" name= "boxOrder" id="boxOrder">
-<!-- <p id ="test2">Stuff</p> -->
+<p id ="test">Stuff</p>
+<p id ="test2">Stuff2</p>
 
 <p><style type="text/css">
 </style></p>
