@@ -7,8 +7,6 @@ var boxOrder ="";
 
 function checkAddress(checked,val) {
    txt = txt + val + ",";
-
-   document.getElementById("test").innerHTML=txt;
    document.getElementById("partOrder").value=txt;
    orderBoxes();
 }
@@ -60,12 +58,9 @@ function orderBoxes() {
 		boxOrder = boxOrder + parts[ind] + ",";
 	}
 
-	boxOrder = boxOrder+"<br>";
+	boxOrder = boxOrder+"|";
 
-
-	document.getElementById("boxOrder").innerHTML = boxOrder;
-	document.getElementById("test2").innerHTML = boxOrder;
-
+	document.getElementById("boxOrder").value = boxOrder;
 }
 
 
@@ -81,7 +76,6 @@ window.onload = function() {
 	
 
 	document.getElementById("boxOrder").value=boxOrder;
-	document.getElementById("test").innerHTML="ok";
 }
 </script>
 
@@ -92,6 +86,7 @@ window.onload = function() {
 <ul class="overview-list">
     <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
     <li class="overview-list-item">Select the parts of the object that you see from the available list. </li>
+    <li class="overview-list-item">The parts list will be shuffled after each selection you make. </li>
     <li class="overview-list-item"> <b> Please check the "start" box before checking any other. </b> </li>
 </ul>
 </div>
@@ -123,8 +118,6 @@ window.onload = function() {
 
 <input type="hidden" name= "partOrder" id="partOrder">
 <input type="hidden" name= "boxOrder" id="boxOrder">
-<p id ="test">Stuff</p>
-<p id ="test2">Stuff2</p>
 
 <p><style type="text/css">
 </style></p>
