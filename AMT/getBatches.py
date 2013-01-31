@@ -6,7 +6,7 @@ NUM_BATCHES = 20;
 
 NUM_PARTITIONS_PER_CLASS = 10; #80 examples per class
 
-READ_SOURCE_DIR = 'pngSubset/';
+READ_SOURCE_DIR = 'svgSubset/';
 
 READ_OUT_WWW = 'http://cs.brown.edu/people/jchua/sketchy/'
 OUT_DIR = "batches/";
@@ -44,7 +44,7 @@ def getClassPartitions(classNames):
 
         imList = [];
         for i in range(len(imListAll)):
-            if(not imListAll[i].endswith(".png")):
+            if(not imListAll[i].endswith(".svg")):
                 continue;
             imList.append(imListAll[i]);
 

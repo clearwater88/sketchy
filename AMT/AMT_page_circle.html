@@ -1,0 +1,108 @@
+<!-- Javascripts -->
+<script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/raphael.min.js"></script>
+<script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/json2.min.js"></script>
+<script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/raphael.sketchpad.smooth.js"></script>
+
+
+<!-- visibility script -->
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+
+<!-- html -->
+<div style="width:480px">
+
+<div class="highlight-box">
+<p>Instructions:&nbsp;</p>
+<ul class="overview-list">
+    <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
+    <li class="overview-list-item">Circle all the constituent parts of the object (eg, if shown a picture of a face, one might circle each of the eyes, the nose, and the mouth).</li>
+	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
+<p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome.</b></p>
+
+</div>
+
+<br>
+
+<h3><p>This is a(n): ${class}.</p></h3>
+
+<div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:480px;height:480px"></div> 
+
+<input type="hidden" id="strokes" name="strokes" />
+
+<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
+<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
+<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
+
+<br><br>
+
+<h3 style="clear:left">Comments (optional)</h3>
+<textarea id="inputComments" name="inputComments" style="width:400px;height:90px"></textarea>
+
+</div>
+<br>
+
+<!-- javascript interfacing with raphael.sketchpad -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var sketchpad = Raphael.sketchpad("editor", {
+			height: 480,
+			width: 480,
+			editing: true	// true is default
+		});
+
+		// When the sketchpad changes, update the input field.
+		sketchpad.change(function() {
+			$("#strokes").val(sketchpad.json());
+			var sk = sketchpad.strokes();
+			<!-- document.getElementById("test1").innerHTML=sk[0].path; -->
+		});
+		
+		function enable(element, enable) {
+			if (enable) {
+				$(element).removeClass("disabled");
+			} else {
+				$(element).addClass("disabled");
+			}
+		};
+		
+		function select(element1, element2) {
+			$(element1).addClass("selected");
+			$(element2).removeClass("selected");
+		};
+		
+				
+		$("#editor_undo").click(function() {
+			sketchpad.undo();
+		});
+		
+		$("#editor_redo").click(function() {
+			sketchpad.redo();
+		});
+		
+		$("#editor_clear").click(function() {
+			sketchpad.clear();
+		});
+		
+		function update_actions() {
+			enable("#editor_undo", sketchpad.undoable());
+			enable("#editor_redo", sketchpad.redoable());
+			enable("#editor_clear", sketchpad.strokes().length > 0);
+		};
+		
+		/* Disable this as it seems to overwrite the previously registered changed function
+		 * which is essential as it puts the JSON data into the input field
+		 */ 
+		/*sketchpad.change(update_actions);*/
+		/*update_actions();*/
+		
+		sketchpad.pen().color("#FF0000");
+	});
+</script>
