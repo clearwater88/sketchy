@@ -3,10 +3,33 @@
 <script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/raphael.min.js"></script>
 <script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/json2.min.js"></script>
 <script type="text/javascript" src="http://cs.brown.edu/people/jchua/sketchy/js/raphael.sketchpad.smooth.js"></script>
-
-
+		
 <!-- visibility script -->
 <script type="text/javascript">
+
+function makeList(parts) {
+	var elem = document.getElementById("partList");
+	elem.style.fontSize = "30px";
+	
+	for(i in parts) {
+		var partName = parts[i] + "\n";
+			//var text = document.createTextNode(partName);
+			var text = document.createElement("li");
+			text.innerHTML=partName;
+			document.getElementById("partList").appendChild(text);
+
+	}
+	}
+
+	window.onload = function() {
+
+		var parts = "00,11,22,33,44,55";
+	<!-- var testStr = "${parts}"; -->
+		parts= parts.split(",");
+
+		makeList(parts);
+	}
+
     function toggle_visibility(id) {
        var e = document.getElementById(id);
        if(e.style.display == 'block')
@@ -14,43 +37,8 @@
        else
           e.style.display = 'block';
     }
-</script>
-
-<!-- html -->
-<div style="width:480px">
-
-<div class="highlight-box">
-<p>Instructions:&nbsp;</p>
-<ul class="overview-list">
-    <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
-    <li class="overview-list-item">Circle all the constituent parts of the object (eg, if shown a picture of a face, one might circle each of the eyes, the nose, and the mouth).</li>
-	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
-<p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome.</b></p>
-
-</div>
-
-<br>
-
-<h3><p>This is a(n): ${class}.</p></h3>
-
-<div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:480px;height:480px"></div> 
-
-<input type="hidden" id="strokes" name="strokes" />
-
-<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
-<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
-<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
-
-<br><br>
-
-<h3 style="clear:left">Comments (optional)</h3>
-<textarea id="inputComments" name="inputComments" style="width:400px;height:90px"></textarea>
-
-</div>
-<br>
 
 <!-- javascript interfacing with raphael.sketchpad -->
-<script type="text/javascript">
 	$(document).ready(function() {
 		var sketchpad = Raphael.sketchpad("editor", {
 			height: 480,
@@ -62,7 +50,6 @@
 		sketchpad.change(function() {
 			$("#strokes").val(sketchpad.json());
 			var sk = sketchpad.strokes();
-			<!-- document.getElementById("test1").innerHTML=sk[0].path; -->
 		});
 		
 		function enable(element, enable) {
@@ -105,4 +92,53 @@
 		
 		sketchpad.pen().color("#FF0000");
 	});
+
 </script>
+
+<!-- html -->
+<div>
+
+<div class="highlight-box">
+<h2>Instructions:&nbsp;</h2>
+<ul class="overview-list">
+    <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
+    <li class="overview-list-item">Using the canvas, circle all the constituent parts of the object. A list of object parts is listed to the right of the sketch. <b>There is no need to name each circled part.</b></li>
+	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
+<p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome. Enjoy! </b></p>
+</div>
+
+<br>
+
+<h3><p>This is a(n): ${class}.</p></h3>
+
+<input type="hidden" id="strokes" name="strokes" />
+
+<table cellspacing="4" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>
+
+<!--
+<div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:420px;height:420px"></div> 
+-->
+
+<div id="editor" style="background-image: url(http://cs.brown.edu/people/jchua/sketchy/camera/3348.svg);border:1px solid #ccc;width:420px;height:420px"></div> 
+
+<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
+
+<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
+
+<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
+            </td>
+		
+	    	<td width="500" style="vertical-align:text-top">
+			<h2> List of parts </h2>
+		    	<ul id = "partList"></ul>
+	    	</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+
