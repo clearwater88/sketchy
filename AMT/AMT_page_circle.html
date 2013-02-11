@@ -9,11 +9,11 @@
 
 function makeList(parts) {
 	var elem = document.getElementById("partList");
-	elem.style.fontSize = "30px";
+	elem.style.fontSize = "20px";
 	
 	for(i in parts) {
-		var partName = parts[i] + "\n";
-			//var text = document.createTextNode(partName);
+		<!-- var partName = parts[i] + "\n"; -->
+		var partName = parts[i];
 			var text = document.createElement("li");
 			text.innerHTML=partName;
 			document.getElementById("partList").appendChild(text);
@@ -23,11 +23,12 @@ function makeList(parts) {
 
 	window.onload = function() {
 
-		var parts = "00,11,22,33,44,55";
-	<!-- var testStr = "${parts}"; -->
-		parts= parts.split(",");
+		<!-- var partNames = "00,11,22,33,44,55"; -->
+		partNames = "${parts}";
 
-		makeList(parts);
+		partNames= partNames.split(",");
+
+		makeList(partNames);
 	}
 
     function toggle_visibility(id) {
@@ -41,8 +42,8 @@ function makeList(parts) {
 <!-- javascript interfacing with raphael.sketchpad -->
 	$(document).ready(function() {
 		var sketchpad = Raphael.sketchpad("editor", {
-			height: 480,
-			width: 480,
+			height: 420,
+			width: 420,
 			editing: true	// true is default
 		});
 
@@ -83,13 +84,7 @@ function makeList(parts) {
 			enable("#editor_redo", sketchpad.redoable());
 			enable("#editor_clear", sketchpad.strokes().length > 0);
 		};
-		
-		/* Disable this as it seems to overwrite the previously registered changed function
-		 * which is essential as it puts the JSON data into the input field
-		 */ 
-		/*sketchpad.change(update_actions);*/
-		/*update_actions();*/
-		
+				
 		sketchpad.pen().color("#FF0000");
 	});
 
@@ -102,7 +97,7 @@ function makeList(parts) {
 <h2>Instructions:&nbsp;</h2>
 <ul class="overview-list">
     <li class="overview-list-item">You will be shown a sketch of an object, and told what kind of object is depicted. </li>
-    <li class="overview-list-item">Using the canvas, circle all the constituent parts of the object. A list of object parts is listed to the right of the sketch. <b>There is no need to name each circled part.</b></li>
+    <li class="overview-list-item">Using the canvas, circle all the constituent parts of the object. A list of potential object parts is listed to the right of the sketch. <b>There is no need to name each circled part.</b></li>
 	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
 <p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome. Enjoy! </b></p>
 </div>
@@ -118,11 +113,11 @@ function makeList(parts) {
         <tr>
             <td>
 
-<!--
 <div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:420px;height:420px"></div> 
--->
 
+<!--
 <div id="editor" style="background-image: url(http://cs.brown.edu/people/jchua/sketchy/camera/3348.svg);border:1px solid #ccc;width:420px;height:420px"></div> 
+-->
 
 <div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
 
@@ -130,10 +125,10 @@ function makeList(parts) {
 
 <div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
             </td>
-		
+		<td width="10"> </width> <!-- sloppy... -->
 	    	<td width="500" style="vertical-align:text-top">
-			<h2> List of parts </h2>
-		    	<ul id = "partList"></ul>
+			<h2> List of potential parts </h2>
+		    	<div id = "partList"></div>
 	    	</td>
 
         </tr>
@@ -141,4 +136,3 @@ function makeList(parts) {
 </table>
 
 <br><br>
-
