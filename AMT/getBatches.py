@@ -2,14 +2,17 @@ import os
 import glob
 import random;
 
-NUM_BATCHES = 20;
+NUM_BATCHES = 10;
 
-NUM_PARTITIONS_PER_CLASS = 10; #80 examples per class
+NUM_EXAMPLES_PER_CLASS= 20;
+NUM_PARTITIONS_PER_CLASS = 15;
 
 READ_SOURCE_DIR = 'svgSubset/';
 
-READ_OUT_WWW = 'http://cs.brown.edu/people/jchua/sketchy/'
+
+READ_OUT_WWW = 'https://cs.brown.edu/people/jchua/sketchy/svgSubset/'
 OUT_DIR = "batches/";
+BATCH_FILE = "batchB_";
 
 headers = ["class","image_url","parts"];
 
@@ -43,7 +46,12 @@ def getClassPartitions(classNames):
         imListAll = os.listdir(dirUse);
 
         imList = [];
-        for i in range(len(imListAll)):
+
+        randRange = range(80);
+        #random.shuffle(randRange);
+        
+        for j in range(NUM_EXAMPLES_PER_CLASS):
+            i = randRange[j];
             if(not imListAll[i].endswith(".svg")):
                 continue;
             imList.append(imListAll[i]);
@@ -93,7 +101,7 @@ classList = partition(classList,NUM_BATCHES);
 
 ### Now output batches
 for i in range(0,len(classList)):
-    f = open(OUT_DIR + "batch" + str(i) + ".csv",'w');
+    f = open(OUT_DIR + BATCH_FILE + str(i) + ".csv",'w');
     f.write(",".join(headers) +"\n");
 
     pListUse = partitionList[i];
