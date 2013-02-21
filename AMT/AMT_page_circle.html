@@ -93,6 +93,7 @@ function makeList(parts) {
 <!-- html -->
 <div>
 
+<!--
 <div class="highlight-box">
 <h2>Instructions:&nbsp;</h2>
 <ul class="overview-list">
@@ -101,10 +102,10 @@ function makeList(parts) {
 	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
 <p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome. Enjoy! </b></p>
 </div>
-
 <br>
 
-<h3><p>This is a(n): ${class}.</p></h3>
+-->
+<h2><p>This is a(n): ${class}.</p></h2>
 
 <input type="hidden" id="strokes" name="strokes" />
 
@@ -127,7 +128,7 @@ function makeList(parts) {
             </td>
 		<td width="10"> </width> <!-- sloppy... -->
 	    	<td width="500" style="vertical-align:text-top">
-			<h2> List of potential parts </h2>
+			<h2> Individually circle these parts in the sketch, if they are present</h2>
 		    	<div id = "partList"></div>
 	    	</td>
 

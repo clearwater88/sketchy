@@ -12,7 +12,7 @@ READ_SOURCE_DIR = 'svgSubset/';
 
 READ_OUT_WWW = 'https://cs.brown.edu/people/jchua/sketchy/svgSubset/'
 OUT_DIR = "batches/";
-BATCH_FILE = "batchB_";
+BATCH_FILE = "batch_";
 
 headers = ["class","image_url","parts"];
 
