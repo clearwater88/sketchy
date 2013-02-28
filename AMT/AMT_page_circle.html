@@ -7,6 +7,14 @@
 <!-- visibility script -->
 <script type="text/javascript">
 
+function toggle_visibility(id) {
+	var e = document.getElementById(id);
+	if(e.style.display == 'block')
+        	e.style.display = 'none';
+       	else
+          e.style.display = 'block';
+}
+
 function makeList(parts) {
 	var elem = document.getElementById("partList");
 	elem.style.fontSize = "20px";
@@ -17,21 +25,20 @@ function makeList(parts) {
 			var text = document.createElement("li");
 			text.innerHTML=partName;
 			document.getElementById("partList").appendChild(text);
-
 	}
-	}
+}
 
-	window.onload = function() {
+window.onload = function() {
+	$("#noJS").hide();
+	$("#allContent").show();
+	document.getElementById("browserId").innerHTML=	window.navigator.appName;
+	var partNames = "${parts}";
+	partNames= partNames.split(",");
+	makeList(partNames);	
 
-		<!-- var partNames = "00,11,22,33,44,55"; -->
-		partNames = "${parts}";
+}
 
-		partNames= partNames.split(",");
-
-		makeList(partNames);
-	}
-
-    function toggle_visibility(id) {
+function toggle_visibility(id) {
        var e = document.getElementById(id);
        if(e.style.display == 'block')
           e.style.display = 'none';
@@ -39,59 +46,67 @@ function makeList(parts) {
           e.style.display = 'block';
     }
 
-<!-- javascript interfacing with raphael.sketchpad -->
-	$(document).ready(function() {
-		var sketchpad = Raphael.sketchpad("editor", {
-			height: 420,
-			width: 420,
-			editing: true	// true is default
-		});
-
-		// When the sketchpad changes, update the input field.
-		sketchpad.change(function() {
-			$("#strokes").val(sketchpad.json());
-			var sk = sketchpad.strokes();
-		});
-		
-		function enable(element, enable) {
-			if (enable) {
-				$(element).removeClass("disabled");
-			} else {
-				$(element).addClass("disabled");
-			}
-		};
-		
-		function select(element1, element2) {
-			$(element1).addClass("selected");
-			$(element2).removeClass("selected");
-		};
-		
-				
-		$("#editor_undo").click(function() {
-			sketchpad.undo();
-		});
-		
-		$("#editor_redo").click(function() {
-			sketchpad.redo();
-		});
-		
-		$("#editor_clear").click(function() {
-			sketchpad.clear();
-		});
-		
-		function update_actions() {
-			enable("#editor_undo", sketchpad.undoable());
-			enable("#editor_redo", sketchpad.redoable());
-			enable("#editor_clear", sketchpad.strokes().length > 0);
-		};
-				
-		sketchpad.pen().color("#FF0000");
+$(document).ready(function() {
+	var sketchpad = Raphael.sketchpad("editor", {
+		height: 420,
+		width: 420,
+		editing: true	// true is default
 	});
+
+	// When the sketchpad changes, update the input field.
+	sketchpad.change(function() {
+		$("#strokes").val(sketchpad.json());
+		var sk = sketchpad.strokes();
+	});
+	
+	function enable(element, enable) {
+		if (enable) {
+			$(element).removeClass("disabled");
+		} else {
+			$(element).addClass("disabled");
+		}
+	};
+		
+	function select(element1, element2) {
+		$(element1).addClass("selected");
+		$(element2).removeClass("selected");
+	};
+	
+			
+	$("#editor_undo").click(function() {
+		sketchpad.undo();
+	});
+	
+	$("#editor_redo").click(function() {
+		sketchpad.redo();
+	});
+	
+	$("#editor_clear").click(function() {
+		sketchpad.clear();
+	});
+	
+	function update_actions() {
+		enable("#editor_undo", sketchpad.undoable());
+		enable("#editor_redo", sketchpad.redoable());
+		enable("#editor_clear", sketchpad.strokes().length > 0);
+	};
+				
+	sketchpad.pen().color("#FF0000");
+});
 
 </script>
 
 <!-- html -->
 <div>
+
+<div id="noJS">
+
+<b><font color= red>
+This HIT requires JavaScript, which is currently disabled. Please click <a href= http://www.enable-javascript.com/>here</a> for instructions on how to enable JavaScript, then come back to do the HIT. We'll keep the HIT warm for you! 
+</font></b>
+
+</div>
+
 
 <!--
 <div class="highlight-box">
@@ -105,38 +120,40 @@ function makeList(parts) {
 <br>
 
 -->
-<h2><p>This is a(n): ${class}.</p></h2>
+<div id="allContent" style="display: none;">
+	<h2><p>This is a(n): ${class}.</p></h2>
 
-<input type="hidden" id="strokes" name="strokes" />
+	<input type="hidden" id="strokes" name="strokes" />
+	<input type="hidden" id="browserId" name="browserId">
 
-<table cellspacing="4" cellpadding="0" border="0">
-    <tbody>
-        <tr>
-            <td>
+	<table cellspacing="4" cellpadding="0" border="0">
+	    <tbody>
+		<tr>
+		    <td>
 
-<div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:420px;height:420px"></div> 
+	<div id="editor" style="background-image: url(${image_url});border:1px solid #ccc;width:420px;height:420px"></div> 
 
-<!--
-<div id="editor" style="background-image: url(http://cs.brown.edu/people/jchua/sketchy/camera/3348.svg);border:1px solid #ccc;width:420px;height:420px"></div> 
--->
+	<!--
+	<div id="editor" style="background-image: url(http://cs.brown.edu/people/jchua/sketchy/camera/3348.svg);border:1px solid #ccc;width:420px;height:420px"></div> 
+	-->
 
-<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
+	<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
+	<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
+	<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
 
-<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
+        </td>
 
-<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
-            </td>
-		<td width="10"> </width> <!-- sloppy... -->
-	    	<td width="500" style="vertical-align:text-top">
-			<h2> Individually circle these parts in the sketch, if they are present</h2>
-		    	<div id = "partList"></div>
-	    	</td>
-
+	<td width="10"> </width></td> <!-- sloppy... -->
+	<td width="500" style="vertical-align:text-top">
+	<h2> Individually circle these parts in the sketch, if they are present</h2>
+	<div id = "partList"></div>
+	 </td>
         </tr>
     </tbody>
 </table>
 
 <h3 style="clear:left">Comments (optional)</h3>
 <textarea id="inputComments" name="inputComments" style="width:400px;height:90px"></textarea>
+</div>
 
 <br><br>
