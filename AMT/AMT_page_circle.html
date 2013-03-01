@@ -107,8 +107,8 @@ This HIT requires JavaScript, which is currently disabled. Please click <a href=
 
 </div>
 
+<div id="allContent" style="display: none;">
 
-<!--
 <div class="highlight-box">
 <h2>Instructions:&nbsp;</h2>
 <ul class="overview-list">
@@ -117,10 +117,24 @@ This HIT requires JavaScript, which is currently disabled. Please click <a href=
 	<li class="overview-list-item"> You may undo,redo, and clear circlings you have made using the controls at the bottom of the drawing pad.
 <p><b>Note: This HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome. Enjoy! </b></p>
 </div>
-<br>
 
--->
-<div id="allContent" style="display: none;">
+<a href="#" onclick="toggle_visibility('examples');"><h3>Examples [click to show/hide]</h3></a>
+<div id="examples" style="display:none">
+An example of the kind of part circlings we would like:
+
+<table cellspacing="4" cellpadding="0" border="0">
+	    <tbody>
+		<tr>
+		    <td>
+<img  src="https://cs.brown.edu/people/jchua/sketchy/svgSubset/example.png" border="1"/>
+	 </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
 	<h2><p>This is a(n): ${class}.</p></h2>
 
 	<input type="hidden" id="strokes" name="strokes" />
