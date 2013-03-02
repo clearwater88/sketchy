@@ -1,0 +1,115 @@
+// lev2 data
+var animalair = ["bee","butterfly","dragon","duck","feather","flying bird","mosquito","owl","parrot","pigeon","standing bird","swan"];
+var animalgrounda = ["ant","bear (animal)","camel","cat","cow","crocodile","dog","dragon","elephant","frog","giraffe","hedgehog","horse","kangaroo","lion","monkey","mouse (animal)"];
+var animalgroundb = ["panda","penguin","pig","rabbit","rooster","scorpion","sea turtle","sheep","snail","snake","spider","squirrel","standing bird","teddy-bear","tiger","zebra"];
+var animalwater = ["crab","crocodile","dolphin","duck","fish","frog","lobster","octopus","penguin","sea turtle","seagull","shark","swan"];
+var aroundthehouse = ["bench","door","door handle","fire hydrant","ladder","mailbox","satellite dish","wheelbarrow"];
+var bathroom = ["bathtub","comb","toilet","toothbrush"];
+var buildings = ["barn","bridge","castle","church","house","skyscraper","tent","windmill"];
+var clothing = ["hat","helmet","shoe","socks","t-shirt","trousers"];
+var electronicscomputers = ["alarm clock","calculator","camera","cell phone","computer monitor","computer-mouse","fan","head-phones","ipod","keyboard","laptop","lightbulb","power outlet","radio","telephone","tv","walkie talkie"];
+var fooda = ["apple","banana","bread","cake","carrot","crab","donut","fish","grapes","hamburger","hot-dog","ice-cream-cone"];
+var foodb = ["lobster","mushroom","pear","pineapple","pizza","pretzel","strawberry","tomato"];
+var fun = ["book","cigarette","feather","pipe (for smoking)","present","snowman","sponge bob"];
+var furnituredecora = ["armchair","ashtray","basket","bed","bench","bookshelf","cabinet","candle","chair","chandelier","couch"];
+var furnituredecorb = ["door","door handle","fan","floor lamp","hourglass","lightbulb","power outlet","table","tablelamp","vase"];
+var handtools = ["axe","bottle opener","flashlight","hammer","ladder","scissors","screwdriver","shovel","syringe"];
+var humanbody = ["arm","brain","ear","eye","face","foot","hand","head","human-skeleton","mouth","nose","person sitting","person walking","skull","tooth"];
+var humanlikefigure = ["angel","mermaid","santa claus","snowman","sponge bob","teddy-bear"];
+var kitchendining = ["basket","beer-mug","bottle opener","bowl","candle","cup","fork","frying-pan","knife","lighter","mug","spoon","teacup","teapot","wine-bottle","wineglass"];
+var musicalinstruments = ["bell","guitar","harp","piano","saxophone","trombone","trumpet","violin"];
+var officework = ["calculator","computer monitor","computer-mouse","envelope","key","microscope","paper clip","pen","stapler","syringe","telephone"];
+var personalaccessoires = ["backpack","binoculars","cigarette","comb","crown","diamond","eyeglasses","key","lighter","pen","purse","suitcase","umbrella","wrist-watch"];
+var plants = ["apple","banana","bush","cactus","carrot","flower with stem","grapes","leaf","mushroom","palm tree","potted plant","pumpkin","tree"];
+var sound = ["bell","head-phones","ipod","loudspeaker","megaphone","microphone","radio"];
+var sports = ["backpack","baseball bat","bicycle","binoculars","boomerang","canoe","parachute","rollerblades","skateboard","snowboard","tennis-racket","tent"];
+var theskies = ["cloud","moon","rainbow","sun"];
+var traffic = ["parking meter","streetlight","tire","traffic light","wheel"];
+var vehicleair = ["airplane","blimp","flying saucer","helicopter","hot air balloon","satellite","space shuttle"];
+var vehicleground = ["bicycle","bulldozer","bus","car (sedan)","crane (machine)","motorbike","pickup truck","race car","suv","tire","tractor","train","truck","van","wheel","wheelbarrow"];
+var vehiclewater = ["canoe","sailboat","ship","speed-boat","submarine"];
+var weapons = ["axe","cannon","grenade","knife","revolver","rifle","sword"];
+
+
+// lev1 data
+var animals = {"animal (air)":animalair,"animal (ground) a-m":animalgrounda,"animal (ground) n-z":animalgroundb,"animal (water)":animalwater};
+var buildingshomeoffice = {"around the house":aroundthehouse,"bathroom":bathroom,"buildings":buildings,"electronics, computers":electronicscomputers,"furniture, decor (a-c)":furnituredecora, "furniture, decor (d-z)": furnituredecorb, "hand tools":handtools,"kitchen, dining":kitchendining,"office, work":officework};
+var leisurepersonalitems = {"clothing":clothing,"fun":fun,"musical instruments":musicalinstruments,"personal accessoires":personalaccessoires,"sports":sports};
+var naturebodyfood = {"food (a-i)":fooda, "food (j-z)": foodb, "human body":humanbody,"plants":plants,"the skies":theskies};
+var soundfiguresweapons = {"human-like figure":humanlikefigure,"sound":sound,"weapons":weapons};
+var vehiclestraffic = {"traffic":traffic,"vehicle (air)":vehicleair,"vehicle (ground)":vehicleground,"vehicle (water)":vehiclewater};
+
+// root
+var hierarchy = {'animals':animals, 'buildings, home, office': buildingshomeoffice, 'leisure, personal items':leisurepersonalitems, 'nature, body, food': naturebodyfood, 'sound, figures, weapons':soundfiguresweapons, 'vehicles, traffic': vehiclestraffic};
+
+// will hold all the HSelect instances on our page
+var selectors = [];
+
+// ------------------------------------------------
+// Global functions
+// ------------------------------------------------
+
+
+// This method Gets URL Parameters (GUP)
+function gup( name )
+{
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var tmpURL = window.location.href;
+  var results = regex.exec( tmpURL );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+
+
+function callback(cat) {
+
+    // go over all selectors and get their current selection
+    // also write the selection into the input fields
+    // If all have a final selection, enable the submit button,
+    // otherwise disable
+    var allReady = true;
+    for (var i = 0; i < selectors.length; i++) {
+
+        var path = selectors[i].getPath();
+        for (var j = 0; j < path.length; j++) {
+            category = path[j];
+            elemName = 'category' + i + j;
+            
+            var bla = document.getElementsByName(elemName);
+            bla[0].value = category;
+            allReady = allReady && (category != '');
+        }
+    }
+    
+    // no assignment id available if user is previewing the HIT
+    // we will use this below to display a message on the submit btn
+    var isPreviewing = (gup('assignmentId') == "ASSIGNMENT_ID_NOT_AVAILABLE");
+
+        
+    // actually the externalHIT_v1.js script that is running along with each HIT already takes care
+    // of disabling the button with id="submitButton" when previewing the HIT. Since we have
+    // additional cases when we want to disable the button we duplicate this functionality here.
+    if (isPreviewing) {
+        document.getElementById('submitButton').disabled = 'disabled';
+        document.getElementById('submitButton').value = 'You must ACCEPT the HIT before you can submit the results.';
+    } else if (allReady) {
+        document.getElementById('submitButton').disabled = '';
+        document.getElementById('submitButton').value = 'submit';              
+    } else {
+        document.getElementById('submitButton').disabled = 'disabled';
+        document.getElementById('submitButton').value = 'Choose categories for all sketches before you can hit submit.';
+    }
+}
+
+selectors[0] = new HSelect(hierarchy, callback);
+selectors[1] = new HSelect(hierarchy, callback);
+selectors[2] = new HSelect(hierarchy, callback);
+selectors[3] = new HSelect(hierarchy, callback);
+
+document.getElementById('container1').appendChild(selectors[0].table);
+document.getElementById('container2').appendChild(selectors[1].table);   
+document.getElementById('container3').appendChild(selectors[2].table);   
+document.getElementById('container4').appendChild(selectors[3].table);  

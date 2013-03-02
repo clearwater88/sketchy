@@ -1,0 +1,177 @@
+/* Constructor
+   callbackFn is called each time the user performs a click on an 
+   an item in our hierarchical menu.
+*/
+HSelect = function(hierarchy, callbackFn) {
+
+	this.hierarchy = hierarchy;
+	this.callbackFn = callbackFn;
+	
+	// set to true, if the user has selected a
+	// final level category, false otherwise
+	this.hasSelection = false;
+
+	// TODO: automatically determine number of rows and cols from the hierarchy
+	this.numRows = 18;
+	this.numCols = 3;
+	
+	
+	// Create array that maps from colIdx -> rowIdx, i.e.
+	// stores our current selected entries in the selector.
+	// selection[i] = -1 means that for col i there is nothing
+	// selected yet
+	this.selection = new Array(this.numCols);
+	this.path = new Array(this.numCols);
+	for (var i = 0; i < this.selection.length; i++) {
+		this.selection[i] = -1;
+		this.path[i] = '';
+	}
+	
+	this.makeTable();
+	this.fill(0, this.hierarchy);
+}
+
+
+HSelect.prototype.getCategory = function() {
+    return this.path[this.numCols-1];
+}
+
+HSelect.prototype.getPath = function() {
+    return this.path;
+}
+
+HSelect.prototype.makeTable = function() {
+
+	// need a "reference" to this as we want to use
+	// it in the closure function later
+	var obj = this;
+	
+	this.table=document.createElement('table');
+	
+	this.table.setAttribute('class','selection_table');
+	tbo=document.createElement('tbody');
+
+	for(var r=0; r < this.numRows; r++) {
+	
+	    var row = document.createElement('tr');
+	    
+	    if (r%2) row.setAttribute('class','odd');
+	    else     row.setAttribute('class','even');
+    	
+	    for (var c=0; c < this.numCols; c++) {
+	    	var cell=document.createElement('td');
+		    cell.onclick = function() {
+		    	obj.select(this);
+		    }
+		    var cont=document.createTextNode('');
+		    cell.appendChild(cont);
+		    row.appendChild(cell);
+		}
+		tbo.appendChild(row);
+	}
+	this.table.appendChild(tbo);
+}
+
+
+// the parameter fill describes the hierarchy level we
+// want to fill in the data from, i.e. the user has clicked
+// on a row somewhere in a column of level-1
+HSelect.prototype.fill = function(col, data) {
+
+    // special case for the last level, data is an array
+    if (col == this.numCols-1) {
+        for (var i = 0; i < data.length; i++) {
+            this.table.rows[i].cells[col].innerHTML = data[i];
+            this.table.rows[i].cells[col].setAttribute('class','hasEntry');
+        }
+        return;
+    }
+
+    // standard case for the subcategories: data is an object containing
+    // key value pairs.
+	var i = 0;
+	for (var key in data) {
+		this.table.rows[i].cells[col].innerHTML = key;
+		this.table.rows[i].cells[col].setAttribute('class','hasEntry');
+		i++;
+	}
+}
+
+HSelect.prototype.clearLevel = function(col) {
+
+    this.selection[col] = -1;
+    this.path[col] = '';
+    
+	for (var i = 0; i < this.table.rows.length; i++) {
+		td = this.table.rows[i].cells[col];
+		td.innerHTML = '';
+		td.setAttribute('class','');
+	}
+}
+
+HSelect.prototype.select = function(td) {
+
+    var selectedText = td.innerHTML;
+	var row = td.parentNode.rowIndex;
+	var col = td.cellIndex;
+	
+    // ------------------------------------------------------------------
+    // prevent selecting items that are just empty table cells
+    if (selectedText == '') return;
+    // ------------------------------------------------------------------
+    
+    
+    // ------------------------------------------------------------------
+	// deselect the last selected item if something has been previously selected
+	if (this.selection[col] >= 0) {
+	    lastRow = this.selection[col];
+	    tdPrev = this.table.rows[lastRow].cells[col];
+	    tdPrev.removeAttribute('class','selected');
+	    }
+    // ------------------------------------------------------------------
+
+  
+    // ------------------------------------------------------------------	
+    // remember which is item is selected so it is easy to undo
+    // upon the next selection
+	this.selection[col] = row;
+	this.path[col] = selectedText;
+	td.setAttribute('class','selected');
+    // ------------------------------------------------------------------	
+	
+	var nextLevel = col+1;	
+	
+    // ------------------------------------------------------------------
+	// special case for last level: this selects a final category
+	// if an assignment id is available, we let the user submit the selection
+	if (col == this.numCols-1) {
+	    td.setAttribute('class', 'finalSelection');
+	    this.hasSelection = true;
+	    this.callbackFn(this.path[col]);
+	    return;		
+	}
+    // ------------------------------------------------------------------
+	
+		
+	// first clear all the following levels to empty them for the update
+	for (var i = nextLevel; i < this.numCols; i++) {
+		this.clearLevel(i);
+	}
+	
+	
+    // Note: must not call the callbackFn earlier since the clearLevel() function
+    // also cleans the this.path array
+	// user has not yet selected a final category
+	this.hasSelection = false;
+	this.callbackFn();
+
+
+	// populate the next table
+	var i = 0;
+	var data = this.hierarchy;
+    while (this.path[i] != '') {
+        data = data[this.path[i]];
+        i++;
+    }
+	this.fill(nextLevel, data);
+}

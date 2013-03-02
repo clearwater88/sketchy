@@ -1,0 +1,124 @@
+<!-- COPY FROM HERE -->
+
+<!-- Javascripts -->
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/raphael.min.js"></script>
+<script type="text/javascript" src="javascripts/json2.min.js"></script>
+<script type="text/javascript" src="javascripts/raphael.sketchpad.smooth.js"></script>
+
+
+<!-- visibility script -->
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+
+<!-- html -->
+<div style="width:680px">
+
+<a href="#" onclick="toggle_visibility('instructions');"><h3>Instructions [click to show/hide]</h3></a>
+<div id="instructions" style="display:none">
+<p>Please sketch an image in the yellow box below that is clearly recognizable to other humans as belonging to the following category: <span style="color:blue">${category}</span>. Your sketch should be as realistic as possible, clearly be recognizable to other humans and roughly fill the yellow area. Please use outlines only and do not draw context around an object (see the examples below).</p>
+<p>We understand that not everybody is an artist and are actually interested in gathering sketches from a variety of different drawing skills. We therefore only reject HITS that are completely unrecognizable (as illustrated in the example below).</p>
+<p>Sketching is based on vectorized strokes which lets you undo and redo strokes by clicking the Undo/Redo buttons below the yellow sketching area. We also provide an erase mode which allows you to remove complete strokes by clicking on them: switch back and forth between draw/erase mode by clicking the Draw/Erase button.</p>
+<p>Note: this HIT unfortunately does not work well in Internet Explorer, so we ask you to use Firefox, Safari or Chrome.</p>
+<p>Have fun!</p>
+</div>
+
+<a href="#" onclick="toggle_visibility('examples');"><h3>Examples [click to show/hide]</h3></a>
+<div id="examples" style="display:none">
+<img src="http://cybertron.cg.tu-berlin.de/eitz/mechanical_turk/images/examples2.jpg" alt="sketch examples" />
+</div>
+
+<h3>Please sketch an image in the yellow box below that is clearly recognizable to other humans as belonging to the following category: <span style="color:blue">${category}</span></h3>
+
+<div id="editor" style="background-color:#ffc;border:1px solid #ccc;width:640px;height:480px"></div>
+
+<!--<textarea id="input1" name="input1" style="width:400px;height:90px"></textarea>-->
+<input type="hidden" id="input1" name="input1" />
+
+<div id="editor_draw_erase" 
+style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;
+width:50px;float:left">Draw</div>
+<div id="editor_undo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Undo</div>
+<div id="editor_redo" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Redo</div>
+<div id="editor_clear" style="cursor:pointer;margin:4px 0 0;color:#1D72C2;background-color:#D4ECFF;border:1px solid #57B6FF;text-align:center;text-decoration:none;width:50px;float:left">Clear</div>
+
+<br><br>
+
+<h3 style="clear:left">Comments (optional)</h3>
+<textarea id="inputComments" name="inputComments" style="width:400px;height:90px"></textarea>
+
+
+</div>
+<br>
+
+<!-- javascript interfacing with raphael.sketchpad -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var sketchpad = Raphael.sketchpad("editor", {
+			height: 480,
+			width: 640,
+			editing: true	// true is default
+		});
+
+		// When the sketchpad changes, update the input field.
+		sketchpad.change(function() {
+			$("#input1").val(sketchpad.json());
+		});
+		
+		function enable(element, enable) {
+			if (enable) {
+				$(element).removeClass("disabled");
+			} else {
+				$(element).addClass("disabled");
+			}
+		};
+		
+		function select(element1, element2) {
+			$(element1).addClass("selected");
+			$(element2).removeClass("selected");
+		};
+		
+				
+		$("#editor_undo").click(function() {
+			sketchpad.undo();
+		});
+		
+		$("#editor_redo").click(function() {
+			sketchpad.redo();
+		});
+		
+		$("#editor_clear").click(function() {
+			sketchpad.clear();
+		});
+
+		$("#editor_draw_erase").toggle(function() {
+			$(this).text("Erase");
+			sketchpad.editing("erase");
+		}, function() {
+			$(this).text("Draw");
+			sketchpad.editing(true);
+		});
+		
+		function update_actions() {
+			enable("#editor_undo", sketchpad.undoable());
+			enable("#editor_redo", sketchpad.redoable());
+			enable("#editor_clear", sketchpad.strokes().length > 0);
+		};
+		
+		/* Disable this as it seems to overwrite the previously registered changed function
+		 * which is essential as it puts the JSON data into the input field
+		 */ 
+		/*sketchpad.change(update_actions);*/
+		/*update_actions();*/
+		
+	});
+</script>
+
+<!-- COPY> TO HERE -->
