@@ -1,18 +1,22 @@
-import os
-import glob
+import os;
+import glob;
 import random;
+import HIT_IO;
 
-NUM_BATCHES = 10;
+NUM_BATCHES = 1;
 
-NUM_EXAMPLES_PER_CLASS= 20;
+NUM_EXAMPLES_PER_CLASS= 80;
 NUM_PARTITIONS_PER_CLASS = 15;
 
 READ_SOURCE_DIR = 'svgSubset/';
 
-
 READ_OUT_WWW = 'https://cs.brown.edu/people/jchua/sketchy/svgSubset/'
 OUT_DIR = "batches/";
 BATCH_FILE = "batch_";
+
+RES_DIR = 'results/';
+HIT_OUT = RES_DIR + 'HIT_OUT';
+
 
 headers = ["class","image_url","parts"];
 
@@ -36,14 +40,14 @@ def getPartNames(classNames):
     
 def partition(arr, n):
     division = len(arr) / float(n) 
-    return [ arr[int(round(division * i)): int(round(division * (i + 1)))] for i in xrange(n) ]
+    return [arr[int(round(division * i)): int(round(division * (i + 1)))] for i in xrange(n)]
 
-def getClassPartitions(classNames):
+#for given class names, retrieves images from it, up to NUM_EXAMPLES_PER_CLASS of each class
+def getClassIms(classNames):
     res = {};
     
     for d in classNames:
-        dirUse = READ_SOURCE_DIR+d;
-        imListAll = os.listdir(dirUse);
+        imListAll = os.listdir(READ_SOURCE_DIR+d);
 
         imList = [];
 
@@ -63,30 +67,31 @@ def getClassPartitions(classNames):
         res[d] = partition(imList,NUM_PARTITIONS_PER_CLASS);        
     return res;
 
-def printPartitions(classDict):
-    for d in classDict:
-        print "====" + d + "====";
-        for l in classDict[d]:
-            print "   " + ','.join(l);
-
-def printPartitionSizes(classDict):
-    for d in classDict:
-        print "====" + d + "====";
-        for l in classDict[d]:
-            print str(len(l)) + ",";
-
 def reorder(arr,order):
     return [arr[i] for i in order];
 
+doneHIT = set(HIT_IO.read_done_HIT(HIT_OUT));
 classNames = os.listdir(READ_SOURCE_DIR);
-classDict = getClassPartitions(classNames);
+classIms = getClassIms(classNames);
 partNames = getPartNames(classNames);
+
+# only get already existing HITS; for no-parts experiment
+for c in classIms:
+    partitionTemp = [];
+    for partitionImgs in classIms[c]:
+        temp = [];
+        for img in partitionImgs:
+            if img in doneHIT:
+                temp.append(img);
+        partitionTemp.append(temp);
+    classIms[c] = partitionTemp;
+# only get already existing HITS; for no-parts experiment
 
 # Build list of partitions and corresponding classes
 partitionList = [];
 classList = [];
-for n in classDict:
-    for p in classDict[n]:
+for n in classIms:
+    for p in classIms[n]:
         partitionList.append(p);
         classList.append(n);
 
@@ -115,10 +120,10 @@ for i in range(0,len(classList)):
                     partNames[classUse] + "\n");
     f.close();
         
-
-
-
-
+s = 0;
+for key in classIms:
+    s = s+len(classIms[key]);
+print s
 
 
 

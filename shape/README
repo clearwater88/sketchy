@@ -1,0 +1,13 @@
+==============================================================
+ShapeBM Interactive GUI
+--------------------------------------------------------------
+'The Shape Boltzmann Machine: a Strong Model of Object Shape'
+S. M. Ali Eslami, Nicolas Heess and John Winn
+Computer Vision and Pattern Recognition (CVPR) 2012
+==============================================================
+
+- Run script start_gui.m in MATLAB to start the GUI.
+- See video in the supplementary material for a walkthrough.
+- Edit gui/gui_settings_horses.m and gui/gui_settings_motorbikes.m to change Gibbs sampling settings.
+- The GUI may be slightly sluggish on older hardware.
+- Tested to work with MATLAB R2009b+ on Windows/OS X/Linux. 

@@ -1,51 +1,44 @@
 import os;
 import re;
 import time;
+import HIT_IO;
 
-RES_DIR = 'results/';
-OUT_FILE = RES_DIR + 'allResults.csv';
-
-def stupidParse(line,mapping):
+def parseLine(line,mapping):
     strDblQt = "(?!,)\"\"(?!,)";
     strSentinel = "&&&";
     m="\",\"";
-    
-    res = [];
 
-    line = re.sub(strDblQt,strSentinel,line);
-
-    sp = re.split(m,line);
-    
-    for i in range(len(sp)):
-        sp[i] = re.sub(strSentinel,"\"",sp[i]); # only single-quote string
-        print mapping[i] + ":" + sp[i];
-        time.sleep(0.2);
+    res = re.split(m,re.sub(strDblQt,strSentinel,line));    
+    for i in range(len(res)):
+        res[i] = re.sub(strSentinel,"\"",res[i]); # only single-quote string
     return res;
 
 def readFields(outFile):
     f = open(outFile,'r');
     m="\",\"";
     
-    res = {}
+    parsed = [];
+    res = {};
 
-    mapping = [];
+    mapping = {};
     isFirstLine = True;
     for line in f.readlines():
         line = line.rstrip();
         line = line[1:-1]; # slice off " marks
 
         if (isFirstLine):
-            mapping = re.split(m,line);
-            for m in mapping:
-                res[m] = [];
+            temp = re.split(m,line);
+            for i in range(len(temp)):
+                mapping[temp[i]] = i;
         else:
-            stupidParse(line,mapping);
-        
+            parsed.append(parseLine(line,mapping));
         isFirstLine = False;
+        
+    res['mapping'] = mapping;
+    res['parsed'] = parsed;
     return res;
 
-
-
+# combines all result files in resDir and outputs outFile
 def compile_results(resDir,outFile):
     out = open(outFile,'w');
     isFirstFile = True;
@@ -53,7 +46,7 @@ def compile_results(resDir,outFile):
     fList = os.listdir(resDir);
 
     for f in fList:
-        if (f in outFile):
+        if ((f in outFile) or not (f.endswith('.csv'))):
             continue;
         print "Analyzing file: " + f;
         isFirstLine = True;
@@ -75,7 +68,14 @@ def compile_results(resDir,outFile):
     out.close();
 
 
-compile_results(RES_DIR, OUT_FILE);
-dic= readFields(OUT_FILE);
 
-    
+RES_DIR = 'results/';
+OUT_FILE = RES_DIR + 'allResults.csv';
+HIT_OUT = RES_DIR + "HIT_OUT";
+
+compile_results(RES_DIR, OUT_FILE);
+res = readFields(OUT_FILE);
+mapping = res['mapping'];
+parsed = res['parsed'];
+
+HIT_IO.output_done_HIT(mapping,parsed,HIT_OUT);
