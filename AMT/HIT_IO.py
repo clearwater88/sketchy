@@ -13,3 +13,9 @@ def output_done_HIT(mapping,parsed,outFile):
 # convenience
 def read_done_HIT(inFile):
    return pickle.load(open(inFile,'r')); 
+
+def output_strokes(strokes,fileOut):
+    f = open(fileOut,'w');
+    f.write(strokes);
+    f.close();
+        
