@@ -5,7 +5,7 @@ import HIT_IO;
 import HIT_parser;
 import Stroke_parser;
 
-RES_DIR = 'results-noParts/';
+RES_DIR = 'results/noParts2/';
 RES_ANNOT_DIR = RES_DIR+ 'annotations/';
 OUT_FILE = RES_DIR + 'allResults.csv';
 HIT_OUT = RES_DIR + "HIT_OUT";

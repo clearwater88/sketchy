@@ -6,13 +6,13 @@ import HIT_IO;
 NUM_BATCHES = 1;
 
 NUM_EXAMPLES_PER_CLASS= 80;
-NUM_PARTITIONS_PER_CLASS = 15;
+NUM_PARTITIONS_PER_CLASS = 1;
 
 READ_SOURCE_DIR = 'svgSubset/';
 
 READ_OUT_WWW = 'https://cs.brown.edu/people/jchua/sketchy/svgSubset/'
 OUT_DIR = "batches/";
-BATCH_FILE = "batch_";
+BATCH_FILE = "batch2_";
 
 RES_DIR = 'results/';
 HIT_OUT = RES_DIR + 'HIT_OUT';
@@ -76,15 +76,15 @@ classIms = getClassIms(classNames);
 partNames = getPartNames(classNames);
 
 # only get already existing HITS; for no-parts experiment
-for c in classIms:
-    partitionTemp = [];
-    for partitionImgs in classIms[c]:
-        temp = [];
-        for img in partitionImgs:
-            if img in doneHIT:
-                temp.append(img);
-        partitionTemp.append(temp);
-    classIms[c] = partitionTemp;
+##for c in classIms:
+##    partitionTemp = [];
+##    for partitionImgs in classIms[c]:
+##        temp = [];
+##        for img in partitionImgs:
+##            if img in doneHIT:
+##                temp.append(img);
+##        partitionTemp.append(temp);
+##    classIms[c] = partitionTemp;
 # only get already existing HITS; for no-parts experiment
 
 # Build list of partitions and corresponding classes
@@ -123,7 +123,6 @@ for i in range(0,len(classList)):
 s = 0;
 for key in classIms:
     s = s+len(classIms[key]);
-print s
 
 
 
