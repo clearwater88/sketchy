@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>imdb framework - tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mathias Eitz">
+
+    <!-- Le styles -->
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+<ul class="breadcrumb">
+<li><a href="../../">Mathias Eitz</a> <span class="divider">/</span></li>
+<li><a href="index.html">imdb framwework</a> <span class="divider">/</span></li>
+<li class="active">tutorial</li>
+</ul>
+  
+<div class="container">
+
+<div class="row">
+<div class="span12">
+<h1>imdb framework</h1>
+<h2>A modern cross-platform C++ framework for (sketch-based) image retrieval</h2>
+</div>   
+</div>
+      
+<hr/>
+
+<div class="row">
+<div class="span12">
+<h2>Tutorial</h2>
+<p>
+The framework comes with several tools that implement common tasks in image retrieval, such as computing descriptors in parallel from a large collection of images or computing a visual vocabulary from a given training set of features.
+</p>
+<h3>Computing descriptors</h3>
+<p>
+This is the most essential building block of our framework: a flexible system for computing descriptors from images and efficient serialization of the resulting data. As the resulting descriptor files can be huge (in the order of Terabytes), our framework supports out-of-core access to individual descriptors.
+</p>
+<p>
+Implementing a new descriptor is simple: you only need to implement the raw descriptor extraction code, all I/O operations are efficiently handled by our framework and computation is automatically parallelized over all cores available in your system. We provide two command-line tools to compute descriptors (the framework comes with several popular descriptor types):
+</p>
+<ul>
+<li><code>generate_filelist</code>: given a root directory, this tool lists all files in and within all subdirectories of the root directory you provided. The result is what we call a FileList, i.e. a vector of filenames relative to the given root directory. Such a FileList is usually generated once for a set of images and then stored on hard-disk. The purpose of this tool is to impose a certain, fixed order on the set of files -- other tools, such as compute_descriptors -- rely on this order and produce a descriptor file that stores descriptors exactly in the same order as the corresponding images in the filelist. Example call:
+<pre>% generate_filelist --rootdir /work/imagedb --namefilters *.png *.jpg --outputfile /work/imagedb/filelist</pre>
+</li>
+<li><code>compute_descriptors</code>: given a filelist, a root directory and some additional parameters for the descriptor, this tool extracts the desired descriptor for each image in your collection and stores the results in a (large) property file. Other tools -- such as e.g. our basic image retrieval application -- read this descriptor file to find similar images.
+<pre>% compute_descriptors compute tinyimage --rootdir /work/imagedb --filelist /work/imagedb/filelist --output /work/imagedb/tinyimage.</pre>
+Using this call, the default parameters of each descriptor are used. You can optionally pass additional descriptor parameters that configure the descriptor generator:
+<pre>% compute_descriptors compute tinyimage --rootdir /work/imagedb --filelist /work/imagedb/filelist --output /work/imagedb/tinyimage --parameters params.width=8 params.height=8</pre>
+</li>
+<li><code>image_search</code>: given the descriptors computed in the previous step, we are ready to use the simple image_search tool to perform example-based image search. This tool expects a query image filename, a filelist, a descriptor file as well as parameters defining the search method to be use. Here is an example call for using linear search with an l2 distance metric:
+<pre>% image_search --queryimage /work/imagedb/0/27266636.jpg --filelist /work/imagedb/filelist --generatorptree /work/imagedb/tinyimage.parameters --searchparams descriptor_file=/work/imagedb/tinyimage.features distfn=l2norm search_type=LinearSearch</pre>
+</li>
+</ul>
+	
+	
+<h3>Building a bag-of-features representation</h3>
+<p>Our framework provides several tools to turn the raw descriptors into a searchable bag-of-features representation:</p>
+<ul>
+<li><code>compute_vocabulary</code>: computes a visual vocabulary from (a subsample of) all descriptors in a descriptor file. Uses standard k-means clustering (parallelized over all cores), the resulting cluster centers are used as the visual words. Example call:
+<pre>% compute_vocabulary --descfile /work/imagedb/tinyimage.features --numclusters 1000 --outputfile /work/imagedb/vocabulary</pre>
+</li>
+<li><code>compute_histvw</code>: given a visual vocabulary, computes a histogram of visual words for each descriptor in the passed descriptor file. Supports hard and soft quantization against the visual vocabulary. Example call:
+<pre>% compute_histvw --vocabulary /work/imagedb/vocabulary --descriptors /work/imagedb/tinyimage.features --positions /work/imagedb/tinyimage.positions --output /work/imagedb/histvw --quantization hard</pre>
+</li>
+<li><code>compute_index</code>: given a feature file of histograms of visual words, this generates an inverted index, optionally eighted using tf-idf weighting functions. Example call:
+<pre>% release/compute_index --histvw /work/imagedb/histvw --tfidf video_google video_google --output /work/imagedb/inverted_index</pre>
+</li>	
+</ul>
+	
+	
+<h3>Search</h3>
+<p>
+We provide two basic search algorithms (more and faster ones available e.g. in the <a href="http://opencv.willowgarage.com/documentation/cpp/flann_fast_approximate_nearest_neighbor_search.html">FLANN module of OpenCV</a>):
+</p>
+<ol>
+<li>linear search that can be used with any feature vector generated by compute_descriptors. Linear search can be slow for large datasets but is a reasonably fast up to about a million images and a good starting point for most applications.</li>
+<li>Bag-of-features search (using an inverted index) that can be used with histograms of visual words. Operates on the InvertedIndex data structure generated by compute_index.</li>
+</ol>
+
+</div>
+</div>
+
+
+<hr/>
+
+<footer class="footer">
+<p class="pull-right"><a href="#">Back to top</a></p>
+<p>Contact: m.eitz @ tu-berlin.de</p>
+</footer>
+   	
+</div> <!-- /container -->
+
+</body>
+</html>

@@ -170,3 +170,6 @@ mentalRes2/*
 AMT/pngSubset/*
 AMT/svgSubset/*
 AMT/results/*
+sketchGuesses/processedSketches/*
+sketchGuesses/data/*
+sketchGUesses/sketches/*
