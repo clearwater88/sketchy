@@ -1,9 +1,20 @@
 function main()
-    histFolder = 'hists/';
+    startup;
+    
+    histFolder = 'hists_hard/';
 
     data = loadData(histFolder);
     [trainData,testData,trainLabels,testLabels] = splitData(data);
     
+    classifierParams = initClassifierParams();
+    
+    KTrain{1} = getKmat(classifierParams,trainData,trainData);
+    KTest{1} = getKmat(classifierParams,testData,trainData);
+    
+    [model, probEstimates, predictLabels, classMap] = ...
+             classifySVM(classifierParams, trainLabels, testLabels, KTrain, KTest, 1);
+    [multiClass, allWinners] = getMultiClass(probEstimates, testLabels, classMap);
+    save('all_hard','model', 'probEstimates', 'predictLabels', 'classMap','multiClass','allWinners', 'trainLabels','testLabels');
 end
 
 function data = loadData(histFolder)
@@ -24,11 +35,15 @@ end
 
 function [trainData,testData,trainLabels,testLabels] = splitData(data)
 
+    pre = 10000;
+
     trainData = [];
     testData= [];
-    trainLabels = [];
-    testLabels = [];
+    trainLabels = zeros(pre,1);
+    testLabels = zeros(pre,1);
     
+    ctTrain = 1;
+    ctTest = 1;
     for (n=1:numel(data))
         display(['Loading class: ', int2str(n)]);
         nTrain = floor(size(data{n},1)/2);
@@ -36,10 +51,24 @@ function [trainData,testData,trainLabels,testLabels] = splitData(data)
         
         inds = randperm(size(data{n},1));
         
-        trainData = cat(1,trainData,data{n}(inds(1:nTrain),:));
-        trainLabels = cat(1,trainLabels,n*ones(nTrain,1));
+        if (ctTrain==1)
+           nFeat = size( data{n},2);
+           trainData = zeros(pre,nFeat);
+           testData = zeros(pre,nFeat);
+        end
+        trainData(ctTrain:ctTrain+nTrain-1,:) = data{n}(inds(1:nTrain),:);
+        trainLabels(ctTrain:ctTrain+nTrain-1) = n*ones(nTrain,1);
+        ctTrain = ctTrain + nTrain;
         
-        testData = cat(1,testData,data{n}(inds(nTrain+1:end),:));
-        testLabels = cat(1,testLabels,n*ones(nTest,1));
+        testData(ctTest:ctTest+nTest-1,:) = data{n}(inds(nTrain+1:end),:);
+        testLabels(ctTest:ctTest+nTest-1) = n*ones(nTest,1);
+        ctTest = ctTest + nTest;
+        
     end
+    
+    trainData(ctTrain:end,:) = [];
+    testData(ctTest:end,:) = [];
+    
+    trainLabels(ctTrain:end) = [];
+    testLabels(ctTest:end) = [];
 end
