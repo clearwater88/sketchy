@@ -1,20 +1,22 @@
-function main()
+function main(nTrials)
     startup;
     
-    histFolder = 'hists_hard/';
-
-    data = loadData(histFolder);
-    [trainData,testData,trainLabels,testLabels] = splitData(data);
-    
+    histFolder = 'histsGuesses_hard/';
     classifierParams = initClassifierParams();
-    
-    KTrain{1} = getKmat(classifierParams,trainData,trainData);
-    KTest{1} = getKmat(classifierParams,testData,trainData);
-    
-    [model, probEstimates, predictLabels, classMap] = ...
-             classifySVM(classifierParams, trainLabels, testLabels, KTrain, KTest, 1);
-    [multiClass, allWinners] = getMultiClass(probEstimates, testLabels, classMap);
-    save('all_hard','model', 'probEstimates', 'predictLabels', 'classMap','multiClass','allWinners', 'trainLabels','testLabels');
+
+    for (t=1:nTrials)
+        data = loadData(histFolder);
+        [trainData,testData,trainLabels,testLabels] = splitData(data);
+        
+        sFile = ['allGuesses_hard_trial', int2str(t)];
+        
+        KTrain{1} = getKmat(classifierParams,trainData,trainData);
+        KTest{1} = getKmat(classifierParams,testData,trainData);
+        [model, probEstimates, predictLabels, classMap] = ...
+            classifySVM(classifierParams, trainLabels, testLabels, KTrain, KTest, 1);
+        [multiClass, allWinners] = getMultiClass(probEstimates, testLabels, classMap);
+        save(sFile, 'probEstimates', 'predictLabels', 'classMap','multiClass','allWinners', 'trainLabels','testLabels');
+    end
 end
 
 function data = loadData(histFolder)
@@ -25,7 +27,7 @@ function data = loadData(histFolder)
         name = files(i).name;
         if (numel(name) < 5) continue; end;
         
-        if(strcmp(name(1:5), 'mHist') == 1)
+        if(strcmp(name(1:12), 'merged_mHist') == 1)
            data{end+1} = readBOWFeat([histFolder,name]);
         end
         
