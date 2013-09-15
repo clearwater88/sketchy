@@ -165,6 +165,7 @@ pip-log.txt
 results/*
 data/*
 *.mat
+*.png
 mentalRes/*
 mentalRes2/*
 AMT/pngSubset/*

@@ -1,6 +1,6 @@
-function res = collectUniqueClasses()
+function res = collectUniqueClasses(rootDir)
 
-    files = dir();
+    files = dir(rootDir);
     
     res = {};
     
@@ -9,7 +9,7 @@ function res = collectUniqueClasses()
        f = files(i).name;
        if(numel(f) < 4) continue; end;
        if(strcmp(f(end-3:end),'.mat'))
-          load(f,'Guesses');
+          load([rootDir,'/',f],'Guesses');
           for(j=1:numel(Guesses))
              if(~isempty(Guesses{j}))
                  temp = Guesses{j};
