@@ -1,8 +1,8 @@
-function [trainData,trainLabels,testData,testLabels] = divideSketches(mappingFile,sketchInfo,nTrainPerc,nTestPerc,voteThresh,nWords,useTurkers)
+function [trainData,trainLabels,testData,testLabels] = divideSketches(mappingFile,sketchInfo,nWords,params)
     
-    [resFeat,gtLabels,isFullSketch,exceedVoteThresh] = voteFilterSketches(mappingFile,sketchInfo,voteThresh,nWords,useTurkers);
+    [resFeat,gtLabels,isFullSketch,exceedVoteThresh] = voteFilterSketches(mappingFile,sketchInfo,params.voteThresh,nWords,params.useTurkers,params.useTurkerLabels);
     
-    [trainInds, testInds] = splitData(numel(gtLabels),nTrainPerc,nTestPerc,exceedVoteThresh);
+    [trainInds, testInds] = splitData(numel(gtLabels),params.nTrainPerc,params.nTestPerc,exceedVoteThresh);
     
     trainData = resFeat(trainInds,:);
     testData = resFeat(testInds,:);
@@ -10,7 +10,7 @@ function [trainData,trainLabels,testData,testLabels] = divideSketches(mappingFil
     testLabels = gtLabels(testInds);
 end
 
-function [resFeat,gtLabels,isFullSketch,exceedVoteThresh] = voteFilterSketches(mappingFile,sketchInfo,voteThresh,nWords,useTurkers)
+function [resFeat,gtLabels,isFullSketch,exceedVoteThresh] = voteFilterSketches(mappingFile,sketchInfo,voteThresh,nWords,useTurkers,useTurkerLabels)
 
     nEx = 0;
     for (i=1:numel(sketchInfo))
@@ -69,8 +69,11 @@ function [resFeat,gtLabels,isFullSketch,exceedVoteThresh] = voteFilterSketches(m
 
                             exceedVoteThresh(ct) = nGuess >= voteThresh;
                             resFeat(ct,:) = featUse;
-                            %gtLabels(ct) = uniqueGuesses(m);
-                            gtLabels(ct) = info.classNum; % try using gt label
+                            if(useTurkerLabels)
+                                gtLabels(ct) = uniqueGuesses(m);
+                            else
+                                gtLabels(ct) = info.classNum; % try using gt label
+                            end
                             isFullSketch(ct) = 0;
                             ct=ct+1;
                         end
