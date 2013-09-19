@@ -1,7 +1,7 @@
 resFolder = 'res_sketchesSet4_withPartials/';
 resStr= 'allGuesses-hard-thresh%d-UseTurkers1-UseTurkerLabels0-nTurkSketches%d-trainPerc400-testPerc200-trial%d';
 
-threshTry = [6:-1:1];
+threshTry = [6:-1:0];
 nTry = [0:10];
 trials = [1:10];
 
